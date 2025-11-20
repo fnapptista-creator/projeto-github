@@ -1,0 +1,180 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.splitSection {
+  display: flex;
+  flex: 1;
+  min-height: 85vh;
+}
+
+.splitSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.5s ease;
+  border-right: 1px solid var(--border-color);
+}
+
+.splitSide:last-child {
+  border-right: none;
+}
+
+.splitSide:hover {
+  flex: 1.3;
+}
+
+.splitContent {
+  z-index: 2;
+  text-align: center;
+  max-width: 500px;
+  animation: fadeIn 1s ease-out;
+}
+
+.sideLabel {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.1);
+  font-weight: 600;
+}
+
+.splitTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.splitSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #e0e0e0;
+  font-weight: 300;
+}
+
+.bioSection {
+  padding: 6rem 0;
+  background-color: var(--background);
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.bioTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.bioText {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Improvements - Melhor distinção visual */
+@media (max-width: 768px) {
+  .splitSection {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .splitSide {
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+    border-right: none;
+    border-bottom: 3px solid var(--border-color);
+  }
+
+  .splitSide:hover {
+    flex: 1;
+  }
+
+  .splitSide:last-child {
+    border-bottom: none;
+  }
+
+  /* Distinção visual clara entre as duas opções no mobile */
+  .consultoriaSide {
+    border-left: 4px solid var(--accent);
+  }
+
+  .representacaoSide {
+    border-left: 4px solid rgba(212, 175, 55, 0.5);
+  }
+
+  .sideLabel {
+    font-size: 0.7rem;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .splitContent {
+    max-width: 100%;
+  }
+
+  .splitTitle {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .splitSubtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .bioSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .bioTitle {
+    font-size: 2rem;
+  }
+
+  .bioText {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .splitSide {
+    min-height: 55vh;
+    padding: 2.5rem 1rem;
+  }
+
+  .splitTitle {
+    font-size: 1.8rem;
+  }
+
+  .splitSubtitle {
+    font-size: 1rem;
+  }
+}
