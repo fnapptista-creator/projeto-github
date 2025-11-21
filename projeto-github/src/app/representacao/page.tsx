@@ -284,10 +284,21 @@ export default function Representacao() {
 
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <h1 className={styles.heroTitle}>Marcas de Renome</h1>
+                    <span className={styles.heroTag}>Representação Comercial Especializada</span>
+                    <h1 className={styles.heroTitle}>Leve as Melhores Marcas para a Sua Loja</h1>
                     <p className={styles.heroSubtitle}>
-                        Curadoria de marcas líderes para abastecer sua loja com o que há de melhor no mercado.
+                        Curadoria estratégica de utilidades domésticas e decoração para lojistas que buscam giro rápido e alta lucratividade.
                     </p>
+                    <div className={styles.heroButtons}>
+                        <a
+                            href="https://felipe.rep.br"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-primary"
+                        >
+                            Área do Cliente
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -384,6 +395,10 @@ export default function Representacao() {
                     </a>
                 </div>
             </section>
+
+            <div className="container" style={{ textAlign: 'center', padding: '2rem 0', color: '#888', fontSize: '0.8rem', lineHeight: '1.6' }}>
+                <p><strong>Marcas Representadas na Bahia:</strong> Lyor, Wolff, Tramontina, Porto Brasil, Schmidt, Devitro, Grillo, Ingá Import, Soprano, Ou, Arthi, Tritec, Rio Master, Nutriplan, Mistral, Mel Toys, Tropical Aromas, Wellmix, Hiper Têxtil, Belfix, Max Alumínios, Dolce Home, Ke Home, Vitazza, AJ Import, Secalux, Casa Ambiente, Grilazer, Tutipan, Mek, Sapico Toys, Class Home, Santana Import, EDDI Casa, Dayhome, TT Brasil.</p>
+            </div>
 
             <Footer />
         </main >

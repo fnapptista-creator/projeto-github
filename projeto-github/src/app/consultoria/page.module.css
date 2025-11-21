@@ -425,6 +425,13 @@
     }
 
     to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
         min-height: 70vh;
         padding: 6rem 1.5rem 4rem;
         background-attachment: scroll;

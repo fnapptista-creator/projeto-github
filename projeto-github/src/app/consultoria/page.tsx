@@ -53,7 +53,7 @@ export default function Consultoria() {
             icon: '🍸',
             description: 'Transforme a experiência do cliente com um serviço de salão e bar bem estruturado e profissional',
             items: [
-                { title: 'Contratação e Treinamento', desc: 'Seleção de profissionais e treinamento prático e teórico em atendimento e hospitalidade' },
+                { title: 'Contratação e Treinamento', desc: 'Seleção de profissionais e treinamento prático e técnicas em atendimento e hospitalidade' },
                 { title: 'Carta de Bebidas', desc: 'Criação de uma carta de drinks e bebidas que complementa o conceito do estabelecimento' },
                 { title: 'Integração Salão e Cozinha', desc: 'Planejamento para otimizar a comunicação entre salão e cozinha, garantindo um fluxo eficiente' },
                 { title: 'Definição de Escalas', desc: 'Organização das escalas de trabalho dos funcionários' },
@@ -119,7 +119,7 @@ export default function Consultoria() {
                             <div className={styles.painIcon}>🔥</div>
                             <h3 className={styles.painTitle}>Apagando Incêndios</h3>
                             <p className={styles.painText}>
-                                Sua operação depende 100% de você. Se você não está lá, as coisas não andam. Você se tornou escravo do seu próprio negócio.
+                                Sua operação depende 100% de você. Se você não está lá, as coisas não andam. Você se tornou refém do seu próprio negócio.
                             </p>
                         </div>
                         <div className={styles.painCard}>
@@ -262,10 +262,15 @@ export default function Consultoria() {
                         className="btn-primary"
                         style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}
                     >
-                        Falar com Felipe no WhatsApp
+                        Fale comigo no WhatsApp
                     </a>
                 </div>
             </section>
+
+            <div className="container" style={{ textAlign: 'center', padding: '2rem 0', color: '#888', fontSize: '0.9rem' }}>
+                <p>Atendimento presencial em <strong>Itabuna, Ilhéus, Porto Seguro, Teixeira de Freitas</strong> e todo o Extremo Sul da Bahia.</p>
+                <p>Consultoria online disponível para todo o Brasil.</p>
+            </div>
 
             <Footer />
         </main>

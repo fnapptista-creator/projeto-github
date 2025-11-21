@@ -23,6 +23,28 @@
   border-right: 1px solid var(--border-color);
 }
 
+/* Background Image Layer for Zoom Effect */
+.splitSide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.consultoriaSide::before {
+  background-image: linear-gradient(rgba(8, 28, 21, 0.7), rgba(8, 28, 21, 0.9)), url(/consultoria-bg.png);
+}
+
+.representacaoSide::before {
+  background-image: linear-gradient(rgba(8, 28, 21, 0.7), rgba(8, 28, 21, 0.9)), url(/representacao-bg.png);
+}
+
 .splitSide:last-child {
   border-right: none;
 }
@@ -31,11 +53,37 @@
   flex: 1.3;
 }
 
+.splitSide:hover::before {
+  transform: scale(1.1);
+}
+
+/* Watermark Icon */
+.watermarkIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20rem;
+  opacity: 0;
+  color: rgba(200, 178, 115, 0.08);
+  /* Gold accent with very low opacity */
+  z-index: 1;
+  transition: opacity 0.6s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.splitSide:hover .watermarkIcon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 .splitContent {
   z-index: 2;
   text-align: center;
   max-width: 500px;
   animation: fadeIn 1s ease-out;
+  position: relative;
+  /* Ensure it stays above background */
 }
 
 .sideLabel {
@@ -99,11 +147,55 @@
   }
 }
 
+.mobileSection {
+  display: none;
+}
+
 /* Mobile Improvements - Melhor distinção visual */
 @media (max-width: 768px) {
   .splitSection {
+    display: none;
+  }
+
+  .mobileSection {
+    display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
     min-height: auto;
+    background-color: var(--background);
+  }
+
+  .mobileCard {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobileCardContent {
+    position: relative;
+    z-index: 2;
+  }
+
+  .mobileCardTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .mobileCardSubtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   }
 
   .splitSide {
@@ -165,16 +257,11 @@
 }
 
 @media (max-width: 480px) {
-  .splitSide {
-    min-height: 55vh;
-    padding: 2.5rem 1rem;
+  .mobileCard {
+    min-height: 300px;
   }
 
-  .splitTitle {
+  .mobileCardTitle {
     font-size: 1.8rem;
-  }
-
-  .splitSubtitle {
-    font-size: 1rem;
   }
 }
