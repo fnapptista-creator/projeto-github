@@ -1,0 +1,292 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.splitSection {
+  display: flex;
+  flex: 1;
+  min-height: 85vh;
+}
+
+.splitSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.5s ease;
+  border-right: 1px solid var(--border-color);
+}
+
+/* Background Image Layer for Zoom Effect */
+.splitSide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.consultoriaSide::before {
+  background-image: linear-gradient(rgba(var(--bg-rgb), 0.7), rgba(var(--bg-rgb), 0.9)), url(/consultoria-bg.png);
+}
+
+.representacaoSide::before {
+  background-image: linear-gradient(rgba(var(--bg-rgb), 0.7), rgba(var(--bg-rgb), 0.9)), url(/representacao-bg.png);
+}
+
+.splitSide:last-child {
+  border-right: none;
+}
+
+.splitSide:hover {
+  flex: 1.3;
+}
+
+.splitSide:hover::before {
+  transform: scale(1.1);
+}
+
+/* Watermark Icon */
+.watermarkIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20rem;
+  opacity: 0;
+  color: rgba(200, 178, 115, 0.08);
+  /* Gold accent with very low opacity */
+  z-index: 1;
+  transition: opacity 0.6s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.splitSide:hover .watermarkIcon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.splitContent {
+  z-index: 2;
+  text-align: center;
+  max-width: 500px;
+  animation: fadeIn 1s ease-out;
+  position: relative;
+  /* Ensure it stays above background */
+}
+
+.sideLabel {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.1);
+  font-weight: 600;
+}
+
+.splitTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.splitSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: var(--foreground);
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.bioSection {
+  padding: 6rem 0;
+  background-color: var(--background);
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.bioTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.bioText {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--foreground);
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.repBtn {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.repBtn:hover {
+  background-color: var(--accent);
+  color: var(--bg-dark-green);
+}
+
+/* Light mode override for the button */
+[data-theme='light'] .repBtn {
+  background-color: var(--bg-dark-green);
+  border-color: var(--bg-dark-green);
+  color: var(--accent);
+}
+
+[data-theme='light'] .repBtn:hover {
+  background-color: transparent;
+  color: var(--bg-dark-green);
+  border-color: var(--bg-dark-green);
+}
+
+.mobileSection {
+  display: none;
+}
+
+/* Mobile Improvements - Melhor distinção visual */
+@media (max-width: 768px) {
+  .splitSection {
+    display: none;
+  }
+
+  .mobileSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    min-height: auto;
+    background-color: var(--background);
+  }
+
+  .mobileCard {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobileCardContent {
+    position: relative;
+    z-index: 2;
+  }
+
+  .mobileCardTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .mobileCardSubtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  .splitSide {
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+    border-right: none;
+    border-bottom: 3px solid var(--border-color);
+  }
+
+  .splitSide:hover {
+    flex: 1;
+  }
+
+  .splitSide:last-child {
+    border-bottom: none;
+  }
+
+  /* Distinção visual clara entre as duas opções no mobile */
+  .consultoriaSide {
+    border-left: 4px solid var(--accent);
+  }
+
+  .representacaoSide {
+    border-left: 4px solid rgba(212, 175, 55, 0.5);
+  }
+
+  .sideLabel {
+    font-size: 0.7rem;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .splitContent {
+    max-width: 100%;
+  }
+
+  .splitTitle {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .splitSubtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .bioSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .bioTitle {
+    font-size: 2rem;
+  }
+
+  .bioText {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileCard {
+    min-height: 300px;
+  }
+
+  .mobileCardTitle {
+    font-size: 1.8rem;
+  }
+}

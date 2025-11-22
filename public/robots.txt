@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://felipenb.com.br/sitemap.xml
