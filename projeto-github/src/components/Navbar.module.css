@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgba(8, 28, 21, 0.95);
+    background-color: var(--navbar-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(200, 178, 115, 0.1);
@@ -92,8 +92,10 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ccc;
+    color: var(--foreground);
+    opacity: 0.8;
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .navLinks a:not(.btn-primary)::after {
@@ -109,6 +111,7 @@
 
 .navLinks a:not(.btn-primary):hover {
     color: var(--accent);
+    opacity: 1;
 }
 
 .navLinks a:not(.btn-primary):hover::after {
@@ -135,7 +138,7 @@
         height: 100vh;
         width: 70%;
         max-width: 300px;
-        background-color: rgba(8, 28, 21, 0.98);
+        background-color: var(--navbar-bg);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: center;

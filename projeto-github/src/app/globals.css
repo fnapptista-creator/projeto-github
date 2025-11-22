@@ -23,6 +23,33 @@
 
   --font-heading: var(--font-heading), sans-serif;
   --font-body: var(--font-body), sans-serif;
+
+  --navbar-bg: rgba(8, 28, 21, 0.95);
+  --bg-rgb: 8, 28, 21;
+}
+
+[data-theme='light'] {
+  --background: var(--bg-cream);
+  --foreground: var(--bg-dark-green);
+  --secondary-bg: #E8E4DA;
+  /* Slightly darker cream */
+  --card-bg: #FFFFFF;
+  /* White cards for contrast */
+  --border-color: #D4C085;
+  /* Gold border */
+
+  --navbar-bg: rgba(244, 241, 234, 0.95);
+  --bg-rgb: 244, 241, 234;
+
+  /* In light mode, maybe we want the primary button to be Dark Green? 
+     If so, we can redefine specific component variables or just leave accent as Gold.
+     Gold on Cream is low contrast. Let's try Dark Green for accent in light mode?
+     Or keep Gold but make it darker? 
+     Let's try keeping Gold first, but maybe swap the button text color if needed.
+     Actually, let's make the accent Dark Green in light mode for better contrast?
+     No, the user likes the Gold/Green combo.
+     Let's keep accent Gold, but maybe use a darker border for cards.
+  */
 }
 
 * {
@@ -149,7 +176,7 @@ button {
 }
 
 .modal-content {
-  background-color: var(--bg-dark-green);
+  background-color: var(--background);
   /* Match site background */
   padding: 0;
   /* Reset padding for internal layout */
@@ -174,7 +201,7 @@ button {
   right: 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   border: none;
-  color: var(--text-light);
+  color: var(--foreground);
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -188,7 +215,7 @@ button {
 }
 
 .close-modal:hover {
-  background: var(--gold-accent);
+  background: var(--accent);
   color: var(--bg-dark-green);
   transform: rotate(90deg);
 }
@@ -213,4 +240,37 @@ button {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--accent);
+  color: var(--bg-dark-green);
+  transform: rotate(15deg);
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

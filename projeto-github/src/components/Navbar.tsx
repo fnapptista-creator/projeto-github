@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ export default function Navbar() {
                     <li><Link href="/consultoria" onClick={() => setIsMenuOpen(false)}>Consultoria</Link></li>
                     <li><Link href="/representacao" onClick={() => setIsMenuOpen(false)}>Representação</Link></li>
                     <li><Link href="/contato" className="btn-primary" onClick={() => setIsMenuOpen(false)}>Contato</Link></li>
+                    <li><ThemeToggle /></li>
                 </ul>
             </div>
         </nav>

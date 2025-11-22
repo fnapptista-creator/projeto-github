@@ -38,11 +38,11 @@
 }
 
 .consultoriaSide::before {
-  background-image: linear-gradient(rgba(8, 28, 21, 0.7), rgba(8, 28, 21, 0.9)), url(/consultoria-bg.png);
+  background-image: linear-gradient(rgba(var(--bg-rgb), 0.7), rgba(var(--bg-rgb), 0.9)), url(/consultoria-bg.png);
 }
 
 .representacaoSide::before {
-  background-image: linear-gradient(rgba(8, 28, 21, 0.7), rgba(8, 28, 21, 0.9)), url(/representacao-bg.png);
+  background-image: linear-gradient(rgba(var(--bg-rgb), 0.7), rgba(var(--bg-rgb), 0.9)), url(/representacao-bg.png);
 }
 
 .splitSide:last-child {
@@ -110,7 +110,8 @@
 .splitSubtitle {
   font-size: 1.3rem;
   margin-bottom: 2.5rem;
-  color: #e0e0e0;
+  color: var(--foreground);
+  opacity: 0.9;
   font-weight: 300;
 }
 
@@ -132,7 +133,8 @@
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #ccc;
+  color: var(--foreground);
+  opacity: 0.8;
 }
 
 @keyframes fadeIn {
@@ -145,6 +147,29 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.repBtn {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.repBtn:hover {
+  background-color: var(--accent);
+  color: var(--bg-dark-green);
+}
+
+/* Light mode override for the button */
+[data-theme='light'] .repBtn {
+  background-color: var(--bg-dark-green);
+  border-color: var(--bg-dark-green);
+  color: var(--accent);
+}
+
+[data-theme='light'] .repBtn:hover {
+  background-color: transparent;
+  color: var(--bg-dark-green);
+  border-color: var(--bg-dark-green);
 }
 
 .mobileSection {

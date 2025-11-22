@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Modal from '@/components/Modal';
 import styles from './page.module.css';
+import ScrollReveal from '@/components/ScrollReveal';
 
 interface Brand {
     name: string;
@@ -302,41 +303,43 @@ export default function Representacao() {
                 </div>
             </section>
 
-            <section className={styles.catalogSection}>
-                <div className="container">
-                    <div className={styles.filterBar}>
-                        {categories.map(cat => (
-                            <button
-                                key={cat}
-                                className={`${styles.filterBtn} ${activeCategory === cat ? styles.active : ''}`}
-                                onClick={() => setActiveCategory(cat)}
-                            >
-                                {cat}
-                            </button>
-                        ))}
-                    </div>
+            <ScrollReveal>
+                <section className={styles.catalogSection}>
+                    <div className="container">
+                        <div className={styles.filterBar}>
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    className={`${styles.filterBtn} ${activeCategory === cat ? styles.active : ''}`}
+                                    onClick={() => setActiveCategory(cat)}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
 
-                    <div className={styles.brandGrid}>
-                        {filteredBrands.map((brand) => (
-                            <div
-                                key={brand.name}
-                                className={styles.brandCard}
-                                onClick={() => setSelectedBrand(brand)}
-                            >
-                                <div className={styles.logoContainer}>
-                                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img
-                                        src={brand.logoUrl}
-                                        alt={brand.name}
-                                        className={styles.brandLogo}
-                                    />
+                        <div className={styles.brandGrid}>
+                            {filteredBrands.map((brand) => (
+                                <div
+                                    key={brand.name}
+                                    className={styles.brandCard}
+                                    onClick={() => setSelectedBrand(brand)}
+                                >
+                                    <div className={styles.logoContainer}>
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={brand.logoUrl}
+                                            alt={brand.name}
+                                            className={styles.brandLogo}
+                                        />
+                                    </div>
+                                    <span className={styles.viewMore}>Ver Detalhes</span>
                                 </div>
-                                <span className={styles.viewMore}>Ver Detalhes</span>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
             <Modal isOpen={!!selectedBrand} onClose={() => setSelectedBrand(null)}>
                 {selectedBrand && (
@@ -381,20 +384,22 @@ export default function Representacao() {
                 )}
             </Modal>
 
-            <section className={styles.ctaSection}>
-                <div className="container">
-                    <h2 style={{ marginBottom: '2rem' }}>Não encontrou o que procura?</h2>
-                    <p style={{ marginBottom: '2rem', color: '#ccc' }}>Tenho acesso a um portfólio ainda maior de parceiros.</p>
-                    <a
-                        href={`${whatsappLink}?text=Olá Felipe, gostaria de saber sobre outras marcas que você representa.`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-outline"
-                    >
-                        Falar com Representante
-                    </a>
-                </div>
-            </section>
+            <ScrollReveal>
+                <section className={styles.ctaSection}>
+                    <div className="container">
+                        <h2 style={{ marginBottom: '2rem' }}>Não encontrou o que procura?</h2>
+                        <p style={{ marginBottom: '2rem', color: '#ccc' }}>Tenho acesso a um portfólio ainda maior de parceiros.</p>
+                        <a
+                            href={`${whatsappLink}?text=Olá Felipe, gostaria de saber sobre outras marcas que você representa.`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-outline"
+                        >
+                            Falar com Representante
+                        </a>
+                    </div>
+                </section>
+            </ScrollReveal>
 
             <div className="container" style={{ textAlign: 'center', padding: '2rem 0', color: '#888', fontSize: '0.8rem', lineHeight: '1.6' }}>
                 <p><strong>Marcas Representadas na Bahia:</strong> Lyor, Wolff, Tramontina, Porto Brasil, Schmidt, Devitro, Grillo, Ingá Import, Soprano, Ou, Arthi, Tritec, Rio Master, Nutriplan, Mistral, Mel Toys, Tropical Aromas, Wellmix, Hiper Têxtil, Belfix, Max Alumínios, Dolce Home, Ke Home, Vitazza, AJ Import, Secalux, Casa Ambiente, Grilazer, Tutipan, Mek, Sapico Toys, Class Home, Santana Import, EDDI Casa, Dayhome, TT Brasil.</p>

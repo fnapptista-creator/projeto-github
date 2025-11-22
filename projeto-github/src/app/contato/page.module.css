@@ -19,7 +19,8 @@
 }
 
 .info p {
-    color: #ccc;
+    color: var(--foreground);
+    opacity: 0.8;
     margin-bottom: 2rem;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -58,7 +59,8 @@
 .label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #ccc;
+    color: var(--foreground);
+    opacity: 0.7;
     font-size: 0.9rem;
 }
 

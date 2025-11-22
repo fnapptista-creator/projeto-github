@@ -16,6 +16,8 @@
     color: white;
     padding: 0 20px;
     position: relative;
+    /* Force dark background for this specific section as requested */
+    background-color: #081C15;
 }
 
 .heroContent {
@@ -80,7 +82,8 @@
 .sectionSubtitle {
     text-align: center;
     font-size: 1.2rem;
-    color: #999;
+    color: var(--foreground);
+    opacity: 0.8;
     margin-bottom: 4rem;
     max-width: 700px;
     margin-left: auto;
@@ -119,7 +122,8 @@
 }
 
 .painText {
-    color: #aaa;
+    color: var(--foreground);
+    opacity: 0.7;
     line-height: 1.7;
 }
 
@@ -145,7 +149,8 @@
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    color: #aaa;
+    color: var(--foreground);
+    opacity: 0.7;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
@@ -154,6 +159,7 @@
 .tabButton:hover {
     border-color: var(--accent);
     color: var(--foreground);
+    opacity: 1;
     transform: translateY(-2px);
 }
 
@@ -161,6 +167,7 @@
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
     border-color: var(--accent);
     color: var(--accent);
+    opacity: 1;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
@@ -193,7 +200,8 @@
 
 .tabDescription {
     font-size: 1.2rem;
-    color: #999;
+    color: var(--foreground);
+    opacity: 0.8;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -253,7 +261,8 @@
 }
 
 .serviceDesc {
-    color: #aaa;
+    color: var(--foreground);
+    opacity: 0.7;
     line-height: 1.6;
     font-size: 0.95rem;
 }
@@ -274,7 +283,8 @@
 
 .authorityText p {
     margin-bottom: 1.5rem;
-    color: #ccc;
+    color: var(--foreground);
+    opacity: 0.8;
     font-size: 1.1rem;
     line-height: 1.8;
 }
@@ -321,7 +331,8 @@
 }
 
 .statLabel {
-    color: #888;
+    color: var(--foreground);
+    opacity: 0.6;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
@@ -368,7 +379,8 @@
 }
 
 .targetCard p {
-    color: #aaa;
+    color: var(--foreground);
+    opacity: 0.7;
     line-height: 1.7;
     font-size: 1.05rem;
 }
@@ -405,7 +417,8 @@
 }
 
 .faqItem p {
-    color: #aaa;
+    color: var(--foreground);
+    opacity: 0.7;
     line-height: 1.7;
 }
 

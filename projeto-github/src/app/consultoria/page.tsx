@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
+import ScrollReveal from '@/components/ScrollReveal';
 
 type ServiceTab = 'pre-abertura' | 'gastronomia' | 'nutricao' | 'salao-bar' | 'precificacao';
 
@@ -104,168 +105,180 @@ export default function Consultoria() {
                 </div>
             </section>
 
-            <section className={styles.painSection}>
-                <div className={`container ${styles.container}`}>
-                    <h2 className={styles.sectionTitle}>O cenário comum (e perigoso)</h2>
-                    <div className={styles.painGrid}>
-                        <div className={styles.painCard}>
-                            <div className={styles.painIcon}>📉</div>
-                            <h3 className={styles.painTitle}>Lucro Invisível</h3>
-                            <p className={styles.painText}>
-                                Você vende bem, o salão está cheio, mas no final do mês a conta não fecha. Onde está o dinheiro? Provavelmente em fichas técnicas erradas e desperdícios.
-                            </p>
-                        </div>
-                        <div className={styles.painCard}>
-                            <div className={styles.painIcon}>🔥</div>
-                            <h3 className={styles.painTitle}>Apagando Incêndios</h3>
-                            <p className={styles.painText}>
-                                Sua operação depende 100% de você. Se você não está lá, as coisas não andam. Você se tornou refém do seu próprio negócio.
-                            </p>
-                        </div>
-                        <div className={styles.painCard}>
-                            <div className={styles.painIcon}>👥</div>
-                            <h3 className={styles.painTitle}>Equipe sem Padrão</h3>
-                            <p className={styles.painText}>
-                                Rotatividade alta, atendimento inconstante e cozinha desorganizada. Falta cultura e processos definidos.
-                            </p>
+            <ScrollReveal>
+                <section className={styles.painSection}>
+                    <div className={`container ${styles.container}`}>
+                        <h2 className={styles.sectionTitle}>O cenário comum (e perigoso)</h2>
+                        <div className={styles.painGrid}>
+                            <div className={styles.painCard}>
+                                <div className={styles.painIcon}>📉</div>
+                                <h3 className={styles.painTitle}>Lucro Invisível</h3>
+                                <p className={styles.painText}>
+                                    Você vende bem, o salão está cheio, mas no final do mês a conta não fecha. Onde está o dinheiro? Provavelmente em fichas técnicas erradas e desperdícios.
+                                </p>
+                            </div>
+                            <div className={styles.painCard}>
+                                <div className={styles.painIcon}>🔥</div>
+                                <h3 className={styles.painTitle}>Apagando Incêndios</h3>
+                                <p className={styles.painText}>
+                                    Sua operação depende 100% de você. Se você não está lá, as coisas não andam. Você se tornou refém do seu próprio negócio.
+                                </p>
+                            </div>
+                            <div className={styles.painCard}>
+                                <div className={styles.painIcon}>👥</div>
+                                <h3 className={styles.painTitle}>Equipe sem Padrão</h3>
+                                <p className={styles.painText}>
+                                    Rotatividade alta, atendimento inconstante e cozinha desorganizada. Falta cultura e processos definidos.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section id="servicos" className={styles.servicesSection}>
-                <div className="container">
-                    <h2 className={styles.sectionTitle}>Serviços de Consultoria Gastronômica</h2>
-                    <p className={styles.sectionSubtitle}>
-                        Soluções completas para cada fase do seu negócio gastronômico
-                    </p>
+            <ScrollReveal>
+                <section id="servicos" className={styles.servicesSection}>
+                    <div className="container">
+                        <h2 className={styles.sectionTitle}>Serviços de Consultoria Gastronômica</h2>
+                        <p className={styles.sectionSubtitle}>
+                            Soluções completas para cada fase do seu negócio gastronômico
+                        </p>
 
-                    <div className={styles.serviceTabs}>
-                        {(Object.keys(services) as ServiceTab[]).map((key) => (
-                            <button
-                                key={key}
-                                className={`${styles.tabButton} ${activeTab === key ? styles.active : ''}`}
-                                onClick={() => setActiveTab(key)}
-                            >
-                                <span className={styles.tabIcon}>{services[key].icon}</span>
-                                <span className={styles.tabLabel}>{services[key].title}</span>
-                            </button>
-                        ))}
-                    </div>
-
-                    <div className={styles.tabContent}>
-                        <div className={styles.tabHeader}>
-                            <h3 className={styles.tabTitle}>{services[activeTab].title}</h3>
-                            <p className={styles.tabDescription}>{services[activeTab].description}</p>
-                        </div>
-                        <div className={styles.serviceGrid}>
-                            {services[activeTab].items.map((item, index) => (
-                                <div key={index} className={styles.serviceCard}>
-                                    <div className={styles.serviceNumber}>{String(index + 1).padStart(2, '0')}</div>
-                                    <h4 className={styles.serviceTitle}>{item.title}</h4>
-                                    <p className={styles.serviceDesc}>{item.desc}</p>
-                                </div>
+                        <div className={styles.serviceTabs}>
+                            {(Object.keys(services) as ServiceTab[]).map((key) => (
+                                <button
+                                    key={key}
+                                    className={`${styles.tabButton} ${activeTab === key ? styles.active : ''}`}
+                                    onClick={() => setActiveTab(key)}
+                                >
+                                    <span className={styles.tabIcon}>{services[key].icon}</span>
+                                    <span className={styles.tabLabel}>{services[key].title}</span>
+                                </button>
                             ))}
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            <section className={styles.authoritySection}>
-                <div className="container">
-                    <div className={styles.authorityContent}>
-                        <div className={styles.authorityText}>
-                            <h2 className={styles.sectionTitle} style={{ textAlign: 'left' }}>Por que posso ajudar?</h2>
-                            <p>
-                                Não sou apenas um consultor de palco. Tenho <strong>17 anos de experiência em vendas</strong> e <strong>9 anos de formação gastronômica</strong>.
-                            </p>
-                            <p>
-                                Já estive do outro lado do balcão e sei exatamente as dores que você sente. Minha abordagem une a técnica da alta gastronomia com a agressividade comercial necessária para fazer um negócio lucrar.
-                            </p>
-                            <p>
-                                Meu objetivo não é te entregar uma planilha bonita, é <strong>implementar processos que funcionam na vida real</strong>, com a equipe que você tem hoje.
-                            </p>
-                            <p className={styles.highlight}>
-                                A consultoria gastronômica é essencial para quem busca minimizar erros e encurtar o caminho para um restaurante de sucesso.
-                            </p>
-                        </div>
-                        <div className={styles.authorityStats}>
-                            <div className={styles.statItem}>
-                                <span className={styles.statNumber}>17+</span>
-                                <span className={styles.statLabel}>Anos de Vendas</span>
+                        <div className={styles.tabContent}>
+                            <div className={styles.tabHeader}>
+                                <h3 className={styles.tabTitle}>{services[activeTab].title}</h3>
+                                <p className={styles.tabDescription}>{services[activeTab].description}</p>
                             </div>
-                            <div className={styles.statItem}>
-                                <span className={styles.statNumber}>9+</span>
-                                <span className={styles.statLabel}>Anos de Gastronomia</span>
-                            </div>
-                            <div className={styles.statItem}>
-                                <span className={styles.statNumber}>100%</span>
-                                <span className={styles.statLabel}>Foco em Resultado</span>
+                            <div className={styles.serviceGrid}>
+                                {services[activeTab].items.map((item, index) => (
+                                    <div key={index} className={styles.serviceCard}>
+                                        <div className={styles.serviceNumber}>{String(index + 1).padStart(2, '0')}</div>
+                                        <h4 className={styles.serviceTitle}>{item.title}</h4>
+                                        <p className={styles.serviceDesc}>{item.desc}</p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className={styles.targetSection}>
-                <div className="container">
-                    <h2 className={styles.sectionTitle}>Para quem é a consultoria?</h2>
-                    <div className={styles.targetGrid}>
-                        <div className={styles.targetCard}>
-                            <div className={styles.targetIcon}>🚀</div>
-                            <h3>Novos Restaurantes</h3>
-                            <p>Orientação completa para abrir um restaurante bem-sucedido, evitando erros comuns e estabelecendo uma base sólida desde o início.</p>
-                        </div>
-                        <div className={styles.targetCard}>
-                            <div className={styles.targetIcon}>📈</div>
-                            <h3>Restaurantes em Operação</h3>
-                            <p>Ajustes personalizados para otimizar o desempenho e explorar o potencial máximo do negócio que já está funcionando.</p>
+            <ScrollReveal>
+                <section className={styles.authoritySection}>
+                    <div className="container">
+                        <div className={styles.authorityContent}>
+                            <div className={styles.authorityText}>
+                                <h2 className={styles.sectionTitle} style={{ textAlign: 'left' }}>Por que posso ajudar?</h2>
+                                <p>
+                                    Não sou apenas um consultor de palco. Tenho <strong>17 anos de experiência em vendas</strong> e <strong>9 anos de formação gastronômica</strong>.
+                                </p>
+                                <p>
+                                    Já estive do outro lado do balcão e sei exatamente as dores que você sente. Minha abordagem une a técnica da alta gastronomia com a agressividade comercial necessária para fazer um negócio lucrar.
+                                </p>
+                                <p>
+                                    Meu objetivo não é te entregar uma planilha bonita, é <strong>implementar processos que funcionam na vida real</strong>, com a equipe que você tem hoje.
+                                </p>
+                                <p className={styles.highlight}>
+                                    A consultoria gastronômica é essencial para quem busca minimizar erros e encurtar o caminho para um restaurante de sucesso.
+                                </p>
+                            </div>
+                            <div className={styles.authorityStats}>
+                                <div className={styles.statItem}>
+                                    <span className={styles.statNumber}>17+</span>
+                                    <span className={styles.statLabel}>Anos de Vendas</span>
+                                </div>
+                                <div className={styles.statItem}>
+                                    <span className={styles.statNumber}>9+</span>
+                                    <span className={styles.statLabel}>Anos de Gastronomia</span>
+                                </div>
+                                <div className={styles.statItem}>
+                                    <span className={styles.statNumber}>100%</span>
+                                    <span className={styles.statLabel}>Foco em Resultado</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className={styles.faqSection}>
-                <div className="container">
-                    <h2 className={styles.sectionTitle}>Perguntas Frequentes</h2>
-                    <div className={styles.faqGrid}>
-                        <div className={styles.faqItem}>
-                            <h3>Serve para pequenos negócios?</h3>
-                            <p>Sim. A consultoria é adaptada para a realidade do seu faturamento. O objetivo é justamente fazer você crescer de forma organizada.</p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <h3>Quanto tempo dura?</h3>
-                            <p>Depende do escopo, mas projetos de reestruturação completa costumam levar de 3 a 6 meses. Também ofereço diagnósticos pontuais.</p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <h3>Você monta o cardápio?</h3>
-                            <p>Sim, trabalhamos a engenharia do cardápio, que envolve desde a seleção dos pratos até a precificação estratégica e design para venda.</p>
-                        </div>
-                        <div className={styles.faqItem}>
-                            <h3>Preciso fechar o restaurante?</h3>
-                            <p>Não. A maior parte das implementações acontece com a operação rodando, ajustando os processos em tempo real.</p>
+            <ScrollReveal>
+                <section className={styles.targetSection}>
+                    <div className="container">
+                        <h2 className={styles.sectionTitle}>Para quem é a consultoria?</h2>
+                        <div className={styles.targetGrid}>
+                            <div className={styles.targetCard}>
+                                <div className={styles.targetIcon}>🚀</div>
+                                <h3>Novos Restaurantes</h3>
+                                <p>Orientação completa para abrir um restaurante bem-sucedido, evitando erros comuns e estabelecendo uma base sólida desde o início.</p>
+                            </div>
+                            <div className={styles.targetCard}>
+                                <div className={styles.targetIcon}>📈</div>
+                                <h3>Restaurantes em Operação</h3>
+                                <p>Ajustes personalizados para otimizar o desempenho e explorar o potencial máximo do negócio que já está funcionando.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </ScrollReveal>
 
-            <section className={styles.ctaSection}>
-                <div className="container">
-                    <h2 className={styles.sectionTitle}>Pare de perder dinheiro hoje.</h2>
-                    <p style={{ marginBottom: '2rem', color: '#ccc', fontSize: '1.1rem' }}>
-                        Agende uma conversa rápida de 15 minutos para eu entender seu momento.
-                    </p>
-                    <a
-                        href={`${whatsappLink}?text=Olá Felipe, gostaria de conversar sobre a consultoria gastronômica.`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-primary"
-                        style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}
-                    >
-                        Fale comigo no WhatsApp
-                    </a>
-                </div>
-            </section>
+            <ScrollReveal>
+                <section className={styles.faqSection}>
+                    <div className="container">
+                        <h2 className={styles.sectionTitle}>Perguntas Frequentes</h2>
+                        <div className={styles.faqGrid}>
+                            <div className={styles.faqItem}>
+                                <h3>Serve para pequenos negócios?</h3>
+                                <p>Sim. A consultoria é adaptada para a realidade do seu faturamento. O objetivo é justamente fazer você crescer de forma organizada.</p>
+                            </div>
+                            <div className={styles.faqItem}>
+                                <h3>Quanto tempo dura?</h3>
+                                <p>Depende do escopo, mas projetos de reestruturação completa costumam levar de 3 a 6 meses. Também ofereço diagnósticos pontuais.</p>
+                            </div>
+                            <div className={styles.faqItem}>
+                                <h3>Você monta o cardápio?</h3>
+                                <p>Sim, trabalhamos a engenharia do cardápio, que envolve desde a seleção dos pratos até a precificação estratégica e design para venda.</p>
+                            </div>
+                            <div className={styles.faqItem}>
+                                <h3>Preciso fechar o restaurante?</h3>
+                                <p>Não. A maior parte das implementações acontece com a operação rodando, ajustando os processos em tempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </ScrollReveal>
+
+            <ScrollReveal>
+                <section className={styles.ctaSection}>
+                    <div className="container">
+                        <h2 className={styles.sectionTitle}>Pare de perder dinheiro hoje.</h2>
+                        <p style={{ marginBottom: '2rem', color: '#ccc', fontSize: '1.1rem' }}>
+                            Agende uma conversa rápida de 15 minutos para eu entender seu momento.
+                        </p>
+                        <a
+                            href={`${whatsappLink}?text=Olá Felipe, gostaria de conversar sobre a consultoria gastronômica.`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-primary"
+                            style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}
+                        >
+                            Fale comigo no WhatsApp
+                        </a>
+                    </div>
+                </section>
+            </ScrollReveal>
 
             <div className="container" style={{ textAlign: 'center', padding: '2rem 0', color: '#888', fontSize: '0.9rem' }}>
                 <p>Atendimento presencial em <strong>Itabuna, Ilhéus, Porto Seguro, Teixeira de Freitas</strong> e todo o Extremo Sul da Bahia.</p>

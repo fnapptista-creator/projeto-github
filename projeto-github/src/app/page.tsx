@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import styles from './page.module.css';
+import ScrollReveal from '@/components/ScrollReveal';
 
 import { Metadata } from 'next';
 
@@ -42,7 +43,7 @@ export default function Home() {
           <div className={styles.splitContent}>
             <h2 className={styles.splitTitle}>Representação Comercial</h2>
             <p className={styles.splitSubtitle}>Sua Loja precisa de Produtos?</p>
-            <Link href="/representacao" className="btn-outline">
+            <Link href="/representacao" className={`btn-outline ${styles.repBtn}`}>
               Ver Catálogo
             </Link>
           </div>
@@ -72,17 +73,19 @@ export default function Home() {
         </div>
       </div>
 
-      <section className={styles.bioSection}>
-        <div className="container">
-          <h2 className={styles.bioTitle}>Felipe Nascimento</h2>
-          <p style={{ color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1.5rem', fontWeight: '600' }}>
-            Consultor Gastronômico & Representante Comercial
-          </p>
-          <p className={styles.bioText}>
-            Conectando oportunidades, impulsionando resultados. Com quase 17 anos de experiência em vendas e 9 anos de formação na área gastronômica, meu principal objetivo é ajudar negócios a alcançar o verdadeiro potencial de suas equipes e operações.
-          </p>
-        </div>
-      </section>
+      <ScrollReveal>
+        <section className={styles.bioSection}>
+          <div className="container">
+            <h2 className={styles.bioTitle}>Felipe Nascimento</h2>
+            <p style={{ color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1.5rem', fontWeight: '600' }}>
+              Consultor Gastronômico & Representante Comercial
+            </p>
+            <p className={styles.bioText}>
+              Conectando oportunidades, impulsionando resultados. Com quase 17 anos de experiência em vendas e 9 anos de formação na área gastronômica, meu principal objetivo é ajudar negócios a alcançar o verdadeiro potencial de suas equipes e operações.
+            </p>
+          </div>
+        </section>
+      </ScrollReveal>
 
       <Footer />
     </main>
