@@ -149,9 +149,7 @@
   }
 }
 
-.consultBtn {
-  /* Default Primary Style is handled by btn-primary */
-}
+
 
 /* Light mode override for Consultoria button */
 [data-theme='light'] .consultBtn {
