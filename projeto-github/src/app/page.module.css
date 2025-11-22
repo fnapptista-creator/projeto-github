@@ -149,6 +149,20 @@
   }
 }
 
+
+
+/* Light mode override for Consultoria button */
+[data-theme='light'] .consultBtn {
+  background-color: var(--bg-dark-green);
+  color: var(--accent);
+}
+
+[data-theme='light'] .consultBtn:hover {
+  background-color: var(--secondary-bg);
+  color: var(--bg-dark-green);
+  box-shadow: 0 4px 20px rgba(8, 28, 21, 0.2);
+}
+
 .repBtn {
   border-color: var(--accent);
   color: var(--accent);

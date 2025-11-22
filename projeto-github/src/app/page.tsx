@@ -27,7 +27,7 @@ export default function Home() {
           <div className={styles.splitContent}>
             <h2 className={styles.splitTitle}>Consultoria Gastronômica</h2>
             <p className={styles.splitSubtitle}>Seu Restaurante precisa de Lucro?</p>
-            <Link href="/consultoria" className="btn-primary">
+            <Link href="/consultoria" className={`btn-primary ${styles.consultBtn}`}>
               Transformar meu Negócio
             </Link>
           </div>
