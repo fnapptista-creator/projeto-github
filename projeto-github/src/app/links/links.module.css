@@ -1,0 +1,229 @@
+.pageContainer {
+    min-height: 100vh;
+    background-color: #F4F1EA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    font-family: var(--font-body);
+    color: #081C15;
+    background-image: radial-gradient(circle at 50% 0%, rgba(200, 178, 115, 0.15) 0%, transparent 50%);
+}
+
+.contentWrapper {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.logoContainer {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #C8B273;
+    box-shadow: 0 15px 35px rgba(8, 28, 21, 0.2);
+    background-color: #081C15;
+    /* Green background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.logoContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(8, 28, 21, 0.25);
+}
+
+.logo {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+.nameWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.verifiedIcon {
+    width: 24px;
+    height: 24px;
+    color: #C8B273;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #081C15;
+    margin: 0;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: #1F4032;
+    opacity: 0.9;
+    text-align: center;
+    font-weight: 600;
+    max-width: 95%;
+}
+
+.bio {
+    font-size: 0.95rem;
+    color: #1F4032;
+    opacity: 0.8;
+    max-width: 400px;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+.linksGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.linkCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #081C15;
+    color: #F4F1EA;
+    text-decoration: none;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(200, 178, 115, 0.1);
+    box-shadow: 0 4px 10px rgba(8, 28, 21, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.linkCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(8, 28, 21, 0.25);
+    border-color: #C8B273;
+    background-color: #0D261D;
+}
+
+.linkContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.linkTitle {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+    color: #F4F1EA;
+}
+
+.linkDescription {
+    font-size: 0.9rem;
+    color: #C8B273;
+    /* Gold text for description */
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.icon {
+    color: #C8B273;
+    font-size: 1.4rem;
+    min-width: 24px;
+    transition: transform 0.3s ease;
+}
+
+.linkCard:hover .icon {
+    transform: translateX(5px);
+}
+
+/* Catalog Button Special Styles */
+.catalogCard {
+    background-color: #C8B273;
+    color: #081C15;
+    border-color: #C8B273;
+}
+
+.catalogCard:hover {
+    background-color: #D4C085;
+    border-color: #081C15;
+    box-shadow: 0 15px 30px rgba(200, 178, 115, 0.3);
+}
+
+.catalogCard .linkTitle {
+    color: #081C15;
+}
+
+.catalogCard .linkDescription {
+    color: #1F4032;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.catalogCard .icon {
+    color: #081C15;
+}
+
+/* LinkedIn Button Special Styles */
+.linkedinCard {
+    background-color: #0077B5;
+    /* LinkedIn Blue */
+    border-color: #0077B5;
+}
+
+.linkedinCard:hover {
+    background-color: #006396;
+    border-color: #006396;
+    box-shadow: 0 15px 30px rgba(0, 119, 181, 0.25);
+}
+
+.linkedinCard .linkDescription {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.linkedinCard .icon {
+    color: white;
+}
+
+.footer {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #1F4032;
+    opacity: 0.6;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
