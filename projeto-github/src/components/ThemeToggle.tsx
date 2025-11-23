@@ -1,9 +1,29 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTheme } from "./ThemeProvider";
 
 export default function ThemeToggle() {
     const { theme, toggleTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return (
+            <div
+                style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%',
+                    border: '1px solid var(--accent)',
+                    background: 'transparent'
+                }}
+            />
+        );
+    }
 
     return (
         <button
@@ -11,6 +31,19 @@ export default function ThemeToggle() {
             className="theme-toggle-btn"
             aria-label="Alternar Tema"
             title={theme === "dark" ? "Mudar para Modo Claro" : "Mudar para Modo Escuro"}
+            style={{
+                background: 'transparent',
+                border: '1px solid var(--accent)',
+                color: 'var(--accent)',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+            }}
         >
             {theme === "dark" ? (
                 // Sun icon for switching to light mode

@@ -95,7 +95,6 @@
     color: var(--foreground);
     opacity: 0.8;
     position: relative;
-    transition: all 0.3s ease;
 }
 
 .navLinks a:not(.btn-primary)::after {
@@ -118,9 +117,50 @@
     width: 100%;
 }
 
+.portalLink {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(200, 178, 115, 0.3);
+    padding: 0.5rem 1rem !important;
+    /* Override default padding if needed */
+    border-radius: 8px;
+    background-color: rgba(200, 178, 115, 0.05);
+    transition: all 0.3s ease;
+}
+
+.portalLink:hover {
+    background-color: rgba(200, 178, 115, 0.15);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.mobileControls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobileThemeToggle {
+    display: none;
+}
+
+.desktopThemeToggle {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+    }
+
+    .mobileThemeToggle {
+        display: block;
+    }
+
+    .desktopThemeToggle {
+        display: none;
     }
 
     .logoImage {
@@ -158,15 +198,15 @@
         text-align: center;
     }
 
-    .navLinks a {
-        font-size: 1rem;
-        display: block;
-        padding: 1rem;
-    }
-
     .navLinks a.btn-primary {
         width: 100%;
         text-align: center;
+    }
+
+    .portalLink {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
     }
 }
 
