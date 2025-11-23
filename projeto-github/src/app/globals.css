@@ -23,6 +23,23 @@
 
   --font-heading: var(--font-heading), sans-serif;
   --font-body: var(--font-body), sans-serif;
+
+  --navbar-bg: rgba(8, 28, 21, 0.95);
+  --bg-rgb: 8, 28, 21;
+}
+
+[data-theme='light'] {
+  --background: var(--bg-cream);
+  --foreground: var(--bg-dark-green);
+  --secondary-bg: #E8E4DA;
+  /* Slightly darker cream */
+  --card-bg: #FFFFFF;
+  /* White cards for contrast */
+  --border-color: #D4C085;
+  /* Gold border */
+
+  --navbar-bg: rgba(244, 241, 234, 0.95);
+  --bg-rgb: 244, 241, 234;
 }
 
 * {

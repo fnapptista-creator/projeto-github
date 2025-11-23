@@ -36,6 +36,46 @@
   text-align: center;
   max-width: 500px;
   animation: fadeIn 1s ease-out;
+  position: relative;
+  width: 100%;
+  /* Ensure content takes width for centering */
+}
+
+/* Dynamic Content States */
+.contentNormal,
+.contentExpanded {
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+}
+
+.contentNormal {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+}
+
+.contentExpanded {
+  opacity: 0;
+  transform: translateY(20px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
+  width: 100%;
+  pointer-events: none;
+  /* Prevent interaction when hidden */
+}
+
+.splitSide:hover .contentNormal {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.splitSide:hover .contentExpanded {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+  pointer-events: auto;
 }
 
 .sideLabel {
@@ -54,16 +94,34 @@
 
 .splitTitle {
   font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  color: #EAEAEA;
+  /* Fixed light color for contrast against dark overlay */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  /* P2: Visual Hierarchy */
+  text-transform: uppercase;
+  /* P2: Visual Hierarchy */
+  letter-spacing: -1px;
 }
 
 .splitSubtitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 2.5rem;
-  color: #e0e0e0;
-  font-weight: 300;
+  color: #EAEAEA;
+  /* Fixed light color */
+  font-weight: 400;
+  /* P2: Visual Hierarchy */
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.elegantList {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
 .bioSection {
@@ -84,7 +142,8 @@
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #ccc;
+  color: var(--foreground);
+  opacity: 0.8;
 }
 
 @keyframes fadeIn {
@@ -107,9 +166,19 @@
   }
 
   .splitSide {
-    min-height: 60vh;
-    padding: 3rem 1.5rem;
+    min-height: auto;
+    /* Allow height to grow with content */
+    padding: 4rem 1.5rem;
     border-right: none;
+    border-bottom: 3px solid var(--border-color);
+    overflow: visible;
+    /* P0: Fix overflow clipping */
+  }
+
+  /* P1: Mobile Layout Fix - Add spacing to first block */
+  .splitSide:first-child {
+    margin-bottom: 0;
+    /* Removed margin to keep them connected but distinct via border */
     border-bottom: 3px solid var(--border-color);
   }
 
@@ -141,8 +210,8 @@
   }
 
   .splitTitle {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   .splitSubtitle {
@@ -162,16 +231,34 @@
     font-size: 1rem;
     padding: 0 1rem;
   }
+
+  /* P0: Mobile Interaction Fix 
+     Ensure the expanded content is visible and correctly positioned.
+     We disable the hover effect and show the "Expanded" (Aggressive) copy by default.
+  */
+  .contentExpanded {
+    position: relative;
+    opacity: 1;
+    transform: none;
+    top: auto;
+    left: auto;
+    pointer-events: auto;
+    display: block;
+    margin-top: 0;
+  }
+
+  .contentNormal {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
   .splitSide {
-    min-height: 55vh;
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .splitTitle {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   .splitSubtitle {
