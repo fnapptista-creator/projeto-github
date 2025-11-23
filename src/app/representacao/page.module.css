@@ -1,0 +1,340 @@
+.hero {
+    min-height: 60vh;
+    padding: 8rem 0 4rem;
+    background: linear-gradient(rgba(8, 28, 21, 0.85), rgba(8, 28, 21, 0.95)), url(/representacao-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.heroTitle {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.catalogSection {
+    padding: 4rem 0;
+}
+
+.filterBar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    background: transparent;
+    border: 1px solid #333;
+    color: #888;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.brandGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.brandCard {
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brandCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logoContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brandLogo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.brandCard:hover .brandLogo {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.viewMore {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 28, 21, 0.9);
+    color: var(--accent);
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.brandCard:hover .viewMore {
+    transform: translateY(0);
+}
+
+/* Modal Styles - Premium Redesign */
+.modalInner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg-dark-green);
+    color: var(--text-light);
+}
+
+.modalHeader {
+    background: linear-gradient(to bottom, rgba(8, 28, 21, 1), rgba(13, 38, 29, 1));
+    padding: 2.5rem 2.5rem 1.5rem;
+    border-bottom: 1px solid rgba(200, 178, 115, 0.2);
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+}
+
+.modalHeader::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+}
+
+.modalLogoWrapper {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--gold-accent);
+}
+
+.modalLogo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modalHeaderText {
+    flex: 1;
+}
+
+.modalTitle {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--gold-accent);
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modalCategory {
+    display: inline-block;
+    background: rgba(200, 178, 115, 0.15);
+    color: var(--gold-accent);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    border: 1px solid rgba(200, 178, 115, 0.3);
+}
+
+.modalBody {
+    padding: 2.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.modalDescription {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(200, 178, 115, 0.1);
+}
+
+.modalSection {
+    margin-bottom: 2rem;
+}
+
+.modalSection h3 {
+    font-family: var(--font-heading);
+    color: var(--gold-accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    border-left: 4px solid var(--gold-accent);
+    padding-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.featureList li {
+    position: relative;
+    padding-left: 2rem;
+    color: #d0d0d0;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    background: rgba(200, 178, 115, 0.05);
+    border-radius: 4px;
+    border-left: 3px solid var(--gold-accent);
+}
+
+.featureList li::before {
+    content: "✓";
+    color: var(--gold-accent);
+    position: absolute;
+    left: 0.75rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.modalFooter {
+    margin-top: auto;
+    padding: 2rem 2.5rem;
+    border-top: 1px solid rgba(200, 178, 115, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: linear-gradient(to top, rgba(8, 28, 21, 1), rgba(13, 38, 29, 1));
+}
+
+.infoBadge {
+    background: rgba(200, 178, 115, 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    text-align: center;
+    border: 1px solid rgba(200, 178, 115, 0.3);
+}
+
+.infoBadge strong {
+    color: var(--gold-accent);
+    font-weight: 600;
+}
+
+.ctaSection {
+    padding: 8rem 0;
+    text-align: center;
+    background-color: var(--secondary-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .brandGrid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .modalHeader {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modalLogoWrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .modalTitle {
+        font-size: 2rem;
+    }
+
+    .featureList {
+        grid-template-columns: 1fr;
+    }
+}

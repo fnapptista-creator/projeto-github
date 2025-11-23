@@ -1,0 +1,565 @@
+.container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+}
+
+.heroContent {
+    max-width: 1000px;
+    animation: fadeInUp 1s ease-out;
+    z-index: 2;
+}
+
+.heroTag {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--accent);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.heroSubtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+    font-weight: 300;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.painSection {
+    background-color: var(--secondary-bg);
+    padding: 5rem 0;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
+    font-weight: 700;
+}
+
+.sectionSubtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--foreground);
+    opacity: 0.7;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.painGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.painCard {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.painCard:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.painIcon {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.painTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
+    text-align: center;
+}
+
+.painText {
+    color: var(--foreground);
+    opacity: 0.8;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Authority Section */
+.authoritySection {
+    padding: 5rem 0;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.authorityContent {
+    display: flex;
+    justify-content: center;
+}
+
+.authorityTextBlock {
+    max-width: 900px;
+    width: 100%;
+}
+
+.authorityLeadText {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--foreground);
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+.authorityGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.authorityFeature {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.authorityFeature:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.authorityIcon {
+    color: var(--accent);
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+}
+
+.authorityFeatureContent h3 {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.authorityFeatureContent p {
+    color: var(--foreground);
+    opacity: 0.85;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.authorityFeatureContent strong {
+    color: var(--foreground);
+    font-weight: 700;
+}
+
+/* Services Section with Tabs */
+.servicesSection {
+    padding: 5rem 0;
+    background-color: var(--secondary-bg);
+    margin-bottom: 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.serviceTabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.tabButton {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--foreground);
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.tabButton:hover {
+    border-color: var(--accent);
+    color: var(--foreground);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.tabButton.active {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    border-color: var(--accent);
+    color: var(--accent);
+    opacity: 1;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.tabIcon {
+    display: flex;
+    align-items: center;
+}
+
+.tabLabel {
+    font-weight: 600;
+}
+
+.tabContent {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.tabHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.tabTitle {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.tabDescription {
+    font-size: 1.15rem;
+    color: var(--foreground);
+    opacity: 0.8;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.serviceListGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+
+.serviceListItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--foreground);
+    opacity: 0.9;
+    line-height: 1.5;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.85rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.serviceListItem:hover {
+    border-color: var(--accent);
+}
+
+.checkIcon {
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Target Section */
+.targetSection {
+    padding: 5rem 0;
+    background-color: var(--background);
+    border-top: none;
+}
+
+.targetGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.targetCard {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.targetCard:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.targetIcon {
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.targetCard h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.targetCard p {
+    color: var(--foreground);
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* FAQ Section */
+.faqSection {
+    padding: 5rem 0;
+    background-color: var(--secondary-bg);
+}
+
+.faqAccordion {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faqItem {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faqItem.open {
+    border-color: var(--accent);
+}
+
+.faqHeader {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.faqHeader:hover {
+    background: rgba(200, 178, 115, 0.05);
+}
+
+.faqHeader h3 {
+    font-size: 1.05rem;
+    color: var(--foreground);
+    margin: 0;
+    font-weight: 600;
+}
+
+.faqIcon {
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+}
+
+.faqContent {
+    display: none;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--foreground);
+    opacity: 0.8;
+    line-height: 1.6;
+    border-top: 1px solid transparent;
+}
+
+.faqItem.open .faqContent {
+    display: block;
+    border-top-color: var(--border-color);
+    padding-top: 1.25rem;
+    animation: fadeIn 0.3s ease;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--background);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+        padding: 6rem 1.5rem 4rem;
+        background-attachment: scroll;
+    }
+
+    .heroTitle {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .heroSubtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .painSection,
+    .servicesSection,
+    .authoritySection,
+    .targetSection,
+    .faqSection,
+    .ctaSection {
+        padding: 3rem 1.5rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .painGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .authorityGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .authorityFeature {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .authorityLeadText {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .serviceListGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabContent {
+        padding: 1.5rem;
+    }
+
+    .serviceTabs {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .tabButton {
+        justify-content: center;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .targetGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 60vh;
+        padding: 5rem 1rem 3rem;
+    }
+
+    .heroTitle {
+        font-size: 1.8rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.6rem;
+    }
+}
