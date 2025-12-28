@@ -1,6 +1,7 @@
 :root {
   /* Palette extracted from Business Card */
-  --bg-dark-green: #081C15;
+  /* User requested ~20% lighter than #081C15 */
+  --bg-dark-green: #0F2E25;
   /* Deep Forest Green */
   --bg-cream: #F4F1EA;
   /* Light Cream from card front */
