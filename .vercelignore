@@ -1,0 +1,6 @@
+# Force Vercel to use local files
+.git
+.github
+projeto-github
+projeto-github.zip
+consultoria.zip
