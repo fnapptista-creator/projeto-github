@@ -668,11 +668,45 @@
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.1);
     transition: all 0.2s;
+    z-index: 10;
 }
 
 .closeBtn:hover {
     background-color: var(--accent);
     color: #fff;
+}
+
+
+/* Helper to hide duplicate list content on mobile */
+@media (max-width: 768px) {
+    .tabContent {
+        display: none;
+    }
+
+    .modalContent {
+        padding: 1.5rem;
+        max-height: 80vh;
+        /* Ensure it fits with safe areas */
+        width: 90%;
+        /* Prevent full width touching edges */
+    }
+
+    .modalContent .serviceCard {
+        padding: 1rem;
+        /* Smaller padding for cards inside modal */
+        margin-bottom: 1rem;
+    }
+
+    .modalContent .tabTitle {
+        font-size: 1.8rem;
+        /* Smaller title in modal */
+        margin-bottom: 0.5rem;
+    }
+
+    .modalContent .tabDescription {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 @media (min-width: 769px) {

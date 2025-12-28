@@ -8,7 +8,8 @@
   /* Muted Gold from logo */
   --gold-hover: #D4C085;
   --text-light: #EAEAEA;
-  --text-dark: #1A1A1A;
+  /* Use Dark Green instead of Black for text */
+  --text-dark: var(--bg-dark-green);
 
   /* Mapping to functional variables */
   --background: var(--bg-dark-green);
@@ -33,29 +34,19 @@
 [data-theme='light'] {
   --background: var(--bg-cream);
   --foreground: var(--bg-dark-green);
-  --accent: #857540;
-  /* Darker Gold for WCAG AA Contrast */
-  --icon-color: #081C15;
+  /* REVERTING UGLY DARK GOLD. Use Deep Green for high-contrast accent text */
+  --accent: #081C15;
   /* Dark Green for Icons */
-  --secondary-bg: #E8E4DA;
+  --icon-color: #081C15;
   /* Slightly darker cream */
-  --card-bg: #FFFFFF;
+  --secondary-bg: #E8E4DA;
   /* White cards for contrast */
-  --border-color: #D4C085;
-  /* Gold border */
+  --card-bg: #FFFFFF;
+  /* Gold border for visual flair */
+  --border-color: #C8B273;
 
   --navbar-bg: rgba(244, 241, 234, 0.95);
   --bg-rgb: 244, 241, 234;
-
-  /* In light mode, maybe we want the primary button to be Dark Green? 
-     If so, we can redefine specific component variables or just leave accent as Gold.
-     Gold on Cream is low contrast. Let's try Dark Green for accent in light mode?
-     Or keep Gold but make it darker? 
-     Let's try keeping Gold first, but maybe swap the button text color if needed.
-     Actually, let's make the accent Dark Green in light mode for better contrast?
-     No, the user likes the Gold/Green combo.
-     Let's keep accent Gold, but maybe use a darker border for cards.
-  */
 }
 
 * {
@@ -109,7 +100,8 @@ button {
 }
 
 .btn-primary {
-  background-color: var(--accent);
+  /* ALWAYS use Brand Gold for button background, regardless of theme */
+  background-color: var(--gold-accent);
   color: var(--bg-dark-green);
   /* Contrast text on gold button */
   padding: 14px 32px;
@@ -125,7 +117,7 @@ button {
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-hover);
+  background-color: var(--gold-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 20px rgba(200, 178, 115, 0.2);
 }
@@ -138,14 +130,15 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--gold-accent);
+  /* Always Gold border */
   transition: all 0.3s ease;
   display: inline-block;
   font-size: 0.9rem;
 }
 
 .btn-outline:hover {
-  background-color: var(--accent);
+  background-color: var(--gold-accent);
   color: var(--bg-dark-green);
 }
 
