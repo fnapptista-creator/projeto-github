@@ -166,47 +166,73 @@
   }
 
   .splitSide {
-    min-height: auto;
-    /* Allow height to grow with content */
+    min-height: 60vh;
     padding: 4rem 1.5rem;
     border-right: none;
-    border-bottom: 3px solid var(--border-color);
-    overflow: visible;
-    /* P0: Fix overflow clipping */
+    border-bottom: none;
+    overflow: hidden;
+
+    /* Flexbox centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  /* P1: Mobile Layout Fix - Add spacing to first block */
+  /* P1: Mobile Block Spacing Fix */
   .splitSide:first-child {
-    margin-bottom: 0;
-    /* Removed margin to keep them connected but distinct via border */
-    border-bottom: 3px solid var(--border-color);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
   }
 
+  .splitSide:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Disable hover expansion on mobile */
   .splitSide:hover {
     flex: 1;
   }
 
-  .splitSide:last-child {
-    border-bottom: none;
+  /* P0: Mobile State Fix - FORCE NORMAL STATE */
+  .contentNormal {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative !important;
+    pointer-events: auto !important;
   }
 
-  /* Distinção visual clara entre as duas opções no mobile */
-  .consultoriaSide {
-    border-left: 4px solid var(--accent);
+  .contentExpanded {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
-  .representacaoSide {
-    border-left: 4px solid rgba(212, 175, 55, 0.5);
+  /* Override hover effects to prevent state change */
+  .splitSide:hover .contentNormal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .splitSide:hover .contentExpanded {
+    opacity: 0 !important;
+    display: none !important;
+  }
+
+  .splitContent {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .sideLabel {
     font-size: 0.7rem;
     padding: 0.4rem 1.2rem;
     margin-bottom: 1rem;
-  }
-
-  .splitContent {
-    max-width: 100%;
   }
 
   .splitTitle {
@@ -230,25 +256,6 @@
   .bioText {
     font-size: 1rem;
     padding: 0 1rem;
-  }
-
-  /* P0: Mobile Interaction Fix 
-     Ensure the expanded content is visible and correctly positioned.
-     We disable the hover effect and show the "Expanded" (Aggressive) copy by default.
-  */
-  .contentExpanded {
-    position: relative;
-    opacity: 1;
-    transform: none;
-    top: auto;
-    left: auto;
-    pointer-events: auto;
-    display: block;
-    margin-top: 0;
-  }
-
-  .contentNormal {
-    display: none;
   }
 }
 

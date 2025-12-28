@@ -33,13 +33,13 @@
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .heroTitle {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
     color: var(--accent);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
     line-height: 1.1;
@@ -47,8 +47,8 @@
 }
 
 .heroSubtitle {
-    font-size: 1.4rem;
-    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
     color: #f0f0f0;
     font-weight: 300;
     max-width: 800px;
@@ -66,13 +66,13 @@
 
 .painSection {
     background-color: var(--secondary-bg);
-    padding: 8rem 0;
+    padding: 5rem 0;
 }
 
 .sectionTitle {
     text-align: center;
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
     color: var(--foreground);
     font-weight: 700;
 }
@@ -80,8 +80,9 @@
 .sectionSubtitle {
     text-align: center;
     font-size: 1.2rem;
-    color: #999;
-    margin-bottom: 4rem;
+    color: var(--foreground);
+    opacity: 0.7;
+    margin-bottom: 2.5rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -90,12 +91,12 @@
 .painGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .painCard {
     background-color: var(--card-bg);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
@@ -108,25 +109,109 @@
 }
 
 .painIcon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .painTitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
     color: var(--foreground);
+    text-align: center;
 }
 
 .painText {
-    color: #aaa;
-    line-height: 1.7;
+    color: var(--foreground);
+    opacity: 0.8;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Authority Section */
+.authoritySection {
+    padding: 5rem 0;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.authorityContent {
+    display: flex;
+    justify-content: center;
+}
+
+.authorityTextBlock {
+    max-width: 900px;
+    width: 100%;
+}
+
+.authorityLeadText {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--foreground);
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+.authorityGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.authorityFeature {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.authorityFeature:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.authorityIcon {
+    color: var(--accent);
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+}
+
+.authorityFeatureContent h3 {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.authorityFeatureContent p {
+    color: var(--foreground);
+    opacity: 0.85;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.authorityFeatureContent strong {
+    color: var(--foreground);
+    font-weight: 700;
 }
 
 /* Services Section with Tabs */
 .servicesSection {
-    padding: 8rem 0;
-    background-color: var(--background);
+    padding: 5rem 0;
+    background-color: var(--secondary-bg);
+    margin-bottom: 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .serviceTabs {
@@ -134,26 +219,28 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .tabButton {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    color: #aaa;
+    color: var(--foreground);
+    opacity: 0.7;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .tabButton:hover {
     border-color: var(--accent);
     color: var(--foreground);
+    opacity: 1;
     transform: translateY(-2px);
 }
 
@@ -161,11 +248,13 @@
     background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
     border-color: var(--accent);
     color: var(--accent);
+    opacity: 1;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
 .tabIcon {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .tabLabel {
@@ -173,163 +262,87 @@
 }
 
 .tabContent {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     animation: fadeIn 0.5s ease;
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
 }
 
 .tabHeader {
     text-align: center;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
     border-bottom: 2px solid var(--border-color);
 }
 
 .tabTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
 }
 
 .tabDescription {
-    font-size: 1.2rem;
-    color: #999;
+    font-size: 1.15rem;
+    color: var(--foreground);
+    opacity: 0.8;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     line-height: 1.6;
+    text-align: center;
 }
 
-.serviceGrid {
+.serviceListGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.serviceCard {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.serviceCard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--accent);
-    transform: scaleY(0);
-    transition: transform 0.3s ease;
-}
-
-.serviceCard:hover::before {
-    transform: scaleY(1);
-}
-
-.serviceCard:hover {
-    transform: translateX(8px);
-    border-color: rgba(212, 175, 55, 0.3);
-}
-
-.serviceNumber {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent);
-    opacity: 0.2;
-    margin-bottom: 1rem;
-    line-height: 1;
-}
-
-.serviceTitle {
-    font-size: 1.3rem;
+.serviceListItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
     color: var(--foreground);
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-}
-
-.serviceDesc {
-    color: #aaa;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-/* Authority Section */
-.authoritySection {
-    padding: 8rem 0;
-    background-color: var(--secondary-bg);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.authorityContent {
-    display: grid;
-}
-
-.highlight {
-    background: rgba(212, 175, 55, 0.1);
-    padding: 1.5rem;
-    border-left: 4px solid var(--accent);
-    border-radius: 4px;
-    font-style: italic;
-}
-
-.authorityStats {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-.statItem {
-    background-color: var(--card-bg);
-    padding: 2.5rem;
-    text-align: center;
+    opacity: 0.9;
+    line-height: 1.5;
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    padding: 0.85rem;
+    border-radius: 6px;
+    transition: background 0.3s;
 }
 
-.statItem:hover {
+.serviceListItem:hover {
     border-color: var(--accent);
-    transform: scale(1.05);
 }
 
-.statNumber {
-    display: block;
-    font-size: 3.5rem;
-    font-weight: 700;
+.checkIcon {
     color: var(--accent);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-
-.statLabel {
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 /* Target Section */
 .targetSection {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background-color: var(--background);
+    border-top: none;
 }
 
 .targetGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
+    gap: 2.5rem;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .targetCard {
     background-color: var(--card-bg);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     text-align: center;
@@ -343,61 +356,97 @@
 }
 
 .targetIcon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: center;
 }
 
 .targetCard h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .targetCard p {
-    color: #aaa;
-    line-height: 1.7;
-    font-size: 1.05rem;
+    color: var(--foreground);
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 /* FAQ Section */
 .faqSection {
-    padding: 8rem 0;
+    padding: 5rem 0;
     background-color: var(--secondary-bg);
 }
 
-.faqGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 2.5rem;
+.faqAccordion {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .faqItem {
-    padding: 2.5rem;
     background-color: var(--card-bg);
     border-radius: 8px;
     border: 1px solid var(--border-color);
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.faqItem:hover {
+.faqItem.open {
     border-color: var(--accent);
-    transform: translateY(-5px);
 }
 
-.faqItem h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+.faqHeader {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.faqHeader:hover {
+    background: rgba(200, 178, 115, 0.05);
+}
+
+.faqHeader h3 {
+    font-size: 1.05rem;
     color: var(--foreground);
+    margin: 0;
+    font-weight: 600;
 }
 
-.faqItem p {
-    color: #aaa;
-    line-height: 1.7;
+.faqIcon {
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+}
+
+.faqContent {
+    display: none;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--foreground);
+    opacity: 0.8;
+    line-height: 1.6;
+    border-top: 1px solid transparent;
+}
+
+.faqItem.open .faqContent {
+    display: block;
+    border-top-color: var(--border-color);
+    padding-top: 1.25rem;
+    animation: fadeIn 0.3s ease;
 }
 
 /* CTA Section */
 .ctaSection {
-    padding: 8rem 0;
+    padding: 5rem 0;
     text-align: center;
     background-color: var(--background);
     border-top: 1px solid var(--border-color);
@@ -423,11 +472,6 @@
         background-attachment: scroll;
     }
 
-    .heroTag {
-        font-size: 0.75rem;
-        padding: 0.4rem 1rem;
-    }
-
     .heroTitle {
         font-size: 2.2rem;
         line-height: 1.2;
@@ -450,17 +494,12 @@
     .targetSection,
     .faqSection,
     .ctaSection {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.5rem;
     }
 
     .sectionTitle {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .sectionSubtitle {
-        font-size: 1rem;
-        margin-bottom: 2.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 
     .painGrid {
@@ -468,35 +507,28 @@
         gap: 1.5rem;
     }
 
-    .painCard {
-        padding: 2rem;
-    }
-
-    .authorityContent {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-
-    .authorityText p {
-        font-size: 1rem;
-    }
-
-    .statItem {
-        padding: 1.5rem;
-    }
-
-    .statNumber {
-        font-size: 2.5rem;
-    }
-
-    .faqGrid,
-    .serviceGrid,
-    .targetGrid {
+    .authorityGrid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .faqItem {
+    .authorityFeature {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .authorityLeadText {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    .serviceListGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabContent {
         padding: 1.5rem;
     }
 
@@ -511,36 +543,9 @@
         padding: 1rem;
     }
 
-    .tabTitle {
-        font-size: 2rem;
-    }
-
-    .tabDescription {
-        font-size: 1rem;
-    }
-
-    .serviceCard {
-        padding: 1.5rem;
-    }
-
-    .serviceTitle {
-        font-size: 1.1rem;
-    }
-
-    .targetCard {
-        padding: 2rem;
-    }
-
-    .targetIcon {
-        font-size: 3rem;
-    }
-
-    .targetCard h3 {
-        font-size: 1.5rem;
-    }
-
-    .targetCard p {
-        font-size: 0.95rem;
+    .targetGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
@@ -554,36 +559,7 @@
         font-size: 1.8rem;
     }
 
-    .heroSubtitle {
-        font-size: 0.95rem;
-    }
-
-    .painSection,
-    .servicesSection,
-    .authoritySection,
-    .targetSection,
-    .faqSection,
-    .ctaSection {
-        padding: 3rem 1rem;
-    }
-
     .sectionTitle {
-        font-size: 1.75rem;
-    }
-
-    .painCard,
-    .faqItem,
-    .serviceCard,
-    .targetCard {
-        padding: 1.25rem;
-    }
-
-    .tabButton {
-        font-size: 0.9rem;
-        padding: 0.85rem;
-    }
-
-    .tabIcon {
-        font-size: 1.25rem;
+        font-size: 1.6rem;
     }
 }

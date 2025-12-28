@@ -4,11 +4,11 @@ import Footer from '@/components/Footer';
 import ConsultoriaClient from './ConsultoriaClient';
 
 export const metadata: Metadata = {
-    title: "Consultoria Gastronômica em Itabuna e Ilhéus | Felipe Nascimento",
-    description: "Consultoria especializada para restaurantes, bares e hotéis. Engenharia de cardápio, precificação, treinamento de equipe e processos operacionais no Extremo Sul da Bahia.",
+    title: "Consultoria Gastronômica Estratégica | Felipe Nascimento",
+    description: "Transforme seu restaurante com uma metodologia atualizada e gestão baseada em dados. Consultoria especializada em Itabuna, Ilhéus e Extremo Sul da Bahia.",
     openGraph: {
         title: "Consultoria Gastronômica - Felipe Nascimento",
-        description: "Transforme seu restaurante em uma máquina de lucro. Soluções para gestão, cardápio e equipe.",
+        description: "Gestão baseada em dados e processos estruturados para eliminar o 'achismo' do seu restaurante.",
         images: ['/consultoria-bg.png'],
     },
 };
@@ -26,7 +26,7 @@ const jsonLd = {
         "addressCountry": "BR"
     },
     "priceRange": "$$$",
-    "description": "Consultoria especializada para restaurantes, bares e hotéis no Extremo Sul da Bahia."
+    "description": "Consultoria especializada em gestão de restaurantes com metodologia atualizada e foco em resultados financeiros."
 };
 
 export default function Consultoria() {

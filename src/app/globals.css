@@ -15,6 +15,8 @@
   --foreground: var(--text-light);
   --accent: var(--gold-accent);
   --accent-hover: var(--gold-hover);
+  --icon-color: var(--gold-accent);
+  /* Default icon color for dark theme */
   --secondary-bg: #0D261D;
   /* Slightly lighter green for cards/sections */
   --card-bg: #112F24;
@@ -31,6 +33,10 @@
 [data-theme='light'] {
   --background: var(--bg-cream);
   --foreground: var(--bg-dark-green);
+  --accent: #857540;
+  /* Darker Gold for WCAG AA Contrast */
+  --icon-color: #081C15;
+  /* Dark Green for Icons */
   --secondary-bg: #E8E4DA;
   /* Slightly darker cream */
   --card-bg: #FFFFFF;
