@@ -73,6 +73,22 @@
     flex-wrap: wrap;
 }
 
+/* Force Hero Buttons to be visible against Dark Background, ignoring Theme */
+.heroButtons .btn-primary {
+    background-color: var(--gold-accent) !important;
+    color: var(--bg-dark-green) !important;
+}
+
+.heroButtons :global(.btn-outline) {
+    color: var(--gold-accent) !important;
+    border-color: var(--gold-accent) !important;
+}
+
+.heroButtons :global(.btn-outline):hover {
+    background-color: var(--gold-accent) !important;
+    color: var(--bg-dark-green) !important;
+}
+
 .painSection {
     background-color: var(--secondary-bg);
     padding: 8rem 0;
@@ -255,7 +271,8 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--accent);
-    opacity: 0.2;
+    opacity: 0.5;
+    /* Increased from 0.2 for better visibility */
     margin-bottom: 1rem;
     line-height: 1;
 }

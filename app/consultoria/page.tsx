@@ -320,7 +320,7 @@ export default function Consultoria() {
                 <section className={styles.ctaSection}>
                     <div className="container">
                         <h2 className={styles.sectionTitle}>Pare de perder dinheiro hoje.</h2>
-                        <p style={{ marginBottom: '2rem', color: '#ccc', fontSize: '1.1rem' }}>
+                        <p style={{ marginBottom: '1rem', color: '#ccc', fontSize: '1.1rem' }}>
                             Agende uma conversa rápida de 15 minutos para eu entender seu momento.
                         </p>
                         <a
@@ -337,8 +337,8 @@ export default function Consultoria() {
             </ScrollReveal>
 
             <div className="container" style={{ textAlign: 'center', padding: '2rem 0', color: '#888', fontSize: '0.9rem' }}>
-                <p>Atendimento presencial em <strong>Itabuna, Ilhéus, Porto Seguro, Teixeira de Freitas</strong> e todo o Extremo Sul da Bahia.</p>
-                <p>Consultoria online disponível para todo o Brasil.</p>
+                <p>Atendimento presencial disponível para todo o Brasil e exterior (sob consulta). Base de operações no Extremo Sul da Bahia.</p>
+                <p>Consultoria online disponível para todo o mundo.</p>
             </div>
 
             <Footer />
