@@ -268,14 +268,14 @@ const brands: Brand[] = [
     {
         name: 'Allmix',
         categories: ['Utilidades', 'Decoração', 'Variedades'],
-        logoUrl: '/allmix_logo.jpg',
+        logoUrl: 'https://logo.clearbit.com/allmixdistribuidora.com.br',
         description: 'A Allmix Atacadista é um distribuidor nacional B2B (empresa para empresa) de utilidades domésticas e presentes, com sede em Cotia, São Paulo. A empresa foca em abastecer lojistas e varejistas de todo o país com um vasto catálogo de produtos, design e marcas reconhecidas, atendendo todo o Brasil.',
         features: ['Utilidades Domésticas: Cozinha, Mesa Posta e Organizadores', 'Presentes e Decoração: Design Diferenciado e Bar', 'Produtos Licenciados: Disney, Marvel, Harry Potter', 'Linha Térmica: Garrafas e Squeezes', 'Distribuição Nacional B2B']
     },
     {
         name: 'Beija Flor',
         categories: ['Utilidades', 'Decoração', 'Variedades'],
-        logoUrl: '/beijaflor_logo.png',
+        logoUrl: '/BF.png',
         description: 'A Beija Flor é uma empresa brasileira especializada em decoração, atuando nos segmentos de atacado. Com mais de 15 anos de história, a empresa se consolidou como referência em decoração de ambientes e eventos sazonais.',
         features: ['Decoração de Natal: Árvores, Enfeites e Luzes', 'Flores e Plantas Permanentes: Decoração de Interiores', 'Fitas e Laços Decorativos', 'Árvores de Natal: Slim, Nevadas e Tradicionais', 'Arranjos Temáticos e Guirlandas']
     }
