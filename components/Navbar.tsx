@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from './Navbar.module.css';
 import ThemeToggle from './ThemeToggle';
 
+// Re-compile trigger
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -17,21 +18,24 @@ export default function Navbar() {
                     <span className={styles.logoText}>Felipe Nascimento</span>
                 </Link>
 
-                <button
-                    className={styles.hamburger}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Menu"
-                >
-                    <span className={isMenuOpen ? styles.active : ''}></span>
-                    <span className={isMenuOpen ? styles.active : ''}></span>
-                    <span className={isMenuOpen ? styles.active : ''}></span>
-                </button>
+                <div className={styles.navActions}>
+                    <ThemeToggle />
+                    <button
+                        className={styles.hamburger}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Menu"
+                    >
+                        <span className={isMenuOpen ? styles.active : ''}></span>
+                        <span className={isMenuOpen ? styles.active : ''}></span>
+                        <span className={isMenuOpen ? styles.active : ''}></span>
+                    </button>
+                </div>
 
                 <ul className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}>
                     <li><Link href="/consultoria" onClick={() => setIsMenuOpen(false)}>Consultoria</Link></li>
                     <li><Link href="/representacao" onClick={() => setIsMenuOpen(false)}>Representação</Link></li>
                     <li><Link href="/contato" className="btn-primary" onClick={() => setIsMenuOpen(false)}>Contato</Link></li>
-                    <li><ThemeToggle /></li>
+                    <li className={styles.desktopToggle}><ThemeToggle /></li>
                 </ul>
             </div>
         </nav>

@@ -1,7 +1,8 @@
 .hero {
     min-height: 80vh;
     /* Increased to match Consultoria */
-    padding: 8rem 0 4rem;
+    padding: 0 20px;
+    /* Changed to match Consultoria (Pure Center) */
     background: linear-gradient(rgba(8, 28, 21, 0.85), rgba(8, 28, 21, 0.95)), url(/representacao-bg.png);
     background-size: cover;
     background-position: center;
@@ -27,7 +28,8 @@
 .heroTag {
     display: inline-block;
     background: rgba(212, 175, 55, 0.15);
-    color: var(--accent);
+    /* Hero is always dark, so always use Gold text */
+    color: var(--gold-accent);
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     font-size: 0.9rem;
@@ -39,16 +41,20 @@
 
 .heroTitle {
     font-family: var(--font-heading);
-    font-size: 4rem;
-    color: var(--accent);
+    font-size: 3rem;
+    /* Reduced from 4rem to match Consultoria */
+    /* Force Gold/Light text because background is always dark image/gradient */
+    color: var(--gold-accent);
+    /* var(--accent) was forcing dark green in light mode, making it invisible */
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 700;
 }
 
 .heroSubtitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    /* Reduced from 1.4rem to match Consultoria */
     margin-bottom: 3rem;
     color: #f0f0f0;
     font-weight: 300;
@@ -66,7 +72,13 @@
 }
 
 .catalogSection {
-    padding: 4rem 0;
+    padding: 3rem 0;
+    /* Reduced from 4rem */
+    background-color: var(--secondary-bg);
+    /* Darkened as requested */
+    /* Darkened as requested */
+    border-top: 1px solid var(--section-divider);
+    /* Added divider between Hero and Catalog */
 }
 
 .filterBar {
@@ -93,12 +105,19 @@
     flex-shrink: 0;
 }
 
-.filterBtn:hover,
-.filterBtn.active {
+.filterBtn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    opacity: 1;
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(200, 178, 115, 0.1);
+}
+
+.filterBtn.active {
+    background-color: var(--gold-accent);
+    color: #081C15;
+    /* Dark contrast text for Gold background */
+    border-color: var(--gold-accent);
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(200, 178, 115, 0.3);
 }
 
 .brandGrid {
@@ -108,8 +127,11 @@
 }
 
 .brandCard {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: #FFFFFF;
+    /* Always white to blend with Logo backgrounds */
+    /* Always white to blend with Logo backgrounds */
+    border: 1px solid rgba(200, 178, 115, 0.3);
+    /* Gold Border for Dark Mode (Default) */
     border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
@@ -122,12 +144,13 @@
     height: 180px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .brandCard:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .logoContainer {
@@ -184,7 +207,8 @@
 
 .modalHeader {
     background: linear-gradient(to bottom, var(--background), var(--secondary-bg));
-    padding: 1.5rem 2rem 1rem;
+    padding: 1.5rem 4rem 1rem 2rem;
+    /* Increased Right padding for Close Button */
     border-bottom: 1px solid rgba(200, 178, 115, 0.2);
     display: flex;
     align-items: center;
@@ -230,10 +254,18 @@
 .modalTitle {
     font-family: var(--font-heading);
     font-size: 1.8rem;
-    color: var(--gold-accent);
+    color: var(--accent);
+    /* Adapts: Green in Light Mode, Gold in Dark Mode */
     margin-bottom: 0.25rem;
     line-height: 1.1;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.categoryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .modalCategory {
@@ -344,10 +376,41 @@
 }
 
 .ctaSection {
-    padding: 8rem 0;
+    padding: 3rem 0;
+    /* Reduced from 8rem 0 */
     text-align: center;
-    background-color: var(--secondary-bg);
-    border-top: 1px solid var(--border-color);
+    background-color: var(--background);
+    /* Lightened to Contrast with Footer */
+    background-color: var(--background);
+    /* Lightened to Contrast with Footer */
+    /* Lightened to Contrast with Footer */
+    border-top: 1px solid var(--section-divider);
+    /* Footer has its own border-top now */
+}
+
+.ctaText {
+    margin-bottom: 2rem;
+    color: var(--foreground);
+    /* Adapts to theme (Dark/Light) */
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+/* SEO Only Text - Visually Hidden but readable by bots */
+.seoHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    opacity: 0.01;
+    font-size: 1px;
+    color: transparent;
+    pointer-events: none;
 }
 
 @keyframes fadeInUp {
@@ -364,16 +427,67 @@
 
 @media (max-width: 768px) {
     .heroTitle {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+        /* Match Consultoria Mobile Title */
+        line-height: 1.2;
     }
 
+    .hero {
+        padding-bottom: 3rem;
+        /* Minimized bottom spacing for mobile */
+    }
+
+    /* Reverted to Grid per User Request */
     .brandGrid {
+        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
+        overflow-x: visible;
+        padding-bottom: 0;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .brandGrid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filterBar {
+        margin-bottom: 1.5rem;
+        /* Reduced from 3rem for mobile */
+        gap: 0.5rem;
+        /* Tighter gap for buttons */
+    }
+
+    .brandCard {
+        min-width: 0;
+        scroll-snap-align: none;
+
+        /* Premium Mobile Styling kept, but layout is grid */
+        background: #FFFFFF;
+        /* Force White on Mobile too */
+        border: 1px solid var(--border-color);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        height: auto;
+        aspect-ratio: auto;
+    }
+
+    [data-theme='light'] .brandCard {
+        border-color: rgba(8, 28, 21, 0.3);
+        /* Green Border for Light Mode */
+    }
+
+    [data-theme='dark'] .brandCard {
+        background: #FFFFFF;
+        /* Force White even in Dark Mode */
+        border-color: rgba(200, 178, 115, 0.3);
     }
 
     /* Modal Mobile Adjustments */
     .modalHeader {
-        padding: 1rem;
+        padding: 1rem 3.5rem 1rem 1rem;
+        /* Increased Right padding to clear Close Button */
         gap: 1rem;
     }
 
@@ -405,21 +519,36 @@
         padding: 1rem;
     }
 
-    /* Mobile Filter Bar Optimization */
+    /* Mobile Filter Bar Optimization - Wrapped per user request */
     .filterBar {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: visible;
         padding-bottom: 1.5rem;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 0.5rem;
     }
 
-    .filterBar::-webkit-scrollbar {
-        display: none;
+    .filterBtn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
     }
+}
+
+/* AI Optimization - Context Layer
+   Hidden from visual users, accessible to bots/crawlers.
+   Technique: Absolute positioning off-screen.
+*/
+.aiContextLayer {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -1;
 }

@@ -1,8 +1,8 @@
 :root {
   /* Palette extracted from Business Card */
-  /* User requested ~20% lighter than #081C15 */
-  --bg-dark-green: #0F2E25;
-  /* Deep Forest Green */
+  /* User requested lighter green (was #081C15, then #0F2E25). Now bumping up visibility */
+  --bg-dark-green: #153E32;
+  /* Visible Deep Green */
   --bg-cream: #F4F1EA;
   /* Light Cream from card front */
   --gold-accent: #C8B273;
@@ -19,32 +19,42 @@
   --accent-hover: var(--gold-hover);
   --icon-color: var(--gold-accent);
   /* Default icon color for dark theme */
-  --secondary-bg: #0D261D;
-  /* Slightly lighter green for cards/sections */
-  --card-bg: #112F24;
-  /* Even lighter green for cards */
-  --border-color: #1F4032;
+  --secondary-bg: #1C4539;
+  /* Slightly lighter/distinct green for sections */
+  --card-bg: #235245;
+  /* Lighter green for cards */
+  --border-color: #2F6152;
+  --section-divider: rgba(200, 178, 115, 0.5);
+  /* Gold Divider for Dark Mode (More Visible) */
+  /* Gold Divider for Dark Mode */
 
-  --font-heading: var(--font-heading), sans-serif;
-  --font-body: var(--font-body), sans-serif;
+  --font-heading: var(--font-heading),
+    sans-serif;
+  --font-body: var(--font-body),
+    sans-serif;
 
   --navbar-bg: rgba(8, 28, 21, 0.95);
-  --bg-rgb: 8, 28, 21;
+  --bg-rgb: 8,
+    28,
+    21;
 }
 
 [data-theme='light'] {
   --background: var(--bg-cream);
   --foreground: var(--bg-dark-green);
   /* REVERTING UGLY DARK GOLD. Use Deep Green for high-contrast accent text */
-  --accent: #081C15;
+  --accent: var(--bg-dark-green);
   /* Dark Green for Icons */
-  --icon-color: #081C15;
+  --icon-color: var(--bg-dark-green);
   /* Slightly darker cream */
   --secondary-bg: #E8E4DA;
   /* White cards for contrast */
   --card-bg: #FFFFFF;
   /* Gold border for visual flair */
   --border-color: #C8B273;
+  --section-divider: rgba(21, 62, 50, 0.6);
+  /* Visible Green Divider for Light Mode */
+  /* Green Divider for Light Mode */
 
   --navbar-bg: rgba(244, 241, 234, 0.95);
   --bg-rgb: 244, 241, 234;
@@ -220,6 +230,11 @@ button {
   transform: rotate(90deg);
 }
 
+[data-theme='light'] .close-modal:hover {
+  color: var(--gold-accent);
+  /* Gold X on Green Background for Light Mode */
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -273,4 +288,38 @@ button {
 .scroll-reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Mobile Horizontal Snap Utilities */
+.snap-parent {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  gap: 1rem !important;
+  padding-bottom: 1.5rem !important;
+  /* Space for scrollbar or shadow */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.snap-parent::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+.snap-child {
+  scroll-snap-align: center;
+  flex: 0 0 85%;
+  /* Show 85% of card to encourage scroll */
+  min-width: 260px;
+}
+
+/* Glassmorphism Utility */
+.glass-effect {
+  background: rgba(var(--bg-rgb), 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 178, 115, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }

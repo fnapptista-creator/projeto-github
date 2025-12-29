@@ -118,9 +118,26 @@
     width: 100%;
 }
 
+.navActions {
+    display: none;
+    /* Hidden on desktop by default, or depends on your design. Usually toggle is in navLinks on desktop */
+    align-items: center;
+    gap: 0.5rem;
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+    }
+
+    .navActions {
+        display: flex;
+        flex-direction: row;
+        /* Ensure horizontal alignment */
+    }
+
+    .desktopToggle {
+        display: none;
     }
 
     .logoImage {

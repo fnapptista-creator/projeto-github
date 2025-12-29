@@ -16,7 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 3rem;
+  /* Reduced from 4rem */
   position: relative;
   overflow: hidden;
   transition: flex 0.5s ease;
@@ -38,11 +39,11 @@
 }
 
 .consultoriaSide::before {
-  background-image: linear-gradient(rgba(var(--bg-rgb), 0.7), rgba(var(--bg-rgb), 0.9)), url(/consultoria-bg.png);
+  background-image: linear-gradient(rgba(var(--bg-rgb), 0.55), rgba(var(--bg-rgb), 0.75)), url(/consultoria-bg.png);
 }
 
 .representacaoSide::before {
-  background-image: linear-gradient(rgba(var(--bg-rgb), 0.7), rgba(var(--bg-rgb), 0.9)), url(/representacao-bg.png);
+  background-image: linear-gradient(rgba(var(--bg-rgb), 0.55), rgba(var(--bg-rgb), 0.75)), url(/representacao-bg.png);
 }
 
 .splitSide:last-child {
@@ -113,13 +114,47 @@
   color: var(--foreground);
   opacity: 0.9;
   font-weight: 300;
+  min-height: 3rem;
+  /* Prevent layout shift */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.defaultText {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.hoverText {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.splitSide:hover .defaultText {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.splitSide:hover .hoverText {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .bioSection {
-  padding: 6rem 0;
+  padding: 3rem 0;
+  /* Reduced from 6rem */
   background-color: var(--background);
   text-align: center;
-  border-top: 1px solid var(--border-color);
+  text-align: center;
+  border-top: 1px solid var(--section-divider);
 }
 
 .bioTitle {
@@ -164,6 +199,7 @@
 }
 
 .repBtn {
+  background-color: transparent;
   border-color: var(--accent);
   color: var(--accent);
 }
@@ -173,17 +209,36 @@
   color: var(--bg-dark-green);
 }
 
+/* Dark Mode: Make it filled to match Consultoria if requested, or keep outline but consistent.
+   User asked: "botão está sem preenchimento... quero que fique ... igual ao card de Consultoria"
+   Consultoria uses .btn-primary (Gold Fill).
+   Let's make Rep Button (Dark Mode) also Premium Filled or at least solid.
+   If we use Dark Green Fill on Dark Green bg it's invisible.
+   Maybe Gold Border + Semi-Transparent Fill?
+   Or just swap to .btn-primary style? 
+   let's keep the specialized class but add fill.
+*/
+.repBtn {
+  background-color: rgba(8, 28, 21, 0.8);
+  /* Dark Green Fill */
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  backdrop-filter: blur(5px);
+}
+
 /* Light mode override for the button */
 [data-theme='light'] .repBtn {
   background-color: var(--bg-dark-green);
   border-color: var(--bg-dark-green);
-  color: var(--accent);
+  color: var(--gold-accent);
+  /* Fix Contrast: Gold Text on Dark Green Bg */
 }
 
 [data-theme='light'] .repBtn:hover {
-  background-color: transparent;
+  background-color: var(--secondary-bg);
+  /* Lighter green on hover */
   color: var(--bg-dark-green);
-  border-color: var(--bg-dark-green);
+  border-color: var(--secondary-bg);
 }
 
 .mobileSection {
@@ -209,18 +264,30 @@
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    min-height: 350px;
+    min-height: 440px;
+    /* Increased by 25% */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    /* Centered vertically as requested */
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  /* Force Gold Text for Mobile Buttons in Light Mode as requested */
+  /* Force Gold Text for Mobile Buttons in Light Mode as requested.
+     Use --gold-accent directly because --accent becomes dark green in light mode. */
+  [data-theme='light'] .mobileCard a {
+    color: var(--gold-accent) !important;
+    border-color: var(--gold-accent) !important;
+  }
+
   .mobileCardContent {
     position: relative;
     z-index: 2;
+    text-align: center;
+    /* Centered alignment as requested */
   }
 
   .mobileCardTitle {
@@ -297,10 +364,26 @@
 
 @media (max-width: 480px) {
   .mobileCard {
-    min-height: 300px;
+    min-height: 375px;
+    /* Increased by 25% */
   }
 
   .mobileCardTitle {
     font-size: 1.8rem;
   }
+}
+
+/* AI Optimization - Context Layer
+   Hidden from visual users, accessible to bots/crawlers.
+   Technique: Absolute positioning off-screen.
+*/
+.aiContextLayer {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -1;
 }

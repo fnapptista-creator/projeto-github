@@ -34,8 +34,8 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.links}>
-                    <a href="https://felipenb.com.br" className={styles.linkItem}>Consultoria: felipenb.com.br</a>
-                    <a href="https://felipe.rep.br" className={styles.linkItem}>Catálogos: felipe.rep.br</a>
+                    <a href="https://felipe.rep.br" className={styles.linkItem} target="_blank" rel="noopener noreferrer">Portal do Cliente: felipe.rep.br</a>
+                    <a href="https://minhacomissao.com.br" className={styles.linkItem} target="_blank" rel="noopener noreferrer">Gestor de Comissão: minhacomissao.com.br</a>
                 </div>
 
                 <div className={styles.copyright}>

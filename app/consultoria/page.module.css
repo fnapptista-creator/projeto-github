@@ -21,8 +21,8 @@
     color: white;
     padding: 0 20px;
     position: relative;
-    /* Force dark background for this specific section as requested */
-    background-color: #081C15;
+    /* Use variable to match new lighter green */
+    background-color: var(--bg-dark-green);
 }
 
 .heroContent {
@@ -45,58 +45,21 @@
     border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
+/* Desktop Base Updates */
 .heroTitle {
-    font-size: 4rem;
+    font-size: 3rem;
+    /* Reduced from 4rem */
     margin-bottom: 1.5rem;
-    /* Hero is always dark, so always use Gold text */
     color: var(--gold-accent);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 700;
-}
-
-.heroSubtitle {
-    font-size: 1.4rem;
-    margin-bottom: 3rem;
-    color: #f0f0f0;
-    font-weight: 300;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-}
-
-.heroButtons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Force Hero Buttons to be visible against Dark Background, ignoring Theme */
-.heroButtons .btn-primary {
-    background-color: var(--gold-accent) !important;
-    color: var(--bg-dark-green) !important;
-}
-
-.heroButtons :global(.btn-outline) {
-    color: var(--gold-accent) !important;
-    border-color: var(--gold-accent) !important;
-}
-
-.heroButtons :global(.btn-outline):hover {
-    background-color: var(--gold-accent) !important;
-    color: var(--bg-dark-green) !important;
-}
-
-.painSection {
-    background-color: var(--secondary-bg);
-    padding: 8rem 0;
 }
 
 .sectionTitle {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.25rem;
+    /* Reduced from 2.8rem */
     margin-bottom: 1rem;
     color: var(--foreground);
     font-weight: 700;
@@ -107,53 +70,102 @@
     font-size: 1.2rem;
     color: var(--foreground);
     opacity: 0.8;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    /* Reduced from 4rem */
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Tablet Overrides */
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+}
+
+
+.painSection {
+    padding: 3rem 0;
+    /* User requested fixed 3rem */
+    background-color: var(--secondary-bg);
+    border-bottom: 1px solid var(--section-divider);
+}
+
+/* Fix double padding issue */
+.painSection .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .painGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    /* Added breathing room for Title */
 }
 
 .painCard {
     background-color: var(--card-bg);
-    padding: 2.5rem;
+    padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
-.painCard:hover {
-    transform: translateY(-8px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
+/* ... existing hover styles ... */
 
 .painIcon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .painTitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
     color: var(--foreground);
+    line-height: 1.3;
 }
 
 .painText {
     color: var(--foreground);
     opacity: 0.7;
-    line-height: 1.7;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
-/* Services Section with Tabs */
+.heroButtons {
+    display: flex;
+    gap: 1.5rem;
+    /* Fix sticking buttons */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.heroButtons :global(.btn-outline) {
+    color: var(--gold-accent);
+    border-color: var(--gold-accent);
+}
+
+.heroButtons :global(.btn-outline):hover {
+    background-color: var(--gold-accent);
+    color: #fff;
+}
+
+/* Services Section */
+/* Services Section */
 .servicesSection {
-    padding: 8rem 0;
+    padding: 3rem 0;
+    /* Reduced from 4rem */
     background-color: var(--background);
+    border-bottom: 1px solid var(--section-divider);
 }
 
 .serviceTabs {
@@ -161,7 +173,7 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .tabButton {
@@ -210,8 +222,8 @@
 
 .tabHeader {
     text-align: center;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid var(--border-color);
 }
 
@@ -293,9 +305,10 @@
 
 /* Authority Section */
 .authoritySection {
-    padding: 8rem 0;
+    padding: 3rem 0;
+    /* Standardized to 3rem */
     background-color: var(--secondary-bg);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--section-divider);
 }
 
 .authorityContent {
@@ -327,8 +340,9 @@
 
 .authorityStats {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2x2 Grid */
+    gap: 1.5rem;
 }
 
 .statItem {
@@ -364,8 +378,10 @@
 
 /* Target Section */
 .targetSection {
-    padding: 8rem 0;
+    padding: 3rem 0;
+    /* Standardized to 3rem */
     background-color: var(--background);
+    border-bottom: 1px solid var(--section-divider);
 }
 
 .targetGrid {
@@ -374,6 +390,8 @@
     gap: 3rem;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 2.5rem;
+    /* Added breathing room for Title */
 }
 
 .targetCard {
@@ -411,47 +429,96 @@
 
 /* FAQ Section */
 .faqSection {
-    padding: 8rem 0;
+    padding: 2.5rem 0;
+    /* Reduced from 8rem */
     background-color: var(--secondary-bg);
 }
 
 .faqGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    /* Added breathing room for Title */
 }
 
 .faqItem {
-    padding: 2.5rem;
+    padding: 1.5rem 2rem;
     background-color: var(--card-bg);
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .faqItem:hover {
     border-color: var(--accent);
-    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .faqItem h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin: 0;
     color: var(--foreground);
+    font-weight: 600;
+}
+
+.faqToggle {
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-weight: 300;
+}
+
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-top: 0;
+}
+
+.faqItem.active .faqAnswer {
+    max-height: 200px;
+    /* Arbitrary large height */
+    padding-top: 1rem;
+}
+
+.faqItem.active .faqQuestion h3 {
+    color: var(--accent);
 }
 
 .faqItem p {
     color: var(--foreground);
-    opacity: 0.7;
-    line-height: 1.7;
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* CTA Section */
 .ctaSection {
-    padding: 8rem 0;
+    padding: 3rem 0;
+    /* Standardized to 3rem */
     text-align: center;
     background-color: var(--background);
-    border-top: 1px solid var(--border-color);
+    background-color: var(--background);
+    border-top: 1px solid var(--section-divider);
+}
+
+.ctaText {
+    margin-bottom: 2rem;
+    color: var(--foreground);
+    /* Use variable for theme compliance */
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
 /* Animations */
@@ -468,83 +535,74 @@
 }
 
 @media (max-width: 768px) {
-    .hero {
-        min-height: 70vh;
-        padding: 6rem 1.5rem 4rem;
-        background-attachment: scroll;
-    }
-
-    .heroTag {
-        font-size: 0.75rem;
-        padding: 0.4rem 1rem;
-    }
-
     .heroTitle {
-        font-size: 2.2rem;
+        font-size: 2.25rem;
+        /* Tablet override */
         line-height: 1.2;
-    }
-
-    .heroSubtitle {
-        font-size: 1.05rem;
-        margin-bottom: 2rem;
-    }
-
-    .heroButtons {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
-
-    .painSection,
-    .servicesSection,
-    .authoritySection,
-    .targetSection,
-    .faqSection,
-    .ctaSection {
-        padding: 4rem 1.5rem;
     }
 
     .sectionTitle {
         font-size: 2rem;
-        margin-bottom: 2rem;
+        /* Tablet override */
     }
 
-    .sectionSubtitle {
-        font-size: 1rem;
-        margin-bottom: 2.5rem;
+    /* Force container to match grid gap for maximum width */
+    .painSection .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
     }
 
     .painGrid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+        overflow: visible !important;
+        padding-bottom: 0 !important;
     }
 
     .painCard {
-        padding: 2rem;
+        padding: 0.75rem !important;
+        margin-bottom: 0 !important;
+        min-width: 0 !important;
+    }
+
+    .painIcon {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .painTitle {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .painText {
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 
     .authorityContent {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        overflow-x: unset;
+        margin: 0;
+        gap: 2rem;
+        /* Reduced from 4rem */
+    }
+
+    .serviceGrid {
+        /* Keep vertical for services, but compact them?
+           Actually, let's keep vertical for Services as it's the main offering list.
+           Or maybe 2-col? No, 1-col is better for readability.
+        */
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 1rem;
     }
 
-    .authorityText p {
-        font-size: 1rem;
-    }
-
-    .statItem {
-        padding: 1.5rem;
-    }
-
-    .statNumber {
-        font-size: 2.5rem;
-    }
-
-    .faqGrid,
-    .serviceGrid,
     .targetGrid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .faqItem {
@@ -578,12 +636,43 @@
         font-size: 1.1rem;
     }
 
+    /* Authority Mobile Fixes */
+    .authorityStats {
+        gap: 0.75rem;
+        /* Reduce gap for mobile */
+    }
+
+    .statItem {
+        padding: 1rem;
+        /* Reduce padding significantly */
+        min-width: 0;
+        /* Prevent flex/grid blowout */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .statNumber {
+        font-size: 2rem;
+        /* Reduce font size */
+    }
+
+    .statLabel {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+
     .targetCard {
-        padding: 2rem;
+        padding: 1.5rem;
+        /* Compact padding */
     }
 
     .targetIcon {
         font-size: 3rem;
+        margin-bottom: 0.75rem;
+        /* Reduced icon spacing */
     }
 
     .targetCard h3 {
@@ -597,19 +686,36 @@
 
 @media (max-width: 480px) {
     .hero {
-        min-height: 60vh;
-        padding: 5rem 1rem 3rem;
+        min-height: auto;
+        /* Remove fixed height to compact it */
+        padding: 6rem 1rem 0rem;
+        /* Remove bottom padding so Pain Section 3rem takes over */
     }
 
     .heroTitle {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
+        /* Reduced from 1.8rem */
     }
 
     .heroSubtitle {
         font-size: 0.95rem;
+        margin-bottom: 2rem;
+        /* Reduced from 3rem (default) */
     }
 
-    .painSection,
+    .painSection {
+        padding: 3rem 0 !important;
+        /* User requested fixed 3rem */
+    }
+
+    /* Duplicate removed */
+
+    .container {
+        padding: 0 1.5rem !important;
+        /* Standardize alignment */
+        width: 100%;
+    }
+
     .servicesSection,
     .authoritySection,
     .targetSection,
@@ -647,11 +753,13 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.85);
-    z-index: 1000;
+    z-index: 2000;
+    /* Increased to be above Navbar (which is usually around 1000) */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 4rem 1rem 1rem 1rem;
+    /* Added top padding to prevent cut-off */
     animation: fadeIn 0.3s ease;
     backdrop-filter: blur(5px);
 }
@@ -659,36 +767,49 @@
 .modalContent {
     background-color: var(--card-bg);
     padding: 2rem;
-    border-radius: 12px;
-    width: 100%;
+    border-radius: 16px;
+    /* softer ratio */
+    width: 90%;
     max-width: 500px;
     max-height: 85vh;
     overflow-y: auto;
     position: relative;
-    border: 1px solid var(--accent);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--gold-accent);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .closeBtn {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    color: var(--foreground);
+    border: 1px solid var(--gold-accent);
+    color: var(--gold-accent);
     font-size: 1.5rem;
     cursor: pointer;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
-    transition: all 0.2s;
-    z-index: 10;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* AI Optimization - Context Layer
+   Hidden from visual users, accessible to bots/crawlers.
+   Technique: Absolute positioning off-screen.
+*/
+.aiContextLayer {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
 
 .closeBtn:hover {
     background-color: var(--accent);
@@ -703,28 +824,71 @@
     }
 
     .modalContent {
-        padding: 1.5rem;
-        max-height: 80vh;
-        /* Ensure it fits with safe areas */
-        width: 90%;
-        /* Prevent full width touching edges */
+        padding: 1.5rem 1rem;
+        /* Tighter padding */
+        max-height: 85vh;
+        width: 95%;
     }
 
+    /* Transform Cards into Clean List Items inside Modal */
     .modalContent .serviceCard {
-        padding: 1rem;
-        /* Smaller padding for cards inside modal */
-        margin-bottom: 1rem;
+        background-color: transparent !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0.5rem 0 1rem 0 !important;
+        /* Reduced top padding significantly */
+        margin-bottom: 0 !important;
+        transform: none !important;
+        position: static !important;
+        /* Disable relative positioning */
+    }
+
+    /* Disable the Accent Strip (Hover Effect) inside Modal */
+    .modalContent .serviceCard::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    .modalContent .serviceCard:last-child {
+        border-bottom: none !important;
+    }
+
+    .modalContent .serviceNumber {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+        /* Tighter */
+        opacity: 0.8;
+    }
+
+    .modalContent .serviceTitle {
+        font-size: 1.25rem;
+        color: var(--accent);
+        margin-bottom: 0.25rem;
+        /* Tighter */
+    }
+
+    .modalContent .serviceDesc {
+        font-size: 1rem;
+        line-height: 1.4;
+        /* Tighter line height */
+        opacity: 0.9;
+        color: var(--foreground);
     }
 
     .modalContent .tabTitle {
         font-size: 1.8rem;
-        /* Smaller title in modal */
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
+        /* Tighter */
+        color: var(--accent);
     }
 
     .modalContent .tabDescription {
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+        /* Minimized spacing to "01" */
+        line-height: 1.4;
     }
 }
 
