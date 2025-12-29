@@ -92,8 +92,8 @@
 
 
 .painSection {
-    padding: 1rem 0;
-    /* Reduced from 3rem */
+    padding: 3.5rem 0 3rem 0;
+    /* Added more top spacing (3.5rem) */
     background-color: var(--secondary-bg);
     border-bottom: 1px solid var(--section-divider);
 }
@@ -117,7 +117,14 @@
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smoother ease */
+}
+
+.painCard:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold-accent);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* ... existing hover styles ... */

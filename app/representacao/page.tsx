@@ -268,7 +268,7 @@ const brands: Brand[] = [
     {
         name: 'Allmix',
         categories: ['Utilidades', 'Decoração', 'Variedades'],
-        logoUrl: 'https://logo.clearbit.com/allmixdistribuidora.com.br',
+        logoUrl: '/allmix.png',
         description: 'A Allmix Atacadista é um distribuidor nacional B2B (empresa para empresa) de utilidades domésticas e presentes, com sede em Cotia, São Paulo. A empresa foca em abastecer lojistas e varejistas de todo o país com um vasto catálogo de produtos, design e marcas reconhecidas, atendendo todo o Brasil.',
         features: ['Utilidades Domésticas: Cozinha, Mesa Posta e Organizadores', 'Presentes e Decoração: Design Diferenciado e Bar', 'Produtos Licenciados: Disney, Marvel, Harry Potter', 'Linha Térmica: Garrafas e Squeezes', 'Distribuição Nacional B2B']
     },
