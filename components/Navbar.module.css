@@ -6,7 +6,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1.2rem 0;
+    padding: 0.8rem 0;
     transition: all 0.3s ease;
 }
 
@@ -118,6 +118,15 @@
     width: 100%;
 }
 
+.activeLink {
+    color: var(--accent) !important;
+    opacity: 1 !important;
+}
+
+.activeLink::after {
+    width: 100% !important;
+}
+
 .navActions {
     display: none;
     /* Hidden on desktop by default, or depends on your design. Usually toggle is in navLinks on desktop */
@@ -158,12 +167,18 @@
         background-color: var(--navbar-bg);
         backdrop-filter: blur(20px);
         flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        padding: 2rem;
-        transition: right 0.3s ease;
-        border-left: 1px solid rgba(200, 178, 115, 0.2);
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        justify-content: flex-start;
+        /* Align to top instead of center */
+        padding-top: 8rem;
+        /* improved top spacing */
+        gap: 3rem;
+        /* Increased gap for elegance */
+        padding-left: 2rem;
+        padding-right: 2rem;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Smoother ease */
+        border-left: 1px solid rgba(200, 178, 115, 0.3);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
     }
 
     .navLinks.open {
@@ -176,9 +191,12 @@
     }
 
     .navLinks a {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        /* Larger text */
         display: block;
         padding: 1rem;
+        border-bottom: 1px solid rgba(200, 178, 115, 0.1);
+        /* Subtle divider */
     }
 
     .navLinks a.btn-primary {

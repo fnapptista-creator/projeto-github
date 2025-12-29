@@ -10,7 +10,8 @@
 }
 
 .hero {
-    min-height: 80vh;
+    min-height: 60vh;
+    /* Reduced from 80vh to bring content up */
     display: flex;
     align-items: center;
     justify-content: center;

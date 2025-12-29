@@ -1,5 +1,6 @@
 .hero {
-    min-height: 80vh;
+    min-height: 60vh;
+    /* Reduced from 80vh to bring content up */
     /* Increased to match Consultoria */
     padding: 0 20px;
     /* Changed to match Consultoria (Pure Center) */

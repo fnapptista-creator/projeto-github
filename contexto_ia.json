@@ -1,0 +1,345 @@
+{
+    "persona": {
+        "name": "Felipe Nascimento",
+        "roles": [
+            {
+                "role_title": "Consultor Gastronômico",
+                "expertise": "Gestão de Restaurantes, Engenharia de Cardápio, Processos Operacionais e Lucratividade",
+                "experience": "9 anos de formação e atuação na área gastronômica",
+                "objective": "Transformar restaurantes em negócios lucrativos, saindo do operacional e focando na estratégia.",
+                "services_detail": {
+                    "Pre-Abertura": {
+                        "description": "Suporte completo desde o planejamento inicial.",
+                        "items": [
+                            "Criação do Conceito do Negócio: Definição estratégica de público e identidade.",
+                            "Escolha do Ponto Ideal: Análise de viabilidade comercial e perfil de cliente.",
+                            "Avaliação de Custos: Negociação de luvas, aluguel e viabilidade financeira.",
+                            "Alvarás e Licenças: Orientação burocrática para legalização.",
+                            "Layout Operacional: Parceria com arquitetos para fluxo eficiente em cozinha e bar.",
+                            "Indicação de Profissionais: Conexão com fornecedores e especialistas confiáveis."
+                        ]
+                    },
+                    "Gastronomia": {
+                        "description": "Desenvolvimento de produto e qualidade culinária.",
+                        "items": [
+                            "Elaboração de Cardápio: Menu exclusivo e rentável.",
+                            "Degustação e Padronização: Garantia de consistência e qualidade.",
+                            "Lista de Compras: Controle de insumos para reduzir desperdício.",
+                            "Aquisição de Equipamentos: Consultoria na compra do maquinário correto.",
+                            "Seleção e Treinamento: Contratação e capacitação da equipe de cozinha."
+                        ]
+                    },
+                    "Nutricao_e_Seguranca": {
+                        "description": "Segurança alimentar e processos técnicos.",
+                        "items": [
+                            "Higiene e Manipulação: Treinamento em boas práticas (RDC).",
+                            "Organização de Tarefas: Roteiros de limpeza e produção.",
+                            "Supervisão de Preparo: Acompanhamento técnico da produção.",
+                            "Armazenamento e Validade: Controle de estoque e etiquetas (PVPS).",
+                            "Fichas Técnicas: Padronização de receitas e custos."
+                        ]
+                    },
+                    "Salao_e_Bar": {
+                        "description": "Excelência no serviço e experiência do cliente.",
+                        "items": [
+                            "Contratação e Treinamento: Técnicas de atendimento e vendas para garçons.",
+                            "Integração Salão-Cozinha: Melhoria na comunicação e fluxo de pedidos.",
+                            "Definição de Escalas: Organização de horários e folgas.",
+                            "Operacional: Checklists de abertura e fechamento.",
+                            "Montagem do Salão: Layout funcional e acolhedor."
+                        ]
+                    },
+                    "Precificacao_e_Financeiro": {
+                        "description": "Engenharia financeira para maximizar o lucro.",
+                        "items": [
+                            "Análise de CMV: Cálculo do Custo de Mercadoria Vendida.",
+                            "Precificação Estratégica: Definição de preços com base em margem real.",
+                            "Engenharia de Cardápio: Estratégia para vender os pratos mais lucrativos.",
+                            "Controle de Estoque: Processos de compras e inventário.",
+                            "Gestão Financeira: Análise de DRE e indicadores de desempenho."
+                        ]
+                    }
+                }
+            },
+            {
+                "role_title": "Representante Comercial",
+                "segment": "Utilidades Domésticas, Decoração, Mesa Posta, Brinquedos e Variedades",
+                "experience": "17 anos de experiência em vendas",
+                "coverage": "Itabuna, Ilhéus e Extremo Sul da Bahia",
+                "portfolio_marcas": [
+                    {
+                        "marca": "Lyor",
+                        "segmentos": [
+                            "Decoração",
+                            "Utilidades"
+                        ],
+                        "produtos": "Mesa Posta (Taças, Pratos), Cozinha, Bar, Decoração."
+                    },
+                    {
+                        "marca": "Wolff",
+                        "segmentos": [
+                            "Decoração",
+                            "Utilidades"
+                        ],
+                        "produtos": "Luxo em Prataria, Inox, Cristais e Porcelanas."
+                    },
+                    {
+                        "marca": "Porto Brasil",
+                        "segmentos": [
+                            "Mesa Posta"
+                        ],
+                        "produtos": "Cerâmica Grés (Stoneware), Aparelhos de Jantar Premium."
+                    },
+                    {
+                        "marca": "Porcelana Schmidt",
+                        "segmentos": [
+                            "Mesa Posta"
+                        ],
+                        "produtos": "Porcelana tradicional de alta resistência, Linha Gastronomia."
+                    },
+                    {
+                        "marca": "Devitro",
+                        "segmentos": [
+                            "Vidros",
+                            "Decoração"
+                        ],
+                        "produtos": "Peças artesanais em vidro, Vasos, Centros de Mesa."
+                    },
+                    {
+                        "marca": "Grillo",
+                        "segmentos": [
+                            "Vidros",
+                            "Decoração"
+                        ],
+                        "produtos": "Plantas permanentes e referência nacional em Decoração de Natal."
+                    },
+                    {
+                        "marca": "Ingá Import",
+                        "segmentos": [
+                            "Utilidades",
+                            "PetShop"
+                        ],
+                        "produtos": "Marcas 'Em Casa Tem' (Utilidades) e 'Mimo Pets'."
+                    },
+                    {
+                        "marca": "Soprano",
+                        "segmentos": [
+                            "Utilidades",
+                            "Variedades"
+                        ],
+                        "produtos": "Garrafas Térmicas, Fechaduras, Materiais Elétricos."
+                    },
+                    {
+                        "marca": "Ou",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Organizadores plásticos de design, Linha Banheiro e Cozinha."
+                    },
+                    {
+                        "marca": "Arthi",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Aço cromado, Escorredores, Organizadores de Cozinha."
+                    },
+                    {
+                        "marca": "Tritec",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Potes herméticos, Bacias, Plásticos reforçados."
+                    },
+                    {
+                        "marca": "Rio Master",
+                        "segmentos": [
+                            "Decoração",
+                            "Variedades"
+                        ],
+                        "produtos": "Decoração Sazonal (Natal, Páscoa) e Utilidades Importadas."
+                    },
+                    {
+                        "marca": "Nutriplan",
+                        "segmentos": [
+                            "Variedades"
+                        ],
+                        "produtos": "Jardinagem, Vasos, Adubos e Fertilizantes."
+                    },
+                    {
+                        "marca": "Mistral",
+                        "segmentos": [
+                            "Vidros",
+                            "Decoração"
+                        ],
+                        "produtos": "Vidros artesanais, Vasos e peças decorativas."
+                    },
+                    {
+                        "marca": "Mel Toys",
+                        "segmentos": [
+                            "Brinquedos"
+                        ],
+                        "produtos": "Pelúcias afetivas, Ursinhos temáticos."
+                    },
+                    {
+                        "marca": "Tropical Aromas",
+                        "segmentos": [
+                            "Variedades"
+                        ],
+                        "produtos": "Difusores elétricos, Aromas, Home Sprays."
+                    },
+                    {
+                        "marca": "Wellmix",
+                        "segmentos": [
+                            "Variedades",
+                            "Brinquedos"
+                        ],
+                        "produtos": "Importadora completa: Papelaria, Utilidades, Brinquedos."
+                    },
+                    {
+                        "marca": "Hiper Têxtil",
+                        "segmentos": [
+                            "Têxtil"
+                        ],
+                        "produtos": "Cama, Mesa e Banho (Marcas Bene Casa e Tessi)."
+                    },
+                    {
+                        "marca": "Belfix",
+                        "segmentos": [
+                            "Lazer",
+                            "Variedades"
+                        ],
+                        "produtos": "Cadeiras de Praia, Piscinas, Gazebos, Lazer."
+                    },
+                    {
+                        "marca": "Max Alumínios",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Caldeirões industriais, Panelas, Alumínio polido."
+                    },
+                    {
+                        "marca": "Dolce Home",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Inox e Bambu, Potes, Organizadores Modernos."
+                    },
+                    {
+                        "marca": "Ke Home",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Utensílios em Aço Inox, Cozinha e Confeitaria."
+                    },
+                    {
+                        "marca": "Vitazza",
+                        "segmentos": [
+                            "Vidros"
+                        ],
+                        "produtos": "Vidro 100% Reciclado, Potes, Boleiras, Suqueiras."
+                    },
+                    {
+                        "marca": "AJ Import",
+                        "segmentos": [
+                            "Variedades"
+                        ],
+                        "produtos": "Brinquedos, Presentes e Utilidades diversas."
+                    },
+                    {
+                        "marca": "Secalux",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Varais, Tábuas de passar, Organização de lavanderia."
+                    },
+                    {
+                        "marca": "Casa Ambiente",
+                        "segmentos": [
+                            "Mesa Posta"
+                        ],
+                        "produtos": "Cerâmicas, Aparelhos de Jantar, Decoração."
+                    },
+                    {
+                        "marca": "Grilazer",
+                        "segmentos": [
+                            "Churrasco"
+                        ],
+                        "produtos": "Espetos, Grelhas, Acessórios para Churrasco."
+                    },
+                    {
+                        "marca": "Tutipan",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Formas e Assadeiras de Alumínio (Panificação/Confeitaria)."
+                    },
+                    {
+                        "marca": "Mek",
+                        "segmentos": [
+                            "Decoração"
+                        ],
+                        "produtos": "Mesa Posta Têxtil, Caminhos de mesa, Sousplats."
+                    },
+                    {
+                        "marca": "Sapico Toys",
+                        "segmentos": [
+                            "Brinquedos"
+                        ],
+                        "produtos": "Carrinhos, Brinquedos de plástico, Linhas Crazy Cars."
+                    },
+                    {
+                        "marca": "Class Home",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Rechauds, Inox, Garrafas Térmicas, Linha Buffet."
+                    },
+                    {
+                        "marca": "Santana Import",
+                        "segmentos": [
+                            "Eletrônicos"
+                        ],
+                        "produtos": "Informática, Ferramentas, Segurança Eletrônica."
+                    },
+                    {
+                        "marca": "EDDI Casa",
+                        "segmentos": [
+                            "Têxtil"
+                        ],
+                        "produtos": "Cortinas, Tapetes, Almofadas, Decoração Têxtil."
+                    },
+                    {
+                        "marca": "Dayhome",
+                        "segmentos": [
+                            "Food Service",
+                            "Utilidades"
+                        ],
+                        "produtos": "Profissional (Cozinhas Industriais) e Doméstico."
+                    },
+                    {
+                        "marca": "TT Brasil",
+                        "segmentos": [
+                            "Utilidades"
+                        ],
+                        "produtos": "Plásticos, Alumínios e Miudezas de alto giro."
+                    },
+                    {
+                        "marca": "Allmix",
+                        "segmentos": [
+                            "Utilidades",
+                            "Decoração"
+                        ],
+                        "produtos": "Distribuidor B2B, Presentes, Licenciados (Disney/Marvel)."
+                    },
+                    {
+                        "marca": "Beija Flor",
+                        "segmentos": [
+                            "Decoração"
+                        ],
+                        "produtos": "Referência em Natal, Flores Permanentes e Decoração."
+                    }
+                ]
+            }
+        ]
+    }
+}

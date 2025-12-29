@@ -27,9 +27,7 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     type: 'website',
   },
-  icons: {
-    icon: '/logo-felipe.png',
-  },
+
 };
 
 export default function RootLayout({

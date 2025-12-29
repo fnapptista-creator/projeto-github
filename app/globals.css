@@ -278,6 +278,11 @@ button {
   transform: rotate(15deg);
 }
 
+[data-theme='light'] .theme-toggle-btn:hover {
+  color: var(--gold-accent);
+  /* Gold Moon on Green Button */
+}
+
 /* Scroll Reveal Animation */
 .scroll-reveal {
   opacity: 0;
