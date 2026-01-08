@@ -4,10 +4,8 @@
     margin: 0 auto;
 }
 
-.dynamicIcon {
-    color: var(--icon-color);
-    transition: color 0.3s ease;
-}
+/* Removed .dynamicIcon */
+
 
 .hero {
     min-height: 60vh;
@@ -114,25 +112,30 @@
 
 .painCard {
     background-color: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    border-radius: 4px;
+    /* Sharper corners for minimal look */
     border: 1px solid var(--border-color);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    /* Smoother ease */
+    border-left: 2px solid var(--gold-accent);
+    /* Minimal accent */
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .painCard:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     border-color: var(--gold-accent);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    /* Removed heavy shadow */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* ... existing hover styles ... */
 
-.painIcon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
+/* Removed .painIcon */
+
 
 .painTitle {
     font-size: 1.25rem;
@@ -188,15 +191,19 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 1rem 1.5rem;
-    background-color: var(--card-bg);
+    padding: 1rem 2rem;
+    background-color: transparent;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 50px;
+    /* Pill shape */
     color: var(--foreground);
     opacity: 0.7;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .tabButton:hover {
@@ -207,16 +214,15 @@
 }
 
 .tabButton.active {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    background-color: var(--accent);
     border-color: var(--accent);
-    color: var(--accent);
+    color: white;
+    /* Contrast text */
     opacity: 1;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
-.tabIcon {
-    font-size: 1.5rem;
-}
+/* Removed .tabIcon */
 
 .tabLabel {
     font-weight: 600;
@@ -412,20 +418,18 @@
 }
 
 .targetCard:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: var(--accent);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-.targetIcon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-}
+/* Removed .targetIcon */
 
 .targetCard h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--accent);
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .targetCard p {

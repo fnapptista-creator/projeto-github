@@ -5,15 +5,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
 import ScrollReveal from '@/components/ScrollReveal';
-import {
-    ChefHat,
-    TrendingDown,
-    Flame,
-    Users,
-    Rocket,
-    TrendingUp,
-    ClipboardX
-} from 'lucide-react';
 
 type ServiceTab = 'novos-negocios' | 'negocios-expansao' | 'negocios-funcionamento';
 
@@ -49,7 +40,6 @@ export default function Consultoria() {
     const services = {
         'novos-negocios': {
             title: 'Novos Negócios',
-            icon: Rocket,
             description: 'Tudo o que você precisa para tirar o seu sonho do papel com segurança e estratégia.',
             items: [
                 { title: 'Estudo de mercado e região', desc: 'Trazemos inteligência de dados para sua tomada de decisões, com pesquisas de mercado qualitativas e quantitativas. Oferecemos uma análise completa para você abrir seu negócio no ponto certo.' },
@@ -63,7 +53,6 @@ export default function Consultoria() {
         },
         'negocios-expansao': {
             title: 'Negócios em Expansão',
-            icon: TrendingUp,
             description: 'Estratégias escaláveis para quem quer crescer sem perder a qualidade e a essência da marca.',
             items: [
                 { title: 'Estudo de mercado e região', desc: 'Analisamos e sugerimos as melhores regiões para abertura de novas operações, com pesquisas de mercado quantitativas e qualitativas.' },
@@ -76,7 +65,6 @@ export default function Consultoria() {
         },
         'negocios-funcionamento': {
             title: 'Negócios em Funcionamento',
-            icon: ChefHat,
             description: 'Diagnóstico e otimização para restaurantes que buscam mais eficiência, padronização e lucro real.',
             items: [
                 { title: 'Engenharia Financeira e Auditoria', desc: 'Análise aprofundada de CMV, precificação estratégica, engenharia de cardápio e auditoria para garantir a saúde financeira e o lucro real.' },
@@ -127,36 +115,24 @@ export default function Consultoria() {
                         <h2 className={styles.sectionTitle}>O cenário comum (e perigoso)</h2>
                         <div className={styles.painGrid}>
                             <div className={styles.painCard}>
-                                <div className={styles.painIcon}>
-                                    <TrendingDown className={styles.dynamicIcon} size={48} />
-                                </div>
                                 <h3 className={styles.painTitle}>Lucro Invisível</h3>
                                 <p className={styles.painText}>
                                     Você vende bem, mas a conta não fecha? O problema pode estar no cálculo de CMV errado ou ficha técnica inexistente. Onde está o dinheiro?
                                 </p>
                             </div>
                             <div className={styles.painCard}>
-                                <div className={styles.painIcon}>
-                                    <Flame className={styles.dynamicIcon} size={48} />
-                                </div>
                                 <h3 className={styles.painTitle}>Apagando Incêndios</h3>
                                 <p className={styles.painText}>
                                     Sua operação depende 100% de você? Aprenda como aumentar o lucro do restaurante e deixe de ser refém do operacional.
                                 </p>
                             </div>
                             <div className={styles.painCard}>
-                                <div className={styles.painIcon}>
-                                    <Users className={styles.dynamicIcon} size={48} />
-                                </div>
                                 <h3 className={styles.painTitle}>Equipe sem Padrão</h3>
                                 <p className={styles.painText}>
                                     Rotatividade alta e cozinha desorganizada? Implemente treinamento de equipe e processos para padronizar o atendimento.
                                 </p>
                             </div>
                             <div className={styles.painCard}>
-                                <div className={styles.painIcon}>
-                                    <ClipboardX className={styles.dynamicIcon} size={48} />
-                                </div>
                                 <h3 className={styles.painTitle}>Desperdício Oculto</h3>
                                 <p className={styles.painText}>
                                     Sem padronização e ficha técnica, você joga dinheiro no lixo a cada prato que sai da cozinha.
@@ -177,16 +153,12 @@ export default function Consultoria() {
 
                         <div className={styles.serviceTabs}>
                             {(Object.keys(services) as ServiceTab[]).map((key) => {
-                                const Icon = services[key].icon;
                                 return (
                                     <button
                                         key={key}
                                         className={`${styles.tabButton} ${activeTab === key ? styles.active : ''}`}
                                         onClick={() => handleTabClick(key)}
                                     >
-                                        <span className={styles.tabIcon}>
-                                            <Icon className={styles.dynamicIcon} size={24} />
-                                        </span>
                                         <span className={styles.tabLabel}>{services[key].title}</span>
                                     </button>
                                 );
@@ -262,16 +234,10 @@ export default function Consultoria() {
                         <h2 className={styles.sectionTitle}>Para quem é a consultoria?</h2>
                         <div className={styles.targetGrid}>
                             <div className={styles.targetCard}>
-                                <div className={styles.targetIcon}>
-                                    <Rocket className={styles.dynamicIcon} size={64} />
-                                </div>
                                 <h3>Novos Restaurantes</h3>
                                 <p>Orientação completa para abrir um restaurante bem-sucedido, evitando erros comuns e estabelecendo uma base sólida desde o início.</p>
                             </div>
                             <div className={styles.targetCard}>
-                                <div className={styles.targetIcon}>
-                                    <TrendingUp className={styles.dynamicIcon} size={64} />
-                                </div>
                                 <h3>Restaurantes em Operação</h3>
                                 <p>Ajustes personalizados para otimizar o desempenho e explorar o potencial máximo do negócio que já está funcionando.</p>
                             </div>
