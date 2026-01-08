@@ -6,23 +6,19 @@ import Footer from '@/components/Footer';
 import styles from './page.module.css';
 import ScrollReveal from '@/components/ScrollReveal';
 import {
-    Construction,
     ChefHat,
-    Salad,
-    Calculator,
     TrendingDown,
     Flame,
     Users,
     Rocket,
     TrendingUp,
-    ClipboardX,
-    ConciergeBell
+    ClipboardX
 } from 'lucide-react';
 
-type ServiceTab = 'pre-abertura' | 'gastronomia' | 'nutricao' | 'salao-bar' | 'precificacao';
+type ServiceTab = 'novos-negocios' | 'negocios-expansao' | 'negocios-funcionamento';
 
 export default function Consultoria() {
-    const [activeTab, setActiveTab] = useState<ServiceTab>('pre-abertura');
+    const [activeTab, setActiveTab] = useState<ServiceTab>('novos-negocios');
     const [showModal, setShowModal] = useState(false);
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -51,66 +47,47 @@ export default function Consultoria() {
     };
 
     const services = {
-        'pre-abertura': {
-            title: 'Pré-Abertura',
-            icon: Construction,
-            description: 'Suporte completo desde a fase de planejamento para garantir uma base sólida ao seu negócio',
+        'novos-negocios': {
+            title: 'Novos Negócios',
+            icon: Rocket,
+            description: 'Tudo o que você precisa para tirar o seu sonho do papel com segurança e estratégia.',
             items: [
-                { title: 'Criação do Conceito do Negócio', desc: 'Orientação estratégica para definir o conceito que melhor atende ao público-alvo' },
-                { title: 'Escolha do Ponto Ideal', desc: 'Auxílio na busca do local ideal para aluguel ou compra, considerando perfil do cliente e viabilidade comercial' },
-                { title: 'Avaliação de Custos', desc: 'Assessoria para negociação de valor de luvas e aluguel' },
-                { title: 'Alvarás e Licenças', desc: 'Indicação do caminho mais eficiente para obtenção de autorizações e licenças de funcionamento' },
-                { title: 'Layout Operacional', desc: 'Orientação no layout de cozinha, bar e área de operações, em parceria com o arquiteto responsável' },
-                { title: 'Indicação de Profissionais', desc: 'Recomendações de arquitetos, designers, fornecedores de equipamentos, assessoria de imprensa, entre outros' }
+                { title: 'Estudo de mercado e região', desc: 'Trazemos inteligência de dados para sua tomada de decisões, com pesquisas de mercado qualitativas e quantitativas. Oferecemos uma análise completa para você abrir seu negócio no ponto certo.' },
+                { title: 'Estrutura organizacional', desc: 'Crie seu novo bar ou restaurante com a equipe e processos certos para possibilitar o crescimento sustentável e sem sustos.' },
+                { title: 'Pré Abertura e Layout Operacional', desc: 'Orientação técnica em parceria com arquitetos para o desenho da cozinha e bar, suporte com alvarás, licenças e avaliação de custos de ponto.' },
+                { title: 'Plano de comunicação', desc: 'Acerte na hora de posicionar o seu novo negócio. Oferecemos um plano completo para a sua divulgação.' },
+                { title: 'Implantação da operação de salão', desc: 'Tenha uma equipe preparada e vendedora em seu novo bar ou restaurante. Cuidamos de cada detalhe para sua abertura ser um sucesso.' },
+                { title: 'Plano de negócios', desc: 'Transformamos a sua ideia de bar ou restaurante em um conceito cheio de personalidade e financeiramente saudável.' },
+                { title: 'Criação de cardápio', desc: 'Um olhar nas tendências e outro em uma operação eficiente: criamos cardápios atrativos e lucrativos para o seu novo negócio.' }
             ]
         },
-        'gastronomia': {
-            title: 'Gastronomia',
+        'negocios-expansao': {
+            title: 'Negócios em Expansão',
+            icon: TrendingUp,
+            description: 'Estratégias escaláveis para quem quer crescer sem perder a qualidade e a essência da marca.',
+            items: [
+                { title: 'Estudo de mercado e região', desc: 'Analisamos e sugerimos as melhores regiões para abertura de novas operações, com pesquisas de mercado quantitativas e qualitativas.' },
+                { title: 'Rollout plan para expansão', desc: 'Entendemos o potencial do mercado e das regiões de interesse e mapeamos a melhor estratégia para a expansão do seu negócio.' },
+                { title: 'Atualização de cardápio', desc: 'Entendemos a essência do seu negócio e adaptamos a oferta de produtos de acordo com o mercado que irá recebê-lo.' },
+                { title: 'Gestão centralizada', desc: 'Desenhamos a melhor equipe para abraçar os desafios da expansão da sua marca. Determinamos papéis e desenvolvemos lideranças para uma gestão centralizada dos negócios.' },
+                { title: 'Padronização de experiência', desc: 'Treinamos a sua equipe para fidelizar os clientes em todas as praças de atuação, oferecendo a experiência da marca e entregando valor.' },
+                { title: 'Cozinha central', desc: 'Trazemos a sua operação a um novo nível de eficiência e qualidade e entendemos a necessidade de um ponto central de produção e distribuição.' }
+            ]
+        },
+        'negocios-funcionamento': {
+            title: 'Negócios em Funcionamento',
             icon: ChefHat,
-            description: 'Desenvolvimento do cardápio e estruturação da operação culinária para elevar a qualidade do estabelecimento',
+            description: 'Diagnóstico e otimização para restaurantes que buscam mais eficiência, padronização e lucro real.',
             items: [
-                { title: 'Elaboração de Cardápio', desc: 'Criação de um menu exclusivo, adaptado ao conceito do restaurante' },
-                { title: 'Degustação e Padronização', desc: 'Testes e padronização para garantir qualidade e consistência nos pratos' },
-                { title: 'Lista de Compras', desc: 'Controle de estoque para bares e restaurantes: Lista detalhada para reduzir desperdício' },
-                { title: 'Aquisição de Equipamentos', desc: 'Orientação na compra de utensílios e equipamentos de cozinha' },
-                { title: 'Seleção e Treinamento', desc: 'Apoio na contratação de funcionários, divisão de tarefas e treinamento prático' }
-            ]
-        },
-        'nutricao': {
-            title: 'Nutrição',
-            icon: Salad,
-            description: 'Foco em segurança alimentar e qualidade nutricional com serviços personalizados',
-            items: [
-                { title: 'Higiene e Manipulação', desc: 'Treinamento sobre práticas seguras de manuseio e higiene alimentar' },
-                { title: 'Organização de Tarefas', desc: 'Elaboração de roteiro de atividades, planilhas de escala e divisão de tarefas' },
-                { title: 'Supervisão de Preparo', desc: 'Acompanhamento do processo de preparação dos alimentos, visando qualidade e eficiência' },
-                { title: 'Armazenamento e Validade', desc: 'Treinamento para correta recepção, armazenamento e controle de validade dos ingredientes' },
-                { title: 'Fichas Técnicas', desc: 'Criação de fichas técnicas para padronizar o preparo dos pratos' }
-            ]
-        },
-        'salao-bar': {
-            title: 'Gestão de Salão',
-            icon: ConciergeBell,
-            description: 'Transforme a experiência do cliente com um serviço de salão bem estruturado e profissional',
-            items: [
-                { title: 'Contratação e Treinamento', desc: 'Seleção de profissionais e treinamento prático e técnicas em atendimento e hospitalidade' },
-                { title: 'Integração Salão e Cozinha', desc: 'Planejamento para otimizar a comunicação entre salão e cozinha, garantindo um fluxo eficiente' },
-                { title: 'Definição de Escalas', desc: 'Organização das escalas de trabalho dos funcionários' },
-                { title: 'Operacional do Funcionamento', desc: 'Implementação de check-lists de abertura e fechamento, para garantir um funcionamento impecável' },
-                { title: 'Montagem do Salão', desc: 'Orientação na disposição do salão para criar um ambiente acolhedor e funcional' },
-                { title: 'Cliente Oculto (Auditoria)', desc: 'Avaliação anônima completa da experiência do cliente, identificando falhas reais no atendimento e produto' }
-            ]
-        },
-        'precificacao': {
-            title: 'Precificação & CMV',
-            icon: Calculator,
-            description: 'Engenharia financeira para maximizar lucros e garantir sustentabilidade do negócio',
-            items: [
-                { title: 'Análise de CMV', desc: 'Cálculo detalhado do Custo de Mercadoria Vendida para cada prato do cardápio' },
-                { title: 'Precificação Estratégica', desc: 'Definição de preços baseada em margem de contribuição e posicionamento de mercado' },
-                { title: 'Engenharia de Cardápio', desc: 'Reformulação do menu para maximizar rentabilidade e destacar pratos mais lucrativos' },
-                { title: 'Controle de Estoque', desc: 'Implementação de rotinas de compras e gestão de estoque para reduzir desperdícios' },
-                { title: 'Gestão Financeira', desc: 'Consultoria para reduzir custos: Gerencie com dados e pare de ter prejuízo' }
+                { title: 'Engenharia Financeira e Auditoria', desc: 'Análise aprofundada de CMV, precificação estratégica, engenharia de cardápio e auditoria para garantir a saúde financeira e o lucro real.' },
+                { title: 'Nutrição e Segurança Alimentar', desc: 'Controle de higiene, armazenamento, fichas técnicas e supervisão de preparo para garantir segurança e padrão.' },
+                { title: 'Ferramentas Operacionais de Gestão', desc: 'Organização de escalas, check-lists de rotina, integração salão-cozinha e aplicação de cliente oculto para excelência na operação.' },
+                { title: 'Planejamento estratégico e atualização conceitual', desc: 'Para quem quer se manter atrativo às novas demandas dos consumidores. Analisamos seu negócio e o mercado e oferecemos as ferramentas certas.' },
+                { title: 'Atualização de cardápio', desc: 'Trazemos atratividade e eficiência ao seu cardápio e operação de cozinha, revendo processos e desenvolvendo a sua equipe operacional.' },
+                { title: 'Treinamento de serviço e hospitalidade', desc: 'Fidelize mais clientes oferecendo experiências memoráveis em seu bar ou restaurante.' },
+                { title: 'Treinamento de vendas', desc: 'Fature mais com uma equipe preparada para oferecer e vender todas as possibilidades de experiência do seu bar ou restaurante.' },
+                { title: 'Estruturação de compras', desc: 'Não perca dinheiro em seu processo de compras. Trazemos inteligência e eficiência para a sua operação ser mais lucrativa.' },
+                { title: 'Planejamento financeiro', desc: 'Entenda a melhor forma de distribuir seus recursos para o máximo de retorno para o seu negócio.' }
             ]
         }
     };
