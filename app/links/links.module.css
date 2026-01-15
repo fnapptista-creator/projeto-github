@@ -213,36 +213,40 @@
 }
 
 /* Light Mode Overrides */
+/* Light Mode Overrides */
 [data-theme='light'] .primaryBtn {
-    background: var(--bg-dark-green);
-    /* Green Background */
-    color: var(--gold-accent);
-    /* Gold Text */
-    border: 1px solid var(--bg-dark-green);
+    background-color: #153E32 !important;
+    /* Deep Green forced */
+    color: #C8B273 !important;
+    /* Gold forced */
+    border: 1px solid #153E32;
     box-shadow: 0 4px 15px rgba(21, 62, 50, 0.25);
 }
 
 [data-theme='light'] .primaryBtn:hover {
-    background: #1C4539;
-    /* Slightly lighter green on hover */
-    color: #D4C085;
+    background-color: #1C4539 !important;
+    color: #D4C085 !important;
     box-shadow: 0 6px 20px rgba(21, 62, 50, 0.35);
-    border-color: var(--gold-accent);
+    border-color: #C8B273;
 }
 
 [data-theme='light'] .linkBtn {
     background: #fff;
     border: 1px solid rgba(21, 62, 50, 0.4);
-    /* Dark Green border with opacity for visibility */
-    color: var(--bg-dark-green);
+    color: #153E32;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme='light'] .linkBtn:hover {
-    background: #F4F1EA;
-    /* Cream hover */
-    border-color: var(--bg-dark-green);
+    background: #fff;
+    /* Keep white so the shine effect is visible */
+    border-color: #153E32;
     transform: scale(1.02);
+}
+
+/* Light Mode 'Shine' Effect */
+[data-theme='light'] .linkBtn::after {
+    background: linear-gradient(90deg, transparent, rgba(21, 62, 50, 0.1), transparent);
 }
 
 /* Primary Button Base (Dark Mode Default) */
@@ -251,17 +255,8 @@
     color: var(--bg-dark-green);
     box-shadow: 0 4px 15px rgba(200, 178, 115, 0.25);
     border: 1px solid var(--gold-accent);
-    /* Ensure it stands out from other cards */
     font-size: 1.05rem;
-    /* Slightly larger */
     padding: 1.35rem 1.5rem;
-    /* Slightly taller */
-}
-
-/* General Link Button Base (Dark Mode Default) */
-.linkBtn {
-    /* ... existing styles ... */
-    /* Ensuring distinction */
 }
 
 .primaryBtn:hover {
