@@ -12,7 +12,8 @@ export default function LinksPage() {
     // vCard Data
     const contactData = {
         fn: "Felipe Nascimento",
-        title: "Soluções Estratégicas para Varejo e Foodservice",
+        title: "Representante Comercial e Consultor Gastronômico", // Updated Title
+        subHeadline: "Soluções Estratégicas para Varejo e Foodservice", // Kept for display if needed
         tel: "5573981349085",
         email: "eu@felipenb.com.br",
         url: "https://felipenb.com.br",

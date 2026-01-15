@@ -103,7 +103,8 @@
 
 [data-theme='light'] .iconBtn {
     background: #fff;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.2);
+    /* Darker border for light mode */
 }
 
 .iconBtn:hover {
@@ -129,7 +130,8 @@
     border-radius: 12px;
     background: var(--secondary-bg);
     color: var(--foreground);
-    border: none;
+    border: 1px solid rgba(200, 178, 115, 0.4);
+    /* Increased visibility (Gold with 40% opacity) */
     font-size: 1rem;
     font-weight: 600;
     display: flex;
@@ -140,6 +142,12 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     text-decoration: none;
     overflow: hidden;
+}
+
+[data-theme='light'] .linkBtn {
+    border-color: rgba(0, 0, 0, 0.15);
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .linkBtn::after {
