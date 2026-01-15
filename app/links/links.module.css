@@ -172,6 +172,60 @@
     border: 1px solid var(--gold-accent);
 }
 
+/* Toast Notification */
+.toast {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-dark-green);
+    color: var(--text-light);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: 90%;
+    text-align: center;
+    border: 1px solid var(--gold-accent);
+}
+
+.toastIcon {
+    width: 20px;
+    height: 20px;
+    color: var(--gold-accent);
+    flex-shrink: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Light Mode Overrides */
+[data-theme='light'] .primaryBtn {
+    background: var(--gold-accent);
+    color: var(--bg-dark-green);
+    border: 1px solid var(--gold-accent);
+    /* Make it pop against white background */
+    box-shadow: 0 4px 15px rgba(200, 178, 115, 0.4);
+}
+
+[data-theme='light'] .primaryBtn:hover {
+    background: var(--gold-hover);
+    box-shadow: 0 6px 20px rgba(200, 178, 115, 0.6);
+}
+
 .primaryBtn {
     background: var(--gold-accent);
     color: var(--bg-dark-green);

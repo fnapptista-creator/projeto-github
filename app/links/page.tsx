@@ -20,6 +20,8 @@ export default function LinksPage() {
         portal: "https://felipe.rep.br"
     };
 
+    const [showToast, setShowToast] = useState(false);
+
     const handleDownloadVCard = () => {
         const vcardContent = `BEGIN:VCARD
 VERSION:3.0
@@ -38,10 +40,22 @@ END:VCARD`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+
+        // Show helper toast
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 5000);
     };
 
     return (
         <div className={styles.pageContainer}>
+            {/* Helper Toast */}
+            {showToast && (
+                <div className={styles.toast}>
+                    <InfoIcon className={styles.toastIcon} />
+                    <span>Abra o arquivo baixado para salvar o contato.</span>
+                </div>
+            )}
+
             <div className={styles.cardContainer}>
 
                 {/* Header Section */}
@@ -168,4 +182,8 @@ function QrCodeIcon({ className }: { className?: string }) {
 
 function XIcon({ className }: { className?: string }) {
     return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>;
+}
+
+function InfoIcon({ className }: { className?: string }) {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>;
 }
