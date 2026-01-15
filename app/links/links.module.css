@@ -214,22 +214,54 @@
 
 /* Light Mode Overrides */
 [data-theme='light'] .primaryBtn {
-    background: var(--gold-accent);
-    color: var(--bg-dark-green);
-    border: 1px solid var(--gold-accent);
-    /* Make it pop against white background */
-    box-shadow: 0 4px 15px rgba(200, 178, 115, 0.4);
+    background: var(--bg-dark-green);
+    /* Green Background */
+    color: var(--gold-accent);
+    /* Gold Text */
+    border: 1px solid var(--bg-dark-green);
+    box-shadow: 0 4px 15px rgba(21, 62, 50, 0.25);
 }
 
 [data-theme='light'] .primaryBtn:hover {
-    background: var(--gold-hover);
-    box-shadow: 0 6px 20px rgba(200, 178, 115, 0.6);
+    background: #1C4539;
+    /* Slightly lighter green on hover */
+    color: #D4C085;
+    box-shadow: 0 6px 20px rgba(21, 62, 50, 0.35);
+    border-color: var(--gold-accent);
 }
 
+[data-theme='light'] .linkBtn {
+    background: #fff;
+    border: 1px solid rgba(21, 62, 50, 0.4);
+    /* Dark Green border with opacity for visibility */
+    color: var(--bg-dark-green);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .linkBtn:hover {
+    background: #F4F1EA;
+    /* Cream hover */
+    border-color: var(--bg-dark-green);
+    transform: scale(1.02);
+}
+
+/* Primary Button Base (Dark Mode Default) */
 .primaryBtn {
     background: var(--gold-accent);
     color: var(--bg-dark-green);
     box-shadow: 0 4px 15px rgba(200, 178, 115, 0.25);
+    border: 1px solid var(--gold-accent);
+    /* Ensure it stands out from other cards */
+    font-size: 1.05rem;
+    /* Slightly larger */
+    padding: 1.35rem 1.5rem;
+    /* Slightly taller */
+}
+
+/* General Link Button Base (Dark Mode Default) */
+.linkBtn {
+    /* ... existing styles ... */
+    /* Ensuring distinction */
 }
 
 .primaryBtn:hover {
