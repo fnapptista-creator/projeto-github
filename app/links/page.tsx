@@ -92,6 +92,13 @@ END:VCARD`;
                     >
                         <MailIcon />
                     </a>
+                    <button
+                        onClick={() => setShowQRCode(true)}
+                        className={styles.iconBtn}
+                        aria-label="QR Code"
+                    >
+                        <QrCodeIcon className={styles.navIcon} />
+                    </button>
                     <ThemeToggle />
                 </div>
 
@@ -117,11 +124,6 @@ END:VCARD`;
                         <span>Portal do Cliente</span>
                         <BriefcaseIcon className={styles.btnIcon} />
                     </a>
-
-                    <button onClick={() => setShowQRCode(true)} className={styles.linkBtn}>
-                        <span>Meu QR Code</span>
-                        <QrCodeIcon className={styles.btnIcon} />
-                    </button>
                 </div>
 
                 {/* Footer */}

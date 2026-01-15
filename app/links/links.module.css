@@ -271,6 +271,11 @@
     opacity: 0.8;
 }
 
+.navIcon {
+    width: 24px;
+    height: 24px;
+}
+
 /* Footer */
 .footer {
     opacity: 0.5;
