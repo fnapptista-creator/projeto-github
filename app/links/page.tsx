@@ -1,185 +1,170 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./links.module.css";
-import { Metadata } from "next";
 import ThemeToggle from "../../components/ThemeToggle";
 
-export const metadata: Metadata = {
-    title: "Felipe Nascimento | Hub de Negócios",
-    description: "Soluções Estratégicas para Varejo e Foodservice. Acesso a catálogos e consultoria especializada.",
-};
-
 export default function LinksPage() {
+    const [showQRCode, setShowQRCode] = useState(false);
+
+    // vCard Data
+    const contactData = {
+        fn: "Felipe Nascimento",
+        title: "Soluções Estratégicas para Varejo e Foodservice",
+        tel: "5573981349085",
+        email: "eu@felipenb.com.br",
+        url: "https://felipenb.com.br",
+        portal: "https://felipe.rep.br"
+    };
+
+    const handleDownloadVCard = () => {
+        const vcardContent = `BEGIN:VCARD
+VERSION:3.0
+FN:${contactData.fn}
+TITLE:${contactData.title}
+TEL;TYPE=CELL:${contactData.tel}
+EMAIL;TYPE=WORK:${contactData.email}
+URL:${contactData.url}
+END:VCARD`;
+
+        const blob = new Blob([vcardContent], { type: "text/vcard;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", "Felipe_Nascimento.vcf");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className={styles.pageContainer}>
-            <div className={styles.contentWrapper}>
+            <div className={styles.cardContainer}>
 
-                {/* 1. Hero Section */}
-                <header className={styles.heroSection}>
-                    <div className={styles.headerTop}>
-                        <div className={styles.profileBlock}>
-                            <div className={styles.logoContainer}>
-                                <Image
-                                    src="/logo-felipe.png"
-                                    alt="Felipe Nascimento Logo"
-                                    width={100}
-                                    height={100}
-                                    className={styles.logo}
-                                    priority
-                                />
-                            </div>
-                            <h2 className={styles.profileName}>Felipe Nascimento</h2>
-                        </div>
-                        <div className={styles.headerToggle}>
-                            <ThemeToggle />
-                        </div>
+                {/* Header Section */}
+                <header className={styles.header}>
+                    <div className={styles.avatarWrapper}>
+                        <Image
+                            src="/logo-felipe.png"
+                            alt="Felipe Nascimento"
+                            width={110}
+                            height={110}
+                            className={styles.avatar}
+                            priority
+                        />
                     </div>
-
-                    <h1 className={styles.headline}>
-                        Soluções Estratégicas para <span className={styles.highlight}>Varejo</span> e <span className={styles.highlight}>Foodservice</span>
-                    </h1>
-                    <p className={styles.subheadline}>
-                        Aumente seu Mix, Margem e Eficiência. Acesso direto às melhores marcas do mercado e consultoria especializada.
-                    </p>
+                    <h1 className={styles.name}>{contactData.fn}</h1>
+                    <p className={styles.title}>{contactData.title}</p>
                 </header>
 
-                {/* 2. Segmentação Estratégica */}
-                <main className={styles.mainGrid}>
-
-                    {/* BLOCO 1: Consultoria Gastronômica */}
-                    <section className={`${styles.card} ${styles.cardConsulting}`}>
-                        <div className={styles.cardHeader}>
-                            <ChefIcon className={styles.cardIcon} />
-                            <h2 className={styles.cardTitle}>Consultoria Gastronômica</h2>
-                        </div>
-                        <p className={styles.cardDescription}>
-                            Otimização de processos, montagem de mix e soluções estratégicas para bares, restaurantes e foodservice.
-                        </p>
-
-                        <div className={styles.actionGroup}>
-                            <Link href="/consultoria" className={styles.btnOutline}>
-                                <span>Conhecer Serviços</span>
-                                <ArrowRightIcon className={styles.btnIcon} />
-                            </Link>
-                        </div>
-                    </section>
-
-                    {/* BLOCO 2: Representação Comercial (Showcase) */}
-                    <section className={`${styles.card} ${styles.cardRepresentation}`}>
-                        <div className={styles.cardHeader}>
-                            <StoreIcon className={styles.cardIcon} />
-                            <h2 className={styles.cardTitle}>Representação Comercial</h2>
-                        </div>
-                        <p className={styles.cardDescription}>
-                            Atendemos Cama, Mesa e Banho, Petshop, Utilidades, Decoração e Foodservice. Transforme o mix da sua loja com marcas líderes.
-                        </p>
-
-                        <div className={styles.actionGroup}>
-                            <Link href="/representacao" className={styles.btnOutline}>
-                                <span>Conhecer Marcas</span>
-                                <ArrowRightIcon className={styles.btnIcon} />
-                            </Link>
-                            <span className={styles.linkSecondary}>
-                                Ainda não é cliente? <strong>Cadastre-se</strong>
-                            </span>
-                        </div>
-                    </section>
-
-                    {/* BLOCO 3: Portal do Cliente (Acesso Restrito) */}
-                    <section className={`${styles.card} ${styles.cardPortal}`}>
-                        <div className={styles.cardHeader}>
-                            <LockIcon className={styles.cardIcon} />
-                            <h2 className={styles.cardTitle}>Portal do Cliente</h2>
-                        </div>
-                        <p className={styles.cardDescription}>
-                            Acesso exclusivo a catálogos de +40 marcas líderes, estoque atualizado e oportunidades de giro rápido.
-                        </p>
-
-                        <div className={styles.actionGroup}>
-                            <a
-                                href="https://felipe.rep.br"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.btnPrimary}
-                            >
-                                <span>Acessar Catálogos</span>
-                                <ExternalLinkIcon className={styles.btnIcon} />
-                            </a>
-                        </div>
-                    </section>
-
-                </main>
-
-                {/* 3. Seção de Autoridade */}
-                <section className={styles.authoritySection}>
-                    <p className={styles.authorityLabel}>Representação oficial de grandes marcas</p>
-                    <div className={styles.brandStrip}>
-                        <span className={styles.brandName}>Porto Brasil</span>
-                        <span className={styles.separator}>•</span>
-                        <span className={styles.brandName}>Lyor</span>
-                        <span className={styles.separator}>•</span>
-                        <span className={styles.brandName}>OU</span>
-                        <span className={styles.separator}>•</span>
-                        <span className={styles.brandName}>DayHome</span>
-                    </div>
-                </section>
-
-                {/* 4. Rodapé / Contato */}
-                <footer className={styles.footer}>
+                {/* Quick Actions (Horizontal) */}
+                <div className={styles.quickActions}>
                     <a
-                        href="https://wa.me/5571999999999" // Substituir pelo número real se disponível
+                        href={`https://wa.me/${contactData.tel}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.whatsappBtn}
+                        className={styles.iconBtn}
+                        aria-label="WhatsApp"
                     >
-                        <WhatsappIcon className={styles.btnIcon} />
-                        <span>Falar diretamente com Felipe</span>
+                        <WhatsappIcon />
+                    </a>
+                    <a
+                        href={`mailto:${contactData.email}`}
+                        className={styles.iconBtn}
+                        aria-label="E-mail"
+                    >
+                        <MailIcon />
+                    </a>
+                    <ThemeToggle />
+                </div>
+
+                {/* Main Actions (Vertical) */}
+                <div className={styles.linksList}>
+
+                    <button onClick={handleDownloadVCard} className={`${styles.linkBtn} ${styles.primaryBtn}`}>
+                        <span>Salvar Contato</span>
+                        <UserPlusIcon className={styles.btnIcon} />
+                    </button>
+
+                    <Link href="/" className={styles.linkBtn}>
+                        <span>Meu Site</span>
+                        <GlobeIcon className={styles.btnIcon} />
+                    </Link>
+
+                    <a
+                        href={contactData.portal}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.linkBtn}
+                    >
+                        <span>Portal do Cliente</span>
+                        <BriefcaseIcon className={styles.btnIcon} />
                     </a>
 
-                    <div className={styles.footerBottom}>
-                        <p className={styles.copy}>© {new Date().getFullYear()} Felipe Nascimento</p>
-                    </div>
-                </footer>
+                    <button onClick={() => setShowQRCode(true)} className={styles.linkBtn}>
+                        <span>Meu QR Code</span>
+                        <QrCodeIcon className={styles.btnIcon} />
+                    </button>
+                </div>
 
+                {/* Footer */}
+                <footer className={styles.footer}>
+                    <p>© {new Date().getFullYear()} Felipe Nascimento</p>
+                </footer>
             </div>
+
+            {/* QR Code Modal */}
+            {showQRCode && (
+                <div className={styles.modalOverlay} onClick={() => setShowQRCode(false)}>
+                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                        <button className={styles.closeBtn} onClick={() => setShowQRCode(false)}>
+                            <XIcon />
+                        </button>
+                        <h3 className={styles.modalTitle}>Escaneie para acessar</h3>
+                        <div className={styles.qrWrapper}>
+                            <Image
+                                src="/qr-code.png"
+                                alt="QR Code Felipe Nascimento"
+                                width={250}
+                                height={250}
+                                className={styles.qrImage}
+                            />
+                        </div>
+                        <p className={styles.modalText}>felipenb.com.br/links</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
 
-// Icons Components
-
-function StoreIcon({ className }: { className?: string }) {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7" /></svg>
-    );
+// Icons
+function WhatsappIcon() {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" /><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" /></svg>;
 }
 
-function ChefIcon({ className }: { className?: string }) {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M6 13.87A8 8 0 0 1 6 10a6 6 0 0 1 12 0 8 8 0 0 1 0 3.87" /><path d="M6 13.87V16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-2.13" /><path d="M9 22v-2" /><path d="M15 22v-2" /><path d="M12 2v4" /><path d="m16 6-2.6-3.4A2 2 0 0 0 11.8 2h-1.4a2 2 0 0 0-1.6.8L6 6" /></svg>
-    );
+function MailIcon() {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>;
 }
 
-function LockIcon({ className }: { className?: string }) {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-    );
+function UserPlusIcon({ className }: { className?: string }) {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="19" y1="8" x2="19" y2="14" /><line x1="22" y1="11" x2="16" y2="11" /></svg>;
 }
 
-function ArrowRightIcon({ className }: { className?: string }) {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-    );
+function GlobeIcon({ className }: { className?: string }) {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="10" /><line x1="2" x2="22" y1="12" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>;
 }
 
-function ExternalLinkIcon({ className }: { className?: string }) {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
-    );
+function BriefcaseIcon({ className }: { className?: string }) {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="20" height="14" x="2" y="7" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>;
 }
 
-function WhatsappIcon({ className }: { className?: string }) {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" /><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" /></svg>
-    );
+function QrCodeIcon({ className }: { className?: string }) {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="5" height="5" x="3" y="3" rx="1" /><rect width="5" height="5" x="16" y="3" rx="1" /><rect width="5" height="5" x="3" y="16" rx="1" /><path d="M21 16h-3a2 2 0 0 0-2 2v3" /><path d="M21 21v.01" /><path d="M12 7v3a2 2 0 0 1-2 2H7" /><path d="M3 12h.01" /><path d="M12 3h.01" /><path d="M12 16v.01" /><path d="M16 12h1" /><path d="M21 12v.01" /><path d="M12 21v-1" /></svg>;
+}
+
+function XIcon({ className }: { className?: string }) {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>;
 }
