@@ -96,7 +96,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--foreground);
+    color: var(--gold-accent);
+    /* Updated to Gold */
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -104,7 +105,8 @@
 [data-theme='light'] .iconBtn {
     background: #fff;
     border-color: rgba(0, 0, 0, 0.2);
-    /* Darker border for light mode */
+    color: #153E32;
+    /* Dark Green for contrast on white in light mode */
 }
 
 .iconBtn:hover {
@@ -129,7 +131,8 @@
     padding: 1.25rem 1.5rem;
     border-radius: 12px;
     background: var(--secondary-bg);
-    color: var(--foreground);
+    color: var(--gold-accent);
+    /* Updated to Gold for Dark Mode */
     border: 1px solid rgba(200, 178, 115, 0.4);
     /* Increased visibility (Gold with 40% opacity) */
     font-size: 1rem;
