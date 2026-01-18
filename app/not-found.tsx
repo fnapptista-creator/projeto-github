@@ -1,49 +1,73 @@
-import Link from 'next/link';
-import { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-    title: 'Página Não Encontrada | Felipe Nascimento',
-    description: 'A página que você está procurando não existe ou foi removida.',
-};
+import Link from 'next/link';
+import { useEffect, useRef } from 'react';
+import styles from './not-found.module.css';
 
 export default function NotFound() {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const drawNoise = () => {
+            const w = canvas.width;
+            const h = canvas.height;
+            const idata = ctx.createImageData(w, h);
+            const buffer32 = new Uint32Array(idata.data.buffer);
+            const len = buffer32.length;
+
+            for (let i = 0; i < len; i++) {
+                if (Math.random() < 0.1) { // 10% chance of noise pixel
+                    buffer32[i] = 0xffffffff; // white
+                }
+            }
+
+            ctx.putImageData(idata, 0, 0);
+            requestAnimationFrame(drawNoise);
+        };
+
+        const animationId = requestAnimationFrame(drawNoise);
+
+        return () => {
+            window.removeEventListener('resize', resizeCanvas);
+            cancelAnimationFrame(animationId);
+        };
+    }, []);
+
     return (
-        <div className="flex min-h-[70vh] flex-col items-center justify-center bg-[var(--background)] px-4 text-center">
-            <div className="relative mb-8">
-                <h1 className="text-[8rem] font-bold leading-none text-[var(--gold-accent)] opacity-20 sm:text-[12rem]">
-                    404
-                </h1>
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h2 className="text-3xl font-bold text-[var(--foreground)] sm:text-4xl">
-                        Página não encontrada
-                    </h2>
-                </div>
+        <div className={styles.container}>
+            <h1 className={styles.title}>404</h1>
+
+            <div className={styles.frame}>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
-            <p className="max-w-md text-lg text-[var(--foreground)] opacity-80 mb-8">
-                Opa! Parece que o link que você seguiu está quebrado ou a página foi removida.
-            </p>
+            <div className={styles.caps}>
+                <img src="http://ademilter.com/caps.png" alt="Overlay" />
+            </div>
 
-            <Link
-                href="/"
-                className="btn-primary inline-flex items-center gap-2"
-            >
-                <span>Voltar para o Início</span>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                </svg>
-            </Link>
+            <canvas ref={canvasRef} className={styles.canvas} id="canvas"></canvas>
+
+            <div className={styles.buttonContainer}>
+                <Link href="/" className={styles.backButton}>
+                    Voltar para o Início
+                </Link>
+            </div>
         </div>
     );
 }
