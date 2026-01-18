@@ -30,20 +30,30 @@ export default function NotFound() {
             const len = buffer32.length;
 
             for (let i = 0; i < len; i++) {
-                if (Math.random() < 0.1) { // 10% chance of noise pixel
-                    buffer32[i] = 0xffffffff; // white
-                }
+                // Equivalent to: color = (Math.random() * 255) + 50;
+                const gray = (Math.random() * 255) | 0; // 0-255 integer
+
+                // buffer32 is ABGR (little-endian) or RGBA (big-endian).
+                // We want opaque grayscale: Alpha=255, R=G=B=gray.
+                // 0xff000000 (Alpha) | (gray << 16) | (gray << 8) | gray
+
+                buffer32[i] =
+                    (255 << 24) | // Alpha
+                    (gray << 16) | // Blue
+                    (gray << 8) | // Green
+                    gray;          // Red
             }
 
             ctx.putImageData(idata, 0, 0);
-            requestAnimationFrame(drawNoise);
+            animationRef.current = requestAnimationFrame(drawNoise);
         };
 
-        const animationId = requestAnimationFrame(drawNoise);
+        const animationRef = { current: 0 };
+        animationRef.current = requestAnimationFrame(drawNoise);
 
         return () => {
             window.removeEventListener('resize', resizeCanvas);
-            cancelAnimationFrame(animationId);
+            cancelAnimationFrame(animationRef.current);
         };
     }, []);
 
