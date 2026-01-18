@@ -161,6 +161,16 @@
 }
 
 /* Custom Button Styles for the Overlay */
+.subtitle {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
 .buttonContainer {
     z-index: 10;
     position: absolute;

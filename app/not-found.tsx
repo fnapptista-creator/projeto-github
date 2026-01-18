@@ -74,6 +74,7 @@ export default function NotFound() {
             <canvas ref={canvasRef} className={styles.canvas} id="canvas"></canvas>
 
             <div className={styles.buttonContainer}>
+                <p className={styles.subtitle}>Essa página mudou</p>
                 <Link href="/" className={styles.backButton}>
                     Voltar para o Início
                 </Link>
