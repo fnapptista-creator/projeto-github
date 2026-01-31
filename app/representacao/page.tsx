@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import RepresentationHero from '@/components/Representacao/RepresentationHero';
 import BrandCatalog from '@/components/Representacao/BrandCatalog';
 import { motion } from 'framer-motion';
+import { Factory, TrendingUp, Handshake } from 'lucide-react';
 
 export default function Representacao() {
     return (
@@ -26,8 +27,8 @@ export default function Representacao() {
                             transition={{ delay: 0.1 }}
                             className="flex flex-col items-center"
                         >
-                            <div className="w-12 h-12 mb-6 border border-white/10 rounded-full flex items-center justify-center text-[var(--accent-gold)] text-xl">
-                                🏭
+                            <div className="w-12 h-12 mb-6 border border-white/10 rounded-full flex items-center justify-center text-[var(--accent-gold)]">
+                                <Factory size={24} />
                             </div>
                             <h3 className="text-lg font-[var(--font-serif)] text-white mb-3">Direto da Indústria</h3>
                             <p className="text-sm text-[#666] max-w-xs">
@@ -42,8 +43,8 @@ export default function Representacao() {
                             transition={{ delay: 0.2 }}
                             className="flex flex-col items-center"
                         >
-                            <div className="w-12 h-12 mb-6 border border-white/10 rounded-full flex items-center justify-center text-[var(--accent-gold)] text-xl">
-                                📈
+                            <div className="w-12 h-12 mb-6 border border-white/10 rounded-full flex items-center justify-center text-[var(--accent-gold)]">
+                                <TrendingUp size={24} />
                             </div>
                             <h3 className="text-lg font-[var(--font-serif)] text-white mb-3">Mix de Alta Giro</h3>
                             <p className="text-sm text-[#666] max-w-xs">
@@ -58,8 +59,8 @@ export default function Representacao() {
                             transition={{ delay: 0.3 }}
                             className="flex flex-col items-center"
                         >
-                            <div className="w-12 h-12 mb-6 border border-white/10 rounded-full flex items-center justify-center text-[var(--accent-gold)] text-xl">
-                                🤝
+                            <div className="w-12 h-12 mb-6 border border-white/10 rounded-full flex items-center justify-center text-[var(--accent-gold)]">
+                                <Handshake size={24} />
                             </div>
                             <h3 className="text-lg font-[var(--font-serif)] text-white mb-3">Parceria Estratégica</h3>
                             <p className="text-sm text-[#666] max-w-xs">

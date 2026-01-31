@@ -79,8 +79,53 @@ END:VCARD`;
                     Performance & Estratégia
                 </p>
 
+                {/* Quick Actions Grid */}
+                <div className="grid grid-cols-4 gap-4 w-full px-4 mb-10">
+                    <button
+                        onClick={() => setShowQRCode(true)}
+                        className="flex flex-col items-center gap-2 group"
+                    >
+                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
+                            <QrCodeIcon />
+                        </div>
+                        <span className="text-[10px] uppercase tracking-wider text-[#666]">QR</span>
+                    </button>
+
+                    <a
+                        href={`https://wa.me/${contactData.tel}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center gap-2 group"
+                    >
+                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
+                            <WhatsappIcon />
+                        </div>
+                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Whats</span>
+                    </a>
+
+                    <button
+                        onClick={handleDownloadVCard}
+                        className="flex flex-col items-center gap-2 group"
+                    >
+                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
+                            <UserPlusIcon />
+                        </div>
+                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Salvar</span>
+                    </button>
+
+                    <a
+                        href={`mailto:${contactData.email}`}
+                        className="flex flex-col items-center gap-2 group"
+                    >
+                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
+                            <MailIcon />
+                        </div>
+                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Email</span>
+                    </a>
+                </div>
+
                 {/* Primary Actions */}
-                <div className="w-full flex flex-col gap-4 mb-10 font-[var(--font-sans)]">
+                <div className="w-full flex flex-col gap-4 mb-12 font-[var(--font-sans)]">
                     <Link href="/consultoria" className="w-full">
                         <motion.div
                             whileHover={{ scale: 1.02 }}
@@ -106,51 +151,6 @@ END:VCARD`;
                             <span className="text-lg text-[#666] group-hover:text-white group-hover:translate-x-1 transition-transform">→</span>
                         </motion.div>
                     </Link>
-                </div>
-
-                {/* Quick Actions Grid */}
-                <div className="grid grid-cols-4 gap-4 w-full px-4 mb-12">
-                    <a
-                        href={`https://wa.me/${contactData.tel}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <WhatsappIcon />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Whats</span>
-                    </a>
-
-                    <a
-                        href={`mailto:${contactData.email}`}
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <MailIcon />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Email</span>
-                    </a>
-
-                    <button
-                        onClick={handleDownloadVCard}
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <UserPlusIcon />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Salvar</span>
-                    </button>
-
-                    <button
-                        onClick={() => setShowQRCode(true)}
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <QrCodeIcon />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">QR</span>
-                    </button>
                 </div>
 
                 <Link
