@@ -33,7 +33,7 @@ export default function Home() {
         ctaText="Acessar Catálogo"
         ctaLink="/representacao"
         align="right"
-        imagePath="/images/foto-representacao.png"
+        imagePath="/images/foto-representacao-hd.jpg"
       />
 
       <Footer />
