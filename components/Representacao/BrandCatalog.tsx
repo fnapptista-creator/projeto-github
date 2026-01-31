@@ -51,7 +51,7 @@ export default function BrandCatalog() {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 transition={{ duration: 0.3 }}
                                 onClick={() => setSelectedBrand(brand)}
-                                className="group relative aspect-square bg-[#0a0a0a] border border-white/5 rounded-sm cursor-pointer overflow-hidden flex items-center justify-center p-8 hover:border-[var(--accent-gold)] transition-colors duration-500"
+                                className="group relative aspect-square bg-[#0a0a0a] border border-white/5 rounded-sm cursor-pointer overflow-hidden flex items-center justify-center p-4 md:p-8 hover:border-[var(--accent-gold)] transition-colors duration-500"
                             >
                                 {/* Hover Gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--accent-gold)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

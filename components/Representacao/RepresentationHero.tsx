@@ -58,7 +58,7 @@ export default function RepresentationHero() {
                         href="#catalogo"
                         className="px-10 py-4 bg-white text-black rounded-full font-bold uppercase text-xs tracking-[0.2em] hover:bg-[var(--accent-gold)] transition-colors duration-300 min-w-[200px] flex justify-center"
                     >
-                        Ver Catálogo
+                        Conhecer Empresas
                     </MagneticLink>
 
                     <MagneticLink
