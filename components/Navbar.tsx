@@ -44,7 +44,7 @@ export default function Navbar() {
                         whileTap={{ scale: 0.95 }}
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/icon.png" alt="Felipe Nascimento" className={styles.logoImage} />
+                        <img src="/logo-new-main.png" alt="Felipe Nascimento" className={styles.logoImage} />
                     </motion.div>
                     <span className={`${styles.logoText} text-[#f0f0f0]`}>Felipe Nascimento</span>
                 </Link>
