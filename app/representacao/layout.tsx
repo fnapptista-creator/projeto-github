@@ -1,23 +1,29 @@
-import { Metadata } from 'next';
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Representante Comercial Lyor, Wolff, Porto Brasil e Mais | Felipe Nascimento",
-    description: "Representante oficial de grandes marcas: Lyor, Wolff, Porto Brasil, Schmidt, Devitro, Grillo, Soprano, Ou, Arthi, Tritec e mais. Catálogo completo para lojistas na Bahia.",
+    title: "Felipe Nascimento | Representação Comercial B2B (Bahia)",
+    description: "Representante oficial das maiores marcas de utilidades e decoração: Wolff, Lyor, Porto Brasil, Ou, Arthi. Acesso direto de fábrica para lojistas.",
     keywords: [
-        "representante comercial", "representação bahia", "lyor", "wolff", "porto brasil",
-        "porto brasil", "schmidt", "devitro", "grillo", "ingá import", "soprano", "ou",
-        "arthi", "tritec", "rio master", "nutriplan", "mistral", "mel toys",
-        "tropical aromas", "wellmix", "hipertextil", "belfix", "max aluminios",
-        "dolce home", "ke home", "vitazza", "aj import", "secalux", "casa ambiente",
-        "grilazer", "tutipan", "mek", "sapico toys", "class home", "santana import",
-        "eddi casa", "dayhome", "tt brasil", "utilidades domesticas atacado"
+        "representante comercial bahia",
+        "representante wolff",
+        "representante lyor",
+        "comprar direto da fábrica",
+        "utilidades domésticas atacado",
+        "porto brasil cerâmica representante"
     ],
+    openGraph: {
+        title: "Catálogo Digital B2B | Melhores Marcas na Sua Loja",
+        description: "Conecte seu negócio às indústrias líderes. Tabela de fábrica e suporte especializado. Solicite seu catálogo.",
+        type: "website",
+        locale: "pt_BR",
+    },
 };
 
 export default function RepresentacaoLayout({
     children,
 }: {
-    children: React.ReactNode
+    children: React.ReactNode;
 }) {
-    return <>{children}</>
+    return <>{children}</>;
 }

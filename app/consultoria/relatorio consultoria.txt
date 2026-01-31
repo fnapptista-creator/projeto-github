@@ -1,0 +1,118 @@
+Análise de concorrência de consultorias gastronômicas
+Contexto
+
+O site do usuário (felipenb.com.br/consultoria) posiciona‑se como consultoria gastronômica especializada e afirma que transforma restaurantes em “máquinas de lucro” ao maximizar lucros, padronizar processos e elevar a experiência do cliente. A página descreve serviços como estudo de mercado, estrutura organizacional, pré‑abertura e layout de cozinha, plano de comunicação, implantação da operação de salão, plano de negócios e criação de cardápio. O consultor destaca 17 anos de experiência em vendas e 9 anos de formação gastronômica, oferecendo consultoria presencial em todo o Brasil ou online. Para entender como se posicionar frente à concorrência, foram pesquisados sites de consultorias gastronômicas encontradas em janeiro de 2026.
+
+Principais concorrentes
+Caju Gastronomia (cajugastronomia.com.br)
+
+Descrição/posicionamento: O meta‑descritivo explica que a Caju Gastronomia é uma consultoria financeira, conceitual e operacional que oferece serviços de assessoria para restaurantes em São Paulo e em todo o Brasil, incluindo treinamento de equipe para restaurantes, cafeterias, hamburguerias, bares e buffets. No site, a empresa afirma que é especializada em gestão de negócios de alimentação com foco em resultados, oferecendo desenvolvimento, implantação, otimização, criação de cardápios, recrutamento, treinamento e controles.
+
+SEO (otimização on‑page): Possui título HTML “Consultoria Gastronômica Caju | Orçamento Consultoria Gastronômica” e meta description detalhado. O código não inclui meta keywords, mas insere tags Open Graph e Twitter. A página utiliza headings (H1/H2) com palavras‑chave como consultoria gastronômica, novos negócios e em expansão, ajudando nos motores de busca.
+
+Principais palavras‑chave: consultoria gastronômica, consultoria financeira, treinamento de equipe, implantação e expansão, delivery/dark kitchen. O meta description repete “consultoria gastronômica financeira, conceitual e operacional”, reforçando esse termo.
+
+Serviços/ofertas: O menu apresenta planos para novo negócio, negócios em operação, negócios em expansão e delivery/dark kitchen. Há uma página de “planos” com itens como aperfeiçoamento de cardápio, padronização dos pratos, orientação na compra de equipamentos, treinamento de equipe, elaboração de fichas técnicas e acompanhamento de inauguração. Não há divulgação de preços; o visitante é incentivado a “fazer orçamento” via WhatsApp ou formulário.
+
+Comunicação: O site combina tom corporativo e acolhedor. Ele explica as dores dos donos de restaurantes e apresenta soluções detalhadas, com seções de cases e depoimentos. O uso de imagens e ícones cria credibilidade e passa segurança, mas a quantidade de menus e textos longos pode exigir navegação cuidadosa.
+
+Eight Consultoria Gastronômica (eightconsultoriagastronomica.com)
+
+Descrição/posicionamento: A página inicial define a Eight como especialista em consultoria para quem busca inovar e crescer no mercado gastronômico. Destacam‑se mais de 20 anos de experiência e um diferencial baseado na combinação de experiência e inovação.
+
+SEO: O código utiliza WordPress. Embora não haja meta‑description visível no HTML, o título “EIGHT CONSULTORIA GASTRONÔMICA – A gastronomia como forma de arte” aparece como H1 e no <title> da página. Palavras‑chave são incorporadas nos títulos de seções (“Desenvolvimento de cardápio”, “Gestão operacional e treinamento”, “Planejamento financeiro e custos”, “Branding e marketing gastronômico”, “Consultoria para novos negócios”, “Sustentabilidade e inovação”), ajudando nos mecanismos de busca.
+
+Principais palavras‑chave: consultoria gastronômica, desenvolvimento de cardápio, gestão operacional, treinamento, planejamento financeiro, branding e marketing gastronômico, sustentabilidade, inovação.
+
+Serviços/ofertas: Oferece desenvolvimento de cardápio, gestão operacional e treinamento, planejamento financeiro e custos, branding e marketing gastronômico, consultoria para novos negócios e sustentabilidade/inovação. Não há divulgação de preços; o contato é feito via WhatsApp.
+
+Comunicação: O site tem um tom inspirador e visual. Destaca a gastronomia como forma de arte e valoriza a experiência do chef fundador. As seções são organizadas e usam frases curtas para ressaltar benefícios (“soluções personalizadas”, “resultados reais e mensuráveis”).
+
+Ghesta (consultoria.ghesta.co)
+
+Descrição/posicionamento: O meta‑description da home diz que a empresa tem ampla experiência em criação, operação e gestão nos setores de hospitalidade e gastronomia e que transforma ideias em bares e restaurantes. A página explica que a Ghesta é uma consultoria especializada em hospitalidade, alimentos & bebidas com amplo conhecimento na criação, operação e gestão de negócios.
+
+SEO: Usa WordPress com plugin Yoast. O meta description está presente e as tags Open Graph e JSON‑LD estruturam dados. Diversas seções H2 e H3 integram palavras‑chave (“Plano de negócios”, “Criação de cardápio”, “Estudo de mercado”, “Plano de comunicação”, “Estrutura organizacional”, etc.), contribuindo para SEO. Há meta keywords (“Ghesta Consultoria Restaurantes e Bares”) na estrutura Schema.
+
+Principais palavras‑chave: consultoria de restaurantes e bares, hospitalidade, criação e gestão de bares e restaurantes, plano de negócios, cardápio, estudo de mercado, expansão de negócios, treinamento de equipe, planejamento financeiro.
+
+Serviços/ofertas: O site lista uma gama ampla de serviços: planos para novos negócios, negócios em funcionamento e negócios em expansão; desenvolvimento de cardápio; implantação da operação de salão; estudo de mercado e região; plano de comunicação; estrutura organizacional; planejamento estratégico; atualização de cardápio; treinamento de serviço e hospitalidade; treinamento de vendas; estruturação de compras; planejamento financeiro e rollout de expansão. Preços não são informados; há chamadas para conversar com a equipe.
+
+Comunicação: O texto adota tom consultivo e didático, destacando que a empresa acompanha da estratégia à implementação. Há seções explicativas para cada serviço e uma seção de “marcas que confiam”, transmitindo autoridade.
+
+Lillo.help (lillo.help)
+
+Descrição/posicionamento: O site apresenta LILLO como uma consultoria voltada a quem pretende abrir um negócio em gastronomia e que precisa de assistência em todas as etapas do projeto. Também atende negócios em funcionamento que buscam superar obstáculos de gestão.
+
+SEO: Utiliza WordPress/Elementor, mas não foi encontrada uma meta description no HTML. O título é “LILLO – Consultoria de Negócios em Gastronomia”. Palavras‑chave são inseridas nos títulos das seções (“Novos negócios”, “Renovação de negócios”, “Mentoria”). Não há meta keywords visíveis.
+
+Principais palavras‑chave: consultoria de negócios em gastronomia, projeto conceitual, projeto operacional, cardápio exclusivo, fichas técnicas, layout de cozinha, treinamento operacional, renovação de negócios, diagnóstico empresarial, mentoria profissional.
+
+Serviços/ofertas: O site divide suas soluções em Novos negócios (projeto conceitual, projeto operacional, cardápio, fichas técnicas, layout de cozinha, treinamentos de cardápio e operacionais), Renovação de negócios (renovação conceitual/identidade, atualização de cardápio, renovação de ambiente, melhoria da comunicação e atendimento, diagnóstico empresarial e plano de melhorias) e Mentoria. Não há preços; a chamada é para receber um modelo de plano de negócios via e‑mail e solicitar contato.
+
+Comunicação: O texto tem tom direto e usa listas para mostrar formações do chef e diferenciais. O site oferece iscas digitais (“receba gratuitamente o modelo de plano de negócio”) e depoimentos de projetos. A linguagem é acessível e informativa.
+
+Bruno Vaz (bvaz.com.br)
+
+Descrição/posicionamento: O meta‑description simplesmente diz “Consultoria Gastronômica”, sem detalhamento. A página inicial afirma que a consultoria ajuda a melhorar resultados, inaugurar ou expandir o negócio, oferecendo ampla variedade de serviços especializados em bares, restaurantes e hamburguerias.
+
+SEO: O título HTML é “Bruno Vaz | Consultoria Gastronômica”. Possui meta description e tags Open Graph com a mesma frase curta. Palavras‑chave são inseridas em seções: “análise de custos”, “soluções criativas”, “gestão financeira”, “delivery”, “marketing” e “mentoria online”.
+
+Principais palavras‑chave: consultoria gastronômica, análise de custos, soluções criativas, gestão financeira, delivery, marketing, mentoria online, elaboração de cardápios.
+
+Serviços/ofertas: Lista consultoria geral; análise de custos (precificação e controle de CMV); soluções criativas e estratégias para bares e restaurantes; mentoria online; elaboração de cardápios, receitas e fichas técnicas; diagnóstico de necessidades; gestão financeira; e apoio a operações de delivery. Não informa preços; o contato é via formulário ou WhatsApp.
+
+Comunicação: O site tem design limpo e usa seções visuais com fotos e ícones. O tom é profissional e destaca a experiência do chef (formação em gastronomia, pós‑graduação em administração, atuações em eventos e programas de TV). Há seções de “mídias” que reforçam autoridade.
+
+Dias Gastronomia (diasgastronomia.com)
+
+Descrição/posicionamento: O meta description afirma que a consultoria para bares e restaurantes é essencial para empresários do setor de alimentação que buscam otimizar suas operações. O meta keywords inclui termos genéricos (“Consultoria, bares, restaurantes, Dias Gastronomia”).
+
+SEO: A página usa HTML estático e contém meta tags com descrição e palavras‑chave. O menu exibe dezenas de páginas, cobrindo tópicos específicos como “abrir restaurante”, “consultoria financeira”, “cliente oculto restaurante”, “food styling” e diversos termos geográficos (Rio de Janeiro, São Paulo). Essa estrutura indica estratégia de SEO para capturar long‑tail keywords. O conteúdo é extenso (6 000 + linhas) e otimizado com geotags e data attributes (ICBM, geo.position).
+
+Principais palavras‑chave: consultoria para bares e restaurantes, gastronomia, estudo de viabilidade financeira, gestão financeira, capacitação de atendimento, nutrição, mixologia, cliente oculto, food styling, abertura de restaurante em cidades específicas (Rio de Janeiro, São Paulo), curadoria gastronômica, fotografia de alimentos.
+
+Serviços/ofertas: Oferece consultoria gastronômica, viabilidade financeira, gestão financeira, capacitação de atendimento, nutrição, mixologia, mentoria online, cliente oculto, food styling, eventos e diversas sub‑consultorias (restaurante, hotel, bar, cafeteria, pizzaria etc.). Também fornece serviços de fotografia gastronômica e curadoria. A página possui CTAs de orçamento por WhatsApp e não divulga preços.
+
+Comunicação: O site tem tom comercial e abrangente, cobrindo muitas áreas do setor de alimentação. A linguagem é objetiva e voltada a empresários. A navegação pode ser complexa pela quantidade de páginas, mas o SEO é agressivo no uso de keywords e geolocalização.
+
+Mistura Fina Gastronomia (misturafinagastronomia.com.br)
+
+Descrição/posicionamento: A home convida o visitante a “projetar o sucesso” e abrir seu negócio de alimentação com segurança e eficiência, afirmando que planeja, estrutura e organiza tudo para tirar o projeto do papel com precisão. Destaca mais de 15 anos transformando operações gastronômicas e promete custos definidos e equipe treinada.
+
+SEO: O site utiliza WordPress/Elementor, mas a view source analisada não mostra meta description nem keywords. A otimização parece focada em headings e CTA, como “Planejamento de negócio”, “Consultoria gastronômica” e “Mentoria personalizada”, com descrições curtas nas caixas de imagem. Há uso de frases que reforçam problemas e soluções (“custos altos e desperdícios”, “equipe desorganizada”, “falta de padronização”, “cardápio pouco lucrativo”, “gestão sem estratégia”).
+
+Principais palavras‑chave: planejamento de negócio, consultoria gastronômica, mentoria personalizada, custos e desperdícios, padronização, cardápio lucrativo, gestão sem estratégia, resultados.
+
+Serviços/ofertas: Divide‑se em Planejamento de negócio (estrutura para abrir ou remodelar restaurante), Consultoria gastronômica (organização, padronização e redução de custos) e Mentoria personalizada (acompanhamento estratégico). Não há preços; há CTAs para solicitar orçamento e falar com especialistas.
+
+Comunicação: O site utiliza linguagem persuasiva e focada em resultados, citando problemas comuns (70 % dos restaurantes fecham antes de 2 anos) e oferecendo ajuda imediata. A comunicação é direta e utiliza provas sociais (cases, depoimentos).
+
+Fernanda Cestari (fernandacestari.com.br)
+
+Descrição/posicionamento: O meta‑description descreve que a consultoria oferece serviços especializados para restaurantes, bares e cafés, ajudando a estruturar o negócio, desenvolver cardápios e otimizar processos para alcançar sucesso. No conteúdo, a consultora destaca que a consultoria gastronômica é essencial para minimizar erros e encurtar o caminho para um restaurante de sucesso.
+
+SEO: Site criado no Wix; o título é “Fernanda Cestari Consultoria Gastronômica” e a meta description inclui palavras‑chave como consultoria gastronômica, restaurantes, bares, cafés. A página define meta keywords (“consultoria gastronomica, abrir restaurante, consultoria para restaurante, montar menu”). Open Graph e Twitter Card replicam a descrição. O conteúdo é segmentado em seções para “Novos Restaurantes” e “Restaurantes em Operação”.
+
+Principais palavras‑chave: consultoria gastronômica, restaurantes, bares, cafés, estruturar negócio, desenvolver cardápios, otimizar processos, abrir restaurante, consultoria para restaurante.
+
+Serviços/ofertas: A consultoria oferece orientação completa para novos restaurantes e ajuste personalizado para restaurantes em operação, ajuda na criação de cardápios e na otimização de processos. Não informa preços; contato via formulário ou redes sociais.
+
+Comunicação: O site tem estilo pessoal e elegante. Utiliza fotos da consultora e exemplos de projetos (como bar “O Pasquim” e Tartuferia San Paolo). A linguagem é sofisticada e convida o leitor a conhecer cases de sucesso.
+
+Comparação com o site do usuário
+Aspecto	Felipe Nascimento (seu site)	Concorrentes – pontos observados
+Palavras‑chave	O site usa clusters de SEO avançado no final do código para orientar motores de busca, incluindo termos como lucro invisível, ficha técnica de restaurante, engenharia de cardápio, reduzir CMV e aumentar ticket médio.	Concorrentes focam em termos genéricos como “consultoria gastronômica”, “novo restaurante”, “gestão financeira”, “treinamento de equipe” e palavras específicas (por exemplo, “food styling”, “mixologia” em Dias Gastronomia; “branding gastronômico” na Eight). Muitos não utilizam meta keywords ou usam termos simples.
+Meta description	Possui tagline de valor (“Transforme seu restaurante em uma máquina de lucro…”) e seções bem estruturadas, mas não há meta description padrão visível; a otimização foca no conteúdo e na base de conhecimento SEO avançada.	Caju, Ghesta, Dias Gastronomia e Fernanda Cestari têm meta description detalhado contendo serviços e público‑alvo. Bruno Vaz utiliza descrição genérica (“Consultoria Gastronômica”). Eight, Lillo e Mistura Fina não exibem claramente meta description.
+Serviços	Oferece serviços para novos restaurantes, negócios em expansão e em funcionamento: estudo de mercado, layout de cozinha, plano de comunicação, implantação de salão, criação de cardápios etc..	Concorrentes oferecem serviços similares: desenvolvimento de cardápios, planejamento financeiro, criação de cardápios, treinamento de equipe, mentoria e marketing. Dias Gastronomia apresenta um portfólio mais amplo (nutrição, mixologia, fotografia de alimentos e eventos).
+Preços	Não divulga preços; oferece diagnóstico gratuito via WhatsApp.	Quase todos os concorrentes também não informam preços. Caju e Mistura Fina têm páginas de planos mas direcionam o visitante a solicitar orçamento.
+Comunicação	Usa linguagem empática com foco nas dores do empresário (“lucro invisível”, “apagando incêndios”) e enfatiza resultados e experiência do consultor.	Varia: Caju e Mistura Fina abordam dores e apresentam soluções detalhadas; Ghesta e Eight têm tom profissional; Lillo e Bruno Vaz usam listas e linguagem direta; Dias Gastronomia tem comunicação comercial com foco em SEO; Fernanda Cestari adota estilo pessoal e sofisticado.
+Conclusões e recomendações
+
+Força do site do usuário: O site de Felipe Nascimento se diferencia pelo foco em lucro e performance, oferecendo uma estrutura detalhada de serviços e uma base de conhecimento de palavras‑chave avançadas com clusters de intenção (financeiro, operacional e cardápio). Isso indica estratégia de SEO robusta e direcionada a problemas específicos. A comunicação é clara e empática, mostrando experiência prática e destacando atendimento presencial e online.
+
+Pontos a melhorar: Algumas concorrentes possuem meta descriptions mais descritivas que podem aumentar o CTR nos resultados de busca (por exemplo, Caju Gastronomia, Ghesta e Fernanda Cestari). Incluir um meta description conciso contendo as principais soluções e benefícios pode ajudar o site a se destacar. Além disso, disponibilizar informações de planos ou pacotes (mesmo sem preços fixos) pode proporcionar transparência, como no exemplo da página de planos da Caju.
+
+Oportunidades de diferenciação:
+
+Especialização regional: Muitos concorrentes têm atuação em grandes centros (São Paulo, Rio de Janeiro). O site do usuário destaca atendimento presencial em todo o Brasil com base no extremo sul da Bahia – reforçar essa capilaridade pode atrair clientes fora dos grandes eixos.

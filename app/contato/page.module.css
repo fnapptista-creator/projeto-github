@@ -3,6 +3,9 @@
     min-height: 80vh;
     display: flex;
     align-items: center;
+    background: radial-gradient(circle at top right, rgba(10, 36, 30, 0.4) 0%, var(--background) 80%);
+    position: relative;
+    overflow: hidden;
 }
 
 .content {

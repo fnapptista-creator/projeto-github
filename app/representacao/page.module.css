@@ -1,67 +1,82 @@
-.hero {
-    min-height: 60vh;
-    /* Reduced from 80vh to bring content up */
-    /* Increased to match Consultoria */
-    padding: 0 20px;
-    /* Changed to match Consultoria (Pure Center) */
-    background: linear-gradient(rgba(8, 28, 21, 0.85), rgba(8, 28, 21, 0.95)), url(/representacao-bg.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    text-align: center;
+.main {
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+/* Hero Section */
+.heroSection {
+    position: relative;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 8rem 0 5rem;
+    overflow: hidden;
+}
+
+.heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/representacao-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(0.2) saturate(0.5);
+    z-index: 1;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(10, 36, 30, 0.4) 0%, var(--bg-deep-emerald) 80%);
+    z-index: 2;
+}
+
+.heroContainer {
     position: relative;
-    /* Force dark background for contrast */
-    background-color: #081C15;
-    color: white;
+    z-index: 3;
+    width: 100%;
 }
 
 .heroContent {
-    max-width: 1000px;
-    /* Increased to match Consultoria */
+    max-width: 900px;
     margin: 0 auto;
-    animation: fadeInUp 1s ease-out;
-    z-index: 2;
+    text-align: center;
 }
 
 .heroTag {
     display: inline-block;
-    background: rgba(212, 175, 55, 0.15);
-    /* Hero is always dark, so always use Gold text */
-    color: var(--gold-accent);
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+    background-color: rgba(197, 160, 89, 0.1);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 100px;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 2rem;
-    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .heroTitle {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    /* Reduced from 4rem to match Consultoria */
-    /* Force Gold/Light text because background is always dark image/gradient */
-    color: var(--gold-accent);
-    /* var(--accent) was forcing dark green in light mode, making it invisible */
-    margin-bottom: 1.5rem;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    line-height: 1.2;
-    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--foreground);
 }
 
 .heroSubtitle {
-    font-size: 1.2rem;
-    /* Reduced from 1.4rem to match Consultoria */
-    margin-bottom: 3rem;
-    color: #f0f0f0;
-    font-weight: 300;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 4rem;
     line-height: 1.6;
 }
 
@@ -72,86 +87,68 @@
     flex-wrap: wrap;
 }
 
+/* Catalog Section */
 .catalogSection {
-    padding: 1rem 0;
-    /* Reduced from 3rem */
-    background-color: var(--secondary-bg);
-    /* Darkened as requested */
-    /* Darkened as requested */
-    border-top: 1px solid var(--section-divider);
-    /* Added divider between Hero and Catalog */
+    padding: 8rem 0;
+    background-color: var(--bg-deep-emerald);
 }
 
 .filterBar {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     flex-wrap: wrap;
-    padding: 0.5rem;
 }
 
 .filterBtn {
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--foreground);
-    opacity: 0.7;
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     border-radius: 50px;
+    color: var(--text-secondary);
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    white-space: nowrap;
-    flex-shrink: 0;
+    transition: var(--transition-smooth);
 }
 
 .filterBtn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(200, 178, 115, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--foreground);
 }
 
 .filterBtn.active {
-    background-color: var(--gold-accent);
-    color: #081C15;
-    /* Dark contrast text for Gold background */
-    border-color: var(--gold-accent);
-    font-weight: 600;
-    box-shadow: 0 4px 10px rgba(200, 178, 115, 0.3);
+    background: var(--accent);
+    color: var(--bg-deep-emerald);
+    border-color: var(--accent);
 }
 
 .brandGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
 }
 
 .brandCard {
     background: #FFFFFF;
-    /* Always white to blend with Logo backgrounds */
-    /* Always white to blend with Logo backgrounds */
-    border: 1px solid rgba(200, 178, 115, 0.3);
-    /* Gold Border for Dark Mode (Default) */
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 180px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .brandCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-premium);
 }
 
 .logoContainer {
@@ -167,8 +164,8 @@
     max-height: 100%;
     object-fit: contain;
     filter: grayscale(100%);
-    transition: all 0.3s ease;
-    opacity: 0.8;
+    transition: var(--transition-smooth);
+    opacity: 0.7;
 }
 
 .brandCard:hover .brandLogo {
@@ -181,65 +178,49 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(var(--bg-rgb), 0.9);
+    background: var(--bg-emerald-surface);
     color: var(--accent);
-    padding: 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.75rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 1px;
+    text-align: center;
     transform: translateY(100%);
-    transition: all 0.3s ease;
+    transition: var(--transition-smooth);
 }
 
 .brandCard:hover .viewMore {
     transform: translateY(0);
 }
 
-/* Modal Styles - Compact & Optimized */
+/* Modal Adjustments */
 .modalInner {
     display: flex;
     flex-direction: column;
-    height: 100%;
     max-height: 85vh;
-    background: var(--background);
-    color: var(--foreground);
-    overflow: hidden;
 }
 
 .modalHeader {
-    background: linear-gradient(to bottom, var(--background), var(--secondary-bg));
-    padding: 1.5rem 4rem 1rem 2rem;
-    /* Increased Right padding for Close Button */
-    border-bottom: 1px solid rgba(200, 178, 115, 0.2);
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.modalHeader::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+    gap: 2rem;
+    padding: 2rem;
+    border-bottom: 1px solid var(--card-border);
+    background-color: var(--bg-emerald-surface);
 }
 
 .modalLogoWrapper {
     background: #fff;
-    padding: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 80px;
-    height: 80px;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border: 1px solid var(--gold-accent);
+    border: 1px solid var(--accent);
 }
 
 .modalLogo {
@@ -248,308 +229,113 @@
     object-fit: contain;
 }
 
-.modalHeaderText {
-    flex: 1;
-}
-
 .modalTitle {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--accent);
-    /* Adapts: Green in Light Mode, Gold in Dark Mode */
-    margin-bottom: 0.25rem;
-    line-height: 1.1;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
 }
 
 .categoryContainer {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
 }
 
 .modalCategory {
-    display: inline-block;
-    background: rgba(200, 178, 115, 0.15);
-    color: var(--gold-accent);
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    border: 1px solid rgba(200, 178, 115, 0.3);
+    background: rgba(197, 160, 89, 0.1);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
 }
 
 .modalBody {
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     overflow-y: auto;
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 2rem;
-    align-content: start;
+    background-color: var(--bg-deep-emerald);
 }
 
 .modalDescription {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--foreground);
-    opacity: 0.9;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-    border-right: 1px solid rgba(200, 178, 115, 0.1);
-    padding-right: 2rem;
-}
-
-.modalSection {
-    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
 .modalSection h3 {
-    font-family: var(--font-heading);
-    color: var(--gold-accent);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    border-left: 3px solid var(--gold-accent);
-    padding-left: 0.75rem;
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .featureList {
     list-style: none;
-    padding: 0;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .featureList li {
-    position: relative;
-    padding-left: 1.5rem;
-    color: var(--foreground);
-    opacity: 0.8;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-    background: rgba(200, 178, 115, 0.05);
-    border-radius: 4px;
-    border-left: 2px solid var(--gold-accent);
-}
-
-.featureList li::before {
-    content: "✓";
-    color: var(--gold-accent);
-    position: absolute;
-    left: 0.5rem;
-    font-weight: bold;
-    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-left: 2px solid var(--accent);
 }
 
 .modalFooter {
-    margin-top: auto;
-    padding: 1rem 2rem;
-    border-top: 1px solid rgba(200, 178, 115, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: linear-gradient(to top, var(--background), var(--secondary-bg));
-    flex-shrink: 0;
+    padding: 2rem;
+    border-top: 1px solid var(--card-border);
+    background-color: var(--bg-emerald-surface);
 }
 
-.infoBadge {
-    background: rgba(200, 178, 115, 0.1);
-    padding: 0.75rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    color: var(--foreground);
-    opacity: 0.9;
-    text-align: center;
-    border: 1px solid rgba(200, 178, 115, 0.3);
-}
-
-.infoBadge strong {
-    color: var(--gold-accent);
-    font-weight: 600;
-}
-
+/* CTA Section */
 .ctaSection {
-    padding: 3rem 0;
-    /* Reduced from 8rem 0 */
+    padding: 8rem 0;
+    background-color: var(--bg-emerald-surface);
     text-align: center;
-    background-color: var(--background);
-    /* Lightened to Contrast with Footer */
-    background-color: var(--background);
-    /* Lightened to Contrast with Footer */
-    /* Lightened to Contrast with Footer */
-    border-top: 1px solid var(--section-divider);
-    /* Footer has its own border-top now */
+    border-top: 1px solid var(--card-border);
 }
 
 .ctaText {
-    margin-bottom: 2rem;
-    color: var(--foreground);
-    /* Adapts to theme (Dark/Light) */
-    opacity: 0.9;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* SEO Only Text - Visually Hidden but readable by bots */
-.seoHidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-    opacity: 0.01;
-    font-size: 1px;
-    color: transparent;
-    pointer-events: none;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .heroTitle {
-        font-size: 2.25rem;
-        /* Match Consultoria Mobile Title */
-        line-height: 1.2;
-    }
-
-    .hero {
-        padding-bottom: 3rem;
-        /* Minimized bottom spacing for mobile */
-    }
-
-    /* Reverted to Grid per User Request */
-    .brandGrid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 1rem;
-        overflow-x: visible;
-        padding-bottom: 0;
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .brandGrid::-webkit-scrollbar {
-        display: none;
-    }
-
-    .filterBar {
-        margin-bottom: 1.5rem;
-        /* Reduced from 3rem for mobile */
-        gap: 0.5rem;
-        /* Tighter gap for buttons */
-    }
-
-    .brandCard {
-        min-width: 0;
-        scroll-snap-align: none;
-
-        /* Premium Mobile Styling kept, but layout is grid */
-        background: #FFFFFF;
-        /* Force White on Mobile too */
-        border: 1px solid var(--border-color);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        height: auto;
-        aspect-ratio: auto;
-    }
-
-    [data-theme='light'] .brandCard {
-        border-color: rgba(8, 28, 21, 0.3);
-        /* Green Border for Light Mode */
-    }
-
-    [data-theme='dark'] .brandCard {
-        background: #FFFFFF;
-        /* Force White even in Dark Mode */
-        border-color: rgba(200, 178, 115, 0.3);
-    }
-
-    /* Modal Mobile Adjustments */
-    .modalHeader {
-        padding: 1rem 3.5rem 1rem 1rem;
-        /* Increased Right padding to clear Close Button */
-        gap: 1rem;
-    }
-
-    .modalLogoWrapper {
-        width: 60px;
-        height: 60px;
-    }
-
-    .modalTitle {
-        font-size: 1.5rem;
-    }
-
-    .modalBody {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1.5rem;
-    }
-
-    .modalDescription {
-        border-right: none;
-        padding-right: 0;
-        border-bottom: 1px solid rgba(200, 178, 115, 0.1);
-        padding-bottom: 1rem;
-        margin-bottom: 0;
-    }
-
-    .modalFooter {
-        padding: 1rem;
-    }
-
-    /* Mobile Filter Bar Optimization - Wrapped per user request */
-    .filterBar {
-        justify-content: center;
-        flex-wrap: wrap;
-        overflow-x: visible;
-        padding-bottom: 1.5rem;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        gap: 0.5rem;
-    }
-
-    .filterBtn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-}
-
-/* AI Optimization - Context Layer
-   Hidden from visual users, accessible to bots/crawlers.
-   Technique: Absolute positioning off-screen.
-*/
+/* AI Context */
 .aiContextLayer {
     position: absolute;
     left: -9999px;
     top: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
     opacity: 0;
-    z-index: -1;
+}
+
+.seoHidden {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .heroSection {
+        padding-top: 10rem;
+    }
+
+    .featureList {
+        grid-template-columns: 1fr;
+    }
+
+    .modalHeader {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1rem 1.5rem;
+    }
 }

@@ -1,8 +1,7 @@
 .footer {
-    background-color: var(--secondary-bg);
-    padding: 1.5rem 0;
-    /* Reduced from 2rem */
-    border-top: 1px solid var(--section-divider);
+    background-color: var(--bg-emerald-surface);
+    padding: 5rem 0 2rem;
+    border-top: 1px solid var(--card-border);
     margin-top: auto;
 }
 

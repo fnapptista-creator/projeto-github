@@ -1,389 +1,349 @@
+/* Page Structure */
 .main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--background);
 }
 
-.splitSection {
-  display: flex;
-  flex: 1;
-  min-height: 85vh;
-}
-
-.splitSide {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
-  /* Reduced from 4rem */
+/* Hero Section - v2.0 */
+.heroSection {
   position: relative;
+  min-height: 100vh;
+  /* Full viewport height for impact */
+  display: flex;
+  align-items: center;
+  padding: 6rem 0;
   overflow: hidden;
-  transition: flex 0.5s ease;
-  border-right: 1px solid var(--border-color);
 }
 
-/* Background Image Layer for Zoom Effect */
-.splitSide::before {
-  content: '';
+.heroBackground {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: url('/consultoria-bg.png');
   background-size: cover;
   background-position: center;
-  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(0.25) saturate(0.6);
   z-index: 1;
 }
 
-.consultoriaSide::before {
-  background-image: linear-gradient(rgba(var(--bg-rgb), 0.55), rgba(var(--bg-rgb), 0.75)), url(/consultoria-bg.png);
-}
-
-.representacaoSide::before {
-  background-image: linear-gradient(rgba(var(--bg-rgb), 0.55), rgba(var(--bg-rgb), 0.75)), url(/representacao-bg.png);
-}
-
-.splitSide:last-child {
-  border-right: none;
-}
-
-.splitSide:hover {
-  flex: 1.3;
-}
-
-.splitSide:hover::before {
-  transform: scale(1.1);
-}
-
-/* Watermark Icon */
-.watermarkIcon {
+.heroOverlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20rem;
-  opacity: 0;
-  color: rgba(200, 178, 115, 0.08);
-  /* Gold accent with very low opacity */
-  z-index: 1;
-  transition: opacity 0.6s ease, transform 0.8s ease;
-  pointer-events: none;
-}
-
-.splitSide:hover .watermarkIcon {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
-.splitContent {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--bg-deep-emerald) 0%, rgba(4, 13, 11, 0.7) 100%);
   z-index: 2;
-  text-align: center;
-  max-width: 500px;
-  animation: fadeIn 1s ease-out;
+}
+
+.heroContainer {
   position: relative;
-  /* Ensure it stays above background */
+  z-index: 3;
+  width: 100%;
 }
 
-.sideLabel {
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 50px;
-  background: rgba(212, 175, 55, 0.1);
-  font-weight: 600;
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.splitTitle {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--foreground);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.splitSubtitle {
-  font-size: 1.3rem;
-  margin-bottom: 2.5rem;
-  color: var(--foreground);
-  opacity: 0.9;
-  font-weight: 300;
-  min-height: 3rem;
-  /* Prevent layout shift */
+/* Left Column - Main */
+.heroMain {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  transition: all 0.5s ease;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.defaultText {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s ease;
-  position: absolute;
+.heroBadge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(197, 160, 89, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* Primary Access Button (Consulting) */
+.primaryCta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--accent);
+  color: #000;
+  padding: 1.2rem 2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
+  border: none;
+}
+
+.ctaIcon {
+  font-size: 2rem;
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.ctaContent strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+}
+
+.ctaSub {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.ctaArrow {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.primaryCta:hover .ctaArrow {
+  transform: translateX(5px);
+}
+
+/* Right Column - Secondary Card */
+.heroSecondary {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.secondaryCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 400px;
   width: 100%;
 }
 
-.hoverText {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-  position: absolute;
+.secondaryHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.secondaryIcon {
+  font-size: 1.5rem;
+}
+
+.secondaryHeader h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.secondaryCard p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.secondaryLink {
+  display: inline-block;
+  color: var(--foreground);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: background 0.3s ease;
   width: 100%;
+  text-align: center;
 }
 
-.splitSide:hover .defaultText {
-  opacity: 0;
-  transform: translateY(-20px);
+.secondaryLink:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.splitSide:hover .hoverText {
-  opacity: 1;
-  transform: translateY(0);
+
+/* Results Section */
+.resultsSection {
+  padding: 6rem 0;
+  background-color: var(--bg-emerald-surface);
+  position: relative;
 }
 
+.sectionHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.sectionLead {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.resultCard {
+  background: rgba(4, 13, 11, 0.5);
+  border: 1px solid var(--glass-border);
+  padding: 2.5rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.resultCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-subtle);
+}
+
+.resultIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.resultCard h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.resultCard p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Bio Section */
 .bioSection {
-  padding: 3rem 0;
-  /* Reduced from 6rem */
-  background-color: var(--background);
+  padding: 6rem 0;
+  background-color: var(--bg-deep-emerald);
+  position: relative;
+  overflow: hidden;
+}
+
+.bioContent {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  text-align: center;
-  border-top: 1px solid var(--section-divider);
+}
+
+.bioHeader {
+  margin-bottom: 3rem;
 }
 
 .bioTitle {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.bioTag {
   color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .bioText {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
   line-height: 1.8;
-  color: var(--foreground);
-  opacity: 0.8;
+  margin-bottom: 4rem;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.bioStats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
 }
 
+.bioStat {
+  display: flex;
+  flex-direction: column;
+}
 
-
-/* Light mode override for Consultoria button */
-[data-theme='light'] .consultBtn {
-  background-color: var(--bg-dark-green);
+.statNumber {
+  font-size: 3rem;
+  font-weight: 800;
   color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
-[data-theme='light'] .consultBtn:hover {
-  background-color: var(--secondary-bg);
-  color: var(--bg-dark-green);
-  box-shadow: 0 4px 20px rgba(8, 28, 21, 0.2);
+.statLabel {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.repBtn {
-  background-color: transparent;
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.repBtn:hover {
-  background-color: var(--accent);
-  color: var(--bg-dark-green);
-}
-
-/* Dark Mode: Make it filled to match Consultoria if requested, or keep outline but consistent.
-   User asked: "botão está sem preenchimento... quero que fique ... igual ao card de Consultoria"
-   Consultoria uses .btn-primary (Gold Fill).
-   Let's make Rep Button (Dark Mode) also Premium Filled or at least solid.
-   If we use Dark Green Fill on Dark Green bg it's invisible.
-   Maybe Gold Border + Semi-Transparent Fill?
-   Or just swap to .btn-primary style? 
-   let's keep the specialized class but add fill.
-*/
-.repBtn {
-  background-color: rgba(8, 28, 21, 0.8);
-  /* Dark Green Fill */
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  backdrop-filter: blur(5px);
-}
-
-/* Light mode override for the button */
-[data-theme='light'] .repBtn {
-  background-color: var(--bg-dark-green);
-  border-color: var(--bg-dark-green);
-  color: var(--gold-accent);
-  /* Fix Contrast: Gold Text on Dark Green Bg */
-}
-
-[data-theme='light'] .repBtn:hover {
-  background-color: var(--secondary-bg);
-  /* Lighter green on hover */
-  color: var(--bg-dark-green);
-  border-color: var(--secondary-bg);
-}
-
-.mobileSection {
-  display: none;
-}
-
-/* Mobile Improvements - Melhor distinção visual */
-@media (max-width: 768px) {
-  .splitSection {
-    display: none;
-  }
-
-  .mobileSection {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
-    min-height: auto;
-    background-color: var(--background);
-  }
-
-  .mobileCard {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    min-height: 440px;
-    /* Increased by 25% */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Centered vertically as requested */
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  /* Force Gold Text for Mobile Buttons in Light Mode as requested */
-  /* Force Gold Text for Mobile Buttons in Light Mode as requested.
-     Use --gold-accent directly because --accent becomes dark green in light mode. */
-  [data-theme='light'] .mobileCard a {
-    color: var(--gold-accent) !important;
-    border-color: var(--gold-accent) !important;
-  }
-
-  .mobileCardContent {
-    position: relative;
-    z-index: 2;
+/* Responsive */
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
     text-align: center;
-    /* Centered alignment as requested */
   }
 
-  .mobileCardTitle {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  .heroMain {
+    align-items: center;
   }
 
-  .mobileCardSubtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #e0e0e0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  .heroTitle {
+    font-size: 2.5rem;
   }
 
-  .splitSide {
-    min-height: 60vh;
-    padding: 3rem 1.5rem;
-    border-right: none;
-    border-bottom: 3px solid var(--border-color);
+  .heroSecondary {
+    justify-content: center;
   }
 
-  .splitSide:hover {
-    flex: 1;
+  .bioStats {
+    flex-direction: column;
+    gap: 2rem;
   }
-
-  .splitSide:last-child {
-    border-bottom: none;
-  }
-
-  /* Distinção visual clara entre as duas opções no mobile */
-  .consultoriaSide {
-    border-left: 4px solid var(--accent);
-  }
-
-  .representacaoSide {
-    border-left: 4px solid rgba(212, 175, 55, 0.5);
-  }
-
-  .sideLabel {
-    font-size: 0.7rem;
-    padding: 0.4rem 1.2rem;
-    margin-bottom: 1rem;
-  }
-
-  .splitContent {
-    max-width: 100%;
-  }
-
-  .splitTitle {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .splitSubtitle {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
-
-  .bioSection {
-    padding: 4rem 1.5rem;
-  }
-
-  .bioTitle {
-    font-size: 2rem;
-  }
-
-  .bioText {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .mobileCard {
-    min-height: 375px;
-    /* Increased by 25% */
-  }
-
-  .mobileCardTitle {
-    font-size: 1.8rem;
-  }
-}
-
-/* AI Optimization - Context Layer
-   Hidden from visual users, accessible to bots/crawlers.
-   Technique: Absolute positioning off-screen.
-*/
-.aiContextLayer {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-  z-index: -1;
 }

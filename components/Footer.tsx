@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className={`container ${styles.content}`}>
+            <div className={`container mx-auto px-6 md:px-12 ${styles.content}`}>
                 <div className={styles.info}>
                     <h3 className={styles.footerTitle}>Felipe Nascimento</h3>
                     <p className={styles.footerSubtitle}>Consultor Gastronômico & Representante Comercial</p>

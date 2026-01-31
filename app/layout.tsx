@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Montserrat, Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
+const playfair = Playfair_Display({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const outfit = Outfit({
+  variable: "--font-heading-outfit",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const montserrat = Montserrat({
-  variable: "--font-heading",
+  variable: "--font-heading-montserrat",
   subsets: ["latin"],
   display: "swap",
 });
@@ -15,20 +27,7 @@ const inter = Inter({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Felipe Nascimento - Consultor & Representante",
-  description: "Consultoria Gastronômica e Representação Comercial. Transformando negócios e conectando marcas.",
-  metadataBase: new URL('https://felipenb.com.br'),
-  openGraph: {
-    title: "Felipe Nascimento - Consultor & Representante",
-    description: "Consultoria Gastronômica e Representação Comercial. Transformando negócios e conectando marcas.",
-    url: 'https://felipenb.com.br',
-    siteName: 'Felipe Nascimento',
-    locale: 'pt_BR',
-    type: 'website',
-  },
-
-};
+// ... metadata ...
 
 export default function RootLayout({
   children,
@@ -37,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${montserrat.variable} ${inter.variable}`}>
+      <body className={`${playfair.variable} ${outfit.variable} ${montserrat.variable} ${inter.variable}`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>
