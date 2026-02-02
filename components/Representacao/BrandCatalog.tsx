@@ -102,14 +102,14 @@ export default function BrandCatalog() {
                             </button>
 
                             {/* Left: Visual Identity */}
-                            <div className="w-full md:w-1/3 bg-[#0c0c0c] p-10 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/5 relative overflow-hidden">
+                            <div className="w-full md:w-1/3 bg-[#0c0c0c] p-6 md:p-10 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/5 relative overflow-hidden">
                                 <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div>
                                 <img
                                     src={selectedBrand.logoUrl}
                                     alt={selectedBrand.name}
-                                    className="w-40 md:w-full object-contain relative z-10"
+                                    className="hidden md:block w-40 md:w-full object-contain relative z-10"
                                 />
-                                <div className="mt-8 flex flex-wrap gap-2 justify-center relative z-10">
+                                <div className="md:mt-8 flex flex-wrap gap-2 justify-center relative z-10">
                                     {selectedBrand.categories.map(cat => (
                                         <span key={cat} className="text-[10px] uppercase tracking-wider px-2 py-1 bg-white/5 rounded text-white/60">
                                             {cat}
