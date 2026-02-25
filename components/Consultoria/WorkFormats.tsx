@@ -1,25 +1,26 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Brain, Map, Swords } from 'lucide-react';
 
 const formats = [
     {
         title: "Mentoria",
         subtitle: "Aconselhamento e Direção",
         description: "Eu destravo a SUA visão como dono. São sessões estratégicas focadas em mudar a sua mentalidade de gestão, tomada de decisão e liderança. Você executa, mas não caminha mais sozinho.",
-        icon: "🧠"
+        icon: <Brain strokeWidth={1.5} className="w-10 h-10" />
     },
     {
         title: "Consultoria",
         subtitle: "Diagnóstico e Rota Clara",
         description: "Fazemos um 'Raio-X' completo da sua operação. Eu identifico todos os gargalos (CMV, equipe, processos), desenho a estratégia exata de solução e te entrego o Plano de Ação para sua equipe executar.",
-        icon: "🗺️"
+        icon: <Map strokeWidth={1.5} className="w-10 h-10" />
     },
     {
         title: "Assessoria",
         subtitle: "A Mão na Massa",
         description: "Eu vou para a trincheira com você. Além da estratégia, eu auxilio na execução técnica no dia a dia, desde estruturar fichas técnicas até formatar o layout do salão e da cozinha.",
-        icon: "⚔️"
+        icon: <Swords strokeWidth={1.5} className="w-10 h-10" />
     }
 ];
 
