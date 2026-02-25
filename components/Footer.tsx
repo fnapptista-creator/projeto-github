@@ -33,10 +33,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className={styles.links}>
-                    <a href="https://felipe.rep.br" className={styles.linkItem} target="_blank" rel="noopener noreferrer">Portal do Cliente: felipe.rep.br</a>
-                    <a href="https://minhacomissao.com.br" className={styles.linkItem} target="_blank" rel="noopener noreferrer">Gestor de Comissão: minhacomissao.com.br</a>
-                </div>
 
                 <div className={styles.copyright}>
                     &copy; {new Date().getFullYear()} Felipe Nascimento. Todos os direitos reservados.
