@@ -12,7 +12,7 @@ export default function LinksPage() {
     // vCard Data
     const contactData = {
         fn: "Felipe Nascimento",
-        title: "Consultor & Representante Comercial",
+        title: "Consultor Gastronômico",
         tel: "5573981349085",
         email: "eu@felipenb.com.br",
         url: "https://felipenb.com.br"
@@ -139,18 +139,7 @@ END:VCARD`;
                         </motion.div>
                     </Link>
 
-                    <Link href="/representacao" className="w-full">
-                        <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full py-5 px-6 rounded-sm bg-[#0a0a0a] border border-white/5 hover:border-white/20 transition-all duration-300 flex items-center justify-between group"
-                        >
-                            <span className="text-xs uppercase tracking-[0.2em] text-[#ccc] group-hover:text-white">
-                                Representação Comercial
-                            </span>
-                            <span className="text-lg text-[#666] group-hover:text-white group-hover:translate-x-1 transition-transform">→</span>
-                        </motion.div>
-                    </Link>
+
                 </div>
 
                 <Link

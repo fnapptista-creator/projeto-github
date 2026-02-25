@@ -6,7 +6,7 @@ export default function Footer() {
             <div className={`container mx-auto px-6 md:px-12 ${styles.content}`}>
                 <div className={styles.info}>
                     <h3 className={styles.footerTitle}>Felipe Nascimento</h3>
-                    <p className={styles.footerSubtitle}>Consultor Gastronômico & Representante Comercial</p>
+                    <p className={styles.footerSubtitle}>Consultor Gastronômico</p>
 
                     <div className={styles.contactList}>
                         <a href="https://wa.me/5573981349085" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>

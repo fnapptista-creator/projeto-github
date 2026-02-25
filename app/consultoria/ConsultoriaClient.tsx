@@ -114,8 +114,8 @@ export default function ConsultoriaClient() {
             answer: "Minha abordagem é baseada em metodologias atuais (fundamentadas em especialização recente na UESC) e numa visão analítica de mercado, fugindo de fórmulas prontas ou ultrapassadas. Foco em estruturar processos que funcionam hoje, usando dados para tomada de decisão, e não apenas 'feeling'."
         },
         {
-            question: "Como sua experiência como representante comercial ajuda meu restaurante?",
-            answer: "Eu conheço o outro lado do balcão: a indústria e os fornecedores. Tenho uma visão realista sobre custos de equipamentos, utensílios e insumos, o que me permite orientar compras mais estratégicas e negociações melhores para o seu negócio, impactando diretamente no seu investimento inicial ou custo operacional."
+            question: "Como sua experiência prévia na indústria de equipamentos e utensílios ajuda meu restaurante?",
+            answer: "Com anos de experiência em representação e com vasto conhecimento técnico em equipamentos, pratos, talheres e utensílios, eu conheço profundamente a indústria e os fornecedores. Tenho uma visão realista sobre custos de montagem e reposição, o que me permite orientar compras mais estratégicas e sugerir marcas robustas para a alta demanda do setor."
         },
         {
             question: "A consultoria é presencial?",
@@ -218,7 +218,7 @@ export default function ConsultoriaClient() {
                                     </div>
                                     <div className={styles.authorityFeatureContent}>
                                         <h3>Visão Analítica de Mercado</h3>
-                                        <p>Visão prática de quem conhece profundamente a cadeia de suprimentos e os custos reais do setor, atuando como <strong>representante comercial das maiores marcas do mercado</strong>.</p>
+                                        <p>Visão prática de quem conhece profundamente a cadeia de suprimentos e os custos reais de implantação, prestando curadoria focada no <strong>custo real de cada equipamento e utensílio para o setor de alimentação</strong>.</p>
                                     </div>
                                 </div>
                             </div>

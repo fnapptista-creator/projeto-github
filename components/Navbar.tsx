@@ -73,16 +73,7 @@ export default function Navbar() {
                             </motion.span>
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/representacao" onClick={() => setIsMenuOpen(false)}>
-                            <motion.span
-                                className={isActive('/representacao') ? styles.activeLink : ''}
-                                whileHover={{ y: -2 }}
-                            >
-                                Representação
-                            </motion.span>
-                        </Link>
-                    </li>
+
                     <li className={styles.desktopAction}>
                         <Link href="/contato" className="btn-primary" onClick={() => setIsMenuOpen(false)}>
                             Contato
