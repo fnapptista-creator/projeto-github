@@ -38,23 +38,22 @@ export default function HeroCinematic() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-[var(--font-serif)] text-[var(--text-primary-dark)] tracking-tight leading-[1.1] md:leading-[1.05]">
-                        A ponte entre a <span className="italic text-[var(--accent-gold)]">Gastronomia</span>
-                        <br className="hidden md:block" />
-                        <span className="md:inline hidden"> e o </span>
-                        <span className="md:hidden block my-2 text-sm tracking-widest uppercase opacity-50 font-sans">E O</span>
-                        <span className="italic text-[var(--accent-gold)]">Lucro Real</span>
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-[var(--font-serif)] text-[var(--text-primary-dark)] tracking-tight leading-[1.1] md:leading-[1.15]">
+                        O seu Restaurante <br className="hidden md:block" />
+                        Precisa dar <span className="italic text-[var(--accent-gold)]">Lucro.</span>
+                        <br />
+                        <span className="text-[0.8em]">Não <span className="text-white/40">Dor de Cabeça.</span></span>
                     </h1>
                 </motion.div>
 
                 {/* Subtitle */}
                 <motion.p
-                    className="mt-8 md:mt-10 text-base sm:text-lg md:text-2xl text-[var(--text-secondary-dark)] max-w-sm md:max-w-3xl font-[var(--font-sans)] leading-relaxed"
+                    className="mt-8 md:mt-10 text-base sm:text-lg md:text-xl text-[var(--text-secondary-dark)] max-w-sm md:max-w-2xl font-[var(--font-sans)] leading-relaxed"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.8 }}
                 >
-                    Estratégia comercial e gestão de alto nível para quem não aceita o básico.
+                    Diagnóstico operacional, redução de desperdício e estratégias comerciais de alto nível para quem não aceita o básico.
                 </motion.p>
             </div>
 

@@ -50,7 +50,7 @@ export default function ServiceSection({ theme, title, subtitle, description, ct
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <span className={`inline-block py-1 px-3 border ${isDark ? 'border-white/10' : 'border-black/5'} rounded-full text-xs tracking-[0.3em] uppercase mb-6 ${accentColor} font-[var(--font-sans)] backdrop-blur-sm`}>
-                                0{index} — {subtitle}
+                                {subtitle}
                             </span>
                             <h2 className={`text-4xl sm:text-5xl md:text-7xl font-[var(--font-serif)] mb-8 leading-[1] ${textColor}`}>
                                 {title}

@@ -4,7 +4,7 @@ import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroCinematic from '@/components/Landing/HeroCinematic';
-import ServiceSection from '@/components/Landing/ServiceSection';
+import ServicesGrid from '@/components/Landing/ServicesGrid';
 
 export default function Home() {
   const jsonLd = {
@@ -104,17 +104,7 @@ export default function Home() {
 
       <HeroCinematic />
 
-      <ServiceSection
-        index={1}
-        theme="dark"
-        title="Consultoria Gastronômica"
-        subtitle="Gestão & Estratégia"
-        description="Transforme seu restaurante em uma operação lucrativa e escalável. Identificamos gargalos invisíveis e implementamos processos de elite."
-        ctaText="Conhecer Consultoria"
-        ctaLink="/consultoria"
-        align="left"
-        imagePath="/images/foto-consultoria.png"
-      />
+      <ServicesGrid />
 
 
       <Footer />
