@@ -1,8 +1,16 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import BioModal from './BioModal';
 
 export default function AuthorityBlock() {
+    const [bioOpen, setBioOpen] = useState(false);
+
+    // Contadores Dinâmicos
+    const currentYear = new Date().getFullYear();
+    const salesYears = currentYear - 2008; // Desde os 14 anos (considerando 17+ em 2025 = 2008)
+    const kitchenYears = currentYear - 2016; // Desde a formação na UniOpet (2016)
     return (
         <section id="expertise" className="relative py-24 md:py-32 bg-[#080808] overflow-hidden">
             <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -17,7 +25,7 @@ export default function AuthorityBlock() {
                                 viewport={{ once: true }}
                                 className="p-8 md:p-12 bg-white/5 border border-white/5 rounded-sm backdrop-blur-sm"
                             >
-                                <span className="block text-5xl md:text-7xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-2">17+</span>
+                                <span className="block text-5xl md:text-7xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-2">{salesYears}+</span>
                                 <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[var(--text-secondary-dark)]">Anos em Vendas</span>
                             </motion.div>
                             <motion.div
@@ -27,7 +35,7 @@ export default function AuthorityBlock() {
                                 transition={{ delay: 0.1 }}
                                 className="p-8 md:p-12 bg-white/5 border border-white/5 rounded-sm backdrop-blur-sm mt-8 md:mt-12"
                             >
-                                <span className="block text-5xl md:text-7xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-2">9+</span>
+                                <span className="block text-5xl md:text-7xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-2">{kitchenYears}+</span>
                                 <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[var(--text-secondary-dark)]">Anos de Cozinha</span>
                             </motion.div>
                         </div>
@@ -57,15 +65,23 @@ export default function AuthorityBlock() {
                             </div>
 
                             <div className="mt-12 pt-8 border-t border-white/10">
-                                <p className="text-sm md:text-base text-[var(--accent-gold)] font-medium">
-                                    "Consultoria essencial para minimizar erros e encurtar o caminho do sucesso."
-                                </p>
+                                <button
+                                    onClick={() => setBioOpen(true)}
+                                    className="text-sm md:text-base text-[var(--accent-gold)] font-medium uppercase tracking-[0.15em] border-b border-[var(--accent-gold)]/30 hover:border-[var(--accent-gold)] pb-1 transition-colors flex items-center gap-2"
+                                >
+                                    Conhecer minha trajetória
+                                    <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
                             </div>
                         </motion.div>
                     </div>
 
                 </div>
             </div>
+
+            <BioModal isOpen={bioOpen} onClose={() => setBioOpen(false)} />
         </section>
     );
 }
