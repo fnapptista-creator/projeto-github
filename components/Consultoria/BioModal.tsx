@@ -73,8 +73,10 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
 
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Gestão para Pequenas e Médias Empresas</span></li>
+                                <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Liderança para Crises Complexas</span></li>
+                                <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Gestão de Qualidade de Bares e Restaurantes</span></li>
+                                <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Gerenciamento de Mudanças e Desafios Diários</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Construção de Máquina de Vendas</span></li>
-                                <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>IA Aplicada ao Marketing Digital</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Gestão Financeira Descomplicada</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Boas Práticas nos Serviços de Alimentação</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>7 Passos de Prospecção Avançada</span></li>
