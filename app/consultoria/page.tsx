@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ConsultoriaHero from '@/components/Consultoria/ConsultoriaHero';
 import AuthorityBlock from '@/components/Consultoria/AuthorityBlock';
+import WorkFormats from '@/components/Consultoria/WorkFormats';
 import ConsultingMode from '@/components/Consultoria/ConsultingMode';
 import PainPoints from '@/components/Consultoria/PainPoints';
 import MagneticLink from '@/components/MagneticLink';
@@ -12,8 +13,8 @@ import { motion } from 'framer-motion';
 const services = {
     novos: {
         title: 'Novos Negócios',
-        subtitle: 'Tirar do papel com segurança e estratégia.',
-        description: 'Transformamos a sua ideia de bar ou restaurante em um conceito cheio de personalidade e financeiramente saudável. Orientação técnica completa desde o plano de negócios até a abertura.',
+        subtitle: 'Abre certo ou perde tudo. Pare de apostar no escuro.',
+        description: 'A estatística de bares e restaurantes que quebram no primeiro ano é assustadora. Transformamos a sua ideia em um conceito à prova de falhas e financeiramente blindado.',
         items: [
             { title: 'Plano de negócios', desc: 'Estruturação completa da viabilidade financeira, estimativa de retorno e definição do conceito para garantir que o investimento seja seguro.' },
             { title: 'Estudo de mercado', desc: 'Análise detalhada da região, perfil do público e concorrência para posicionar seu restaurante no local certo.' },
@@ -24,8 +25,8 @@ const services = {
     },
     funcionamento: {
         title: 'Em Funcionamento',
-        subtitle: 'Otimização, Padronização e Lucro Real.',
-        description: 'Diagnóstico profundo para quem busca eficiência. Resolvemos gargalos operacionais e financeiros para que você deixe de apagar incêndios e foque no crescimento.',
+        subtitle: 'Deixe de ser escravo da sua própria operação.',
+        description: 'O seu restaurante trabalha pra você, ou você trabalha para pagar boletos? Resolvemos gargalos operacionais e estancamos o ralo financeiro para que você foque no crescimento e não em apagar incêndios.',
         items: [
             { title: 'Engenharia de Cardápio', desc: 'Análise profunda da rentabilidade e popularidade dos pratos para maximizar o lucro sem necessariamente aumentar os preços.' },
             { title: 'Auditoria Operacional', desc: 'Diagnóstico "Raio-X" da sua operação para identificar onde você está perdendo dinheiro, seja no desperdício ou processos falhos.' },
@@ -36,8 +37,8 @@ const services = {
     },
     expansao: {
         title: 'Expansão',
-        subtitle: 'Crescer sem perder a essência.',
-        description: 'Estratégias escaláveis para quem quer abrir novas unidades ou franquias. Preparamos sua operação para ser replicável com qualidade.',
+        subtitle: 'Escalabilidade agressiva, sem perder o controle do padrão.',
+        description: 'Você chegou no limite da sua unidade e quer abrir filiais ou franquear? Preparamos a sua operação para ser replicável com qualidade idêntica à loja matriz.',
         items: [
             { title: 'Rollout Plan', desc: 'Planejamento estratégico detalhado para abertura de novas unidades, cronograma físico-financeiro e metas de crescimento.' },
             { title: 'Cozinha Central', desc: 'Estudo de viabilidade e implementação de uma central de produção para abastecer múltiplas unidades com padronização.' },
@@ -56,6 +57,8 @@ export default function Consultoria() {
             <ConsultoriaHero />
 
             <AuthorityBlock />
+
+            <WorkFormats />
 
             {/* The Triad - Service Modes */}
             <div id="servicos">
@@ -96,7 +99,7 @@ export default function Consultoria() {
                     className="max-w-3xl mx-auto"
                 >
                     <h2 className="text-4xl md:text-6xl font-[var(--font-serif)] text-white mb-8">
-                        Pare de perder dinheiro.
+                        Chega de trabalhar apenas para pagar boletos.
                     </h2>
                     <p className="text-[#888] text-lg mb-12">
                         Agende uma conversa rápida de 15 minutos para eu entender seu momento.

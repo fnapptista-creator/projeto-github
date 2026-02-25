@@ -5,19 +5,19 @@ import { motion } from 'framer-motion';
 const problems = [
     {
         title: "Lucro Invisível",
-        desc: "Você vende bem, mas a conta não fecha? O problema pode estar no cálculo de CMV errado ou ficha técnica inexistente. Onde está o dinheiro?"
+        desc: "Você vende muito, mas não vê a cor do dinheiro? O buraco negro geralmente se chama CMV descontrolado e Falta de Ficha Técnica. Vamos fechar esse ralo."
     },
     {
         title: "Apagando Incêndios",
-        desc: "Sua operação depende 100% de você? Deixe de ser refém do operacional e construa processos que funcionam sozinhos."
+        desc: "Sua operação para se você não estiver na loja? Deixe de ser funcionário do seu próprio negócio e crie processos que libertam o dono."
     },
     {
         title: "Equipe sem Padrão",
-        desc: "Rotatividade alta e cozinha desorganizada? Implemente treinamento e cultura para padronizar o atendimento e a qualidade."
+        desc: "Rotatividade alta e cada dia o prato sai de um jeito? Implemente cultura e treinamento para acabar com o amadorismo no salão e cozinha."
     },
     {
         title: "Desperdício Oculto",
-        desc: "Sem padronização e ficha técnica, você joga dinheiro no lixo a cada prato. Transforme sobras em estratégia."
+        desc: "Sem Ficha Técnica e Padronização, você paga para trabalhar. Cada erro de preparo é o seu lucro indo direto pro lixo."
     }
 ];
 

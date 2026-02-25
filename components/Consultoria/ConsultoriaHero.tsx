@@ -44,7 +44,7 @@ export default function ConsultoriaHero() {
                     transition={{ duration: 1, delay: 0.6 }}
                     className="text-base md:text-xl text-[var(--text-secondary-dark)] max-w-2xl mx-auto leading-relaxed mb-12 font-[var(--font-sans)] text-pretty"
                 >
-                    Maximize seus lucros, padronize seus processos e eleve a experiência do seu cliente com uma gestão de alta performance.
+                    Pare de sangrar dinheiro com desperdício e equipe desmotivada. A consultoria "Raio-X" que mapeia falhas operacionais, estanca o seu CMV e bota lucro real no caixa.
                 </motion.p>
 
                 {/* CTAs */}

@@ -42,9 +42,9 @@ export default function Contato() {
             >
                 <div className={`container ${styles.content}`}>
                     <motion.div className={styles.info} variants={fadeInUp}>
-                        <h1>Vamos Conversar?</h1>
+                        <h1>Vamos estancar o sangramento e gerar lucro?</h1>
                         <p>
-                            Seja para transformar a gestão do seu restaurante ou para abastecer sua loja com as melhores marcas, estou pronto para ajudar.
+                            Chega de adiar o problema que está sugando o caixa da sua operação. Me chame no WhatsApp e vamos traçar uma rota blindada pro seu restaurante crescer e lucrar.
                         </p>
 
                         <div className={styles.contactMethods}>
