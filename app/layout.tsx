@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat, Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { QuizProvider } from "@/components/LeadQuiz/QuizContext";
+import LeadQuizModal from "@/components/LeadQuiz/LeadQuizModal";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -72,7 +74,10 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${playfair.variable} ${outfit.variable} ${montserrat.variable} ${inter.variable}`}>
         <ThemeProvider>
-          {children}
+          <QuizProvider>
+            {children}
+            <LeadQuizModal />
+          </QuizProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -9,8 +9,9 @@ interface MagneticLinkProps {
     children: React.ReactNode;
     className?: string;
     style?: React.CSSProperties;
-    strength?: number; // How much the item moves (pixels)
-    activeStrength?: number; // How much the item moves when active (pixels) - not used but kept for API compat
+    strength?: number;
+    activeStrength?: number;
+    onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export default function MagneticLink({
@@ -18,7 +19,8 @@ export default function MagneticLink({
     children,
     className = '',
     style = {},
-    strength = 30
+    strength = 30,
+    onClick
 }: MagneticLinkProps) {
     const ref = useRef<HTMLDivElement>(null);
 
@@ -61,7 +63,7 @@ export default function MagneticLink({
             style={{ x: mouseX, y: mouseY, ...style }}
             className={className}
         >
-            <Link href={href} style={{ display: 'block', width: '100%', height: '100%' }}>
+            <Link href={href} onClick={onClick} style={{ display: 'block', width: '100%', height: '100%' }}>
                 {children}
             </Link>
         </motion.div>

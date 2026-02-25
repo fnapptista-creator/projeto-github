@@ -9,6 +9,7 @@ import ConsultingMode from '@/components/Consultoria/ConsultingMode';
 import PainPoints from '@/components/Consultoria/PainPoints';
 import MagneticLink from '@/components/MagneticLink';
 import { motion } from 'framer-motion';
+import { useQuiz } from '@/components/LeadQuiz/QuizContext';
 
 const services = {
     novos: {
@@ -50,6 +51,7 @@ const services = {
 };
 
 export default function Consultoria() {
+    const { openQuiz } = useQuiz();
     return (
         <main className="bg-[#050505] min-h-screen">
             <Navbar />
@@ -105,7 +107,8 @@ export default function Consultoria() {
                         Agende uma conversa rápida de 15 minutos para eu entender seu momento.
                     </p>
                     <MagneticLink
-                        href="https://wa.me/5573981349085?text=Olá Felipe, gostaria de conversar sobre a consultoria."
+                        href="#"
+                        onClick={(e: React.MouseEvent) => { e.preventDefault(); openQuiz(); }}
                         className="inline-block px-12 py-5 bg-white text-black rounded-full font-bold uppercase text-xs tracking-[0.2em] hover:bg-[var(--accent-gold)] transition-colors"
                     >
                         Falar no WhatsApp
