@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuiz } from './QuizContext';
-import { X, ArrowRight, Check } from 'lucide-react';
+import { X, ArrowRight, Check, ArrowLeft } from 'lucide-react';
 
 const slideVariants = {
     hidden: { x: 50, opacity: 0 },
@@ -201,13 +201,28 @@ export default function LeadQuizModal() {
                         </div>
 
                         {/* Footer Controls */}
-                        <div className="p-6 border-t border-white/5 bg-[#0a0a0a] flex items-center justify-between">
-                            <div className="text-red-400 text-sm font-sans px-2">{error}</div>
+                        <div className="p-6 border-t border-white/5 bg-[#0a0a0a] flex items-center justify-between flex-wrap gap-4">
+                            <div className="flex items-center gap-4 order-2 sm:order-1">
+                                {step > 1 && (
+                                    <button
+                                        onClick={() => { setStep(prev => prev - 1); setError(''); }}
+                                        className="px-6 py-3 bg-transparent text-white/60 border border-white/10 font-bold uppercase tracking-widest text-xs rounded-full hover:text-white hover:border-white/30 transition-colors flex items-center gap-2"
+                                    >
+                                        <ArrowLeft className="w-4 h-4" />
+                                        Voltar
+                                    </button>
+                                )}
+                            </div>
+
+                            <div className="order-1 sm:order-2 text-right sm:text-left flex-1 sm:flex-none">
+                                <span className="text-red-400 text-sm font-sans px-2">{error}</span>
+                            </div>
+
                             <button
                                 onClick={handleNext}
-                                className="px-8 py-3 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-[var(--accent-gold)] transition-colors flex items-center gap-2"
+                                className="px-8 py-3 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-[var(--accent-gold)] transition-colors flex items-center gap-2 order-3"
                             >
-                                {step === 4 ? 'Avançar para WhatsApp' : 'Próximo'}
+                                {step === 4 ? 'Avançar' : 'Próximo'}
                                 <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>

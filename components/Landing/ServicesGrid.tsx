@@ -41,19 +41,17 @@ export default function ServicesGrid() {
                             transition={{ duration: 0.8, delay: service.delay, ease: "easeOut" }}
                             className="group relative h-full"
                         >
-                            <Link href={service.link} className="block h-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--accent-gold)] focus:ring-offset-2 focus:ring-offset-[var(--bg-void)] rounded-lg">
+                            <Link href={service.link} className="block h-full cursor-pointer outline-none rounded-xl">
                                 {/* Card Body */}
-                                <div className="h-full flex flex-col justify-between p-8 md:p-10 border border-white/[0.05] bg-[#080808] rounded-lg transition-colors duration-500 group-hover:bg-[#0c0c0c] group-hover:border-[var(--accent-gold)]/30">
-
-                                    <div>
-                                        <div className="text-[var(--accent-gold)] text-xs tracking-[0.2em] font-sans uppercase mb-4 opacity-80">0{index + 1}</div>
-                                        <h3 className="text-2xl lg:text-3xl font-[var(--font-serif)] text-white mb-4 leading-tight">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-[#888] font-sans text-sm md:text-base leading-relaxed mb-10">
-                                            {service.description}
-                                        </p>
-                                    </div>
+                                <div className="h-full flex flex-col justify-between p-8 md:p-10 border border-white/[0.03] bg-[#050505]/60 backdrop-blur-md rounded-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:bg-[#0c0c0c]/80 group-hover:border-[var(--accent-gold)]/20 group-hover:-translate-y-3 group-hover:shadow-[0_20px_40px_rgba(197,160,89,0.05)]">                                    <div>
+                                    <div className="text-[var(--accent-gold)] text-xs tracking-[0.2em] font-sans uppercase mb-4 opacity-80">0{index + 1}</div>
+                                    <h3 className="text-2xl lg:text-3xl font-[var(--font-serif)] text-white mb-4 leading-tight">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-[#888] font-sans text-sm md:text-base leading-relaxed mb-10">
+                                        {service.description}
+                                    </p>
+                                </div>
 
                                     {/* Action Link Area */}
                                     <div className="flex items-center text-xs font-bold tracking-[0.15em] uppercase text-white group-hover:text-[var(--accent-gold)] transition-colors duration-300">

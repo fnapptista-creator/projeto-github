@@ -11,16 +11,18 @@ export default function HeroCinematic() {
             <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
 
             {/* Subtle Gradient Spot */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[var(--accent-gold)] rounded-full blur-[200px] opacity-[0.03] pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[var(--accent-gold)] rounded-full blur-[160px] opacity-[0.06] pointer-events-none"></div>
 
             {/* Content Container */}
             <div className="z-10 flex flex-col items-center text-center px-4 md:px-0 max-w-5xl mx-auto">
 
-                {/* Logo Animation */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8, filter: "blur(12px)" }}
-                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)", y: [0, -10, 0] }}
+                    transition={{
+                        duration: 1.5, ease: [0.16, 1, 0.3, 1],
+                        y: { repeat: Infinity, duration: 6, ease: "easeInOut" }
+                    }}
                     className="relative w-32 h-32 md:w-56 md:h-56 -mb-6 md:-mb-10 z-20"
                 >
                     <Image

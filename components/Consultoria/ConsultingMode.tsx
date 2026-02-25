@@ -22,6 +22,7 @@ export default function ConsultingMode({ title, subtitle, description, items, in
     const textColor = isDark ? 'text-[var(--text-primary-dark)]' : 'text-[#111]';
     const subColor = isDark ? 'text-[var(--text-secondary-dark)]' : 'text-[#555]';
     const borderColor = isDark ? 'border-white/10' : 'border-black/10';
+    const hoverBg = isDark ? 'hover:bg-white/[0.02]' : 'hover:bg-black/[0.03]';
 
     return (
         <section className={`py-20 md:py-32 relative ${bgColor} overflow-hidden`}>
@@ -71,14 +72,14 @@ export default function ConsultingMode({ title, subtitle, description, items, in
                     {items.map((item, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 * i }}
-                            className="group"
+                            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+                            transition={{ delay: 0.1 * i, duration: 0.6, ease: "easeOut" }}
+                            className={`group p-6 md:p-8 rounded-2xl border border-transparent ${hoverBg} transition-all duration-500 ease-out hover:-translate-y-1 block`}
                         >
-                            <div className={`w-full h-[1px] ${borderColor} bg-current opacity-20 mb-6 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                            <h3 className={`text-xl font-medium mb-3 ${textColor}`}>{item.title}</h3>
+                            <div className={`w-full h-[1px] ${borderColor} bg-current opacity-20 mb-6 group-hover:opacity-100 group-hover:bg-[var(--accent-gold)] group-hover:border-[var(--accent-gold)] transition-all duration-500`}></div>
+                            <h3 className={`text-xl font-medium mb-3 ${textColor} group-hover:text-[var(--accent-gold)] transition-colors duration-300`}>{item.title}</h3>
                             <p className={`text-sm md:text-base leading-relaxed ${subColor} text-pretty`}>
                                 {item.desc}
                             </p>
