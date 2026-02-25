@@ -1,11 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import { motion } from 'framer-motion';
-import BioModal from './BioModal';
+import dynamic from 'next/dynamic';
+
+const BioModal = dynamic(() => import('./BioModal'), { ssr: false });
 
 export default function AuthorityBlock() {
     const [bioOpen, setBioOpen] = useState(false);
+    const [isPending, startTransition] = useTransition();
 
     // Contadores Dinâmicos
     const currentYear = new Date().getFullYear();
@@ -66,8 +69,9 @@ export default function AuthorityBlock() {
 
                             <div className="mt-12 pt-8 border-t border-white/10">
                                 <button
-                                    onClick={() => setBioOpen(true)}
-                                    className="text-sm md:text-base text-[var(--accent-gold)] font-medium uppercase tracking-[0.15em] border-b border-[var(--accent-gold)]/30 hover:border-[var(--accent-gold)] pb-1 transition-colors flex items-center gap-2"
+                                    onClick={() => startTransition(() => setBioOpen(true))}
+                                    disabled={isPending}
+                                    className={`text-sm md:text-base text-[var(--accent-gold)] font-medium uppercase tracking-[0.15em] border-b border-[var(--accent-gold)]/30 hover:border-[var(--accent-gold)] pb-1 transition-colors flex items-center gap-2 ${isPending ? 'opacity-50 cursor-wait' : ''}`}
                                 >
                                     Conhecer minha trajetória
                                     <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
