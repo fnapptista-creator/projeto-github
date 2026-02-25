@@ -63,8 +63,8 @@ export default function LeadQuizModal() {
         };
 
         const text = `Olá Felipe! Me chamo *${quizData.name.trim()}* e falo de *${quizData.city.trim()}*.\n\n` +
-            `🏢 *Momento do Negócio:* ${businessMap[quizData.businessStage]}\n\n` +
-            `🚨 *Principais Desafios Atuais:*\n${quizData.painPoints.map(p => `- ${p}`).join('\n')}\n\n` +
+            `*Momento do Negócio:* ${businessMap[quizData.businessStage]}\n\n` +
+            `*Principais Desafios Atuais:*\n${quizData.painPoints.map(p => `- ${p}`).join('\n')}\n\n` +
             `Gostaria de saber como a consultoria pode me ajudar com esse cenário!`;
 
         const encoded = encodeURIComponent(text);

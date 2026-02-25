@@ -59,7 +59,7 @@ export default function AuthorityBlock() {
 
                             <div className="space-y-6 text-base md:text-lg text-[var(--text-secondary-dark)] font-[var(--font-sans)] leading-relaxed">
                                 <p>
-                                    Já estive do outro lado do balcão e sei exatamente as dores que você sente. Minha abordagem une a <strong className="text-white font-normal">técnica da alta gastronomia</strong> com a <strong className="text-white font-normal">agressividade comercial</strong> necessária para fazer um negócio lucrar.
+                                    Já estive do outro lado do balcão e sei exatamente as dores que você sente. Minha abordagem une a <strong className="text-white font-normal">técnica da gastronomia</strong> com a <strong className="text-white font-normal">agressividade comercial</strong> necessária para fazer um negócio lucrar.
                                 </p>
 
                                 <p>
