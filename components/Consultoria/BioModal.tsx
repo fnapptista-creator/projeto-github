@@ -49,7 +49,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
                             </p>
 
                             <p>
-                                Porém, a minha escola primária de negócios começou muito antes. <strong className="text-white font-medium">Desde os 14 anos de idade eu respiro o comércio.</strong> Passei por diversos segmentos — de bijuterias e brinquedos a utilidades e foodservice. São quase 18 anos de pura bagagem comercial.
+                                Porém, a minha escola primária de negócios começou muito antes. <strong className="text-white font-medium">Desde os 14 anos de idade eu respiro o comércio.</strong> Passei por diversos segmentos — de bijuterias e brinquedos a utilidades e foodservice. Essa vivência me construiu uma bagagem de quase 18 anos lidando com os mais diferentes e complexos perfis de clientes, me ensinando a maestria do atendimento e da conversão muito antes de eu entrar em uma cozinha.
                             </p>
 
                             <div className="p-6 border-l-2 border-[var(--accent-gold)] bg-[var(--accent-gold)]/[0.03] rounded-r-xl my-8">
@@ -59,7 +59,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
                             </div>
 
                             <p>
-                                Vi muitos empreendedores que dominavam as panelas brilhantemente, mas cujos restaurantes sangravam dinheiro por total falta de agressividade comercial e visão de gestão.
+                                Vi muitos empreendedores que dominavam as panelas brilhantemente, mas cujos restaurantes sangravam dinheiro pela total falta de agressividade comercial e por não entenderem a arte de vender.
                             </p>
 
                             <p>
@@ -71,14 +71,18 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
                                 Para garantir que minha entrega estratégica permaneça impecável e resolva os problemas dos empresários, acumulei dezenas de formações e certificações focadas em resultado prático, incluindo:
                             </p>
 
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-                                <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Liderança para Crises Complexas (Flow)</span></li>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                                <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Gestão para Pequenas e Médias Empresas</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Construção de Máquina de Vendas</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>IA Aplicada ao Marketing Digital</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Gestão Financeira Descomplicada</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>Boas Práticas nos Serviços de Alimentação</span></li>
                                 <li className="flex items-start gap-3 bg-white/[0.02] p-3 rounded-lg border border-white/5"><span className="text-[var(--accent-gold)] mt-1">✦</span> <span>7 Passos de Prospecção Avançada</span></li>
                             </ul>
+
+                            <p className="text-sm italic text-[#666] mb-8">
+                                * Além de dezenas de outros cursos corporativos, palestras e fóruns do setor de alimentação.
+                            </p>
 
                             <p>
                                 Atualmente, continuo elevando a barra técnica cursando o <strong className="text-[var(--accent-gold)]">primeiro semestre da Pós-Graduação em Consultoria na consolidada UESC</strong>, consolidando a ponte entre o empirismo da experiência prática com a validação acadêmica superior.
