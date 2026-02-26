@@ -27,7 +27,7 @@ export default function HeroCinematic() {
                 >
                     <Image
                         src="/logo-new.png"
-                        alt="Felipe Nascimento Logo"
+                        alt="Felipe Baptista Logo"
                         fill
                         className="object-contain"
                         priority

@@ -99,7 +99,7 @@ export default function ServiceSection({ theme, title, subtitle, description, ct
 
                             {/* Decorative Elements */}
                             <div className={`absolute top-8 left-8 right-8 bottom-8 border opacity-10 ${isDark ? 'border-white' : 'border-black'} pointer-events-none`}></div>
-                            <div className={`absolute bottom-12 left-0 right-0 text-center text-xs tracking-[0.4em] uppercase opacity-40 ${isDark ? 'text-white' : 'text-black'} z-10 font-[var(--font-sans)]`}>Felipe Nascimento</div>
+                            <div className={`absolute bottom-12 left-0 right-0 text-center text-xs tracking-[0.4em] uppercase opacity-40 ${isDark ? 'text-white' : 'text-black'} z-10 font-[var(--font-sans)]`}>Felipe Baptista</div>
                         </motion.div>
                     </motion.div>
 

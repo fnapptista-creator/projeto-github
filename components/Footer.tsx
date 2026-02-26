@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={`container mx-auto px-6 md:px-12 ${styles.content}`}>
                 <div className={styles.info}>
-                    <h3 className={styles.footerTitle}>Felipe Nascimento</h3>
+                    <h3 className={styles.footerTitle}>Felipe Baptista</h3>
                     <p className={styles.footerSubtitle}>Consultor Gastronômico</p>
 
                     <div className={styles.contactList}>
@@ -45,7 +45,7 @@ export default function Footer() {
 
 
                 <div className={styles.copyright}>
-                    &copy; {new Date().getFullYear()} Felipe Nascimento. Todos os direitos reservados.
+                    &copy; {new Date().getFullYear()} Felipe Baptista. Todos os direitos reservados.
                 </div>
             </div>
         </footer>

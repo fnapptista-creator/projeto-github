@@ -10,7 +10,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["Person", "ProfessionalService"],
-    "name": "Felipe Nascimento",
+    "name": "Felipe Baptista",
     "jobTitle": "Consultor Gastronômico",
     "description": "Consultoria especializada para restaurantes. Aumente seus lucros, treine sua equipe e melhore a gestão do seu negócio no Sul da Bahia (Itabuna, Ilhéus, Porto Seguro, Eunápolis) e em todo o estado.",
     "url": "https://felipenb.com.br",

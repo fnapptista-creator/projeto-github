@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Felipe Nascimento | Consultoria Gastronômica Especializada",
+    title: "Felipe Baptista | Consultoria Gastronômica Especializada",
     description: "Transforme seu restaurante em uma máquina de lucro. Consultoria especializada em redução de custos, engenharia de cardápio e padronização operacional. Atendimento em todo o Brasil e focado no Sul da Bahia.",
     keywords: [
         "consultoria gastronômica",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         "como abrir filial de restaurante",
         "cozinha central",
         "consultor de restaurantes bahia",
-        "felipe nascimento consultoria",
+        "felipe baptista consultoria",
         "consultoria de restaurante em itabuna",
         "consultoria de restaurante em ilhéus",
         "consultoria de restaurante em porto seguro",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
                 url: "/logo-new-main.png",
                 width: 1200,
                 height: 630,
-                alt: "Felipe Nascimento Consultoria Gastronômica",
+                alt: "Felipe Baptista Consultoria Gastronômica",
             },
         ],
     },

@@ -11,7 +11,7 @@ export default function LinksPage() {
 
     // vCard Data
     const contactData = {
-        fn: "Felipe Nascimento",
+        fn: "Felipe Baptista",
         title: "Consultor Gastronômico",
         tel: "5573981349085",
         email: "eu@felipenb.com.br",
@@ -32,7 +32,7 @@ END:VCARD`;
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
         link.href = url;
-        link.setAttribute("download", "Felipe_Nascimento.vcf");
+        link.setAttribute("download", "Felipe_Baptista.vcf");
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -62,7 +62,7 @@ END:VCARD`;
                     <div className="relative w-28 h-28 rounded-full overflow-hidden border border-white/10 bg-black">
                         <Image
                             src="/logo-new-main.png"
-                            alt="Felipe Nascimento"
+                            alt="Felipe Baptista"
                             width={112}
                             height={112}
                             className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
@@ -73,7 +73,7 @@ END:VCARD`;
 
                 {/* Header */}
                 <h1 className="text-2xl md:text-3xl font-[var(--font-serif)] text-white mb-2 text-center">
-                    Felipe Nascimento
+                    Felipe Baptista
                 </h1>
                 <p className="text-sm uppercase tracking-[0.2em] text-[#888] mb-10 text-center font-[var(--font-sans)]">
                     Performance & Estratégia
