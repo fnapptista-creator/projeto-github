@@ -10,6 +10,8 @@ import LatestPosts from '@/components/Landing/LatestPosts';
 import HomeCTA from '@/components/Landing/HomeCTA';
 import { getSortedPostsData } from '@/lib/posts';
 
+export const revalidate = 86400; // ISR: Reconstrução diária automática na Vercel para carregar novos posts agendados
+
 export default function Home() {
   const recentPosts = getSortedPostsData().slice(0, 3);
   const jsonLd = {

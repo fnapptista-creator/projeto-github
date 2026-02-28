@@ -9,6 +9,8 @@ export const metadata = {
     description: 'Artigos brutais e sem filtro sobre redução de CMV, gestão de equipe e engenharia de cardápio para donos de restaurantes.',
 };
 
+export const revalidate = 86400; // ISR: Revalida a página 1x por dia (24h) para ativar os agendamentos automáticos
+
 export default function BlogIndex() {
     const allPostsData = getSortedPostsData();
 
