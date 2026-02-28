@@ -35,7 +35,7 @@ export default function PainPoints() {
                     </h2>
                 </div>
 
-                <div className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] md:grid md:grid-cols-2 gap-4 md:gap-8 border-t border-white/[0.05] pt-12 mt-12 pb-4 -mx-6 px-6 md:mx-0 md:px-0">
+                <div className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] md:grid md:grid-cols-2 gap-4 md:gap-8 border-t border-white/[0.05] pt-12 mt-12 pb-4 -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth">
                     {problems.map((problem, i) => (
                         <motion.div
                             key={i}
@@ -43,7 +43,7 @@ export default function PainPoints() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.1, margin: "-10%" }}
                             transition={{ delay: i * 0.1, duration: 0.6 }}
-                            className="group snap-center shrink-0 w-[85vw] md:w-auto border border-white/[0.05] p-6 md:p-8 transition-all duration-300 rounded-none cursor-default hover:bg-[#070707] hover:border-white/10"
+                            className="group snap-start snap-always shrink-0 w-[85vw] md:w-auto border border-white/[0.05] p-6 md:p-8 transition-all duration-300 rounded-none cursor-default hover:bg-[#070707] hover:border-white/10 touch-pan-y"
                         >
                             <div className="mb-4">
                                 <span className="text-[var(--accent-gold)] font-[var(--font-serif)] text-4xl md:text-5xl opacity-30 group-hover:opacity-100 transition-opacity">

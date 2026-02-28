@@ -53,19 +53,20 @@ export default function HeroCinematic() {
                         transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[var(--font-serif)] text-white tracking-tighter leading-[1] uppercase">
-                            O SEU RESTAURANTE <br />
-                            PRECISA DAR <span className="text-transparent" style={{ WebkitTextStroke: '2px var(--accent-gold)' }}>LUCRO.</span>
+                            O SEU RESTAURANTE <br className="hidden sm:block" />
+                            PRECISA DAR <span className="text-transparent" style={{ WebkitTextStroke: '2px var(--accent-gold)' }}>LUCRO.</span><br />
+                            <span className="text-[0.6em] text-white/90 block mt-4 tracking-normal">NÃO DOR DE CABEÇA.</span>
                         </h2>
                     </motion.div>
 
                     {/* Subtitle */}
                     <motion.p
-                        className="mt-8 text-sm md:text-lg text-[#aaa] max-w-xl font-[var(--font-sans)] leading-relaxed uppercase tracking-widest border-l-2 border-[var(--accent-gold)] pl-4"
+                        className="mt-8 text-sm md:text-base text-[#aaa] max-w-2xl font-[var(--font-sans)] leading-relaxed uppercase tracking-widest border-l-2 border-[var(--accent-gold)] pl-4"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1.2, delay: 0.6 }}
                     >
-                        Não dor de cabeça. Diagnóstico operacional, redução de desperdício e estratégias comerciais de alto nível.
+                        Diagnóstico operacional, treinamento de equipe, padronização e estratégias comerciais de alto nível.
                     </motion.p>
 
                     {/* CTAs */}

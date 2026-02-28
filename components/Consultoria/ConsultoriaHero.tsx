@@ -30,10 +30,11 @@ export default function ConsultoriaHero() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-5xl sm:text-6xl md:text-8xl font-[var(--font-serif)] text-[var(--text-primary-dark)] leading-[1.05] tracking-tight mb-8"
+                    className="text-5xl sm:text-6xl md:text-8xl font-[var(--font-serif)] text-white leading-[1] tracking-tighter mb-8 uppercase"
                 >
-                    Transforme seu Restaurante em uma <br className="hidden md:block" />
-                    <span className="italic text-[var(--accent-gold)]">Máquina de Lucro</span>
+                    TRANSFORME O SEU <br className="hidden md:block" />
+                    RESTAURANTE EM UMA <br />
+                    <span className="text-transparent" style={{ WebkitTextStroke: '2px var(--accent-gold)' }}>MÁQUINA DE LUCRO.</span>
                 </motion.h1>
 
                 {/* Subtitle */}
