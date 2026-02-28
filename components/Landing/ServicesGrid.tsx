@@ -55,7 +55,7 @@ export default function ServicesGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.1, margin: "-10%" }}
                             transition={{ duration: 0.6, delay: service.delay }}
-                            className="group snap-start snap-always shrink-0 w-[85vw] md:w-auto block border border-white/[0.05] hover:border-white/10 hover:bg-white/[0.02] transition-colors duration-300 rounded-none relative overflow-hidden touch-pan-y"
+                            className="group snap-start snap-always shrink-0 w-[85vw] md:w-auto block border border-white/[0.05] hover:border-white/10 hover:bg-white/[0.02] transition-colors duration-300 rounded-none relative overflow-hidden"
                         >
                             <Link href={service.link} className="flex flex-col w-full h-full p-8 outline-none relative z-10">
                                 {/* Stage */}

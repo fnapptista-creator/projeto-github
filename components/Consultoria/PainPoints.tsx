@@ -43,7 +43,7 @@ export default function PainPoints() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.1, margin: "-10%" }}
                             transition={{ delay: i * 0.1, duration: 0.6 }}
-                            className="group snap-start snap-always shrink-0 w-[85vw] md:w-auto border border-white/[0.05] p-6 md:p-8 transition-all duration-300 rounded-none cursor-default hover:bg-[#070707] hover:border-white/10 touch-pan-y"
+                            className="group snap-start snap-always shrink-0 w-[85vw] md:w-auto border border-white/[0.05] p-6 md:p-8 transition-all duration-300 rounded-none cursor-default hover:bg-[#070707] hover:border-white/10"
                         >
                             <div className="mb-4">
                                 <span className="text-[var(--accent-gold)] font-[var(--font-serif)] text-4xl md:text-5xl opacity-30 group-hover:opacity-100 transition-opacity">
