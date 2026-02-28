@@ -47,7 +47,7 @@ export default function ServicesGrid() {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/[0.05] pt-12 mt-12">
+                <div className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] md:grid md:grid-cols-3 gap-4 md:gap-8 border-t border-white/[0.05] pt-12 mt-12 pb-4 -mx-6 px-6 md:mx-0 md:px-0">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
@@ -55,7 +55,7 @@ export default function ServicesGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.1, margin: "-10%" }}
                             transition={{ duration: 0.6, delay: service.delay }}
-                            className="group block border border-white/[0.05] hover:border-white/10 hover:bg-white/[0.02] transition-colors duration-300 rounded-none relative overflow-hidden"
+                            className="group snap-center shrink-0 w-[85vw] md:w-auto block border border-white/[0.05] hover:border-white/10 hover:bg-white/[0.02] transition-colors duration-300 rounded-none relative overflow-hidden"
                         >
                             <Link href={service.link} className="flex flex-col w-full h-full p-8 outline-none relative z-10">
                                 {/* Stage */}

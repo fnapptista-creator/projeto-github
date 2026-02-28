@@ -69,7 +69,7 @@ export default function ConsultingMode({ title, subtitle, description, items, in
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-8 md:gap-y-10">
+                <div className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-x-8 md:gap-y-10 pb-4 -mx-6 px-6 md:mx-0 md:px-0 mt-8">
                     {items.map((item, i) => (
                         <motion.div
                             key={i}
@@ -77,7 +77,7 @@ export default function ConsultingMode({ title, subtitle, description, items, in
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.1, margin: "0px 0px -50px 0px" }}
                             transition={{ delay: 0.1 * i, duration: 0.6, ease: "easeOut" }}
-                            className={`group py-6 md:py-8 border-t ${borderColor} transition-all duration-500 ease-out block relative`}
+                            className={`group snap-center shrink-0 w-[85vw] md:w-auto py-6 md:py-8 border-t ${borderColor} transition-all duration-500 ease-out block relative`}
                         >
                             <div className={`absolute top-0 left-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-700 ${hoverLineColor}`}></div>
                             <h3 className={`text-xl lg:text-2xl font-[var(--font-serif)] mb-3 ${textColor} opacity-60 ${hoverTitleColor} group-hover:opacity-100 transition-all duration-300 tracking-tight uppercase`}>{item.title}</h3>

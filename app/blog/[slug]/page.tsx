@@ -105,7 +105,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 />
 
                 {/* Viral Ecosystem (Share) */}
-                <ShareArticle title={postData.title} urlPath={`/blog/${postData.slug}`} />
+                <ShareArticle title={postData.title} urlPath={`/blog/${postData.slug}`} coverImage={postData.coverImage} />
 
             </article>
 

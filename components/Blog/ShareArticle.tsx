@@ -1,16 +1,21 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { toPng } from 'html-to-image';
+import download from 'downloadjs';
 
 interface ShareArticleProps {
     title: string;
     urlPath: string; // Ex: /blog/meu-post
+    coverImage?: string;
 }
 
-export default function ShareArticle({ title, urlPath }: ShareArticleProps) {
+export default function ShareArticle({ title, urlPath, coverImage }: ShareArticleProps) {
     const [baseUrl, setBaseUrl] = useState('');
     const [copied, setCopied] = useState(false);
+    const [isGenerating, setIsGenerating] = useState(false);
+    const storyRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         setBaseUrl(window.location.origin);
@@ -32,6 +37,24 @@ export default function ShareArticle({ title, urlPath }: ShareArticleProps) {
     const handleLinkedIn = () => {
         const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(fullUrl)}`;
         window.open(url, '_blank');
+    };
+
+    const generateStory = async () => {
+        if (!storyRef.current) return;
+        setIsGenerating(true);
+        try {
+            // Render to 1080x1920 via html-to-image
+            const dataUrl = await toPng(storyRef.current, {
+                cacheBust: true,
+                quality: 0.95,
+                pixelRatio: 1
+            });
+            download(dataUrl, `felipebaptista-story-${urlPath.replace(/\//g, '')}.png`);
+        } catch (err) {
+            console.error('Error generating story:', err);
+        } finally {
+            setIsGenerating(false);
+        }
     };
 
     return (
@@ -86,6 +109,81 @@ export default function ShareArticle({ title, urlPath }: ShareArticleProps) {
                     </svg>
                     LinkedIn
                 </motion.button>
+                <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={generateStory}
+                    disabled={isGenerating}
+                    className="px-6 py-3 bg-[var(--accent-gold)] text-black rounded-full text-sm font-sans font-bold hover:bg-white transition-colors flex items-center gap-2"
+                >
+                    {isGenerating ? (
+                        <svg className="animate-spin w-4 h-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    ) : (
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    )}
+                    Gerar Banner Story
+                </motion.button>
+            </div>
+
+            {/* Template Oculto para o Story (9:16) */}
+            <div className="overflow-hidden absolute top-[-9999px] left-[-9999px]">
+                <div
+                    ref={storyRef}
+                    className="w-[1080px] h-[1920px] bg-[#050505] flex flex-col justify-between p-24 font-sans text-white relative border-8 border-black shadow-2xl"
+                    style={{ WebkitFontSmoothing: 'antialiased' }}
+                >
+                    {/* Background Gradients/Noise */}
+                    <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
+
+                    {coverImage && (
+                        <div className="absolute inset-0 z-0 overflow-hidden">
+                            {/* Using standard img for html-to-image compatibility */}
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={coverImage} alt="Cover" className="w-full h-full object-cover opacity-30 grayscale" crossOrigin="anonymous" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/90 via-transparent to-transparent"></div>
+                        </div>
+                    )}
+
+                    {/* Top Header */}
+                    <div className="relative z-10 flex items-center gap-8 pt-12">
+                        <div className="w-24 h-24 bg-[var(--accent-gold)] rounded-none flex items-center justify-center text-black font-[var(--font-serif)] text-5xl">
+                            F
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-4xl font-black tracking-widest text-white uppercase">Felipe Baptista</span>
+                            <span className="text-2xl text-[var(--accent-gold)] uppercase tracking-[0.3em] mt-2">Consultoria Gastronômica</span>
+                        </div>
+                    </div>
+
+                    {/* Middle: Title */}
+                    <div className="relative z-10 flex flex-col gap-12 mt-auto pb-48">
+                        <span className="text-4xl uppercase tracking-[0.5em] text-[var(--accent-gold)] border-l-8 border-[var(--accent-gold)] pl-8 font-bold">Novo Artigo Liberado</span>
+                        <h1 className="text-8xl font-[var(--font-serif)] leading-[1.05] uppercase tracking-tighter" style={{ textWrap: 'balance' }}>
+                            {title}
+                        </h1>
+                    </div>
+
+                    {/* Bottom CTA (Safe Area) */}
+                    <div className="relative z-10 w-full bg-white text-black p-12 flex items-center justify-between mt-auto mb-16">
+                        <span className="text-5xl font-black uppercase tracking-[0.1em]">Leia o artigo completo</span>
+                        <div className="w-20 h-20 rounded-full border-4 border-black flex items-center justify-center bg-transparent">
+                            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="4" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    {/* Footer / URL Mention */}
+                    <div className="relative z-10 text-center pb-12 opacity-50">
+                        <span className="text-3xl tracking-[0.4em] font-bold uppercase">felipenb.com.br/blog</span>
+                    </div>
+                </div>
             </div>
         </div>
     );
