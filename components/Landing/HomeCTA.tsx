@@ -8,7 +8,7 @@ export default function HomeCTA() {
     const { openQuiz } = useQuiz();
 
     return (
-        <section className="py-24 md:py-32 bg-[var(--accent-gold)] text-center px-6 relative overflow-hidden flex items-center justify-center">
+        <section className="py-12 md:py-16 bg-[var(--accent-gold)] text-center px-6 relative overflow-hidden flex items-center justify-center">
             {/* Subtle noise for luxury texture */}
             <div className="absolute inset-0 opacity-15 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay pointer-events-none"></div>
 
