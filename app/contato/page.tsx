@@ -3,12 +3,11 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import styles from './page.module.css';
 import MagneticLink from '@/components/MagneticLink';
 import { useQuiz } from '@/components/LeadQuiz/QuizContext';
 
 const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 40 },
     visible: {
         opacity: 1,
         y: 0,
@@ -24,88 +23,133 @@ const staggerContainer = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.2
+            staggerChildren: 0.15,
+            delayChildren: 0.1
         }
     }
 };
 
 export default function Contato() {
     const { openQuiz } = useQuiz();
+
     return (
-        <main>
+        <main className="min-h-screen bg-[var(--bg-void)] flex flex-col pt-32 selection:bg-[var(--accent-gold)] selection:text-black">
             <Navbar />
 
-            <motion.section
-                className={styles.container}
-                initial="hidden"
-                animate="visible"
-                variants={staggerContainer}
-            >
-                <div className={`container ${styles.content}`}>
-                    <motion.div className={styles.info} variants={fadeInUp}>
-                        <h1>Vamos estancar o sangramento e gerar lucro?</h1>
-                        <p>
-                            Chega de adiar o problema que está sugando o caixa da sua operação. Me chame no WhatsApp e vamos traçar uma rota blindada pro seu restaurante crescer e lucrar.
-                        </p>
+            <section className="flex-1 w-full px-6 md:px-16 pb-24 relative overflow-hidden">
+                {/* Noise Texture */}
+                <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay pointer-events-none"></div>
 
-                        <div className={styles.contactMethods}>
-                            <motion.div className={styles.method} variants={fadeInUp}>
-                                <span className={styles.icon}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor" />
-                                    </svg>
-                                </span>
-                                <button onClick={openQuiz} className="bg-transparent border-0 text-[var(--accent-gold)] font-inherit cursor-pointer hover:underline p-0 text-base">
-                                    (73) 9 8134-9085
-                                </button>
-                            </motion.div>
-                            <motion.div className={styles.method} variants={fadeInUp}>
-                                <span className={styles.icon}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor" />
-                                    </svg>
-                                </span>
-                                <a href="mailto:eu@felipenb.com.br">eu@felipenb.com.br</a>
-                            </motion.div>
-                            <motion.div className={styles.method} variants={fadeInUp}>
-                                <span className={styles.icon}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.5 3h-17A1.5 1.5 0 002 4.5v15A1.5 1.5 0 003.5 21h17a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0020.5 3zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" fill="currentColor" />
-                                    </svg>
-                                </span>
-                                <a href="https://linkedin.com/in/felipenascimentob/" target="_blank" rel="noopener noreferrer">
-                                    LinkedIn
-                                </a>
-                            </motion.div>
-                            <motion.div className={styles.method} variants={fadeInUp}>
-                                <span className={styles.icon}>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor" />
-                                    </svg>
-                                </span>
-                                <a href="https://felipenb.com.br">felipenb.com.br</a>
-                            </motion.div>
-                        </div>
-                    </motion.div>
+                <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 pt-12">
 
-                    <motion.div className={styles.form} variants={fadeInUp}>
-                        <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent)' }}>Envie uma mensagem rápida</h3>
-                        <p style={{ marginBottom: '2rem', color: '#ccc' }}>
-                            A forma mais rápida de falar comigo é pelo WhatsApp. Clique no botão abaixo para iniciar a conversa.
-                        </p>
-
-                        <MagneticLink
-                            href="#"
-                            onClick={(e: React.MouseEvent) => { e.preventDefault(); openQuiz(); }}
-                            className="btn-primary"
-                            style={{ width: '100%', textAlign: 'center', display: 'block' }}
+                    {/* Left Column - Monumental Text */}
+                    <motion.div
+                        className="lg:col-span-7 flex flex-col justify-center"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        <motion.h1
+                            variants={fadeInUp}
+                            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[var(--font-serif)] text-white tracking-tighter leading-[0.9] uppercase mb-10"
                         >
-                            Chamar no WhatsApp
-                        </MagneticLink>
+                            VAMOS ESTANCAR O <span className="text-transparent" style={{ WebkitTextStroke: '2px var(--accent-gold)' }}>SANGRAMENTO</span> E GERAR LUCRO.
+                        </motion.h1>
+
+                        <motion.p
+                            variants={fadeInUp}
+                            className="text-[#aaa] text-lg md:text-xl font-sans max-w-xl leading-relaxed border-l-2 border-[var(--accent-gold)] pl-6 uppercase tracking-widest mb-16"
+                        >
+                            Chega de adiar o problema que está sugando o caixa da sua operação. Selecione seu canal de preferência e vamos traçar uma rota blindada pro seu restaurante crescer e lucrar.
+                        </motion.p>
                     </motion.div>
+
+                    {/* Right Column - Brutal Grid Contacts */}
+                    <motion.div
+                        className="lg:col-span-5 flex flex-col gap-4 justify-center"
+                        initial="hidden"
+                        animate="visible"
+                        variants={staggerContainer}
+                    >
+                        {/* WhatsApp Method */}
+                        <motion.div variants={fadeInUp}>
+                            <a
+                                href="#"
+                                onClick={(e) => { e.preventDefault(); openQuiz(); }}
+                                className="group flex flex-col p-8 bg-black border border-white/5 hover:bg-white hover:text-black transition-all duration-300 w-full rounded-none"
+                            >
+                                <span className="text-[10px] text-[var(--accent-gold)] group-hover:text-black uppercase tracking-[0.3em] font-bold mb-4">Ação Rápida</span>
+                                <h3 className="text-3xl font-[var(--font-serif)] uppercase mb-2 group-hover:text-black text-white">Chamar no WhatsApp</h3>
+                                <div className="flex items-center gap-4 mt-8">
+                                    <div className="w-10 h-10 rounded-full bg-[var(--accent-gold)] group-hover:bg-black/10 flex items-center justify-center">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-black group-hover:text-black">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                    <span className="font-sans text-xs tracking-[0.2em] font-bold text-[#888] group-hover:text-black/60">+55 73 98134-9085</span>
+                                </div>
+                            </a>
+                        </motion.div>
+
+                        {/* Email Method */}
+                        <motion.div variants={fadeInUp}>
+                            <a
+                                href="mailto:eu@felipenb.com.br"
+                                className="group flex flex-col p-8 bg-[var(--bg-void)] border border-white/10 hover:border-white transition-all duration-300 w-full rounded-none"
+                            >
+                                <span className="text-[10px] text-white/50 uppercase tracking-[0.3em] font-bold mb-4">Corporativo</span>
+                                <h3 className="text-2xl font-[var(--font-serif)] uppercase mb-2 text-white">E-mail Direto</h3>
+                                <p className="font-sans text-sm tracking-wide text-[#888] mt-4">eu@felipenb.com.br</p>
+                            </a>
+                        </motion.div>
+
+                        {/* LinkedIn Method */}
+                        <motion.div variants={fadeInUp}>
+                            <a
+                                href="https://linkedin.com/in/felipenascimentob/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex flex-col p-8 bg-[var(--bg-void)] border border-white/10 hover:border-[#0a66c2] transition-colors duration-300 w-full rounded-none"
+                            >
+                                <span className="text-[10px] text-white/50 uppercase tracking-[0.3em] font-bold mb-4">Investidores & Network</span>
+                                <h3 className="text-2xl font-[var(--font-serif)] uppercase mb-2 text-white group-hover:text-[#0a66c2] transition-colors">LinkedIn</h3>
+                                <p className="font-sans text-sm tracking-wide text-[#888] mt-4 underline decoration-[#111] group-hover:decoration-[#0a66c2]/30 text-underline-offset-4">/felipenascimentob</p>
+                            </a>
+                        </motion.div>
+                    </motion.div>
+
                 </div>
-            </motion.section>
+
+                {/* Massive Divider Line */}
+                <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 1.5, delay: 0.8 }}
+                    className="max-w-[1400px] mx-auto h-[1px] bg-white/10 my-24 origin-left"
+                />
+
+                {/* Extreme CTA for Form */}
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1 }}
+                    className="max-w-[1400px] mx-auto text-center flex flex-col items-center justify-center"
+                >
+                    <MagneticLink
+                        href="#"
+                        onClick={(e: React.MouseEvent) => { e.preventDefault(); openQuiz(); }}
+                        className="group inline-flex flex-col items-center gap-6 cursor-pointer"
+                    >
+                        <span className="text-[var(--accent-gold)] font-sans font-black uppercase tracking-[0.5em] text-[10px] md:text-xs group-hover:text-white transition-colors duration-300">
+                            Iniciar Raio-X Diagnóstico
+                        </span>
+                        <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-[var(--font-serif)] tracking-tighter text-white uppercase group-hover:scale-[1.02] transition-transform duration-500 origin-center leading-[0.8]">
+                            <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.3)' }}>AGENDAR</span><br />
+                            SESSÃO
+                        </h2>
+                    </MagneticLink>
+                </motion.div>
+            </section>
 
             <Footer />
         </main>

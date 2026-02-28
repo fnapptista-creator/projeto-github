@@ -10,11 +10,8 @@ export default function ConsultoriaHero() {
     const { openQuiz } = useQuiz();
     return (
         <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[var(--bg-void)] px-6 md:px-12 pt-20 pb-20">
-            {/* Background Texture */}
-            <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
-
-            {/* Ambient Glow */}
-            <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] bg-[var(--accent-gold)] rounded-full blur-[180px] opacity-[0.04] pointer-events-none"></div>
+            {/* Background Texture - Sutileza brutalista */}
+            <div className="absolute inset-0 opacity-[0.1] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
 
             <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
 

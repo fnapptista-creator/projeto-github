@@ -10,91 +10,87 @@ export default function HeroCinematic() {
     const { openQuiz } = useQuiz();
 
     return (
-        <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[var(--bg-void)] px-6 md:px-12 lg:px-20 pt-20 pb-32">
-            {/* Background Noise Texture (Optional enhancement) */}
-            <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
-
-            {/* Subtle Gradient Spot */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[var(--accent-gold)] rounded-full blur-[160px] opacity-[0.06] pointer-events-none"></div>
-
-            {/* Content Container */}
-            <div className="z-10 flex flex-col items-center text-center px-4 md:px-0 max-w-5xl mx-auto">
-
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8, filter: "blur(12px)" }}
-                    animate={{ opacity: 1, scale: 1, filter: "blur(0px)", y: [0, -10, 0] }}
-                    transition={{
-                        duration: 1.5, ease: [0.16, 1, 0.3, 1],
-                        y: { repeat: Infinity, duration: 6, ease: "easeInOut" }
-                    }}
-                    className="relative w-32 h-32 md:w-56 md:h-56 -mb-6 md:-mb-10 z-20"
-                >
-                    <Image
-                        src="/logo-new.png"
-                        alt="Felipe Baptista Logo"
-                        fill
-                        className="object-contain"
-                        priority
-                    />
-                </motion.div>
-
-                {/* Title Animation - Staggered */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                >
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-[var(--font-serif)] text-[var(--text-primary-dark)] tracking-tight leading-[1.1] md:leading-[1.15]">
-                        O seu Restaurante <br className="hidden md:block" />
-                        Precisa dar <span className="italic text-[var(--accent-gold)]">Lucro.</span>
-                        <br />
-                        <span className="text-[0.8em]">Não <span className="text-white/40">Dor de Cabeça.</span></span>
-                    </h1>
-                </motion.div>
-
-                {/* Subtitle */}
-                <motion.p
-                    className="mt-8 md:mt-10 text-base sm:text-lg md:text-xl text-[var(--text-secondary-dark)] max-w-sm md:max-w-2xl font-[var(--font-sans)] leading-relaxed"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.2, delay: 0.8 }}
-                >
-                    Diagnóstico operacional, redução de desperdício e estratégias comerciais de alto nível para quem não aceita o básico.
-                </motion.p>
-
-                {/* CTAs */}
-                <motion.div
-                    className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 font-[var(--font-sans)]"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2, delay: 1.0 }}
-                >
-                    <Link
-                        href="/consultoria"
-                        className="px-8 py-4 bg-[var(--accent-gold)] text-black font-bold uppercase text-xs tracking-[0.2em] rounded-full hover:bg-white transition-colors duration-300 w-full sm:w-auto text-center"
-                    >
-                        Conhecer a Consultoria
-                    </Link>
-                    <button
-                        onClick={() => openQuiz()}
-                        className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold uppercase text-xs tracking-[0.2em] rounded-full hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto text-center"
-                    >
-                        Diagnóstico Gratuito
-                    </button>
-                </motion.div>
+        <section className="relative min-h-screen w-full flex flex-col justify-end overflow-hidden bg-[var(--bg-void)] px-6 md:px-16 pt-32 pb-20">
+            {/* Cinematic Background Image */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none grayscale opacity-40">
+                <Image
+                    src="/hero-bg.png"
+                    alt="Restaurante Operação Alto Nível"
+                    fill
+                    className="object-cover mix-blend-luminosity"
+                    priority
+                    quality={90}
+                />
+                {/* Harsh Vignette mimicking Brutalism */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-void)] via-[var(--bg-void)]/90 to-transparent"></div>
+                <div className="absolute inset-0 bg-[var(--bg-void)]/30 backdrop-blur-[2px]"></div>
             </div>
 
-            {/* Scroll Indicator - Animated */}
-            <motion.div
-                className="absolute bottom-2 flex flex-col items-center gap-2 cursor-pointer"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1.5 }}
-                whileHover={{ y: 5 }}
-            >
-                <span className="text-[10px] tracking-[0.3em] font-sans text-[var(--accent-gold)] uppercase opacity-80">Explore</span>
-                <div className="w-[1px] h-20 bg-gradient-to-b from-[var(--accent-gold)] to-transparent opacity-40"></div>
-            </motion.div>
+            {/* Background Noise Texture (Optional enhancement) */}
+            <div className="absolute inset-0 opacity-[0.04] pointer-events-none z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
+
+            {/* Subtle Gradient Spot */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[var(--accent-gold)] rounded-full blur-[160px] opacity-[0.05] z-0 pointer-events-none"></div>
+
+            {/* Content Container - Refined Asymmetric */}
+            <div className="z-10 flex flex-col md:flex-row items-end justify-between w-full max-w-[1400px] mx-auto">
+                <div className="w-full md:w-[75%] flex flex-col items-start text-left">
+                    {/* H1 SEO Camouflage */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1.5, delay: 0.1 }}
+                    >
+                        <h1 className="text-[9px] md:text-[10px] text-[var(--accent-gold)] uppercase tracking-[0.3em] font-sans opacity-60 mb-4 pl-1">
+                            Consultoria Gastronômica para Restaurantes em Itabuna, Ilhéus e Sul da Bahia
+                        </h1>
+                    </motion.div>
+
+                    {/* Title Animation - Staggered (Now H2 for visual structure) */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[var(--font-serif)] text-white tracking-tighter leading-[1] uppercase">
+                            O SEU RESTAURANTE <br />
+                            PRECISA DAR <span className="text-transparent" style={{ WebkitTextStroke: '2px var(--accent-gold)' }}>LUCRO.</span>
+                        </h2>
+                    </motion.div>
+
+                    {/* Subtitle */}
+                    <motion.p
+                        className="mt-8 text-sm md:text-lg text-[#aaa] max-w-xl font-[var(--font-sans)] leading-relaxed uppercase tracking-widest border-l-2 border-[var(--accent-gold)] pl-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1.2, delay: 0.6 }}
+                    >
+                        Não dor de cabeça. Diagnóstico operacional, redução de desperdício e estratégias comerciais de alto nível.
+                    </motion.p>
+
+                    {/* CTAs */}
+                    <motion.div
+                        className="mt-12 flex flex-col sm:flex-row items-start gap-4 font-[var(--font-sans)] w-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.2, delay: 0.8 }}
+                    >
+                        <button
+                            onClick={() => openQuiz()}
+                            className="px-10 py-5 bg-[var(--accent-gold)] text-black font-black uppercase text-xs tracking-[0.25em] rounded-none hover:bg-white transition-colors duration-300 w-full sm:w-auto"
+                        >
+                            Diagnóstico Gratuito
+                        </button>
+                        <Link
+                            href="/consultoria"
+                            className="px-10 py-5 bg-transparent border border-white/20 text-white font-bold uppercase text-xs tracking-[0.2em] rounded-none hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto text-center"
+                        >
+                            Conhecer a Consultoria
+                        </Link>
+                    </motion.div>
+                </div>
+            </div>
+
         </section>
     );
 }

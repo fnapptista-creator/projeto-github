@@ -18,22 +18,23 @@ interface ConsultingModeProps {
 
 export default function ConsultingMode({ title, subtitle, description, items, index, theme = 'dark' }: ConsultingModeProps) {
     const isDark = theme === 'dark';
-    const bgColor = isDark ? '' : 'bg-[#f2f2f0]';
-    const textColor = isDark ? 'text-[var(--text-primary-dark)]' : 'text-[#111]';
-    const subColor = isDark ? 'text-[var(--text-secondary-dark)]' : 'text-[#555]';
-    const borderColor = isDark ? 'border-white/10' : 'border-black/10';
-    const hoverBg = isDark ? 'hover:bg-white/[0.02]' : 'hover:bg-black/[0.03]';
+    const bgColor = isDark ? 'bg-[var(--bg-void)]' : 'bg-white';
+    const textColor = isDark ? 'text-[var(--text-primary-dark)]' : 'text-black';
+    const subColor = isDark ? 'text-[var(--text-secondary-dark)]' : 'text-black/60';
+    const borderColor = isDark ? 'border-white/[0.05]' : 'border-black/[0.05]';
+    const hoverLineColor = isDark ? 'group-hover:bg-[var(--accent-gold)]' : 'group-hover:bg-black';
+    const hoverTitleColor = isDark ? 'group-hover:text-[var(--accent-gold)]' : 'group-hover:text-black';
 
     return (
-        <section className={`py-20 md:py-32 relative ${bgColor} overflow-hidden`}>
+        <section className={`py-16 md:py-20 relative ${bgColor} overflow-hidden min-h-[100svh] flex flex-col justify-center`}>
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Header */}
-                <div className="mb-16 md:mb-24 max-w-4xl">
+                <div className="mb-12 md:mb-16 max-w-4xl">
                     <motion.span
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.1 }}
                         className={`inline-block py-1 px-3 border ${borderColor} rounded-full text-[10px] tracking-[0.25em] uppercase mb-6 ${isDark ? 'text-[var(--accent-gold)]' : 'text-[#999]'}`}
                     >
                         Modo {String(index).padStart(2, '0')}
@@ -41,7 +42,7 @@ export default function ConsultingMode({ title, subtitle, description, items, in
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ delay: 0.1 }}
                         className={`text-4xl md:text-6xl font-[var(--font-serif)] mb-6 ${textColor}`}
                     >
@@ -50,7 +51,7 @@ export default function ConsultingMode({ title, subtitle, description, items, in
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ delay: 0.2 }}
                         className={`text-lg md:text-xl ${isDark ? 'text-[var(--accent-gold)]' : 'text-[#666]'} italic font-serif`}
                     >
@@ -59,7 +60,7 @@ export default function ConsultingMode({ title, subtitle, description, items, in
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.1 }}
                         transition={{ delay: 0.3 }}
                         className={`mt-4 text-base md:text-lg ${subColor} max-w-2xl`}
                     >
@@ -68,19 +69,19 @@ export default function ConsultingMode({ title, subtitle, description, items, in
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-12 md:gap-y-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-8 md:gap-y-10">
                     {items.map((item, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+                            viewport={{ once: false, amount: 0.1, margin: "0px 0px -50px 0px" }}
                             transition={{ delay: 0.1 * i, duration: 0.6, ease: "easeOut" }}
-                            className={`group p-6 md:p-8 rounded-2xl border border-transparent ${hoverBg} transition-all duration-500 ease-out hover:-translate-y-1 block`}
+                            className={`group py-6 md:py-8 border-t ${borderColor} transition-all duration-500 ease-out block relative`}
                         >
-                            <div className={`w-full h-[1px] ${borderColor} bg-current opacity-20 mb-6 group-hover:opacity-100 group-hover:bg-[var(--accent-gold)] group-hover:border-[var(--accent-gold)] transition-all duration-500`}></div>
-                            <h3 className={`text-xl font-medium mb-3 ${textColor} group-hover:text-[var(--accent-gold)] transition-colors duration-300`}>{item.title}</h3>
-                            <p className={`text-sm md:text-base leading-relaxed ${subColor} text-pretty`}>
+                            <div className={`absolute top-0 left-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-700 ${hoverLineColor}`}></div>
+                            <h3 className={`text-xl lg:text-2xl font-[var(--font-serif)] mb-3 ${textColor} opacity-60 ${hoverTitleColor} group-hover:opacity-100 transition-all duration-300 tracking-tight uppercase`}>{item.title}</h3>
+                            <p className={`text-sm leading-relaxed ${subColor} max-w-[95%]`}>
                                 {item.desc}
                             </p>
                         </motion.div>

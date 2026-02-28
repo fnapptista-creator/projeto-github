@@ -1,12 +1,17 @@
-'use client';
-
 import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroCinematic from '@/components/Landing/HeroCinematic';
+import InfiniteMarquee from '@/components/Landing/InfiniteMarquee';
 import ServicesGrid from '@/components/Landing/ServicesGrid';
+import PainPoints from '@/components/Consultoria/PainPoints';
+import AuthorityBlock from '@/components/Consultoria/AuthorityBlock';
+import LatestPosts from '@/components/Landing/LatestPosts';
+import HomeCTA from '@/components/Landing/HomeCTA';
+import { getSortedPostsData } from '@/lib/posts';
 
 export default function Home() {
+  const recentPosts = getSortedPostsData().slice(0, 3);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["Person", "ProfessionalService"],
@@ -98,14 +103,29 @@ export default function Home() {
       <Script
         id="schema-person-home"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
       />
       <Navbar />
 
       <HeroCinematic />
 
+      {/* Break Visual Header com a Automação Marquee */}
+      <InfiniteMarquee />
+
+      {/* 2. Conexão com o Momento/Dores */}
+      <PainPoints />
+
+      {/* 3. Como eu Resolvo */}
       <ServicesGrid />
 
+      {/* 4. Autoridade e Lastro Profissional */}
+      <AuthorityBlock />
+
+      {/* 4.5 Vitrine de Retenção de Artigos / Inteligência (Blog) */}
+      <LatestPosts posts={recentPosts} />
+
+      {/* 5. Acionamento (Funil Final isolado em Client Component) */}
+      <HomeCTA />
 
       <Footer />
     </main>

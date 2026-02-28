@@ -35,27 +35,34 @@ export default function PainPoints() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/[0.05] pt-12 mt-12">
                     {problems.map((problem, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
-                            className="bg-[#0a0a0a] p-6 border border-white/5 hover:border-[var(--accent-gold)] transition-colors duration-300 group rounded-sm"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.1, margin: "-10%" }}
+                            transition={{ delay: i * 0.1, duration: 0.6 }}
+                            className="group border border-white/[0.05] p-6 md:p-8 transition-all duration-300 rounded-none cursor-default hover:bg-[#070707] hover:border-white/10"
                         >
-                            <div className="w-6 h-6 mb-4 rounded-full bg-white/5 group-hover:bg-[var(--accent-gold)] transition-colors flex items-center justify-center">
-                                <span className="text-white/50 group-hover:text-black text-[10px] font-bold">!</span>
+                            <div className="mb-4">
+                                <span className="text-[var(--accent-gold)] font-[var(--font-serif)] text-4xl md:text-5xl opacity-30 group-hover:opacity-100 transition-opacity">
+                                    0{i + 1}
+                                </span>
                             </div>
-                            <h3 className="text-base font-medium text-white mb-3">{problem.title}</h3>
-                            <p className="text-xs md:text-sm text-[#888] leading-relaxed group-hover:text-[#aaa] transition-colors">
-                                {problem.desc}
-                            </p>
+                            <div className="flex flex-col">
+                                <h3 className="text-xl md:text-2xl font-[var(--font-serif)] text-white mb-3">{problem.title}</h3>
+                                <p className="text-sm md:text-base text-[#777] leading-relaxed group-hover:text-[#aaa] transition-colors">
+                                    {problem.desc}
+                                </p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
             </div>
+
+            {/* Espaçador Claro (Separador Visual entre as Seções) */}
+            <div className="absolute bottom-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#222] to-transparent"></div>
         </section>
     );
 }

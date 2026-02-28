@@ -46,7 +46,7 @@ export default function ServiceSection({ theme, title, subtitle, description, ct
                         <motion.div
                             initial={{ opacity: 0, x: align === 'left' ? -30 : 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, margin: "-20%" }}
+                            viewport={{ once: false, amount: 0.1, margin: "-20%" }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
                             <span className={`inline-block py-1 px-3 border ${isDark ? 'border-white/10' : 'border-black/5'} rounded-full text-xs tracking-[0.3em] uppercase mb-6 ${accentColor} font-[var(--font-sans)] backdrop-blur-sm`}>
@@ -75,7 +75,7 @@ export default function ServiceSection({ theme, title, subtitle, description, ct
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
-                            viewport={{ once: true, margin: "-10%" }}
+                            viewport={{ once: false, amount: 0.1, margin: "-10%" }}
                             transition={{ duration: 1 }}
                             className={`relative aspect-[3.5/5] w-full max-w-xs md:max-w-sm mx-auto overflow-hidden ${isDark ? 'bg-[#0a0a0a]' : 'bg-[#f0f0f0]'} shadow-2xl rounded-sm`}
                         >

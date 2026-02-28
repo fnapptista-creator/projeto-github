@@ -15,68 +15,69 @@ export default function AuthorityBlock() {
     const salesYears = currentYear - 2008; // Desde os 14 anos (considerando 17+ em 2025 = 2008)
     const kitchenYears = currentYear - 2016; // Desde a formação na UniOpet (2016)
     return (
-        <section id="expertise" className="relative py-24 md:py-32 bg-[#080808] overflow-hidden">
+        <section id="expertise" className="relative py-24 bg-[#0a0a0a] overflow-hidden border-t border-white/5">
             <div className="container mx-auto px-6 md:px-12 relative z-10">
-                <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+                <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center max-w-7xl mx-auto">
 
-                    {/* Stats / Visual Side */}
-                    <div className="w-full lg:w-1/2">
-                        <div className="grid grid-cols-2 gap-4 md:gap-8">
+                    {/* Visual Stats Block (Left Side) */}
+                    <div className="w-full lg:w-[45%]">
+                        <div className="grid grid-cols-2 gap-4">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                className="p-8 md:p-12 bg-white/5 border border-white/5 rounded-sm backdrop-blur-sm"
+                                viewport={{ once: false, amount: 0.1 }}
+                                className="bg-[#111] p-8 md:p-12 border border-white/[0.03] rounded-sm flex flex-col justify-center items-center text-center"
                             >
-                                <span className="block text-5xl md:text-7xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-2">{salesYears}+</span>
-                                <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[var(--text-secondary-dark)]">Anos em Vendas</span>
+                                <span className="block text-5xl md:text-6xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-3">{salesYears}+</span>
+                                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#888]">Anos em Vendas</span>
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false, amount: 0.1 }}
                                 transition={{ delay: 0.1 }}
-                                className="p-8 md:p-12 bg-white/5 border border-white/5 rounded-sm backdrop-blur-sm mt-8 md:mt-12"
+                                className="bg-[#111] p-8 md:p-12 border border-white/[0.03] rounded-sm flex flex-col justify-center items-center text-center mt-8 md:mt-12"
                             >
-                                <span className="block text-5xl md:text-7xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-2">{kitchenYears}+</span>
-                                <span className="text-xs md:text-sm uppercase tracking-[0.2em] text-[var(--text-secondary-dark)]">Anos de Cozinha</span>
+                                <span className="block text-5xl md:text-6xl font-[var(--font-serif)] text-[var(--accent-gold)] mb-3">{kitchenYears}+</span>
+                                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-[#888]">Anos de Cozinha</span>
                             </motion.div>
                         </div>
                     </div>
 
-                    {/* Content Side */}
-                    <div className="w-full lg:w-1/2">
+                    {/* Content Side (Right Side) */}
+                    <div className="w-full lg:w-[55%]">
                         <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: false, amount: 0.1 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h2 className="text-3xl md:text-5xl font-[var(--font-serif)] text-[var(--text-primary-dark)] mb-8 leading-tight">
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-[var(--font-serif)] text-white mb-8 leading-tight tracking-tight">
                                 Não sou apenas um <br />
-                                <span className="opacity-50">consultor de palco.</span>
+                                <span className="opacity-40 italic font-light">consultor de palco.</span>
                             </h2>
 
-                            <div className="space-y-6 text-base md:text-lg text-[var(--text-secondary-dark)] font-[var(--font-sans)] leading-relaxed">
+                            <div className="space-y-6 text-base text-[#aaa] font-sans leading-relaxed">
                                 <p>
-                                    Já estive do outro lado do balcão e sei exatamente as dores que você sente. Minha abordagem une a <strong className="text-white font-normal">técnica da gastronomia</strong> com a <strong className="text-white font-normal">agressividade comercial</strong> necessária para fazer um negócio lucrar.
+                                    Já estive do outro lado do balcão e sei exatamente as dores que você sente. Minha abordagem une a <strong className="text-[var(--accent-gold)] font-normal">técnica da gastronomia</strong> com a <strong className="text-[var(--accent-gold)] font-normal">agressividade comercial</strong> necessária para fazer um negócio lucrar.
                                 </p>
-
                                 <p>
                                     Meu objetivo não é te entregar uma planilha bonita, é <strong>implementar processos que funcionam na vida real</strong>, com a equipe que você tem hoje.
                                 </p>
                             </div>
 
-                            <div className="mt-12 pt-8 border-t border-white/10">
+                            <div className="mt-10 pt-8 border-t border-white/[0.05]">
                                 <button
                                     onClick={() => startTransition(() => setBioOpen(true))}
                                     disabled={isPending}
-                                    className={`text-sm md:text-base text-[var(--accent-gold)] font-medium uppercase tracking-[0.15em] border-b border-[var(--accent-gold)]/30 hover:border-[var(--accent-gold)] pb-1 transition-colors flex items-center gap-2 ${isPending ? 'opacity-50 cursor-wait' : ''}`}
+                                    className={`group flex items-center gap-3 text-sm tracking-[0.1em] text-white outline-none hover:text-[var(--accent-gold)] transition-colors ${isPending ? 'opacity-50 cursor-wait' : ''}`}
                                 >
-                                    Conhecer minha trajetória
-                                    <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
+                                    <div className="w-8 h-8 rounded-full border border-white/20 group-hover:border-[var(--accent-gold)] flex items-center justify-center transition-colors">
+                                        <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </div>
+                                    <span className="font-medium">Conhecer Trajetória</span>
                                 </button>
                             </div>
                         </motion.div>

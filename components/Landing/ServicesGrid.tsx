@@ -31,41 +31,53 @@ export default function ServicesGrid() {
             <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-[var(--accent-gold)] rounded-full blur-[150px] opacity-[0.02] pointer-events-none"></div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                {/* Section Title */}
+                <div className="mb-16 md:mb-24 max-w-4xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false, amount: 0.1 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <span className="text-[var(--accent-gold)] text-[10px] tracking-[0.3em] font-sans uppercase block mb-6 border-l-2 border-[var(--accent-gold)] pl-4">Metodologia Exclusiva</span>
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-[var(--font-serif)] text-white tracking-tighter uppercase leading-[0.9]">
+                            Níveis de <br />
+                            <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.5)' }}>Intervenção.</span>
+                        </h2>
+                    </motion.div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/[0.05] pt-12 mt-12">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-10%" }}
-                            transition={{ duration: 0.8, delay: service.delay, ease: "easeOut" }}
-                            className="group relative h-full"
+                            viewport={{ once: false, amount: 0.1, margin: "-10%" }}
+                            transition={{ duration: 0.6, delay: service.delay }}
+                            className="group block border border-white/[0.05] hover:border-white/10 hover:bg-white/[0.02] transition-colors duration-300 rounded-none relative overflow-hidden"
                         >
-                            <Link href={service.link} className="block h-full cursor-pointer outline-none rounded-xl">
-                                {/* Card Body */}
-                                <div className="h-full flex flex-col justify-between p-8 md:p-10 border border-white/[0.03] bg-[#050505]/60 backdrop-blur-md rounded-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:bg-[#0c0c0c]/80 group-hover:border-[var(--accent-gold)]/20 group-hover:-translate-y-3 group-hover:shadow-[0_20px_40px_rgba(197,160,89,0.05)]">                                    <div>
-                                    <div className="text-[var(--accent-gold)] text-xs tracking-[0.2em] font-sans uppercase mb-4 opacity-80">0{index + 1}</div>
-                                    <h3 className="text-2xl lg:text-3xl font-[var(--font-serif)] text-white mb-4 leading-tight">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-[#888] font-sans text-sm md:text-base leading-relaxed mb-10">
-                                        {service.description}
-                                    </p>
+                            <Link href={service.link} className="flex flex-col w-full h-full p-8 outline-none relative z-10">
+                                {/* Stage */}
+                                <div className="text-[var(--accent-gold)] text-[10px] tracking-[0.3em] font-sans uppercase mb-6 opacity-60 group-hover:opacity-100 transition-opacity">
+                                    ESTÁGIO 0{index + 1}
                                 </div>
 
-                                    {/* Action Link Area - Now visible on mobile, animated on desktop */}
-                                    <div className="flex items-center text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase text-[var(--accent-gold)] md:text-white md:group-hover:text-[var(--accent-gold)] transition-colors duration-300 mt-4 md:mt-0">
-                                        <span className="mr-3">Saber Mais</span>
-                                        <svg
-                                            className="w-4 h-4 transform md:translate-x-0 group-hover:translate-x-2 transition-transform duration-300"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </div>
+                                {/* Title */}
+                                <h3 className="text-3xl lg:text-4xl font-[var(--font-serif)] text-white/50 group-hover:text-white transition-colors duration-500 mb-6 uppercase tracking-tighter">
+                                    {service.title}
+                                </h3>
 
+                                {/* Description */}
+                                <p className="text-[#777] group-hover:text-[#aaa] font-sans text-sm leading-relaxed transition-colors duration-300 mb-8 flex-grow">
+                                    {service.description}
+                                </p>
+
+                                {/* Action Icon at Bottom Right */}
+                                <div className="mt-auto self-end flex items-center justify-center w-12 h-12 rounded-full border border-white/10 group-hover:border-[var(--accent-gold)] group-hover:bg-[var(--accent-gold)] group-hover:text-black transition-all duration-300">
+                                    <svg className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
                                 </div>
                             </Link>
                         </motion.div>
@@ -76,7 +88,7 @@ export default function ServicesGrid() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-16 text-center"
                 >

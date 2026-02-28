@@ -42,20 +42,26 @@ export default function WorkFormats() {
                     {formats.map((format, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-10%" }}
-                            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
-                            className="bg-[#111111]/80 backdrop-blur-md p-8 md:p-10 border border-white/[0.04] rounded-2xl shadow-xl transition-all duration-500 hover:border-[var(--accent-gold)]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(197,160,89,0.06)] relative group overflow-hidden"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false, amount: 0.1, margin: "-10%" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="bg-[#050505] p-8 md:p-10 border border-white/5 hover:border-[var(--accent-gold)]/40 hover:bg-[#0a0a0a] rounded-lg transition-all duration-500 group relative overflow-hidden flex flex-col items-center text-center shadow-lg"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-gold)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-[var(--accent-gold)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
-                            <div className="text-4xl mb-6 grayscale group-hover:grayscale-0 transform group-hover:scale-110 group-hover:text-[var(--accent-gold)] transition-all duration-500 opacity-80 relative z-10">{format.icon}</div>
-                            <h3 className="text-2xl font-[var(--font-serif)] text-white mb-2 relative z-10">{format.title}</h3>
-                            <h4 className="text-xs tracking-[0.2em] text-[var(--accent-gold)] font-sans uppercase mb-6 opacity-90 relative z-10">{format.subtitle}</h4>
-                            <p className="text-[#999] leading-relaxed font-sans text-sm md:text-base relative z-10">
-                                {format.description}
-                            </p>
+                            <div className="mb-6 text-[var(--accent-gold)] group-hover:scale-110 transition-transform duration-500 w-12 h-12 flex justify-center items-center">
+                                {format.icon}
+                            </div>
+
+                            <h3 className="text-2xl font-[var(--font-serif)] text-white mb-2 relative z-10 group-hover:text-[var(--accent-gold)] transition-colors duration-300">{format.title}</h3>
+                            <h4 className="text-[10px] tracking-[0.2em] text-[#888] font-sans uppercase mb-6 relative z-10">{format.subtitle}</h4>
+
+                            <div className="flex-grow">
+                                <p className="text-[#aaa] leading-relaxed font-sans text-sm relative z-10">
+                                    {format.description}
+                                </p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

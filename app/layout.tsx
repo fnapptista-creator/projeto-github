@@ -31,8 +31,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://felipenb.com.br'),
-  title: 'Felipe Baptista | Consultor Gastronômico',
-  description: 'Consultoria especializada para restaurantes. Aumente seus lucros, treine sua equipe e melhore a gestão do seu negócio no Sul da Bahia e em todo o estado.',
+  title: 'Consultoria Gastronômica para Restaurantes na Bahia | Felipe Baptista',
+  description: 'Consultoria gastronômica especializada em bares e restaurantes em Itabuna, Ilhéus e sul da Bahia. Diagnóstico completo, CMV na régua e redução de desperdícios. Atendimento em todo Brasil.',
   keywords: [
     'consultor gastronômico', 'gestão de restaurantes', 'treinar equipe', 'treinar garçom',
     'meu restaurante ta falindo o que fazer', 'consultoria para restaurantes', 'felipe baptista',
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://felipenb.com.br/',
-    title: 'Felipe Baptista | Consultor Gastronômico',
-    description: 'Transforme seu restaurante em uma máquina de lucro com gestão, controle de CMV, e treinamento de equipe no Sul da Bahia.',
+    title: 'Consultoria Gastronômica para Restaurantes na Bahia | Felipe Baptista',
+    description: 'Consultoria gastronômica especializada em bares e restaurantes em Itabuna, Ilhéus e sul da Bahia. Diagnóstico completo, CMV na régua e redução de desperdícios. Atendimento em todo Brasil.',
     siteName: 'Felipe Baptista Consultoria',
     images: [{
       url: '/logo-new-main.png',
