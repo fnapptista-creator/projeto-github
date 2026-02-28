@@ -53,7 +53,7 @@ export default function ServicesGrid() {
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, amount: 0.1, margin: "-10%" }}
+                            viewport={{ once: false, amount: 0.1, margin: "0px 0px -50px 0px" }}
                             transition={{ duration: 0.6, delay: service.delay }}
                             className="group snap-start snap-always shrink-0 w-[85vw] md:w-auto block border border-white/[0.05] hover:border-white/10 hover:bg-white/[0.02] transition-colors duration-300 rounded-none relative overflow-hidden"
                         >
