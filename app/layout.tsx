@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { QuizProvider } from "@/components/LeadQuiz/QuizContext";
 import LeadQuizModal from "@/components/LeadQuiz/LeadQuizModal";
+import { Analytics } from "@vercel/analytics/react";
 
 const playfair = Playfair_Display({
   variable: "--font-serif",
@@ -79,6 +80,7 @@ export default function RootLayout({
             <LeadQuizModal />
           </QuizProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
