@@ -39,8 +39,11 @@ export function getSortedPostsData() {
             };
         });
 
+    const today = new Date().toISOString().split('T')[0];
+    const publishedPosts = allPostsData.filter(post => post.date <= today);
+
     // Sort posts by date
-    return allPostsData.sort((a, b) => {
+    return publishedPosts.sort((a, b) => {
         if (a.date < b.date) {
             return 1;
         } else {
@@ -55,9 +58,18 @@ export function getAllPostSlugs() {
     }
 
     const fileNames = fs.readdirSync(postsDirectory);
+    const today = new Date().toISOString().split('T')[0];
 
     return fileNames
         .filter(fileName => fileName.endsWith('.md'))
+        .filter(fileName => {
+            // Filtrar slugs de posts com data no futuro para não gerar a página
+            const fullPath = path.join(postsDirectory, fileName);
+            const fileContents = fs.readFileSync(fullPath, 'utf8');
+            const matterResult = matter(fileContents);
+            const date = matterResult.data.date || '1970-01-01';
+            return date <= today;
+        })
         .map(fileName => {
             return {
                 params: {
