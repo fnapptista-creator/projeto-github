@@ -57,8 +57,8 @@ export default function Footer() {
                 </div>
 
                 {/* Right Side: Logo Display */}
-                <div className="shrink-0 flex justify-end items-start opacity-[0.05] hover:opacity-30 transition-opacity duration-700">
-                    <div className="relative w-28 h-28 md:w-48 md:h-48 filter grayscale hover:grayscale-0 transition-all duration-700">
+                <div className="shrink-0 flex justify-end self-end items-end opacity-[0.05] hover:opacity-30 transition-opacity duration-700">
+                    <div className="relative w-40 h-40 md:w-56 md:h-56 filter grayscale hover:grayscale-0 transition-all duration-700">
                         <Image
                             src="/logo-new.png"
                             alt="Felipe Baptista Logo"
