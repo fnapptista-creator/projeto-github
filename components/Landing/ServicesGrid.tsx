@@ -53,11 +53,11 @@ export default function ServicesGrid() {
                                     </p>
                                 </div>
 
-                                    {/* Action Link Area */}
-                                    <div className="flex items-center text-xs font-bold tracking-[0.15em] uppercase text-white group-hover:text-[var(--accent-gold)] transition-colors duration-300">
+                                    {/* Action Link Area - Now visible on mobile, animated on desktop */}
+                                    <div className="flex items-center text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase text-[var(--accent-gold)] md:text-white md:group-hover:text-[var(--accent-gold)] transition-colors duration-300 mt-4 md:mt-0">
                                         <span className="mr-3">Saber Mais</span>
                                         <svg
-                                            className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300"
+                                            className="w-4 h-4 transform md:translate-x-0 group-hover:translate-x-2 transition-transform duration-300"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -71,6 +71,23 @@ export default function ServicesGrid() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Final Section CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="mt-16 text-center"
+                >
+                    <Link
+                        href="/consultoria"
+                        className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold text-white hover:text-[var(--accent-gold)] transition-colors group"
+                    >
+                        <span>Ver detalhes da metodologia</span>
+                        <span className="w-8 h-[1px] bg-white/30 group-hover:bg-[var(--accent-gold)] transition-colors"></span>
+                    </Link>
+                </motion.div>
             </div>
         </section>
     );

@@ -2,9 +2,13 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useQuiz } from '@/components/LeadQuiz/QuizContext';
 
 
 export default function HeroCinematic() {
+    const { openQuiz } = useQuiz();
+
     return (
         <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[var(--bg-void)] px-6 md:px-12 lg:px-20 pt-20 pb-32">
             {/* Background Noise Texture (Optional enhancement) */}
@@ -57,6 +61,27 @@ export default function HeroCinematic() {
                 >
                     Diagnóstico operacional, redução de desperdício e estratégias comerciais de alto nível para quem não aceita o básico.
                 </motion.p>
+
+                {/* CTAs */}
+                <motion.div
+                    className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 font-[var(--font-sans)]"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, delay: 1.0 }}
+                >
+                    <Link
+                        href="/consultoria"
+                        className="px-8 py-4 bg-[var(--accent-gold)] text-black font-bold uppercase text-xs tracking-[0.2em] rounded-full hover:bg-white transition-colors duration-300 w-full sm:w-auto text-center"
+                    >
+                        Conhecer a Consultoria
+                    </Link>
+                    <button
+                        onClick={() => openQuiz()}
+                        className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold uppercase text-xs tracking-[0.2em] rounded-full hover:bg-white/10 transition-colors duration-300 w-full sm:w-auto text-center"
+                    >
+                        Diagnóstico Gratuito
+                    </button>
+                </motion.div>
             </div>
 
             {/* Scroll Indicator - Animated */}
