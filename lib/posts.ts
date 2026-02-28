@@ -39,7 +39,8 @@ export function getSortedPostsData() {
             };
         });
 
-    const today = new Date().toISOString().split('T')[0];
+    // Garante que o recorte de Hoje (YYYY-MM-DD) só muda na meia-noite do Brasil, e não no horário Global (UTC) da Vercel
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Sao_Paulo' });
     const publishedPosts = allPostsData.filter(post => post.date <= today);
 
     // Sort posts by date
@@ -58,7 +59,8 @@ export function getAllPostSlugs() {
     }
 
     const fileNames = fs.readdirSync(postsDirectory);
-    const today = new Date().toISOString().split('T')[0];
+    // Garante que o recorte de Hoje (YYYY-MM-DD) só muda na meia-noite do Brasil (America/Sao_Paulo)
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Sao_Paulo' });
 
     return fileNames
         .filter(fileName => fileName.endsWith('.md'))
