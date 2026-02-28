@@ -58,19 +58,19 @@ export default function LatestPosts({ posts }: LatestPostsProps) {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 -mx-6 px-6 md:mx-0 md:px-0 pb-4">
                     {posts.slice(0, 3).map((post, i) => (
                         <motion.div
                             key={post.slug}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, amount: 0.1 }}
+                            viewport={{ once: false, amount: 0.1, margin: "0px 0px -50px 0px" }}
                             transition={{ delay: 0.15 * i, duration: 0.6 }}
-                            className="h-full"
+                            className="h-full group snap-start snap-always shrink-0 w-[85vw] md:w-auto block relative"
                         >
                             <Link
                                 href={`/blog/${post.slug}`}
-                                className="group flex flex-col h-full bg-[#111] hover:bg-[#1a1a1a] transition-all duration-500 border border-white/5 hover:border-white/10"
+                                className="flex flex-col h-full bg-[#111] hover:bg-[#1a1a1a] transition-all duration-500 border border-white/5 hover:border-white/10"
                             >
                                 {/* Imagem de Capa do MDX */}
                                 {post.coverImage && (

@@ -9,10 +9,10 @@ export default function Footer() {
 
     return (
         <footer className="bg-[#050505] border-t border-white/[0.05] relative overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 py-8 md:py-12 relative z-10 flex flex-col lg:flex-row justify-between items-start gap-8">
+            <div className="container mx-auto px-6 md:px-12 py-8 md:py-12 relative z-10 flex flex-row justify-between items-start gap-4 lg:gap-8">
 
                 {/* Left Side: Info & Contacts */}
-                <div className="flex flex-col space-y-8 w-full lg:w-1/2">
+                <div className="flex flex-col space-y-8 flex-1">
                     {/* Brand Name */}
                     <div>
                         <h2 className="text-3xl font-sans text-white mb-2 tracking-tight">Felipe Baptista</h2>
@@ -57,8 +57,8 @@ export default function Footer() {
                 </div>
 
                 {/* Right Side: Logo Display */}
-                <div className="flex-1 flex justify-start lg:justify-end items-center opacity-[0.05] hover:opacity-30 transition-opacity duration-700 w-full lg:w-auto -mt-8 sm:mt-0">
-                    <div className="relative w-32 h-32 md:w-48 md:h-48 filter grayscale hover:grayscale-0 transition-all duration-700">
+                <div className="shrink-0 flex justify-end items-start opacity-[0.05] hover:opacity-30 transition-opacity duration-700">
+                    <div className="relative w-28 h-28 md:w-48 md:h-48 filter grayscale hover:grayscale-0 transition-all duration-700">
                         <Image
                             src="/logo-new.png"
                             alt="Felipe Baptista Logo"
