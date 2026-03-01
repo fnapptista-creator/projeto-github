@@ -47,11 +47,11 @@ END:VCARD`;
             {/* Texture */}
             <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none"></div>
 
-            <div className="relative z-10 w-full max-w-xl mx-auto flex flex-col items-start pt-10 md:pt-16 pb-20">
+            <div className="relative z-10 w-full max-w-xl mx-auto flex flex-col items-start pt-6 md:pt-10 pb-10">
 
                 {/* Brutalist Header */}
-                <div className="flex flex-row items-end gap-6 md:gap-8 mb-16 w-full">
-                    <div className="relative w-24 h-24 md:w-32 md:h-32 shrink-0 border border-white/20 filter grayscale hover:grayscale-0 transition-all duration-700 bg-black">
+                <div className="flex flex-row items-end gap-4 md:gap-6 mb-8 w-full">
+                    <div className="relative w-16 h-16 md:w-24 md:h-24 shrink-0 border border-white/20 filter grayscale hover:grayscale-0 transition-all duration-700 bg-black">
                         <Image
                             src="/logo-new-main.png"
                             alt="Felipe Baptista"
@@ -61,44 +61,44 @@ END:VCARD`;
                         />
                     </div>
                     <div className="flex flex-col pb-1">
-                        <h1 className="text-5xl md:text-7xl font-[var(--font-serif)] text-white tracking-tighter leading-none mb-3">
+                        <h1 className="text-3xl md:text-5xl font-[var(--font-serif)] text-white tracking-tighter leading-none mb-1">
                             Felipe<br />Baptista.
                         </h1>
-                        <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-[var(--accent-gold)] font-bold font-sans">
+                        <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[var(--accent-gold)] font-bold font-sans">
                             Consultor Gastronômico
                         </span>
                     </div>
                 </div>
 
                 {/* Main Action Blocks */}
-                <div className="w-full flex flex-col gap-4 mb-20 section-fade-in delay-100">
+                <div className="w-full flex flex-col gap-3 mb-8 section-fade-in delay-100">
                     <Link href="/consultoria" className="w-full group">
-                        <div className="w-full flex flex-row items-center justify-between border border-[var(--accent-gold)]/20 bg-black p-6 md:p-8 hover:bg-[var(--accent-gold)] transition-colors duration-500">
+                        <div className="w-full flex flex-row items-center justify-between border border-[var(--accent-gold)]/20 bg-black p-4 md:p-6 hover:bg-[var(--accent-gold)] transition-colors duration-500">
                             <div className="flex flex-col">
-                                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-[var(--accent-gold)] group-hover:text-black/60 mb-3 font-sans font-bold transition-colors">
+                                <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[var(--accent-gold)] group-hover:text-black/60 mb-1 font-sans font-bold transition-colors">
                                     Diagnóstico & Solução
                                 </span>
-                                <h2 className="text-3xl md:text-5xl font-[var(--font-serif)] text-white group-hover:text-black transition-colors leading-none tracking-tight">
+                                <h2 className="text-2xl md:text-4xl font-[var(--font-serif)] text-white group-hover:text-black transition-colors leading-none tracking-tight">
                                     Consultoria<br />Gastronômica
                                 </h2>
                             </div>
-                            <div className="text-5xl md:text-7xl font-sans font-light text-[var(--accent-gold)]/20 group-hover:text-black/30 group-hover:translate-x-3 transition-all duration-500">
+                            <div className="text-3xl md:text-5xl font-sans font-light text-[var(--accent-gold)]/20 group-hover:text-black/30 group-hover:translate-x-2 transition-all duration-500">
                                 →
                             </div>
                         </div>
                     </Link>
 
                     <Link href="/blog" className="w-full group">
-                        <div className="w-full flex flex-row items-center justify-between border border-white/10 bg-[#0a0a0a] p-6 md:p-8 hover:bg-white transition-colors duration-500">
+                        <div className="w-full flex flex-row items-center justify-between border border-white/10 bg-[#0a0a0a] p-4 md:p-6 hover:bg-white transition-colors duration-500">
                             <div className="flex flex-col">
-                                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/40 group-hover:text-black/50 mb-3 font-sans font-bold transition-colors">
+                                <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/40 group-hover:text-black/50 mb-1 font-sans font-bold transition-colors">
                                     Inteligência Aplicada
                                 </span>
-                                <h2 className="text-3xl md:text-5xl font-[var(--font-serif)] text-white group-hover:text-black transition-colors leading-none tracking-tight">
+                                <h2 className="text-2xl md:text-4xl font-[var(--font-serif)] text-white group-hover:text-black transition-colors leading-none tracking-tight">
                                     Artigos &<br />Análises
                                 </h2>
                             </div>
-                            <div className="text-5xl md:text-7xl font-sans font-light text-white/10 group-hover:text-black/30 group-hover:translate-x-3 transition-all duration-500">
+                            <div className="text-3xl md:text-5xl font-sans font-light text-white/10 group-hover:text-black/30 group-hover:translate-x-2 transition-all duration-500">
                                 →
                             </div>
                         </div>
@@ -106,31 +106,39 @@ END:VCARD`;
                 </div>
 
                 {/* Quick Actions (Brutalist Bento) */}
-                <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-6 font-sans font-bold w-full text-left">Acesso Direto</span>
-                <div className="grid grid-cols-2 gap-4 w-full mb-20 section-fade-in delay-200">
-                    <a href={`https://wa.me/${contactData.tel}`} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-[var(--accent-gold)] transition-colors group items-start">
-                        <div className="text-white/30 group-hover:text-[var(--accent-gold)] transition-colors"><WhatsappIcon /></div>
-                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">WhatsApp</span>
+                <span className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-3 font-sans font-bold w-full text-left">Acesso Direto</span>
+                <div className="grid grid-cols-2 gap-3 w-full mb-8 section-fade-in delay-200">
+                    <a href={`https://wa.me/${contactData.tel}`} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between h-[72px] p-4 border border-white/10 bg-[#0a0a0a] hover:border-[var(--accent-gold)] transition-colors group items-start">
+                        <div className="flex flex-row items-center justify-between w-full h-full">
+                            <span className="text-[10px] uppercase tracking-[0.1em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">WhatsApp</span>
+                            <div className="text-white/30 group-hover:text-[var(--accent-gold)] transition-colors scale-75 transform origin-right"><WhatsappIcon /></div>
+                        </div>
                     </a>
 
-                    <a href={`mailto:${contactData.email}`} className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-white transition-colors group items-start">
-                        <div className="text-white/30 group-hover:text-white transition-colors"><MailIcon /></div>
-                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">E-mail</span>
+                    <a href={`mailto:${contactData.email}`} className="flex flex-col justify-between h-[72px] p-4 border border-white/10 bg-[#0a0a0a] hover:border-white transition-colors group items-start">
+                        <div className="flex flex-row items-center justify-between w-full h-full">
+                            <span className="text-[10px] uppercase tracking-[0.1em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">E-mail</span>
+                            <div className="text-white/30 group-hover:text-white transition-colors scale-75 transform origin-right"><MailIcon /></div>
+                        </div>
                     </a>
 
-                    <button onClick={handleDownloadVCard} className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-[var(--accent-gold)] transition-colors group items-start text-left">
-                        <div className="text-white/30 group-hover:text-[var(--accent-gold)] transition-colors"><UserPlusIcon /></div>
-                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">Salvar<br />Contato</span>
+                    <button onClick={handleDownloadVCard} className="flex flex-col justify-between h-[72px] p-4 border border-white/10 bg-[#0a0a0a] hover:border-[var(--accent-gold)] transition-colors group items-start text-left w-full">
+                        <div className="flex flex-row items-center justify-between w-full h-full">
+                            <span className="text-[10px] uppercase tracking-[0.1em] text-white/80 font-sans font-bold group-hover:text-white transition-colors leading-tight">Salvar<br />Contato</span>
+                            <div className="text-white/30 group-hover:text-[var(--accent-gold)] transition-colors scale-75 transform origin-right"><UserPlusIcon /></div>
+                        </div>
                     </button>
 
-                    <button onClick={() => setShowQRCode(true)} className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-white transition-colors group items-start text-left">
-                        <div className="text-white/30 group-hover:text-white transition-colors"><QrCodeIcon /></div>
-                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">Gerar<br />QR Code</span>
+                    <button onClick={() => setShowQRCode(true)} className="flex flex-col justify-between h-[72px] p-4 border border-white/10 bg-[#0a0a0a] hover:border-white transition-colors group items-start text-left w-full">
+                        <div className="flex flex-row items-center justify-between w-full h-full">
+                            <span className="text-[10px] uppercase tracking-[0.1em] text-white/80 font-sans font-bold group-hover:text-white transition-colors leading-tight">Gerar<br />QR Code</span>
+                            <div className="text-white/30 group-hover:text-white transition-colors scale-75 transform origin-right"><QrCodeIcon /></div>
+                        </div>
                     </button>
                 </div>
 
                 {/* Footer Reference */}
-                <div className="w-full flex justify-center mt-auto border-t border-white/5 pt-12 section-fade-in delay-300">
+                <div className="w-full flex justify-center mt-auto border-t border-white/5 pt-6 section-fade-in delay-300">
                     <Link href="/" className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-white/20 hover:text-[var(--accent-gold)] transition-colors">
                         felipenb.com.br
                     </Link>
