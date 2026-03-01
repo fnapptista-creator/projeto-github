@@ -14,10 +14,10 @@ export default function HeroCinematic() {
             {/* Cinematic Background Image */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none grayscale opacity-40">
                 <Image
-                    src="/uploads/hero_felipe.png"
+                    src="/uploads/hero_v2.png"
                     alt="Restaurante Operação Alto Nível"
                     fill
-                    className="object-cover object-[80%_center] md:object-center mix-blend-luminosity"
+                    className="object-cover object-[75%_center] md:object-right mix-blend-luminosity"
                     priority
                     quality={90}
                 />
