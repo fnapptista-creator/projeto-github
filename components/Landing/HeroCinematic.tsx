@@ -14,7 +14,7 @@ export default function HeroCinematic() {
             {/* Cinematic Background Image */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none grayscale opacity-40">
                 <Image
-                    src="/hero-bg.png"
+                    src="/uploads/hero_felipe.png"
                     alt="Restaurante Operação Alto Nível"
                     fill
                     className="object-cover object-[80%_center] md:object-center mix-blend-luminosity"
