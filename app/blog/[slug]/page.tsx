@@ -119,12 +119,17 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                     <p className="text-black/70 mb-10 text-lg">
                         Agende um diagnóstico executivo de 15 minutos. Vamos encontrar a torneira aberta e estancar a perda de dinheiro do seu negócio.
                     </p>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center w-full mt-4">
                         <MagneticLink
                             href="https://wa.me/5573981349085"
-                            className="bg-black text-[var(--accent-gold)] px-8 py-4 rounded-none font-bold uppercase text-[10px] tracking-[0.2em] hover:text-white transition-colors block"
+                            className="inline-flex flex-row items-center gap-4 px-8 md:px-10 py-5 cursor-pointer bg-black text-[var(--accent-gold)] rounded-none font-bold uppercase text-[10px] tracking-[0.2em] group outline-none whitespace-nowrap w-fit"
                         >
-                            Agendar Diagnóstico Gratuito
+                            <span className="group-hover:text-white transition-colors duration-300">Agendar Diagnóstico Gratuito</span>
+                            <div className="w-8 h-8 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] bg-white/5 flex items-center justify-center transition-all duration-300">
+                                <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
                         </MagneticLink>
                     </div>
                 </div>

@@ -57,7 +57,7 @@ export default function ConsultoriaHero() {
                     <MagneticLink
                         href="#"
                         onClick={(e: React.MouseEvent) => { e.preventDefault(); openQuiz(); }}
-                        className="flex items-center justify-center px-8 py-4 bg-[var(--accent-gold)] text-black rounded-full font-bold uppercase text-xs tracking-[0.15em] hover:bg-white transition-colors duration-300 min-w-[240px]"
+                        className="inline-flex flex-row items-center justify-center px-8 py-5 bg-[var(--accent-gold)] text-black rounded-full font-bold uppercase text-xs tracking-[0.15em] hover:bg-white transition-colors duration-300 min-w-[240px] whitespace-nowrap"
                     >
                         Agendar Diagnóstico
                     </MagneticLink>

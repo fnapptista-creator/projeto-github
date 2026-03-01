@@ -136,8 +136,13 @@ export default function ConsultoriaClient() {
                         Gestão baseada em dados, processos estruturados e uma metodologia atualizada para eliminar o "achismo" operacional e financeiro da sua empresa.
                     </p>
                     <div className={styles.heroButtons}>
-                        <a href="https://wa.me/5573981349085?text=Ol%C3%A1%20Felipe,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20meu%20restaurante." className="btn-primary">
-                            Agendar Diagnóstico Gratuito
+                        <a href="https://wa.me/5573981349085?text=Ol%C3%A1%20Felipe,%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20para%20meu%20restaurante." className="btn-primary inline-flex flex-row items-center gap-3 whitespace-nowrap">
+                            <span>Agendar Diagnóstico Gratuito</span>
+                            <div className="w-5 h-5 rounded-full bg-black/10 flex items-center justify-center transition-all duration-300">
+                                <svg className="w-3 h-3 transform translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
                         </a>
                     </div>
                 </div>
