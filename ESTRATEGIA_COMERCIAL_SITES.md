@@ -1,54 +1,54 @@
 # Estratégia Comercial: Venda de Sites para Novos Consultores
 
-Como seus colegas de pós-graduação estão em início de carreira, eles sofrem de dois problemas:
-1. Precisam urgente de Autoridade Digital (um site que não pareça amador).
-2. Não têm fluxo de caixa para pagar R$ 3.000 a R$ 5.000 à vista em um site de alto padrão.
-
-A solução para fechar negócio na sua reunião de segunda-feira é não vender "um site". Você vai vender **Módulos (Escada de Valor)** ou uma **Assinatura (WaaS - Website as a Service)**.
-
-Aqui estão 2 modelos de negócio para você apresentar na segunda-feira. Escolha o que se adaptar melhor a você.
+Apresente-se como um parceiro de tecnologia que cria *Autoridade Digital* sob medida, e não apenas um "vededor de sites". As soluções abaixo são modulares para que seu colega possa começar no orçamento atual e evoluir.
 
 ---
 
-## 🎯 Modelo 1: A Escada de Valor (Módulos Destraváveis)
+## 🎯 Menu de Serviços Base (Valores do Áudio)
 
-Nesta estratégia, o cliente compra o básico para "existir" na internet, e vai pagando por fora para adicionar novas peças no site conforme ele ganha dinheiro com os clientes dele.
+Esta é a tabela principal para o projeto inicial do cliente.
 
-### Módulo 1: O Cartão de Visitas Brutalista (Low Ticket)
-*   **O que é:** Uma Landing Page de Seção Única (Link na Bio super avançado). Uma Hero Section impactante com a foto dele, quem ele é, e um botão de WhatsApp flutuando. Hospedagem na Vercel (gratuita).
-*   **Valor Sugerido:** R$ 500,00 a R$ 800,00 (Pagamento Único).
-*   **Argumento de Venda:** *"Vou tirar aquele seu Linktree padrão e colocar seu nome em um domínio próprio com um visual de consultoria Premium. É o mínimo para quem vai te procurar no Instagram."*
+1. **Cartão Digital de Contato (O "Linktree Premium")**
+   *   **O que é:** Uma página de links direta, reta e brutalista para colocar na bio do Instagram. Muito superior a ferramentas gratuitas, com o nome do cliente no topo e botões diretos para WhatsApp, LinkedIn, etc.
+   *   **Valor Mínimo (Referência):** R$ 400,00 
+   *   **Argumento de Venda:** *"Vamos varrer aquele seu Linktree padrão e colocar o seu nome em evidência com um botão rápido focado só no que importa."*
 
-### Módulo 2: Máquina de Autoridade (Medium Ticket)
-*   **O que é:** A Landing Page Completa (como a sua da Consultoria). Adiciona as seções: "Pain Points" (Dores do cliente dele), "Grid de Serviços", "Sobre Mim" e formulário flutuante.
-*   **Valor Sugerido:** + R$ 1.200,00 a R$ 1.800,00 (adicionais).
-*   **Argumento de Venda:** *"Quando você tiver seu primeiro cliente pagante, faremos um upgrade para a Máquina de Autoridade. Aqui a gente explica o seu método de trabalho."*
+2. **Landing Page Completa (Página Única "One Page")**
+   *   **O que é:** A vitrine completa. Banners impactantes, suas dores (Pain Points), serviços listados de forma clara, "Quem Sou Eu" e botão focado na conversão (WhatsApp ou Formulário de Diagnóstico).
+   *   **Valor Mínimo (Referência):** R$ 800,00
+   *   **Argumento de Venda:** *"Quando o cliente chegar até você através de recomendação ou rede social, ele vai te enxergar com o dobro de valor só pelo nível de profissionalismo da sua página."*
 
-### Módulo 3: O Ecossistema (High Ticket)
-*   **O que é:** O site completo + O módulo de **Blog Automatizado** com Sistema SSG (igual ao que fizemos para você hoje) + Analytics nativo para tráfego pago.
-*   **Valor Sugerido:** + R$ 1.500,00 a R$ 2.500,00 (pela complexidade estrutural de programação).
-*   **Argumento de Venda:** *"O Blog é para quem quer dominar as buscas do Google. É um motor de busca de leads de longo prazo."*
-
----
-
-## 🔁 Modelo 2: Website As A Service "WaaS" (O Motor Recorrente)
-
-Se eles não têm limite no cartão de crédito para pagar à vista, use a "Netflix dos Sites". Você se torna o "Sócio Tecnológico" deles.
-
-*   **Taxa de Setup (Configuração Inicial):** R$ 400,00 a R$ 600,00 (Para cobrir seu tempo de pegar as fotos, textos e colocar a primeira versão no ar).
-*   **Mensalidade Fixa:** R$ 150,00 a R$ 250,00 por mês (Contrato mínimo de 12 meses).
-*   **O que está incluso na mensalidade:** Hospedagem em servidores ultra-rápidos, código blindado em Next.js (mesma segurança da Netflix), e o direito a **1 pequena alteração por mês** (ex: trocar foto de capa, atualizar um serviço).
-
-**Por que esse modelo é o melhor para a reunião?**
-1. O atrito de compra é baixo. Ele consegue pagar R$ 150/mês fácil.
-2. Você garante uma renda passiva fantástica. Se fechar com 10 colegas do grupo, você tem R$ 2.000 caindo na conta todo mês só para manter os códigos na sua máquina funcionando, usando a infraestrutura grátis da Vercel.
+3. **Página Adicional (Interna)**
+   *   **O que é:** O cliente já tem a Landing Page (acima) e resolveu criar uma página nova inteira separada – por exemplo, uma página dedicada a um treinamento, um curso, ou um novo grande serviço.
+   *   **Valor Mínimo (Referência):** + R$ 600,00 por página
 
 ---
 
-## 🗣️ O Pitch da Reunião de Segunda-Feira
+## 📈 A Mina de Ouro: Taxas por Fora (Upsells e Recorrência)
 
-*"Pessoal, entendo que no início a grana é curta. Eu não cobraria menos de 3 mil por uma infraestrutura limpa em Next.js para fora do grupo. Mas como estamos juntos nessa formação de consultores, eu vou propor o seguinte para quem quiser elevar a barra da apresentação visual no Instagram: nós não vamos fazer o site inteiro de uma vez para não pesar para ninguém.*
+Respondendo à sua pergunta *"O que mais a gente pode cobrar aí?"*... Aqui estão os serviços avançados que você oferece para escalar o lucro além do desenvolvimento do site:
 
-*Vamos começar com a nossa Opção Starter (Módulo 1). Eu cobro só o Setup X e eu construo o seu pilar de captura. A primeira impressão sua deixará de ser aquele Linktree padrão e será um ambiente próprio, ultra-rápido, carregando em 1 segundo.* 
+#### 1. Configuração de SEO Avançado & Otimização
+*   **O que é:** Escrever meta-descrições corretas, arrumar tags no código, criar `sitemap.xml`, cadastrar o site no *Google Search Console* e configurar rastreamento via Analytics para ranqueamento Google ao longo do tempo.
+*   **Valor a Cobrar:** + R$ 300,00 a R$ 500,00 (Pagamento único).
 
-*Conforme vocês fecharem os 2 primeiros contratos de consultoria, e o dinheiro começar a entrar, a gente destrava o Módulo de Serviços (Módulo 2) na página. Assim o próprio site se paga."*
+#### 2. Assinatura Mensal de Manutenção (WaaS)
+*   **O que é:** Taxa fixa todos os meses para gerir a hospedagem, manter o código a salvo, renovar o SSL (Cadeado do site) e incluir **1 alteração mensal simples** de brinde (ex: "Felipe, troca minha foto da vitrine por essa aqui?").
+*   **Valor a Cobrar:** R$ 100,00 a R$ 150,00 / mês.
+*   **O pulo do gato:** É aqui que você lucra muito. Com 10 clientes te pagando R$ 150/mês, são R$ 1.500 garantidos para rodarem na Vercel (que não te cobra nada no tier gratuito).
+
+#### 3. Setup de Domínio e E-mail Profissional
+*   **O que é:** Configurar a compra do domínio `.com.br` e parear tecnicamente o serviço de E-mail Profissional (como Zoho Workspace ou Google Workspace) com o site, para que o cliente tenha um `contato@clinte.com.br` funcionando. Como é trabalhoso alterar a zona de DNS, você empacota esse serviço.
+*   **Valor a Cobrar:** + R$ 250,00 (Apenas a mão de obra de configuração. A anuidade do domínio e hospedagem do e-mail ele paga à parte nas plataformas).
+
+#### 4. Motor de Leads (O Blog Automático)
+*   **O que é:** Construir aquela infraestrutura brutal de Blog (estilo SSG) como no seu site da Antigravity, para que ele publique textos para os clientes dele, agendando para o futuro e captando visibilidade orgânica de longo prazo.
+*   **Valor a Cobrar:** + R$ 800,00 a R$ 1.500,00 (Para desenvolver a seção do Blog + Página Individual dos Artigos). Integrado e funcionando.
+
+---
+
+### Resumo do Pitch Comercial:
+
+Na reunião, deixe claro que o seu foco é no **crescimento seguro da infraestrutura deles**. 
+Sugira que montem o pacote em partes: 
+*"A gente faz o seu Linktree premium agora e, em três meses com mais capital, a gente escala a operação pra uma Landing Page completa focada em SEO. Já faço a fundação pronta pra acoplar o Blog amanhã, se você quiser."*
