@@ -42,116 +42,102 @@ END:VCARD`;
     };
 
     return (
-        <main className="min-h-screen w-full bg-[#050505] text-white overflow-hidden relative flex flex-col items-center justify-center py-12 px-4">
+        <main className="min-h-screen w-full bg-[#050505] text-[var(--text-primary-dark)] overflow-x-hidden relative flex flex-col items-center py-12 px-6 shadow-none">
 
-            {/* Background Texture */}
+            {/* Texture */}
             <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none"></div>
-            <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] bg-[var(--accent-gold)] rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
-            <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-white rounded-full blur-[120px] opacity-5 pointer-events-none"></div>
 
-            {/* Content Container */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative z-10 w-full max-w-md mx-auto flex flex-col items-center"
-            >
-                {/* Avatar */}
-                <div className="relative mb-8 group cursor-pointer">
-                    <div className="absolute -inset-0.5 bg-gradient-to-tr from-[var(--accent-gold)] to-white opacity-20 group-hover:opacity-50 blur rounded-full transition duration-500"></div>
-                    <div className="relative w-28 h-28 rounded-full overflow-hidden border border-white/10 bg-black">
+            <div className="relative z-10 w-full max-w-xl mx-auto flex flex-col items-start pt-10 md:pt-16 pb-20">
+
+                {/* Brutalist Header */}
+                <div className="flex flex-row items-end gap-6 md:gap-8 mb-16 w-full">
+                    <div className="relative w-24 h-24 md:w-32 md:h-32 shrink-0 border border-white/20 filter grayscale hover:grayscale-0 transition-all duration-700 bg-black">
                         <Image
                             src="/logo-new-main.png"
                             alt="Felipe Baptista"
-                            width={112}
-                            height={112}
-                            className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                            fill
+                            className="object-cover"
                             priority
                         />
                     </div>
+                    <div className="flex flex-col pb-1">
+                        <h1 className="text-5xl md:text-7xl font-[var(--font-serif)] text-white tracking-tighter leading-none mb-3">
+                            Felipe<br />Baptista.
+                        </h1>
+                        <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-[var(--accent-gold)] font-bold font-sans">
+                            Consultor Gastronômico
+                        </span>
+                    </div>
                 </div>
 
-                {/* Header */}
-                <h1 className="text-2xl md:text-3xl font-[var(--font-serif)] text-white mb-2 text-center">
-                    Felipe Baptista
-                </h1>
-                <p className="text-sm uppercase tracking-[0.2em] text-[#888] mb-10 text-center font-[var(--font-sans)]">
-                    Performance & Estratégia
-                </p>
-
-                {/* Quick Actions Grid */}
-                <div className="grid grid-cols-4 gap-4 w-full px-4 mb-10">
-                    <button
-                        onClick={() => setShowQRCode(true)}
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <QrCodeIcon />
+                {/* Main Action Blocks */}
+                <div className="w-full flex flex-col gap-4 mb-20 section-fade-in delay-100">
+                    <Link href="/consultoria" className="w-full group">
+                        <div className="w-full flex flex-row items-center justify-between border border-[var(--accent-gold)]/20 bg-black p-6 md:p-8 hover:bg-[var(--accent-gold)] transition-colors duration-500">
+                            <div className="flex flex-col">
+                                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-[var(--accent-gold)] group-hover:text-black/60 mb-3 font-sans font-bold transition-colors">
+                                    Diagnóstico & Solução
+                                </span>
+                                <h2 className="text-3xl md:text-5xl font-[var(--font-serif)] text-white group-hover:text-black transition-colors leading-none tracking-tight">
+                                    Consultoria<br />Gastronômica
+                                </h2>
+                            </div>
+                            <div className="text-5xl md:text-7xl font-sans font-light text-[var(--accent-gold)]/20 group-hover:text-black/30 group-hover:translate-x-3 transition-all duration-500">
+                                →
+                            </div>
                         </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">QR</span>
-                    </button>
-
-                    <a
-                        href={`https://wa.me/${contactData.tel}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <WhatsappIcon />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Whats</span>
-                    </a>
-
-                    <button
-                        onClick={handleDownloadVCard}
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <UserPlusIcon />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Salvar</span>
-                    </button>
-
-                    <a
-                        href={`mailto:${contactData.email}`}
-                        className="flex flex-col items-center gap-2 group"
-                    >
-                        <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-[#0a0a0a] group-hover:bg-white/5 transition-colors text-[#ccc] group-hover:text-white">
-                            <MailIcon />
-                        </div>
-                        <span className="text-[10px] uppercase tracking-wider text-[#666]">Email</span>
-                    </a>
-                </div>
-
-                {/* Primary Actions */}
-                <div className="w-full flex flex-col gap-4 mb-12 font-[var(--font-sans)]">
-                    <Link href="/consultoria" className="w-full">
-                        <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full py-5 px-6 rounded-sm bg-[#111] border border-[var(--accent-gold)]/30 hover:bg-[var(--accent-gold)] hover:text-black group transition-all duration-300 flex items-center justify-between"
-                        >
-                            <span className="text-xs uppercase tracking-[0.2em] font-bold text-[var(--accent-gold)] group-hover:text-black">
-                                Consultoria Gastronômica
-                            </span>
-                            <span className="text-lg opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-transform">→</span>
-                        </motion.div>
                     </Link>
 
-
+                    <Link href="/blog" className="w-full group">
+                        <div className="w-full flex flex-row items-center justify-between border border-white/10 bg-[#0a0a0a] p-6 md:p-8 hover:bg-white transition-colors duration-500">
+                            <div className="flex flex-col">
+                                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/40 group-hover:text-black/50 mb-3 font-sans font-bold transition-colors">
+                                    Inteligência Aplicada
+                                </span>
+                                <h2 className="text-3xl md:text-5xl font-[var(--font-serif)] text-white group-hover:text-black transition-colors leading-none tracking-tight">
+                                    Artigos &<br />Análises
+                                </h2>
+                            </div>
+                            <div className="text-5xl md:text-7xl font-sans font-light text-white/10 group-hover:text-black/30 group-hover:translate-x-3 transition-all duration-500">
+                                →
+                            </div>
+                        </div>
+                    </Link>
                 </div>
 
-                <Link
-                    href="/"
-                    className="text-[10px] uppercase tracking-[0.3em] text-[#444] hover:text-[var(--accent-gold)] transition-colors"
-                >
-                    felipenb.com.br
-                </Link>
+                {/* Quick Actions (Brutalist Bento) */}
+                <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-6 font-sans font-bold w-full text-left">Acesso Direto</span>
+                <div className="grid grid-cols-2 gap-4 w-full mb-20 section-fade-in delay-200">
+                    <a href={`https://wa.me/${contactData.tel}`} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-[var(--accent-gold)] transition-colors group items-start">
+                        <div className="text-white/30 group-hover:text-[var(--accent-gold)] transition-colors"><WhatsappIcon /></div>
+                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">WhatsApp</span>
+                    </a>
 
-            </motion.div>
+                    <a href={`mailto:${contactData.email}`} className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-white transition-colors group items-start">
+                        <div className="text-white/30 group-hover:text-white transition-colors"><MailIcon /></div>
+                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">E-mail</span>
+                    </a>
 
-            {/* QR Code Modal */}
+                    <button onClick={handleDownloadVCard} className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-[var(--accent-gold)] transition-colors group items-start text-left">
+                        <div className="text-white/30 group-hover:text-[var(--accent-gold)] transition-colors"><UserPlusIcon /></div>
+                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">Salvar<br />Contato</span>
+                    </button>
+
+                    <button onClick={() => setShowQRCode(true)} className="flex flex-col justify-between h-32 p-6 border border-white/10 bg-[#0a0a0a] hover:border-white transition-colors group items-start text-left">
+                        <div className="text-white/30 group-hover:text-white transition-colors"><QrCodeIcon /></div>
+                        <span className="text-[11px] uppercase tracking-[0.15em] text-white/80 font-sans font-bold group-hover:text-white transition-colors">Gerar<br />QR Code</span>
+                    </button>
+                </div>
+
+                {/* Footer Reference */}
+                <div className="w-full flex justify-center mt-auto border-t border-white/5 pt-12 section-fade-in delay-300">
+                    <Link href="/" className="text-[10px] font-sans font-bold uppercase tracking-[0.3em] text-white/20 hover:text-[var(--accent-gold)] transition-colors">
+                        felipenb.com.br
+                    </Link>
+                </div>
+            </div>
+
+            {/* QR Code Modal (Unchanged) */}
             <AnimatePresence>
                 {showQRCode && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
@@ -160,26 +146,30 @@ END:VCARD`;
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setShowQRCode(false)}
-                            className="absolute inset-0 bg-black/90 backdrop-blur-sm"
+                            className="absolute inset-0 bg-[#050505]/95 backdrop-blur-md"
                         />
                         <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
+                            initial={{ scale: 0.95, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            className="relative bg-[#111] border border-white/10 p-8 rounded-lg max-w-sm w-full text-center shadow-2xl"
+                            exit={{ scale: 0.95, opacity: 0 }}
+                            className="relative bg-black border border-white/10 p-10 max-w-sm w-full text-left"
                         >
-                            <h3 className="text-xl font-[var(--font-serif)] text-white mb-6">Escaneie para acessar</h3>
-                            <div className="bg-white p-4 rounded-lg inline-block mb-4">
+                            <h3 className="text-3xl font-[var(--font-serif)] text-white mb-2 leading-none">Acesso Rápido</h3>
+                            <p className="text-[10px] uppercase font-sans tracking-[0.2em] text-white/40 mb-8">Escaneie o código abaixo</p>
+
+                            <div className="bg-white p-6 inline-block mb-8 border border-white/20">
                                 <Image
                                     src="/qr-code.png"
                                     alt="QR Code"
-                                    width={200}
-                                    height={200}
+                                    width={240}
+                                    height={240}
+                                    className="w-full h-auto"
                                 />
                             </div>
+
                             <button
                                 onClick={() => setShowQRCode(false)}
-                                className="block w-full py-3 mt-4 text-xs uppercase tracking-widest text-[#666] hover:text-white transition-colors"
+                                className="block w-full py-4 text-[10px] font-bold uppercase tracking-[0.3em] border border-white/10 text-[#888] hover:text-white hover:border-white transition-colors"
                             >
                                 Fechar
                             </button>
@@ -195,9 +185,9 @@ END:VCARD`;
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 50 }}
-                        className="fixed bottom-10 z-50 px-6 py-3 bg-[var(--accent-gold)] text-black font-bold uppercase text-xs tracking-wider rounded-full shadow-lg"
+                        className="fixed bottom-10 z-50 px-8 py-4 bg-[var(--accent-gold)] text-black font-bold uppercase text-[10px] tracking-[0.2em] shadow-lg"
                     >
-                        Contato Salvo!
+                        Contato Salvo no Aparelho!
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -206,19 +196,19 @@ END:VCARD`;
     );
 }
 
-// Icons
+// Icons (Unchanged)
 function WhatsappIcon() {
-    return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" /><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" /></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" /><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" /></svg>;
 }
 
 function MailIcon() {
-    return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>;
 }
 
 function UserPlusIcon() {
-    return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="19" y1="8" x2="19" y2="14" /><line x1="22" y1="11" x2="16" y2="11" /></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><line x1="19" y1="8" x2="19" y2="14" /><line x1="22" y1="11" x2="16" y2="11" /></svg>;
 }
 
 function QrCodeIcon() {
-    return <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="5" height="5" x="3" y="3" rx="1" /><rect width="5" height="5" x="16" y="3" rx="1" /><rect width="5" height="5" x="3" y="16" rx="1" /><path d="M21 16h-3a2 2 0 0 0-2 2v3" /><path d="M21 21v.01" /><path d="M12 7v3a2 2 0 0 1-2 2H7" /><path d="M3 12h.01" /><path d="M12 3h.01" /><path d="M12 16v.01" /><path d="M16 12h1" /><path d="M21 12v.01" /><path d="M12 21v-1" /></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect width="5" height="5" x="3" y="3" rx="1" /><rect width="5" height="5" x="16" y="3" rx="1" /><rect width="5" height="5" x="3" y="16" rx="1" /><path d="M21 16h-3a2 2 0 0 0-2 2v3" /><path d="M21 21v.01" /><path d="M12 7v3a2 2 0 0 1-2 2H7" /><path d="M3 12h.01" /><path d="M12 3h.01" /><path d="M12 16v.01" /><path d="M16 12h1" /><path d="M21 12v.01" /><path d="M12 21v-1" /></svg>;
 }
