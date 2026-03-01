@@ -63,7 +63,7 @@ export default function MagneticLink({
             style={{ x: mouseX, y: mouseY, ...style }}
             className={className}
         >
-            <Link href={href} onClick={onClick} style={{ display: 'block', width: '100%', height: '100%' }}>
+            <Link href={href} onClick={onClick} style={{ display: 'inherit', width: '100%', height: '100%', alignItems: 'inherit', justifyContent: 'inherit', gap: 'inherit', flexDirection: 'inherit' }}>
                 {children}
             </Link>
         </motion.div>
