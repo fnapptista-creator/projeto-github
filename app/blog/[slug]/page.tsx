@@ -110,24 +110,30 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
                 {/* Post Navigation */}
                 {(postData.prevPost || postData.nextPost) && (
-                    <div className="flex flex-col md:flex-row items-stretch justify-between gap-4 mt-8 pb-8 pt-8 border-t border-black/10">
+                    <div className="flex flex-col md:flex-row items-stretch justify-between gap-6 pb-16">
                         {postData.prevPost ? (
                             <Link
                                 href={`/blog/${postData.prevPost.slug}`}
-                                className="flex-1 group flex flex-col items-start p-6 border border-black/10 hover:border-[var(--accent-gold)] hover:bg-black/5 transition-all text-left"
+                                className="flex-1 group flex flex-col items-start p-8 bg-white border border-black/10 hover:border-black hover:shadow-[6px_6px_0_0_#000] hover:-translate-y-1 hover:-translate-x-1 transition-all text-left"
                             >
-                                <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-black/40 mb-2 group-hover:text-[var(--accent-gold)] transition-colors">Artigo Anterior</span>
-                                <span className="font-serif text-lg leading-tight group-hover:text-[var(--accent-gold)] transition-colors">{postData.prevPost.title}</span>
+                                <div className="flex items-center gap-2 mb-4 text-black/40 group-hover:text-black transition-colors">
+                                    <svg className="w-4 h-4 transform group-hover:-translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                                    <span className="text-[10px] tracking-[0.2em] uppercase font-bold">Artigo Anterior</span>
+                                </div>
+                                <span className="font-serif text-xl leading-[1.2] text-black group-hover:text-[var(--accent-gold)] transition-colors">{postData.prevPost.title}</span>
                             </Link>
                         ) : <div className="flex-1 hidden md:block"></div>}
 
                         {postData.nextPost ? (
                             <Link
                                 href={`/blog/${postData.nextPost.slug}`}
-                                className="flex-1 group flex flex-col items-end p-6 border border-black/10 hover:border-[var(--accent-gold)] hover:bg-black/5 transition-all text-right"
+                                className="flex-1 group flex flex-col items-end p-8 bg-white border border-black/10 hover:border-black hover:shadow-[6px_6px_0_0_#000] hover:-translate-y-1 hover:-translate-x-1 transition-all text-right"
                             >
-                                <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-black/40 mb-2 group-hover:text-[var(--accent-gold)] transition-colors">Próximo Artigo</span>
-                                <span className="font-serif text-lg leading-tight group-hover:text-[var(--accent-gold)] transition-colors">{postData.nextPost.title}</span>
+                                <div className="flex items-center gap-2 mb-4 text-black/40 group-hover:text-black transition-colors">
+                                    <span className="text-[10px] tracking-[0.2em] uppercase font-bold">Próximo Artigo</span>
+                                    <svg className="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                </div>
+                                <span className="font-serif text-xl leading-[1.2] text-black group-hover:text-[var(--accent-gold)] transition-colors">{postData.nextPost.title}</span>
                             </Link>
                         ) : <div className="flex-1 hidden md:block"></div>}
                     </div>

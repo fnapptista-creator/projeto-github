@@ -58,7 +58,7 @@ export default function ShareArticle({ title, urlPath, coverImage }: ShareArticl
     };
 
     return (
-        <div className="py-12 border-t border-b border-black/10 mt-16 mb-4 flex flex-col items-center text-center">
+        <div className="py-12 border-t border-black/10 mt-16 flex flex-col items-center text-center">
             <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-black/40 mb-6 block">
                 Compartilhe e ajude outros profissionais
             </span>
