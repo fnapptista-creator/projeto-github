@@ -95,10 +95,22 @@ export async function getPostData(slug: string) {
 
     const contentHtml = processedContent.toString();
 
+    // Lógica para Next / Previous post
+    const allPosts = getSortedPostsData();
+    const currentIndex = allPosts.findIndex((p) => p.slug === slug);
+
+    // Como a lista está ordenada do MAIS NOVO (índice 0) para o MAIS VELHO (índice final)
+    // O Post "Anterior" (cronologicamente mais antigo) estará no currentIndex + 1
+    // O "Próximo" Post (cronologicamente mais novo) estará no currentIndex - 1
+    const prevPost = currentIndex < allPosts.length - 1 ? { slug: allPosts[currentIndex + 1].slug, title: allPosts[currentIndex + 1].title } : null;
+    const nextPost = currentIndex > 0 ? { slug: allPosts[currentIndex - 1].slug, title: allPosts[currentIndex - 1].title } : null;
+
     // Combine the data with the slug and contentHtml
     return {
         slug,
         contentHtml,
+        nextPost,
+        prevPost,
         // Default properties to make TS happy if missing
         title: matterResult.data.title || 'Sem título',
         date: matterResult.data.date || '',

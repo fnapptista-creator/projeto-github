@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import ShareArticle from '@/components/Blog/ShareArticle';
 import MagneticLink from '@/components/MagneticLink';
 import { Metadata, ResolvingMetadata } from 'next';
+import Link from 'next/link';
 import Head from 'next/head'; // Used occasionally for JSON-LD, but in App Router we can use <script>
 
 // Gera os parâmetros estáticos para SSG
@@ -68,7 +69,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
             />
 
-            <article className="pt-32 pb-20 px-6 md:px-12 max-w-3xl mx-auto">
+            <article className="pt-32 pb-4 px-6 md:px-12 max-w-3xl mx-auto">
                 {/* Header (Brutalista e Elegante) */}
                 <header className="mb-16">
                     <div className="flex items-center gap-4 mb-8">
@@ -107,6 +108,30 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 {/* Viral Ecosystem (Share) */}
                 <ShareArticle title={postData.title} urlPath={`/blog/${postData.slug}`} coverImage={postData.coverImage} />
 
+                {/* Post Navigation */}
+                {(postData.prevPost || postData.nextPost) && (
+                    <div className="flex flex-col md:flex-row items-stretch justify-between gap-4 mt-8 pb-8 pt-8 border-t border-black/10">
+                        {postData.prevPost ? (
+                            <Link
+                                href={`/blog/${postData.prevPost.slug}`}
+                                className="flex-1 group flex flex-col items-start p-6 border border-black/10 hover:border-[var(--accent-gold)] hover:bg-black/5 transition-all text-left"
+                            >
+                                <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-black/40 mb-2 group-hover:text-[var(--accent-gold)] transition-colors">Artigo Anterior</span>
+                                <span className="font-serif text-lg leading-tight group-hover:text-[var(--accent-gold)] transition-colors">{postData.prevPost.title}</span>
+                            </Link>
+                        ) : <div className="flex-1 hidden md:block"></div>}
+
+                        {postData.nextPost ? (
+                            <Link
+                                href={`/blog/${postData.nextPost.slug}`}
+                                className="flex-1 group flex flex-col items-end p-6 border border-black/10 hover:border-[var(--accent-gold)] hover:bg-black/5 transition-all text-right"
+                            >
+                                <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-black/40 mb-2 group-hover:text-[var(--accent-gold)] transition-colors">Próximo Artigo</span>
+                                <span className="font-serif text-lg leading-tight group-hover:text-[var(--accent-gold)] transition-colors">{postData.nextPost.title}</span>
+                            </Link>
+                        ) : <div className="flex-1 hidden md:block"></div>}
+                    </div>
+                )}
             </article>
 
             {/* Inbound Conversion Block (CTA Dourado) */}

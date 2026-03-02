@@ -2,6 +2,13 @@
 
 Este documento contém ideias estratégicas e agendamentos para o ecossistema de conteúdo ("Inteligência Aplicada") do site.
 
+> [!IMPORTANT]
+> **Aviso de Tom de Voz (Persona)**
+> O público-alvo principal destas postagens **NÃO SÃO** restaurantes de altíssimo padrão com menus-degustação astronômicos, nem lanchonetes de baixíssima renda. 
+> A comunicação deve focar na **CLASSE MÉDIA E MÉDIA/ALTA GASTRONÔMICA**. Empresários com pizzarias robustas, docerias, gastropubs e casas de carne premium. Use linguagem culta, mas brutal, direta e palpável com os problemas de quem "gira muito pedido" na rua.
+> ❌ **Proibido usar jargão elitista exagerado:** "Maître", "Sommelier", "Gastronomia Molecular", "Experiência Sensorial Extrema".
+> ✅ **Obrigatório usar:** "O garçom chefe", "Chef de Cozinha" (pode usar livremente), "A lanchonete cheia no sábado", "O Ifood tocando", "Problemas de CMV".
+
 ## 📅 Agendamentos (Próximas 2 Sextas-feiras)
 
 Aqui estão as ideias para os próximos dois posts já engatilhados. 
