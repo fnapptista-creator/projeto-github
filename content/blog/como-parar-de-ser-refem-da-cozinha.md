@@ -5,9 +5,9 @@ description: "Rotatividade alta de funcionários, qualidade que flutua e você p
 coverImage: "/uploads/chef-trabalhando-cozinha.png"
 ---
 
-Pense na última vez que o "Joãozinho", o cozinheiro ou chapeiro que estava com você há três anos e sabia de cor a receita molho da casa, resolveu pedir as contas. Bateu aquele frio na espinha, né? 
+Pense na última vez que o "Joãozinho", o cozinheiro que estava com você há três anos e sabia de cor a receita molho da casa, resolveu pedir as contas. Bateu aquele frio na espinha, né? 
 
-Ou então pense naquele sábado lotado em que o seu melhor garçom não apareceu, e você teve que abandonar o caixa para tirar pedido de mesa. 
+Ou então pense naquele sábado lotado em que o seu gerente de salão não apareceu, e você teve que abandonar o caixa para tirar pedido de mesa. 
 
 Se o seu negócio depende do humor ou da "boa vontade" de um funcionário específico para funcionar direito, você não tem uma empresa. Você tem um castelo de cartas pronto para desmoronar com qualquer vento. 
 
@@ -31,10 +31,10 @@ Quando você tem um POP bem feito, o "Joãozinho" pode pedir as contas à vontad
 
 ## Acabe com a Síndrome do "Dono Polvo"
 
-A falta de padronização transforma o dono da lanchonete, bar ou pizzaria em um polvo. Uma hora está temperando frango, outra hora consertando a impressora de pedidos no salão, outra hora correndo no atacadista pra comprar limão porque a equipe da cozinha não fez o pedido direito. 
+A falta de padronização transforma o dono do bar ou restaurante em um polvo. Uma hora está temperando frango, outra hora consertando a impressora no salão, outra hora correndo no mercado atacadista pra comprar limão porque a chefia da cozinha não fez inventário direito. 
 
-Isso destrói a sua saúde mental e te impede de fazer o que o dono *deveria* estar fazendo: pensar em estratégia de vendas, lidar com negociação de fornecedores para baratear custos e gerenciar o fluxo financeiro. 
+Isso destrói a sua saúde mental e te impede de fazer o que o dono *deveria* estar fazendo: pensar em estratégia, lidar com negociação de fornecedores para baratear custos e gerenciar o fluxo financeiro. 
 
-Se você quer expandir, abrir sua segunda loja ou apenas ter a liberdade de tirar férias com a sua família sem o restaurante pegar fogo, a padronização não é um "bônus". Ela é a base de tudo. 
+Se você quer expandir, abrir franquias ou apenas ter a liberdade de tirar férias com a sua família sem o restaurante pegar fogo, a padronização não é um "bônus". Ela é a base de tudo. 
 
 Construa uma máquina que funcione sozinha, ou morra operando a engrenagem. 
