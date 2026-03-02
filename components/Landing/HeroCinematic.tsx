@@ -17,7 +17,7 @@ export default function HeroCinematic() {
                     src="/uploads/hero_v2.png"
                     alt="Restaurante Operação Alto Nível"
                     fill
-                    className="object-cover object-[75%_top] md:object-[right_top] mix-blend-luminosity"
+                    className="object-cover object-[75%_15%] md:object-[right_15%] mix-blend-luminosity"
                     priority
                     quality={90}
                 />
