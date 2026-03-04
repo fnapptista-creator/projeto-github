@@ -64,7 +64,7 @@ export default function LeadQuizModal() {
 
         const text = `Olá Felipe! Me chamo *${quizData.name.trim()}* e falo de *${quizData.city.trim()}*.\n\n` +
             `*Momento do Negócio:* ${businessMap[quizData.businessStage]}\n\n` +
-            `*Principais Desafios Atuais:*\n${quizData.painPoints.map(p => `- ${p}`).join('\n')}\n\n` +
+            `*Demandas e Focos Selecionados:*\n${quizData.painPoints.map(p => `- ${p}`).join('\n')}\n\n` +
             `Gostaria de saber como a consultoria pode me ajudar com esse cenário!`;
 
         const encoded = encodeURIComponent(text);
@@ -76,6 +76,45 @@ export default function LeadQuizModal() {
             resetQuiz();
             setStep(1);
         }, 500);
+    };
+
+    const painPointsMap: Record<string, { title: string, subtitle: string, options: string[] }> = {
+        'novo': {
+            title: 'Para seu negócio nascer forte, no que você precisa de mais ajuda?',
+            subtitle: 'Pode selecionar mais de uma opção.',
+            options: [
+                'Criação e Validação do Conceito',
+                'Escolha do Ponto e Estudo de Viabilidade',
+                'Layout Operacional de Cozinha e Bar',
+                'Montagem do Primeiro Cardápio',
+                'Assessoria para Licenças e Alvarás',
+                'Seleção e Treinamento da Primeira Equipe'
+            ]
+        },
+        'operando': {
+            title: 'Para fechar: Onde estão os maiores gargalos da sua operação hoje?',
+            subtitle: 'Pode selecionar mais de uma opção de dor principal.',
+            options: [
+                'Lucro Baixo, CMV Alto e Desperdício',
+                'Precificação Cega (Sem Ficha Técnica)',
+                'Equipe de Salão e Cozinha Desalinhada',
+                'Problemas de Qualidade e Padronização',
+                'Falta de Controles Financeiros (Gestão)',
+                'Preso no Operacional Trabalhando 14h+'
+            ]
+        },
+        'expansao': {
+            title: 'Quais áreas precisam ser blindadas para suportar seu crescimento?',
+            subtitle: 'Pode selecionar mais de uma opção estratégica.',
+            options: [
+                'Padronização Rica para Multi-Unidades',
+                'Estruturação de Cozinha Central',
+                'Auditoria de Qualidade e Segurança',
+                'Engenharia de Cardápio Avançada',
+                'Formação de Novos Gestores e Líderes',
+                'POPs (Procedimento Operacional) Escaláveis'
+            ]
+        }
     };
 
     return (
@@ -170,19 +209,12 @@ export default function LeadQuizModal() {
                                     </motion.div>
                                 )}
 
-                                {step === 4 && (
+                                {step === 4 && quizData.businessStage && (
                                     <motion.div key="s4" variants={slideVariants} initial="hidden" animate="visible" exit="exit" className="w-full">
-                                        <h2 className="text-3xl font-[var(--font-serif)] text-white mb-2">Para fechar: Qual sua maior dor principal?</h2>
-                                        <p className="text-[#888] mb-6 font-sans text-sm">Pode selecionar mais de uma opção.</p>
+                                        <h2 className="text-3xl font-[var(--font-serif)] text-white mb-2">{painPointsMap[quizData.businessStage].title}</h2>
+                                        <p className="text-[#888] mb-6 font-sans text-sm">{painPointsMap[quizData.businessStage].subtitle}</p>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                            {[
-                                                'CMV Alto e Desperdício',
-                                                'Precificação sem Ficha Técnica',
-                                                'Falta de Padrão e Manuais',
-                                                'Equipe Desmotivada / Rotatividade',
-                                                'Preso na Operação 14h por dia',
-                                                'Elaborar Projeto Inicial'
-                                            ].map(point => (
+                                            {painPointsMap[quizData.businessStage].options.map(point => (
                                                 <button
                                                     key={point}
                                                     onClick={() => togglePainPoint(point)}
