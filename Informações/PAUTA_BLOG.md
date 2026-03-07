@@ -47,12 +47,37 @@ Use esta lista para puxar temas nas próximas semanas. Todos focados na dor do d
 4. **O que os números dizem quando a porta abaixa à meia-noite?**
    * *Foco:* Educação Financeira (Gestão à Vista). DRE básica para donos, separando Caixa de Lucro Real, e matando o Pró-Labore de "retiradas cegas".
    * *Sub-Pautas:* A perdição da Antecipação de Recebíveis de Cartão de Crédito; Capital de Giro vs Reserva de Emergência.
-5. **Controle de Estoque que funciona no Mundo Real (Abaixo de 3% de quebra)**
-   * *Foco:* Chega de planilhas complexas que ninguém usa. Ferramentas visuais: Inventários rotativos diários (Curva A - Carnes, Queijos), Travas de Segurança.
-
+5. **A Morte Lenta do Desperdício Invisível (O ralo no fim do turno)**
+   * *Foco:* O custo daquele "pão a mais" e do "restinho de molho" no fim de um ano fiscal.
+   * *Sub-Pautas:* Como parametrizar Lixeiras Transparentes para chocar a equipe com o que é jogado fora; Aproveitamento Integral de Alimentos; O peso do 'Fator de Correção' não calculado na bancada.
+6. **Ticket Médio não cresce com desconto, cresce com ancoragem**
+   * *Foco:* Por que dar desconto de 15% quebra a margem, mas "montar um combo" mascarado aumenta a percepção de valor. Estratégias de Pricing.
+   * *Foco:* A diferença entre pratos "Estrela" e "Cavalo de Batalha". Usar a matriz de vendas para promover itens com Margem de Contribuição pesada (mesmo que com menor giro).
+   * *Sub-Pautas:* Design do cardápio físico (Ancoragem de preço, Zonas cegas); Por que cardápios de 10 páginas matam sua cozinha e sua lucratividade.
+4. **O que os números dizem quando a porta abaixa à meia-noite?**
+   * *Foco:* Educação Financeira (Gestão à Vista). DRE básica para donos, separando Caixa de Lucro Real, e matando o Pró-Labore de "retiradas cegas".
+   * *Sub-Pautas:* A perdição da Antecipação de Recebíveis de Cartão de Crédito; Capital de Giro vs Reserva de Emergência.
 ### 🏗️ Pilar: Operação & Escala (O Motor)
-6. **Cozinha Central vs Produção na Loja: O ponto exato da virada para Franquias**
+7. **Cozinha Central vs Produção na Loja: O ponto exato da virada para Franquias**
    * *Foco:* Quando vale a pena montar uma unidade produtora para abastecer mais de 2 lojas, reduzindo *headcount* e garantindo a padronização inflexível de sabor.
-   * *Sub-Pautas:* Equipamentos de ultra-congelamento; Diferença técnica entre "Cocção do zero" e "Regeneração" na hora do rush para casas escaladas.
+   * *Sub-Pautas:* Equipamentos de ultra-congelamento; Diferença técnica entre "Cocção do zero" e "Regeneração" na hora do rush.
+8. **Controle de Estoque que funciona no Mundo Real (Abaixo de 3% de quebra)**
+   * *Foco:* Chega de planilhas complexas que ninguém usa. Ferramentas visuais: Inventários rotativos diários (Curva A - Carnes, Queijos), Travas de Segurança.
+9. **Mapeamento de Fluxo de Salão: Como o garçom perde 4km por noite**
+   * *Foco:* Ergonomia exterior. Colocação estratégica de Ilhas de Apoio, talheres, copos e PDVs avançados para acelerar a mesa sem exaurir o físico da equipe.
+10. **A Anatomia de um "Lançamento de Prato" Perfeito**
+    * *Foco:* Como inserir um prato novo sem afundar o giro da cozinha. Fases de teste, ficha tática e treinamento antes de colocar a foto bonita no Instagram. 
 
-*(Nota: Os Artigos sobre 'IFood/Refém' e 'Layout de Cozinha' já foram escritos e movidos para produção em Março).*
+### 🚀 Pilar: Vendas & Growth (Marketing com os Pés no Chão)
+11. **Sua fachada no Google Meu Negócio está sangrando clientes todos os dias**
+    * *Foco:* SEO local e conversão orgânica antes de colocar dinheiro em Meta Ads. Como responder avaliações negativas de forma política, mas implacável, mostrando autoridade para novos clientes.
+12. **Programas de Fidelidade que não ofendem a inteligência do cliente**
+    * *Foco:* Cartãozinho de 10 carimbos morreu. Como captar dados reais do cliente (Telefone, Aniversário) oferecendo um Welcome Drink, e usar isso para lotar a casa em dias de chuva.
+13. **Influenciadores vs Clientes Reais: Onde colocar sua comida de graça**
+    * *Foco:* A diferença entre o cara que tem 50k seguidores comprados e o advogado influente no bairro que enche mesas de 10 pessoas toda a sexta-feira (Micro-Comunidades).
+14. **WhatsApp Business: De máquina de resposta lenta para máquina de vendas armada**
+    * *Foco:* Automatizações reais, tags de clientes (VIP, Reclamão, Sumido) e mensagens de reativação de fim de semana que trazem R$ 2.000 extras sem anúncio.
+15. **Eventos de Giro: "All you can eat" inteligente**
+    * *Foco:* Como transformar as terças e quartas-feiras mortas num campo de lucro montando festivais pontuais, desde que amarrados a um CMV milimetricamente arquitetado.
+
+*(Nota: Os Artigos sobre 'IFood/Refém' e 'Layout de Cozinha' já foram escritos e movidos para produção em Março. Nossa grade agora possui temas pré-aprovados até Agosto/Setembro, permitindo fluidez extrema semanal).*
