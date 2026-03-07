@@ -32,17 +32,27 @@ Para colocá-los no ar, criaremos os arquivos `.md` na pasta `content/blog/` com
 
 Use esta lista para puxar temas nas próximas semanas. Todos focados na dor do dono de restaurante e em soluções de **Alto Nível (Brutalistas)**.
 
-1. **A armadilha do Ifood: Você é parceiro ou refém?**
-   * *Foco:* Como otimizar cardápios para vitrine digital, reduzir dependência agressiva e aumentar o repasse sem prejudicar a venda estrutural.
-2. **Layout de Cozinha: Onde o seu dinheiro escorrega pelo ralo**
-   * *Foco:* Movimentos cruzados, falta de padronização de praças e como um equipamento mal posicionado adiciona 10 minutos de delay na entrega da mesa.
+### 👥 Pilar: Equipe & Cultura
+1. **A Farsa dos 10%: Por que a gorjeta focada só no salão destrói sua operação**
+   * *Foco:* O restaurante não nasce no balcão, nasce no fogo. Como migrar do modelo tóxico de "Caixinha de Garçom" para um modelo de **Comissionamento Geral e Metas**, onde a cozinha, limpeza e bar ganham baseados na performance da casa inteira.
+   * *Sub-Pautas:* Modelos matemáticos de pontuação por nível de senioridade no rateio; Como vencer a resistência cultural de garçons antigos; O Impacto da comissão no zelo pelos equipamentos da cozinha.
+2. **O garçom é o seu melhor vendedor, mas você o treina como "Tirador de Pedidos"**
+   * *Foco:* Treinamento comercial de salão ativo. Técnicas de *up-selling* e *cross-selling* que aumentam o ticket médio instantaneamente.
+   * *Sub-Pautas:* A diferença entre empurrar prato e guiar a experiência; O poder do "Drink de Espera" bem oferecido.
+
+### 💰 Pilar: Financeiro & Retenção de Margem
 3. **Engenharia de Cardápio: Seus pratos mais vendidos podem estar te falindo**
-   * *Foco:* A diferença entre pratos "Estrela" e "Cavalo de Batalha". Como usar a matriz de vendas para promover os itens com maior Margem de Contribuição.
-4. **O garçom é o seu melhor vendedor, mas você o trata como tirador de pedidos**
-   * *Foco:* Treinamento de salão ativo. Técnicas de up-selling que aumentam o ticket médio em 15% instantaneamente, sem parecer impositivo ao cliente.
-5. **Cozinha Central vs Produção na Loja: O ponto de virada para Franquias**
-   * *Foco:* Quando vale a pena montar uma unidade produtora para abastecer sua rede, os custos de logística e o segredo da padronização perfeita.
-6. **Controle de Estoque que funciona no Mundo Real**
-   * *Foco:* Esqueça planilhas mirabolantes. Como o método "Curva A", inventários rotativos e travas de segurança reduzem o desperdício para menos de 3%.
-7. **O que os números te dizem quando você fecha o caixa à noite?**
-   * *Foco:* Educação Financeira. DRE básica para restaurantes, separando Caixa (liquidez) de Competência (lucro real), e parando de sangrar a empresa com pró-labore cego.
+   * *Foco:* A diferença entre pratos "Estrela" e "Cavalo de Batalha". Usar a matriz de vendas para promover itens com Margem de Contribuição pesada (mesmo que com menor giro).
+   * *Sub-Pautas:* Design do cardápio físico (Ancoragem de preço, Zonas cegas); Por que cardápios de 10 páginas matam sua cozinha e sua lucratividade.
+4. **O que os números dizem quando a porta abaixa à meia-noite?**
+   * *Foco:* Educação Financeira (Gestão à Vista). DRE básica para donos, separando Caixa de Lucro Real, e matando o Pró-Labore de "retiradas cegas".
+   * *Sub-Pautas:* A perdição da Antecipação de Recebíveis de Cartão de Crédito; Capital de Giro vs Reserva de Emergência.
+5. **Controle de Estoque que funciona no Mundo Real (Abaixo de 3% de quebra)**
+   * *Foco:* Chega de planilhas complexas que ninguém usa. Ferramentas visuais: Inventários rotativos diários (Curva A - Carnes, Queijos), Travas de Segurança.
+
+### 🏗️ Pilar: Operação & Escala (O Motor)
+6. **Cozinha Central vs Produção na Loja: O ponto exato da virada para Franquias**
+   * *Foco:* Quando vale a pena montar uma unidade produtora para abastecer mais de 2 lojas, reduzindo *headcount* e garantindo a padronização inflexível de sabor.
+   * *Sub-Pautas:* Equipamentos de ultra-congelamento; Diferença técnica entre "Cocção do zero" e "Regeneração" na hora do rush para casas escaladas.
+
+*(Nota: Os Artigos sobre 'IFood/Refém' e 'Layout de Cozinha' já foram escritos e movidos para produção em Março).*
