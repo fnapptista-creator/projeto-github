@@ -89,7 +89,7 @@ export default function LatestPosts({ posts }: LatestPostsProps) {
                                     <div className="text-xs md:text-sm font-sans tracking-[0.2em] uppercase text-[var(--accent-gold)] mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
                                         <time dateTime={post.date}>
                                             {new Date(post.date).toLocaleDateString('pt-BR', {
-                                                day: '2-digit', month: '2-digit', year: '2-digit'
+                                                timeZone: 'UTC', day: '2-digit', month: '2-digit', year: '2-digit'
                                             })}
                                         </time>
                                     </div>

@@ -43,6 +43,7 @@ export default function BlogIndex() {
                                     <div className="text-sm font-sans tracking-[0.2em] uppercase text-white/40 group-hover:text-[var(--accent-gold)] transition-colors">
                                         <time dateTime={date}>
                                             {new Date(date).toLocaleDateString('pt-BR', {
+                                                timeZone: 'UTC',
                                                 day: '2-digit',
                                                 month: 'short',
                                                 year: 'numeric'

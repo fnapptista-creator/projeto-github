@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import ConsultoriaHero from '@/components/Consultoria/ConsultoriaHero';
 import ConsultingMode from '@/components/Consultoria/ConsultingMode';
 import MagneticLink from '@/components/MagneticLink';
+import MicroConsulting from '@/components/Consultoria/MicroConsulting';
+import ConsultingFAQ from '@/components/Consultoria/ConsultingFAQ';
 import { motion } from 'framer-motion';
 import { useQuiz } from '@/components/LeadQuiz/QuizContext';
 
@@ -82,6 +84,10 @@ export default function Consultoria() {
                     theme="dark"
                 />
             </div>
+
+            <MicroConsulting />
+
+            <ConsultingFAQ />
 
             {/* Final CTA Idêntico ao da Home */}
             <section className="py-12 md:py-16 bg-[var(--accent-gold)] text-center px-6 relative overflow-hidden flex items-center justify-center">

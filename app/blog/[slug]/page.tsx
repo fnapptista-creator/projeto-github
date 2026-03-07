@@ -78,7 +78,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                             className="text-xs tracking-[0.2em] font-sans font-bold uppercase text-[var(--accent-gold)]"
                         >
                             {new Date(postData.date).toLocaleDateString('pt-BR', {
-                                day: '2-digit', month: 'short', year: 'numeric'
+                                timeZone: 'UTC', day: '2-digit', month: 'short', year: 'numeric'
                             })}
                         </time>
                         <span className="w-12 h-[1px] bg-black/20"></span>
