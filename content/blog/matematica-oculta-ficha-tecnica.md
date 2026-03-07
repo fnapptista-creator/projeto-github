@@ -2,7 +2,7 @@
 title: "A Matemática Oculta da Ficha Técnica: Como prever lucro antes de vender"
 date: "2026-03-06"
 description: "A maioria dos donos precifica multiplicando o custo por 3 ou olhando o vizinho. Entenda por que a ficha técnica é o único mapa seguro para o lucro."
-coverImage: "/uploads/restaurante-vazio.png"
+coverImage: "/uploads/ficha_tecnica.png"
 ---
 
 A cena é clássica e se repete diariamente na consultoria: o empresário abre a planilha de fechamento do mês (quando tem uma) e não encontra o dinheiro. A casa esteve cheia, o salão rodou bem, mas a conta não fecha. A resposta para esse buraco negro quase sempre mora na ausência de uma **Ficha Técnica Operacional e Gerencial**.

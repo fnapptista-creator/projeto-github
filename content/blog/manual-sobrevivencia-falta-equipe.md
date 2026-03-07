@@ -2,7 +2,7 @@
 title: "Manual de Sobrevivência: O que fazer quando sua equipe te deixa na mão"
 date: "2026-03-13"
 description: "A alta rotatividade no setor gastronômico é brutal. Veja processos que tornam seu restaurante independente de 'estrelas' e mais fácil de treinar novatos."
-coverImage: "/uploads/chef-trabalhando-cozinha.png"
+coverImage: "/uploads/equipe_caos.png"
 ---
 
 O cenário é a pior pesadelo de quem empreende na cozinha: Sexta-feira, 18h, casa com reservas lotadas, e o seu chef de chapa (ou o garçom mais experiente) manda uma mensagem dizendo que não vai trabalhar. E pior: decide não voltar mais. 

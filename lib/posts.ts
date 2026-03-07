@@ -34,6 +34,7 @@ export function getSortedPostsData() {
                 title: matterResult.data.title || 'Sem título',
                 date: matterResult.data.date || '1970-01-01',
                 coverImage: matterResult.data.coverImage || '',
+                storyImage: matterResult.data.storyImage || '',
                 description: matterResult.data.description || '',
                 ...matterResult.data
             };
@@ -115,6 +116,7 @@ export async function getPostData(slug: string) {
         title: matterResult.data.title || 'Sem título',
         date: matterResult.data.date || '',
         coverImage: matterResult.data.coverImage || '',
+        storyImage: matterResult.data.storyImage || '',
         description: matterResult.data.description || '',
         ...matterResult.data
     };

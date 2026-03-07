@@ -9,9 +9,10 @@ interface ShareArticleProps {
     title: string;
     urlPath: string; // Ex: /blog/meu-post
     coverImage?: string;
+    storyImage?: string;
 }
 
-export default function ShareArticle({ title, urlPath, coverImage }: ShareArticleProps) {
+export default function ShareArticle({ title, urlPath, coverImage, storyImage }: ShareArticleProps) {
     const [baseUrl, setBaseUrl] = useState('');
     const [copied, setCopied] = useState(false);
     const [isGenerating, setIsGenerating] = useState(false);
@@ -140,11 +141,11 @@ export default function ShareArticle({ title, urlPath, coverImage }: ShareArticl
                     {/* Background Gradients/Noise */}
                     <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
 
-                    {coverImage && (
+                    {(storyImage || coverImage) && (
                         <div className="absolute inset-0 z-0 overflow-hidden">
                             {/* Using standard img for html-to-image compatibility */}
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={coverImage} alt="Cover" className="w-full h-full object-cover opacity-30 grayscale" crossOrigin="anonymous" />
+                            <img src={storyImage || coverImage} alt="Cover" className="w-full h-full object-cover opacity-30 grayscale" crossOrigin="anonymous" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/70 to-transparent"></div>
                             <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/90 via-transparent to-transparent"></div>
                         </div>
