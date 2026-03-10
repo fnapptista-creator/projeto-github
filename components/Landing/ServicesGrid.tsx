@@ -26,7 +26,7 @@ const services = [
 
 export default function ServicesGrid() {
     return (
-        <section className="py-24 bg-[var(--bg-void)] relative overflow-hidden">
+        <section className="py-24 bg-[#050505] relative overflow-hidden">
             {/* Ambient background touches */}
             <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-[var(--accent-gold)] rounded-full blur-[150px] opacity-[0.02] pointer-events-none"></div>
 

@@ -23,7 +23,7 @@ const problems = [
 
 export default function PainPoints() {
     return (
-        <section className="py-16 md:py-20 bg-[var(--bg-void)] relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-[#090909] relative overflow-hidden">
             {/* Decoration */}
             <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-[#111] to-transparent pointer-events-none"></div>
 

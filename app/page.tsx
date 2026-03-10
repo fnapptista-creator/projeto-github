@@ -8,6 +8,7 @@ import PainPoints from '@/components/Consultoria/PainPoints';
 import AuthorityBlock from '@/components/Consultoria/AuthorityBlock';
 import LatestPosts from '@/components/Landing/LatestPosts';
 import HomeCTA from '@/components/Landing/HomeCTA';
+import PrecifikSection from '@/components/Landing/PrecifikSection';
 import { getSortedPostsData } from '@/lib/posts';
 
 export const revalidate = 86400; // ISR: Reconstrução diária automática na Vercel para carregar novos posts agendados
@@ -122,6 +123,9 @@ export default function Home() {
 
       {/* 4. Autoridade e Lastro Profissional */}
       <AuthorityBlock />
+
+      {/* 4.3 Ferramenta Exclusiva: Precifik */}
+      <PrecifikSection />
 
       {/* 4.5 Vitrine de Retenção de Artigos / Inteligência (Blog) */}
       <LatestPosts posts={recentPosts} />
