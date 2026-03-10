@@ -70,14 +70,13 @@ export default function AuthorityBlock() {
                                 <button
                                     onClick={() => startTransition(() => setBioOpen(true))}
                                     disabled={isPending}
-                                    className={`group flex items-center gap-3 text-sm tracking-[0.1em] text-white outline-none hover:text-[var(--accent-gold)] transition-colors ${isPending ? 'opacity-50 cursor-wait' : ''}`}
+                                    className={`group inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold text-white hover:text-[var(--accent-gold)] transition-colors duration-300 outline-none cursor-pointer ${isPending ? 'opacity-50 cursor-wait' : ''}`}
                                 >
-                                    <div className="w-8 h-8 rounded-full border border-white/20 group-hover:border-[var(--accent-gold)] flex items-center justify-center transition-colors">
-                                        <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </div>
-                                    <span className="font-medium">Conhecer Trajetória</span>
+                                    <span>Conhecer Trajetória</span>
+                                    <span className="w-6 h-[1px] bg-white/30 group-hover:bg-[var(--accent-gold)] group-hover:w-10 transition-all duration-300" />
+                                    <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
                                 </button>
                             </div>
                         </motion.div>

@@ -19,7 +19,7 @@ export default function LatestPosts({ posts }: LatestPostsProps) {
     if (!posts || posts.length === 0) return null;
 
     return (
-        <section className="py-24 md:py-32 bg-[#0c0c0c] relative overflow-hidden text-white border-t border-white/5">
+        <section className="py-16 md:py-20 bg-[#0c0c0c] relative overflow-hidden text-white border-t border-white/5">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-8">
                     <div className="max-w-xl">
@@ -27,7 +27,7 @@ export default function LatestPosts({ posts }: LatestPostsProps) {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: false, amount: 0.1 }}
-                            className="inline-block py-1 px-3 border border-[var(--accent-gold)] rounded-full text-[10px] tracking-[0.25em] uppercase mb-6 text-[var(--accent-gold)]"
+                            className="text-[var(--accent-gold)] text-[10px] tracking-[0.3em] font-sans uppercase block mb-6 border-l-2 border-[var(--accent-gold)] pl-4"
                         >
                             Inteligência Aplicada
                         </motion.span>
@@ -48,10 +48,11 @@ export default function LatestPosts({ posts }: LatestPostsProps) {
                     >
                         <Link
                             href="/blog"
-                            className="inline-flex items-center gap-3 text-sm tracking-[0.2em] uppercase font-bold text-white hover:text-[var(--accent-gold)] transition-colors group"
+                            className="inline-flex items-center gap-3 text-xs tracking-[0.2em] uppercase font-bold text-white hover:text-[var(--accent-gold)] transition-colors duration-300 group"
                         >
-                            Ver Todo o Acervo
-                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <span>Ver Todo o Acervo</span>
+                            <span className="w-6 h-[1px] bg-white/30 group-hover:bg-[var(--accent-gold)] group-hover:w-10 transition-all duration-300" />
+                            <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </Link>

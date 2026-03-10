@@ -12,14 +12,14 @@ const features = [
 
 export default function PrecifikSection() {
     return (
-        <section className="py-20 md:py-28 bg-[#050505] border-t border-white/5">
+        <section className="py-16 md:py-20 bg-[#050505] border-t border-white/5">
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Topo: badge + CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.5 }}
                     className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12 md:mb-16"
                 >
@@ -43,31 +43,36 @@ export default function PrecifikSection() {
                 {/* Corpo */}
                 <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 lg:gap-20 items-start">
 
-                    {/* Coluna Esquerda: Logo + Título juntos + Tagline abaixo */}
+                    {/* Coluna Esquerda: Logo + Título + Tagline */}
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.6 }}
+                        initial={{ opacity: 0, x: -16 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{ duration: 0.9 }}
                     >
-                        {/* Logo e Título em linha */}
+                        {/* Logo com hover de brightness */}
                         <div className="flex items-center gap-4 mb-5">
                             <Image
                                 src="/precifik.png"
                                 alt="Precifik"
                                 width={68}
                                 height={68}
-                                className="rounded-xl opacity-95 flex-shrink-0"
+                                className="rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
                             />
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-serif)] text-white tracking-tighter leading-none">
-                                Precifik
+                                Precifi<span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.7)' }}>k</span>
                             </h2>
                         </div>
 
-                        {/* Tagline abaixo do conjunto logo+título */}
-                        <p className="text-[#999] text-sm md:text-base font-sans leading-relaxed">
+                        <motion.p
+                            initial={{ opacity: 0, y: 8 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="text-[#999] text-sm md:text-base font-sans leading-relaxed"
+                        >
                             Você sabe exatamente quanto custa cada prato que sai da sua cozinha? O Precifik é o sistema que transforma seu cardápio numa máquina de margem. Precificação com precisão, do insumo ao preço final de venda.
-                        </p>
+                        </motion.p>
                     </motion.div>
 
                     {/* Coluna Direita: Features */}
@@ -75,18 +80,18 @@ export default function PrecifikSection() {
                         {features.map((f, i) => (
                             <motion.div
                                 key={f.id}
-                                initial={{ opacity: 0, x: 10 }}
+                                initial={{ opacity: 0, x: 16 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: false, amount: 0.1 }}
                                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                                className="flex items-start gap-6 md:gap-10 py-5"
+                                className="flex items-start gap-6 md:gap-10 py-5 group cursor-default hover:bg-white/[0.02] transition-colors duration-300 -mx-4 px-4"
                             >
-                                <span className="text-[10px] font-mono text-white/20 pt-1 w-5 flex-shrink-0 select-none">{f.id}</span>
+                                <span className="text-[10px] font-mono text-white/20 group-hover:text-[var(--accent-gold)] pt-1 w-5 flex-shrink-0 select-none transition-colors duration-300">{f.id}</span>
                                 <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-8 flex-1">
-                                    <p className="text-white text-sm font-sans font-semibold tracking-tight sm:w-52 flex-shrink-0">
+                                    <p className="text-white/80 group-hover:text-white text-sm font-sans font-semibold tracking-tight sm:w-52 flex-shrink-0 transition-colors duration-300">
                                         {f.label}
                                     </p>
-                                    <p className="text-[#aaa] text-sm font-sans leading-relaxed">
+                                    <p className="text-[#777] group-hover:text-[#aaa] text-sm font-sans leading-relaxed transition-colors duration-300">
                                         {f.desc}
                                     </p>
                                 </div>

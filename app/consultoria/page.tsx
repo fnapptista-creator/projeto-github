@@ -59,30 +59,36 @@ export default function Consultoria() {
 
             {/* The Triad - Service Modes */}
             <div id="servicos">
-                <ConsultingMode
-                    index={1}
-                    title={services.novos.title}
-                    subtitle={services.novos.subtitle}
-                    description={services.novos.description}
-                    items={services.novos.items}
-                    theme="dark"
-                />
-                <ConsultingMode
-                    index={2}
-                    title={services.funcionamento.title}
-                    subtitle={services.funcionamento.subtitle}
-                    description={services.funcionamento.description}
-                    items={services.funcionamento.items}
-                    theme="light" // Visual break
-                />
-                <ConsultingMode
-                    index={3}
-                    title={services.expansao.title}
-                    subtitle={services.expansao.subtitle}
-                    description={services.expansao.description}
-                    items={services.expansao.items}
-                    theme="dark"
-                />
+                <div id="novos-negocios">
+                    <ConsultingMode
+                        index={1}
+                        title={services.novos.title}
+                        subtitle={services.novos.subtitle}
+                        description={services.novos.description}
+                        items={services.novos.items}
+                        theme="dark"
+                    />
+                </div>
+                <div id="em-funcionamento">
+                    <ConsultingMode
+                        index={2}
+                        title={services.funcionamento.title}
+                        subtitle={services.funcionamento.subtitle}
+                        description={services.funcionamento.description}
+                        items={services.funcionamento.items}
+                        theme="light"
+                    />
+                </div>
+                <div id="expansao">
+                    <ConsultingMode
+                        index={3}
+                        title={services.expansao.title}
+                        subtitle={services.expansao.subtitle}
+                        description={services.expansao.description}
+                        items={services.expansao.items}
+                        theme="dark"
+                    />
+                </div>
             </div>
 
             <MicroConsulting />
