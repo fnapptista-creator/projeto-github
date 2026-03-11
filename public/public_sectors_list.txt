@@ -1,0 +1,12 @@
+﻿
+Name             Length
+----             ------
+conveniencia.png 318206
+delivery.png     331720
+gastrobar.png    400957
+hamburgueria.png 395537
+pizzaria.png     360150
+selfservice.png  322519
+alacarte.png     587354
+
+

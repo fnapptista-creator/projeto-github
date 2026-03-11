@@ -12,7 +12,7 @@ const features = [
 
 export default function PrecifikSection() {
     return (
-        <section className="py-16 md:py-20 bg-[#050505] border-t border-white/5">
+        <section className="py-9 bg-[#050505] border-t border-white/5">
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Topo: badge + CTA */}
@@ -24,7 +24,7 @@ export default function PrecifikSection() {
                     className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12 md:mb-16"
                 >
                     <span className="text-[var(--accent-gold)] text-[10px] tracking-[0.3em] font-sans uppercase border-l-2 border-[var(--accent-gold)] pl-4">
-                        Ferramenta Exclusiva — Clientes da Consultoria
+                        Ferramenta Exclusiva para Clientes da Consultoria
                     </span>
                     <a
                         href="https://precifik.felipenb.com.br/"

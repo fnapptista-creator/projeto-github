@@ -25,7 +25,7 @@ No dia a dia corrido, a maioria das cozinhas funciona na base do grito e da trad
 
 O Procedimento Operacional Padrão (POP) é o fim dessa cultura. É a "receita" de como as coisas devem ser feitas no seu restaurante, desde como lavar o chão, até quantos milissegundos a carne na chapa precisa fritar. 
 
-Tudo precisa estar documentado, fotografado e acessível. A construção de uma boa Ficha Técnica — documento que mostra a receita exata, as medidas por miligrama e o modo de preparo passo a passo — é o começo disso tudo. 
+Tudo precisa estar documentado, fotografado e acessível. A construção de uma boa Ficha Técnica, documento que mostra a receita exata, as medidas por miligrama e o modo de preparo passo a passo, é o começo disso tudo. 
 
 Quando você tem um POP bem feito, o "Joãozinho" pode pedir as contas à vontade. O substituto dele vai pegar o manual, ler, e no dia seguinte a comida vai sair com o mesmo sabor. 
 

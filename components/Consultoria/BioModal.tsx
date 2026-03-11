@@ -49,7 +49,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
                             </p>
 
                             <p>
-                                Porém, a minha escola primária de negócios começou muito antes. <strong className="text-white font-medium">Desde os 14 anos de idade eu respiro o comércio.</strong> Passei por diversos segmentos — de bijuterias e brinquedos a utilidades e foodservice. Essa vivência me construiu uma bagagem de quase 18 anos lidando com os mais diferentes e complexos perfis de clientes, me ensinando a maestria do atendimento e da conversão muito antes de eu entrar em uma cozinha.
+                                Porém, a minha escola primária de negócios começou muito antes. <strong className="text-white font-medium">Desde os 14 anos de idade eu respiro o comércio.</strong> Passei por diversos segmentos, de bijuterias e brinquedos a utilidades e foodservice. Essa vivência me construiu uma bagagem de quase 18 anos lidando com os mais diferentes e complexos perfis de clientes, me ensinando a maestria do atendimento e da conversão muito antes de eu entrar em uma cozinha.
                             </p>
 
                             <div className="p-6 border-l-2 border-[var(--accent-gold)] bg-[var(--accent-gold)]/[0.03] rounded-r-xl my-8">

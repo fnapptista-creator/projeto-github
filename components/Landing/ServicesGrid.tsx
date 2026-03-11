@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const services = [
+
     {
         index: "01",
         title: "Novos Negócios",
@@ -32,7 +33,7 @@ const services = [
 
 export default function ServicesGrid() {
     return (
-        <section className="py-16 md:py-20 bg-[#050505] relative overflow-hidden">
+        <section className="py-9 bg-[#050505] relative overflow-hidden">
 
             {/* Ambient glow */}
             <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-[var(--accent-gold)] rounded-full blur-[200px] opacity-[0.015] pointer-events-none" />
@@ -56,7 +57,7 @@ export default function ServicesGrid() {
                     </h2>
                 </motion.div>
 
-                {/* Editorial Stacked Stages — Desktop */}
+                {/* Editorial Stacked Stages: Desktop */}
                 <div className="hidden md:block divide-y divide-white/[0.06]">
                     {services.map((service, i) => (
                         <motion.div
@@ -70,7 +71,7 @@ export default function ServicesGrid() {
                                 href={service.link}
                                 className="group flex items-center gap-8 lg:gap-14 py-5 md:py-6 cursor-pointer"
                             >
-                                {/* Stage Number — âncora tipográfica */}
+                                {/* Stage Number: âncora tipográfica */}
                                 <span className="w-20 lg:w-28 text-right font-[var(--font-serif)] text-5xl lg:text-6xl leading-none text-[var(--accent-gold)] opacity-[0.12] group-hover:opacity-70 transition-all duration-700 flex-shrink-0 select-none tabular-nums">
                                     {service.index}
                                 </span>
@@ -104,7 +105,7 @@ export default function ServicesGrid() {
                     ))}
                 </div>
 
-                {/* Mobile — Scroll horizontal de cards */}
+                {/* Mobile: Scroll horizontal de cards */}
                 <div className="flex md:hidden overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] gap-px bg-white/[0.04] -mx-6 px-6 scroll-smooth">
                     {services.map((service, i) => (
                         <motion.div

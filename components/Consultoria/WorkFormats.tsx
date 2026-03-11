@@ -10,7 +10,7 @@ const formats = [
         index: "01",
         title: "Mentoria",
         subtitle: "Aconselhamento e Direção",
-        description: "Eu destravo a SUA visão como dono. Sessões estratégicas focadas em mudar sua mentalidade de gestão, tomada de decisão e liderança. Você executa — mas não caminha mais sozinho.",
+        description: "Eu destravo a SUA visão como dono. Sessões estratégicas focadas em mudar sua mentalidade de gestão, tomada de decisão e liderança. Você executa, mas não caminha mais sozinho.",
         cta: "Conhecer a Mentoria",
         icon: Brain,
         href: "/consultoria#mentoria",
@@ -20,7 +20,7 @@ const formats = [
         index: "02",
         title: "Consultoria",
         subtitle: "Diagnóstico e Rota Clara",
-        description: "Fazemos um Raio-X completo da sua operação. Identifico os gargalos — CMV, equipe, processos — e entrego o Plano de Ação exato para sua equipe executar.",
+        description: "Fazemos um Raio-X completo da sua operação. Identifico os gargalos de CMV, equipe e processos, e entrego o Plano de Ação exato para sua equipe executar.",
         cta: "Ver a Consultoria",
         icon: Map,
         href: "/consultoria#consultoria",
@@ -30,7 +30,7 @@ const formats = [
         index: "03",
         title: "Assessoria",
         subtitle: "A Mão na Massa",
-        description: "Vou para a trincheira com você. Além da estratégia, atuo na execução técnica do dia a dia — desde fichas técnicas até o layout do salão e da cozinha.",
+        description: "Vou para a trincheira com você. Além da estratégia, atuo na execução técnica do dia a dia, desde fichas técnicas até o layout do salão e da cozinha.",
         cta: "Ver a Assessoria",
         icon: Swords,
         href: "/consultoria#assessoria",
@@ -60,7 +60,7 @@ export default function WorkFormats() {
                         </span>
                     </h2>
                     <p className="text-[#888] font-sans text-sm md:text-base mt-5 max-w-xl leading-relaxed">
-                        O mercado confunde os três termos. Cada momento da sua empresa exige um formato diferente de acompanhamento — e eu atuo nos três.
+                        O mercado confunde os três termos. Cada momento da sua empresa exige um formato diferente de acompanhamento, e eu atuo nos três.
                     </p>
                 </motion.div>
 

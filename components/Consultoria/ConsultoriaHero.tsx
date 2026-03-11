@@ -63,7 +63,7 @@ export default function ConsultoriaHero() {
                     </MagneticLink>
 
                     <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--text-secondary-dark)] opacity-50 hidden md:block mt-[2px]">
-                        — ou —
+                        ou
                     </span>
 
                     <motion.a

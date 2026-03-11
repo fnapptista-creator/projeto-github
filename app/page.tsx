@@ -9,6 +9,7 @@ import AuthorityBlock from '@/components/Consultoria/AuthorityBlock';
 import LatestPosts from '@/components/Landing/LatestPosts';
 import HomeCTA from '@/components/Landing/HomeCTA';
 import PrecifikSection from '@/components/Landing/PrecifikSection';
+import SectorsStrip from '@/components/Landing/SectorsStrip';
 import { getSortedPostsData } from '@/lib/posts';
 
 export const revalidate = 86400; // ISR: Reconstrução diária automática na Vercel para carregar novos posts agendados
@@ -114,6 +115,9 @@ export default function Home() {
 
       {/* Break Visual Header com a Automação Marquee */}
       <InfiniteMarquee />
+
+      {/* Setores Gastronômicos Atendidos */}
+      <SectorsStrip />
 
       {/* 2. Conexão com o Momento/Dores */}
       <PainPoints />

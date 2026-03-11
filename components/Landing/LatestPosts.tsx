@@ -19,7 +19,7 @@ export default function LatestPosts({ posts }: LatestPostsProps) {
     if (!posts || posts.length === 0) return null;
 
     return (
-        <section className="py-16 md:py-20 bg-[#0c0c0c] relative overflow-hidden text-white border-t border-white/5">
+        <section className="py-9 bg-[#0c0c0c] relative overflow-hidden text-white border-t border-white/5">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-8">
                     <div className="max-w-xl">

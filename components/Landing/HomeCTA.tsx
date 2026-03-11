@@ -31,7 +31,7 @@ export default function HomeCTA() {
                     <MagneticLink
                         href="#"
                         onClick={(e: React.MouseEvent) => { e.preventDefault(); openQuiz(); }}
-                        className="inline-flex flex-row items-center gap-4 px-8 md:px-10 py-5 cursor-pointer bg-black text-[var(--accent-gold)] rounded-none font-bold uppercase text-[10px] tracking-[0.2em] group outline-none whitespace-nowrap"
+                        className="inline-flex flex-row items-center gap-4 px-8 md:px-10 py-5 cursor-pointer bg-black text-[var(--accent-gold)] rounded-none font-bold uppercase text-[10px] tracking-[0.2em] group outline-none whitespace-nowrap mb-6"
                     >
                         <span className="group-hover:text-white transition-colors duration-300">Agendar Diagnóstico</span>
                         <div className="w-8 h-8 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] bg-white/5 flex items-center justify-center transition-all duration-300">
@@ -41,6 +41,14 @@ export default function HomeCTA() {
                         </div>
                     </MagneticLink>
                 </div>
+
+                {/* Secondary CTA: Sessão Estratégica (Opção A) */}
+                <span className="text-black/60 text-[10px] md:text-xs font-sans block mt-2">
+                    Buscando apenas um direcionamento rápido? <br className="md:hidden" />
+                    <a href="/consultoria#mentoria" className="text-black/90 font-bold hover:underline decoration-[var(--accent-gold)] underline-offset-4 transition-all">
+                        Conheça a Mentoria (Sessão Estratégica)
+                    </a>
+                </span>
             </motion.div>
         </section>
     );

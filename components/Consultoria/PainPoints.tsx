@@ -6,32 +6,32 @@ const problems = [
     {
         id: "01",
         title: "Lucro Invisível",
-        desc: "Você trabalha 14 horas por dia, o salão está cheio — e no fim do mês o caixa não bate. O dinheiro some antes de chegar em você. Geralmente tem nome: CMV fora de controle e zero ficha técnica.",
+        desc: "Você trabalha 14 horas por dia, o salão está cheio, mas no fim do mês o caixa não bate. O dinheiro some antes de chegar em você. Geralmente tem nome: CMV fora de controle e zero ficha técnica.",
         signal: "CMV descontrolado"
     },
     {
         id: "02",
         title: "Refém da Operação",
-        desc: "Tirou um dia de folga e a cozinha virou caos? Você não tem um negócio — você tem um emprego sem carteira assinada. E o patrão te cobra 24 horas por dia.",
+        desc: "Tirou um dia de folga e a cozinha virou caos? Você não tem um negócio, você tem um emprego sem carteira assinada. E o patrão te cobra 24 horas por dia.",
         signal: "Operação sem processo"
     },
     {
         id: "03",
         title: "Equipe sem Padrão",
-        desc: "O cliente que voltou hoje pediu o mesmo prato da semana passada e não reconheceu. Alta rotatividade, treino informal e nenhum padrão de preparo — o amadorismo no salão custa mais do que parece.",
+        desc: "O cliente que voltou hoje pediu o mesmo prato da semana passada e não reconheceu. Alta rotatividade, treino informal e nenhum padrão de preparo: o amadorismo no salão custa mais do que parece.",
         signal: "Sem cultura de serviço"
     },
     {
         id: "04",
         title: "Desperdício Oculto",
-        desc: "Cada quilo jogado fora, cada receita feita no olho, cada preparo errado — é o seu lucro indo direto pro lixo. Sem ficha técnica, você nem sabe o quanto está perdendo.",
+        desc: "Cada quilo jogado fora, cada receita feita no olho, cada preparo errado é o seu lucro indo direto pro lixo. Sem ficha técnica, você nem sabe o quanto está perdendo.",
         signal: "Custo real desconhecido"
     }
 ];
 
 export default function PainPoints() {
     return (
-        <section className="py-16 md:py-20 bg-[#090909] relative overflow-hidden">
+        <section className="py-9 bg-[#090909] relative overflow-hidden">
 
             <div className="container mx-auto px-6 md:px-12 relative z-10">
 
@@ -54,18 +54,18 @@ export default function PainPoints() {
                     </h2>
                 </motion.div>
 
-                {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/[0.04]">
+                {/* Cards - Desktop (Grid) & Mobile (Scroll Horizontal) */}
+                <div className="flex md:grid md:grid-cols-2 overflow-x-auto md:overflow-visible snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] gap-2 md:gap-px scroll-smooth -mx-6 px-6 md:mx-0 md:px-0 bg-transparent md:bg-white/[0.04]">
                     {problems.map((problem, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.1 }}
-                            transition={{ delay: i * 0.09, duration: 0.7 }}
-                            className="group bg-[#090909] p-8 md:p-10 cursor-default hover:bg-[#0e0b09] transition-colors duration-500 relative overflow-hidden"
+                            transition={{ duration: 0.6, delay: i * 0.08 }}
+                            className="group bg-[#090909] p-8 md:p-10 cursor-default hover:bg-[#0e0b09] transition-colors duration-500 relative overflow-hidden flex-shrink-0 w-[82vw] md:w-auto snap-center sm:snap-start snap-always border border-white/5 md:border-none"
                         >
-                            {/* Linha de alerta no topo do card — aparece no hover */}
+                            {/* Linha de alerta no topo do card, aparece no hover */}
                             <span className="absolute top-0 left-0 w-0 h-[2px] bg-[#a05030]/60 group-hover:w-full transition-all duration-700 ease-out" />
 
                             {/* Número */}
@@ -81,7 +81,7 @@ export default function PainPoints() {
                                 {problem.desc}
                             </p>
 
-                            {/* Signal badge — categoria do problema */}
+                            {/* Signal badge da categoria do problema */}
                             <span className="inline-block text-[11px] font-mono tracking-[0.2em] uppercase text-[#a05030]/70 group-hover:text-[#a05030] transition-colors duration-300">
                                 ● {problem.signal}
                             </span>
