@@ -11,26 +11,71 @@ export default function HeroCinematic() {
 
     return (
         <section className="relative min-h-screen w-full flex flex-col justify-end overflow-hidden bg-[var(--bg-void)] px-6 md:px-16 pt-32 pb-20">
-            {/* Cinematic Background Image */}
-            <div className="absolute inset-0 z-0 select-none pointer-events-none grayscale opacity-40">
-                <Image
-                    src="/uploads/hero_v2.png"
-                    alt="Restaurante Operação Alto Nível"
-                    fill
-                    className="object-cover object-[75%_15%] md:object-[right_15%] mix-blend-luminosity"
-                    priority
-                    quality={90}
+            {/* 2026 Cinematic Atmos Background - Iluminação Volumétrica Dinâmica Filtrada */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden bg-black">
+                
+                {/* 1. Base Image - "Lens Breathing" suave, porém óbvio e visível RÁPIDO */}
+                <motion.div
+                    initial={{ scale: 1.05, opacity: 0.6, filter: 'blur(4px)' }}
+                    animate={{ scale: 1.15, opacity: 0.9, filter: 'blur(0px)' }}
+                    transition={{ 
+                        scale: { duration: 6, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" },
+                        opacity: { duration: 2, ease: "easeOut" },
+                        filter: { duration: 2, ease: "easeOut" }
+                    }}
+                    className="absolute inset-0 w-full h-full transform-gpu origin-center mix-blend-luminosity grayscale"
+                >
+                    <Image
+                        src="/uploads/nova imagem.jpeg"
+                        alt="Restaurante Operação Alto Nível"
+                        fill
+                        className="object-cover object-[25%_20%]"
+                        priority
+                        quality={100}
+                    />
+                </motion.div>
+
+                {/* 2. Feixe de Luz Interativa (Relighting RÁPIDO) */}
+                <motion.div
+                    initial={{ opacity: 0, x: '-50%', y: '-10%' }}
+                    animate={{ 
+                        opacity: [0, 0.6, 0.2, 0.7, 0],
+                        x: ['-50%', '10%', '60%', '20%', '-50%'],
+                        y: ['-10%', '30%', '10%', '0%', '-10%']
+                    }}
+                    transition={{ 
+                        duration: 8, 
+                        ease: "easeInOut", 
+                        repeat: Infinity 
+                    }}
+                    className="absolute inset-0 w-full h-full pointer-events-none z-10"
+                    style={{
+                        background: 'radial-gradient(circle at 50% 50%, rgba(204, 163, 100, 0.35) 0%, transparent 50%)'
+                    }}
                 />
-                {/* Harsh Vignette mimicking Brutalism */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-void)] via-[var(--bg-void)]/90 to-transparent"></div>
-                <div className="absolute inset-0 bg-[var(--bg-void)]/30 backdrop-blur-[2px]"></div>
+
+                {/* 3. Gold Flare / Lens Glint (Refração Óbvia e Pulsante) */}
+                 <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ 
+                        opacity: [0.1, 0.35, 0.1],
+                        scale: [0.8, 1.3, 0.8]
+                    }}
+                    transition={{ 
+                        duration: 4, 
+                        ease: "easeInOut", 
+                        repeat: Infinity 
+                    }}
+                    className="absolute top-1/4 right-[5%] w-[50vw] h-[50vw] bg-[#CCA364] rounded-full blur-[120px] mix-blend-screen z-10 pointer-events-none"
+                />
+
+                {/* 4. Densa Degrade para Legibilidade Perfeita */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-void)] via-[#0a0a0a]/80 to-transparent z-20"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-void)] via-[#0a0a0a]/50 to-transparent z-20"></div>
+
+                {/* 5. Granulado Premium Animado */}
+                <div className="absolute inset-0 z-30 opacity-[0.05]" style={{ backgroundImage: "url('https://grainy-gradients.vercel.app/noise.svg')" }}></div>
             </div>
-
-            {/* Background Noise Texture (Optional enhancement) */}
-            <div className="absolute inset-0 opacity-[0.04] pointer-events-none z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
-
-            {/* Subtle Gradient Spot */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[var(--accent-gold)] rounded-full blur-[160px] opacity-[0.05] z-0 pointer-events-none"></div>
 
             {/* Content Container - Refined Asymmetric */}
             <div className="z-10 flex flex-col md:flex-row items-end justify-between w-full max-w-[1400px] mx-auto">
